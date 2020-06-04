@@ -1,7 +1,16 @@
 import React from "react"
+import { TestComponent, Nav } from "../components"
 import { Link } from "gatsby"
-import "./style.css"
+import "./index.css"
 
-const IndexPage = () => <div>Home</div>
+const IndexPage = () => {
+  return (
+    <React.Fragment>
+      <Nav></Nav>
+      <div>Home</div>
+      <TestComponent></TestComponent>
+    </React.Fragment>
+  )
+}
 
 export default IndexPage
