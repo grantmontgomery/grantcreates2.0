@@ -1,1 +1,1 @@
-export { FullLogo } from "./FullLogoSVG"
+export { FullLogo } from "./FullLogo"
