@@ -5,16 +5,15 @@ import { LogoProps } from "../types"
 export const FullLogo = ({ location }: LogoProps) => {
   return (
     <div className={`fullLogoWrapper ${location} ${css[`${location}`]}`}>
-      <defs>
-        <svg
-          version="1.1"
-          id="Layer_1"
-          x="0px"
-          y="0px"
-          viewBox="0 0 1614.5 548.6"
-          enableBackground="new 0 0 1614.5 548.6"
-        >
-          {/* <style type="text/css">
+      <svg
+        version="1.1"
+        id="Layer_1"
+        x="0px"
+        y="0px"
+        viewBox="0 0 1614.5 548.6"
+        enableBackground="new 0 0 1614.5 548.6"
+      >
+        {/* <style type="text/css">
 	.st0{fill:#F5F5F5;}
 	.st1{fill:url(#SVGID_1_);}
 	.st2{fill:url(#SVGID_2_);}
@@ -23,235 +22,234 @@ export const FullLogo = ({ location }: LogoProps) => {
 	.st5{fill:url(#SVGID_5_);}
 	.st6{fill:url(#SVGID_6_);}
 </style> */}
-          <g>
-            <g id="Layer_4">
-              <path
-                className={`${css.st0}`}
-                d="M667.5,271.1c-9.9,0-19.8-1.1-29.5-3.1c-10.2-2.1-18.2-4.8-24.1-8.1l4.1-34.5c6.6,3.8,13.7,6.7,21.1,8.5
+        <g>
+          <g id="Layer_4">
+            <path
+              className={`${css.st0}`}
+              d="M667.5,271.1c-9.9,0-19.8-1.1-29.5-3.1c-10.2-2.1-18.2-4.8-24.1-8.1l4.1-34.5c6.6,3.8,13.7,6.7,21.1,8.5
 			c7.9,2.1,16.1,3.2,24.3,3.3c15.5,0,26.9-3.5,34.3-10.5c7.4-7,11.1-18,11.1-32.9v-9.9c-4.6,7.2-11.1,12.9-18.8,16.5
 			c-7.8,3.7-17,5.6-27.3,5.6c-11.6,0.2-23.1-2.9-33-9c-9.8-6-17.5-14.6-23.1-25.8c-5.6-11.2-8.5-24.1-8.5-38.7
 			c-0.1-12.8,2.7-25.5,8.3-37c5.3-11,13.5-20.3,23.7-27.1c10.2-6.9,22.2-10.5,34.5-10.3c9-0.1,17.8,1.9,25.8,5.9
 			c7.5,3.7,13.9,9.5,18.5,16.5l0.5-18h36.4v129.3c0,26.1-6.6,45.8-19.7,59.2C712.9,264.4,693.4,271.1,667.5,271.1z M673,172.1
 			c10.8,0,19.6-3.7,26.5-11.2s10.4-17.1,10.4-29c0-11.7-3.4-21.2-10.3-28.7C692.8,95.7,683.9,92,673,92c-10.9,0-19.8,3.7-26.7,11.2
 			c-6.8,7.5-10.3,17-10.3,28.7c0,11.8,3.5,21.5,10.4,29C653.4,168.4,662.2,172.2,673,172.1L673,172.1z"
-              />
-              <path
-                className={`${css.st0}`}
-                d="M786.2,62.5h36.7l0.3,23c3.8-8.2,9-14.5,15.5-18.9c6.7-4.4,14.5-6.8,22.5-6.6c5.5-0.1,11,1,16.1,3L874,98.8
+            />
+            <path
+              className={`${css.st0}`}
+              d="M786.2,62.5h36.7l0.3,23c3.8-8.2,9-14.5,15.5-18.9c6.7-4.4,14.5-6.8,22.5-6.6c5.5-0.1,11,1,16.1,3L874,98.8
 			c-5.4-2.1-11.2-3.3-17-3.3c-10.4,0-18.5,3.7-24.2,11.2c-5.7,7.5-8.6,18-8.6,31.4v63.4h-38L786.2,62.5z"
-              />
-              <path
-                className={`${css.st0}`}
-                d="M957.7,206.1c-11.6,0.2-23-2.9-33-9c-9.8-6-17.5-14.6-23.1-25.8c-5.6-11.2-8.5-24.1-8.5-38.7
+            />
+            <path
+              className={`${css.st0}`}
+              d="M957.7,206.1c-11.6,0.2-23-2.9-33-9c-9.8-6-17.5-14.6-23.1-25.8c-5.6-11.2-8.5-24.1-8.5-38.7
 			c-0.1-12.8,2.7-25.5,8.3-37c5.3-11,13.5-20.3,23.7-27.1c10.2-6.9,22.2-10.5,34.5-10.3c9-0.1,17.8,1.9,25.8,5.9
 			c7.5,3.7,13.9,9.5,18.5,16.5l0.5-18h36.4v139.1h-36.4l-0.5-17.8c-4.6,7.2-11.2,12.9-18.9,16.5C977.2,204.1,968.1,206,957.7,206.1z
 			 M968.1,172.1c10.8,0,19.6-3.7,26.5-11.2c6.9-7.5,10.4-17.1,10.4-29c0-11.7-3.4-21.2-10.3-28.7C987.9,95.7,979,92,968.1,92
 			c-10.9,0-19.8,3.7-26.7,11.2c-6.8,7.5-10.3,17-10.3,28.7c0,11.8,3.5,21.5,10.4,29S957.3,172.2,968.1,172.1z"
-              />
-              <path
-                className={`${css.st0}`}
-                d="M1081.3,62.5h36.7l0.3,17.2c3.9-6.9,9.8-12.4,16.8-16c7.2-3.7,15.6-5.6,25.3-5.6c16.4,0,28.9,5.1,37.6,15.2
+            />
+            <path
+              className={`${css.st0}`}
+              d="M1081.3,62.5h36.7l0.3,17.2c3.9-6.9,9.8-12.4,16.8-16c7.2-3.7,15.6-5.6,25.3-5.6c16.4,0,28.9,5.1,37.6,15.2
 			c8.7,10.1,13,24.7,13,43.9v84.5h-38v-77.4c0-21.7-8.3-32.5-24.9-32.6c-9.1,0-16.2,3.1-21.2,9.2s-7.5,14.7-7.5,25.8v74.9h-38
 			L1081.3,62.5z"
-              />
-              <path
-                className={`${css.st0}`}
-                d="M1311.8,206.1c-17.3,0-30.2-4.4-38.6-13.3s-12.6-22.4-12.6-40.6V93.9h-27.1V62.5h27.1V24.7h38v37.7h43.5v31.4
+            />
+            <path
+              className={`${css.st0}`}
+              d="M1311.8,206.1c-17.3,0-30.2-4.4-38.6-13.3s-12.6-22.4-12.6-40.6V93.9h-27.1V62.5h27.1V24.7h38v37.7h43.5v31.4
 			h-43.5v51.4c0,9.7,1.6,16.6,4.9,20.8s8.8,6.3,16.7,6.3c8.6,0.1,17-2,24.6-6l4.1,31.7c-5.1,2.7-10.6,4.6-16.3,5.7
 			C1325.9,205.4,1318.9,206.1,1311.8,206.1z"
-              />
-              <path
-                className={`${css.st0}`}
-                d="M677.5,489.4c-15.1,0-28.5-2.9-40.1-8.8c-11.3-5.5-20.6-14.3-26.9-25.2c-6.4-11-9.6-23.8-9.6-38.6
+            />
+            <path
+              className={`${css.st0}`}
+              d="M677.5,489.4c-15.1,0-28.5-2.9-40.1-8.8c-11.3-5.5-20.6-14.3-26.9-25.2c-6.4-11-9.6-23.8-9.6-38.6
 			c0-14.2,3.1-26.9,9.3-38c6.2-11.1,15.4-20.2,26.7-26.3c11.6-6.4,25-9.6,40.3-9.6c8.2,0,16.4,0.9,24.5,2.7c7.1,1.5,14,3.9,20.4,7.4
 			l-4.7,32.3c-12.2-5.8-24.4-8.7-36.6-8.8c-12.8,0-22.9,3.6-30.5,10.7c-7.6,7.1-11.4,16.7-11.4,28.7c0,12.4,3.8,22.1,11.5,29.1
 			s18.1,10.5,31.5,10.5c11.7,0,24.3-2.8,38-8.5l3.8,31.2c-6.6,3.8-13.7,6.5-21.1,8.1C694.5,488.4,686,489.4,677.5,489.4z"
-              />
-              <path
-                className={`${css.st0}`}
-                d="M756.9,346.6h36.6l0.3,23c3.8-8.2,9-14.5,15.5-18.9c6.7-4.4,14.5-6.7,22.6-6.6c5.5-0.1,11,1,16.1,3l-3.3,35.8
+            />
+            <path
+              className={`${css.st0}`}
+              d="M756.9,346.6h36.6l0.3,23c3.8-8.2,9-14.5,15.5-18.9c6.7-4.4,14.5-6.7,22.6-6.6c5.5-0.1,11,1,16.1,3l-3.3,35.8
 			c-5.4-2.1-11.1-3.3-17-3.3c-10.4,0-18.5,3.7-24.2,11.2s-8.6,18-8.6,31.5v63.4h-38L756.9,346.6z"
-              />
-              <path
-                className={`${css.st0}`}
-                d="M944.7,490.2c-16.2,0-30.4-2.9-42.5-8.8c-11.8-5.5-21.6-14.4-28.3-25.6c-6.7-11.2-10.1-24.4-10.1-39.5
+            />
+            <path
+              className={`${css.st0}`}
+              d="M944.7,490.2c-16.2,0-30.4-2.9-42.5-8.8c-11.8-5.5-21.6-14.4-28.3-25.6c-6.7-11.2-10.1-24.4-10.1-39.5
 			c0-14,2.9-26.6,8.8-37.9c5.6-11,14.3-20.2,24.9-26.5c10.8-6.5,23.3-9.7,37.5-9.7c13.1,0,24.7,2.8,34.6,8.3
 			c9.9,5.5,18,13.9,23.3,23.9c5.6,10.4,8.3,22.7,8.3,36.9c0,5.5-0.4,11-1.4,16.4h-98.2c4.7,20.8,20.5,31.2,47.3,31.2
 			c8.2,0,16.4-0.9,24.5-2.6c7.5-1.6,14.7-4.1,21.5-7.5l3.8,29.8c-7.6,4-15.7,6.9-24.1,8.5C964.7,489.2,954.7,490.2,944.7,490.2z
 			 M964.7,401.3c-0.9-9.7-4.1-17.1-9.4-22.3c-5.4-5.2-12.5-7.8-21.5-7.8c-8.7,0-15.9,2.6-21.6,7.8s-9.3,12.6-10.9,22.3H964.7z"
-              />
-              <path
-                className={`${css.st0}`}
-                d="M1094.9,490.2c-11.6,0.2-23.1-2.9-33-9c-9.7-6-17.4-14.6-23.1-25.9s-8.5-24.1-8.5-38.7
+            />
+            <path
+              className={`${css.st0}`}
+              d="M1094.9,490.2c-11.6,0.2-23.1-2.9-33-9c-9.7-6-17.4-14.6-23.1-25.9s-8.5-24.1-8.5-38.7
 			c-0.2-12.8,2.7-25.5,8.3-37.1c5.3-11,13.5-20.3,23.7-27.1c10.2-6.8,22.2-10.4,34.5-10.3c9-0.1,17.8,1.9,25.8,5.9
 			c7.5,3.7,13.9,9.5,18.5,16.5l0.5-18h36.4v139.1h-36.4l-0.5-17.8c-4.6,7.2-11.2,12.9-18.9,16.5
 			C1114.4,488.3,1105.3,490.2,1094.9,490.2z M1105.3,456.3c10.8,0,19.6-3.7,26.5-11.2s10.4-17.1,10.4-29c0-11.7-3.4-21.2-10.3-28.7
 			c-6.8-7.5-15.7-11.2-26.7-11.2c-10.9,0-19.8,3.7-26.7,11.2c-6.8,7.5-10.3,17-10.3,28.7c0,11.9,3.5,21.5,10.4,29
 			C1085.7,452.5,1094.5,456.3,1105.3,456.3z"
-              />
-              <path
-                className={`${css.st0}`}
-                d="M1279.7,490.2c-17.3,0-30.2-4.4-38.6-13.3c-8.4-8.8-12.6-22.4-12.6-40.6V378h-27.1v-31.4h27.1v-37.7h38v37.7
+            />
+            <path
+              className={`${css.st0}`}
+              d="M1279.7,490.2c-17.3,0-30.2-4.4-38.6-13.3c-8.4-8.8-12.6-22.4-12.6-40.6V378h-27.1v-31.4h27.1v-37.7h38v37.7
 			h43.5v31.5h-43.5v51.4c0,9.7,1.6,16.6,4.9,20.8s8.8,6.3,16.7,6.3c8.6,0.1,17-2,24.6-6l4.1,31.7c-5.1,2.7-10.6,4.6-16.3,5.7
 			C1293.8,489.5,1286.8,490.2,1279.7,490.2z"
-              />
-              <path
-                className={`${css.st0}`}
-                d="M1416.5,490.2c-16.2,0-30.4-2.9-42.5-8.8c-11.8-5.5-21.6-14.4-28.3-25.6c-6.7-11.2-10.1-24.4-10.1-39.5
+            />
+            <path
+              className={`${css.st0}`}
+              d="M1416.5,490.2c-16.2,0-30.4-2.9-42.5-8.8c-11.8-5.5-21.6-14.4-28.3-25.6c-6.7-11.2-10.1-24.4-10.1-39.5
 			c0-14,2.9-26.6,8.8-37.9c5.6-11,14.3-20.2,24.9-26.5c10.8-6.5,23.2-9.7,37.5-9.7c13.1,0,24.7,2.8,34.6,8.3
 			c9.9,5.5,18,13.9,23.3,23.9c5.6,10.4,8.3,22.7,8.3,36.9c0,5.5-0.4,11-1.4,16.4h-98.2c4.7,20.8,20.5,31.2,47.3,31.2
 			c8.2,0,16.4-0.9,24.5-2.6c7.5-1.6,14.7-4.1,21.5-7.5l3.8,29.8c-7.6,4-15.7,6.9-24.1,8.5C1436.5,489.2,1426.5,490.2,1416.5,490.2z
 			 M1436.5,401.3c-0.9-9.7-4.1-17.1-9.5-22.3s-12.5-7.8-21.5-7.8c-8.7,0-15.9,2.6-21.6,7.8s-9.3,12.6-10.9,22.3H1436.5z"
-              />
-              <path
-                className={`${css.st0}`}
-                d="M1554.3,490.2c-10.1,0.1-20.3-1.2-30.1-3.7c-9.5-2.5-16.8-5.7-21.9-9.7l4.7-30.9c13.6,8.8,29.4,13.6,45.7,14
+            />
+            <path
+              className={`${css.st0}`}
+              d="M1554.3,490.2c-10.1,0.1-20.3-1.2-30.1-3.7c-9.5-2.5-16.8-5.7-21.9-9.7l4.7-30.9c13.6,8.8,29.4,13.6,45.7,14
 			c15.5,0,23.3-3.9,23.3-11.8c0.2-3.8-1.7-7.5-4.9-9.6c-3.3-2.2-10.1-4.7-20.5-7.6c-16.4-4.6-28.1-10.3-35.2-17.4
 			c-7-7-10.5-16.5-10.5-28.3c0-13.3,5-23.8,15-31.5c10-7.6,23.8-11.5,41.3-11.5c8.7,0,17.3,1,25.7,3c8.6,2,15.6,4.6,21.1,7.9
 			l-4.4,30.1c-6.1-3.5-12.7-6.1-19.6-7.8c-6.9-1.9-14-2.8-21.2-2.9c-13.3,0-20,3.6-20,10.7c-0.1,3.8,1.7,7.3,4.8,9.4
 			c3.2,2.3,9.5,4.8,19,7.5c17.5,5.1,29.9,11.1,37.1,18c7.2,6.9,10.8,16.5,10.9,28.8c0,13.5-5.3,24.1-16,31.7
 			C1587.8,486.4,1573.1,490.2,1554.3,490.2z"
-              />
+            />
 
-              <linearGradient
-                id="SVGID_1_"
-                gradientUnits="userSpaceOnUse"
-                x1="269.2103"
-                y1="338.9057"
-                x2="26.4203"
-                y2="-71.8843"
-                gradientTransform="matrix(1 0 0 -1 0 550)"
-              >
-                <stop offset="3.000000e-02" stopColor="#666666" />
-                <stop offset="11%" stopColor="#858585" />
-                <stop offset="24%" stopColor="#B1B1B1" />
-                <stop offset="36%" stopColor="#D3D3D3" />
-                <stop offset="48%" stopColor="#EBEBEB" />
-                <stop offset="58%" stopColor="#FAFAFA" />
-                <stop offset="67%" stopColor="#FFFFFF" />
-              </linearGradient>
-              <path
-                className={`${css.st1}`}
-                d="M249.6,419.1c0,71.5-58,129.5-129.5,129.5H0c0-6,1.7-11.9,4.8-17c3.2-5.1,7.6-9.3,13-12
+            <linearGradient
+              id="SVGID_1_"
+              gradientUnits="userSpaceOnUse"
+              x1="269.2103"
+              y1="338.9057"
+              x2="26.4203"
+              y2="-71.8843"
+              gradientTransform="matrix(1 0 0 -1 0 550)"
+            >
+              <stop offset="3.000000e-02" stopColor="#666666" />
+              <stop offset="11%" stopColor="#858585" />
+              <stop offset="24%" stopColor="#B1B1B1" />
+              <stop offset="36%" stopColor="#D3D3D3" />
+              <stop offset="48%" stopColor="#EBEBEB" />
+              <stop offset="58%" stopColor="#FAFAFA" />
+              <stop offset="67%" stopColor="#FFFFFF" />
+            </linearGradient>
+            <path
+              className={`${css.st1}`}
+              d="M249.6,419.1c0,71.5-58,129.5-129.5,129.5H0c0-6,1.7-11.9,4.8-17c3.2-5.1,7.6-9.3,13-12
 			c89.2-45.2,150.6-141.9,151.7-248.1c-0.4-25.1-6.4-49.8-17.5-72.3C153.5,201.6,249.6,354.8,249.6,419.1z"
-              />
+            />
 
-              <linearGradient
-                id="SVGID_2_"
-                gradientUnits="userSpaceOnUse"
-                x1="225.8099"
-                y1="644.6601"
-                x2="-202.5601"
-                y2="-236.5899"
-                gradientTransform="matrix(1 0 0 -1 0 550)"
-              >
-                <stop offset="0%" style={{ stopColor: "#FFFFFF" }} />
-                <stop offset="18%" style={{ stopColor: "#FAFAFA" }} />
-                <stop offset="39%" style={{ stopColor: "#ECECEC" }} />
-                <stop offset="61%" style={{ stopColor: "#D4D4D4" }} />
-                <stop offset="85%" style={{ stopColor: "#B3B3B3" }} />
-                <stop offset="1%" style={{ stopColor: "#999999" }} />
-              </linearGradient>
-              <path
-                className={`${css.st2}`}
-                d="M249.6,91H144.8c0,57.9,46.9,104.8,104.8,104.8h0c-61.5,8.7-97.5,3.4-97.5,3.4c-28.8-2.9-56.3-13.2-80-29.9
+            <linearGradient
+              id="SVGID_2_"
+              gradientUnits="userSpaceOnUse"
+              x1="225.8099"
+              y1="644.6601"
+              x2="-202.5601"
+              y2="-236.5899"
+              gradientTransform="matrix(1 0 0 -1 0 550)"
+            >
+              <stop offset="0%" style={{ stopColor: "#FFFFFF" }} />
+              <stop offset="18%" style={{ stopColor: "#FAFAFA" }} />
+              <stop offset="39%" style={{ stopColor: "#ECECEC" }} />
+              <stop offset="61%" style={{ stopColor: "#D4D4D4" }} />
+              <stop offset="85%" style={{ stopColor: "#B3B3B3" }} />
+              <stop offset="1%" style={{ stopColor: "#999999" }} />
+            </linearGradient>
+            <path
+              className={`${css.st2}`}
+              d="M249.6,91H144.8c0,57.9,46.9,104.8,104.8,104.8h0c-61.5,8.7-97.5,3.4-97.5,3.4c-28.8-2.9-56.3-13.2-80-29.9
 			c-23.2-16.3-42-38.2-54.5-63.6l0,0C5.9,82.3,0,56.6,0,30.6h169.5V0h30.6c27.3,0,49.5,22.1,49.5,49.5c0,0,0,0,0,0L249.6,91z"
-              />
+            />
 
-              <linearGradient
-                id="SVGID_3_"
-                gradientUnits="userSpaceOnUse"
-                x1="174.6403"
-                y1="501.8701"
-                x2="331.6003"
-                y2="-394.0999"
-                gradientTransform="matrix(1 0 0 -1 0 550)"
-              >
-                <stop offset="0.13" style={{ stopColor: "#999999" }} />
-                <stop offset="0.14" style={{ stopColor: "#A3A3A3" }} />
-                <stop offset="0.17" style={{ stopColor: "#BFBFBF" }} />
-                <stop offset="0.21" style={{ stopColor: "#D7D7D7" }} />
-                <stop offset="0.25" style={{ stopColor: "#E9E9E9" }} />
-                <stop offset="0.3" style={{ stopColor: "#F6F6F6" }} />
-                <stop offset="0.36" style={{ stopColor: "#FDFDFD" }} />
-                <stop offset="0.51" style={{ stopColor: "#FFFFFF" }} />
-              </linearGradient>
-              <path
-                className={`${css.st3}`}
-                d="M249.6,195.8v223.3c0-64.3-96-217.5-97.5-219.9C152,199.2,188.1,204.5,249.6,195.8z"
-              />
+            <linearGradient
+              id="SVGID_3_"
+              gradientUnits="userSpaceOnUse"
+              x1="174.6403"
+              y1="501.8701"
+              x2="331.6003"
+              y2="-394.0999"
+              gradientTransform="matrix(1 0 0 -1 0 550)"
+            >
+              <stop offset="0.13" style={{ stopColor: "#999999" }} />
+              <stop offset="0.14" style={{ stopColor: "#A3A3A3" }} />
+              <stop offset="0.17" style={{ stopColor: "#BFBFBF" }} />
+              <stop offset="0.21" style={{ stopColor: "#D7D7D7" }} />
+              <stop offset="0.25" style={{ stopColor: "#E9E9E9" }} />
+              <stop offset="0.3" style={{ stopColor: "#F6F6F6" }} />
+              <stop offset="0.36" style={{ stopColor: "#FDFDFD" }} />
+              <stop offset="0.51" style={{ stopColor: "#FFFFFF" }} />
+            </linearGradient>
+            <path
+              className={`${css.st3}`}
+              d="M249.6,195.8v223.3c0-64.3-96-217.5-97.5-219.9C152,199.2,188.1,204.5,249.6,195.8z"
+            />
 
-              <linearGradient
-                id="SVGID_4_"
-                gradientUnits="userSpaceOnUse"
-                x1="292.013"
-                y1="294.5699"
-                x2="507.8329"
-                y2="3.5499"
-                gradientTransform="matrix(1 0 0 -1 0 550)"
-              >
-                <stop offset="3.000000e-02" style={{ stopColor: "#666666" }} />
-                <stop offset="0.11" style={{ stopColor: "#858585" }} />
-                <stop offset="0.24" style={{ stopColor: "#B1B1B1" }} />
-                <stop offset="0.36" style={{ stopColor: "#D3D3D3" }} />
-                <stop offset="0.48" style={{ stopColor: "#EBEBEB" }} />
-                <stop offset="0.58" style={{ stopColor: "#FAFAFA" }} />
-                <stop offset="0.67" style={{ stopColor: "#FFFFFF" }} />
-              </linearGradient>
-              <path
-                className={`${css.st4}`}
-                d="M548.6,548.6h-120c-71.5,0.1-129.5-57.8-129.6-129.3c0-0.1,0-0.1,0-0.2c0-64.1,95.7-216.8,97.5-219.8
+            <linearGradient
+              id="SVGID_4_"
+              gradientUnits="userSpaceOnUse"
+              x1="292.013"
+              y1="294.5699"
+              x2="507.8329"
+              y2="3.5499"
+              gradientTransform="matrix(1 0 0 -1 0 550)"
+            >
+              <stop offset="3.000000e-02" style={{ stopColor: "#666666" }} />
+              <stop offset="0.11" style={{ stopColor: "#858585" }} />
+              <stop offset="0.24" style={{ stopColor: "#B1B1B1" }} />
+              <stop offset="0.36" style={{ stopColor: "#D3D3D3" }} />
+              <stop offset="0.48" style={{ stopColor: "#EBEBEB" }} />
+              <stop offset="0.58" style={{ stopColor: "#FAFAFA" }} />
+              <stop offset="0.67" style={{ stopColor: "#FFFFFF" }} />
+            </linearGradient>
+            <path
+              className={`${css.st4}`}
+              d="M548.6,548.6h-120c-71.5,0.1-129.5-57.8-129.6-129.3c0-0.1,0-0.1,0-0.2c0-64.1,95.7-216.8,97.5-219.8
 			c-11.1,22.5-17.1,47.2-17.5,72.3c1.1,106.2,62.5,202.9,151.6,248.1C541.6,525.1,548.6,536.3,548.6,548.6z"
-              />
+            />
 
-              <linearGradient
-                id="SVGID_5_"
-                gradientUnits="userSpaceOnUse"
-                x1="291.3208"
-                y1="516.4904"
-                x2="502.2309"
-                y2="-19.7797"
-                gradientTransform="matrix(1 0 0 -1 0 550)"
-              >
-                <stop offset="0.2" style={{ stopColor: "#999999" }} />
-                <stop offset="0.22" style={{ stopColor: "#A3A3A3" }} />
-                <stop offset="0.27" style={{ stopColor: "#C4C4C4" }} />
-                <stop offset="0.33" style={{ stopColor: "#DEDEDE" }} />
-                <stop offset="0.39" style={{ stopColor: "#F0F0F0" }} />
-                <stop offset="0.45" style={{ stopColor: "#FBFBFB" }} />
-                <stop offset="0.51" style={{ stopColor: "#FFFFFF" }} />
-              </linearGradient>
-              <path
-                className={`${css.st5}`}
-                d="M470.7,123.7c-1.4,0.8-46.5,28.7-74.2,75.6c-1.8,3-97.5,155.7-97.5,219.8V186.6
+            <linearGradient
+              id="SVGID_5_"
+              gradientUnits="userSpaceOnUse"
+              x1="291.3208"
+              y1="516.4904"
+              x2="502.2309"
+              y2="-19.7797"
+              gradientTransform="matrix(1 0 0 -1 0 550)"
+            >
+              <stop offset="0.2" style={{ stopColor: "#999999" }} />
+              <stop offset="0.22" style={{ stopColor: "#A3A3A3" }} />
+              <stop offset="0.27" style={{ stopColor: "#C4C4C4" }} />
+              <stop offset="0.33" style={{ stopColor: "#DEDEDE" }} />
+              <stop offset="0.39" style={{ stopColor: "#F0F0F0" }} />
+              <stop offset="0.45" style={{ stopColor: "#FBFBFB" }} />
+              <stop offset="0.51" style={{ stopColor: "#FFFFFF" }} />
+            </linearGradient>
+            <path
+              className={`${css.st5}`}
+              d="M470.7,123.7c-1.4,0.8-46.5,28.7-74.2,75.6c-1.8,3-97.5,155.7-97.5,219.8V186.6
 			C347.3,175.6,405.6,156.4,470.7,123.7z"
-              />
+            />
 
-              <linearGradient
-                id="SVGID_6_"
-                gradientUnits="userSpaceOnUse"
-                x1="343.0724"
-                y1="627.5406"
-                x2="612.8425"
-                y2="56.9306"
-                gradientTransform="matrix(1 0 0 -1 0 550)"
-              >
-                <stop offset="0" style={{ stopColor: "#FFFFFF" }} />
-                <stop offset="0.18" style={{ stopColor: "#FAFAFA" }} />
-                <stop offset="0.39" style={{ stopColor: "#ECECEC" }} />
-                <stop offset="0.61" style={{ stopColor: "#D4D4D4" }} />
-                <stop offset="0.85" style={{ stopColor: "#B3B3B3" }} />
-                <stop offset="1" style={{ stopColor: "#999999" }} />
-              </linearGradient>
-              <path
-                className={`${css.st6}`}
-                d="M548.6,0v2c0,51.2-29.4,97.6-75.3,120.3l-2.6,1.3l0,0l0,0c-65.1,32.8-123.4,51.9-171.7,62.9V49.5
+            <linearGradient
+              id="SVGID_6_"
+              gradientUnits="userSpaceOnUse"
+              x1="343.0724"
+              y1="627.5406"
+              x2="612.8425"
+              y2="56.9306"
+              gradientTransform="matrix(1 0 0 -1 0 550)"
+            >
+              <stop offset="0" style={{ stopColor: "#FFFFFF" }} />
+              <stop offset="0.18" style={{ stopColor: "#FAFAFA" }} />
+              <stop offset="0.39" style={{ stopColor: "#ECECEC" }} />
+              <stop offset="0.61" style={{ stopColor: "#D4D4D4" }} />
+              <stop offset="0.85" style={{ stopColor: "#B3B3B3" }} />
+              <stop offset="1" style={{ stopColor: "#999999" }} />
+            </linearGradient>
+            <path
+              className={`${css.st6}`}
+              d="M548.6,0v2c0,51.2-29.4,97.6-75.3,120.3l-2.6,1.3l0,0l0,0c-65.1,32.8-123.4,51.9-171.7,62.9V49.5
 			c0-27.3,22.1-49.5,49.4-49.5H548.6z"
-              />
-            </g>
+            />
           </g>
-        </svg>
-      </defs>
+        </g>
+      </svg>
     </div>
   )
 }

@@ -1,26 +1,19 @@
-// .fullLogoWrapper {
-//   & .st0 {
-//     fill: #f5f5f5;
-//   }
-//   & .st1 {
-//     fill: url(#SVGID_1_);
-//   }
-//   & .st2 {
-//     fill: url(#SVGID_2_);
-//   }
-//   & .st3 {
-//     fill: url(#SVGID_3_);
-//   }
-//   & .st4 {
-//     fill: url(#SVGID_4_);
-//   }
-//   & .st5 {
-//     fill: url(#SVGID_5_);
-//   }
-//   & .st6 {
-//     fill: url(#SVGID_6_);
-//   }
-// }
+.navBar {
+  height: 66%;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: 5%;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  //   border: solid 1px black;
+  & svg {
+    height: 100%;
+    width: auto;
+  }
+}
 
 .st0 {
   fill: #f5f5f5;
