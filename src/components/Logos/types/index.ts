@@ -1,0 +1,1 @@
+export { LogoProps } from "./interfaces"

@@ -1,0 +1,1 @@
+export { FullLogo } from "./FullLogo"
