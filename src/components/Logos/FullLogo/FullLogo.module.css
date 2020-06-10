@@ -5,8 +5,6 @@
   width: fit-content;
   margin-right: auto;
   margin-left: 5%;
-  margin-top: auto;
-  margin-bottom: auto;
   position: relative;
   top: 50%;
   -webkit-transform: translate(0, -50%);

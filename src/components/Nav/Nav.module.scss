@@ -1,5 +1,38 @@
 .navWrapper {
   width: 100vw;
   height: 12.5vh;
-  background: #0f2027;
+  display: flex;
+  flex-flow: row;
+  background: transparent;
+  justify-content: space-between;
+  border: solid 1px white;
+  & .linksWrapper {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: auto;
+    margin-right: 5%;
+    top: 50%;
+    justify-content: right;
+    width: 100%;
+    height: 50%;
+    transform: translate(0, -50%);
+    border: solid 1px white;
+    & .link {
+      height: fit-content;
+      position: relative;
+      margin-left: 5%;
+      margin-right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      position: relative;
+      border: solid 1px red;
+      & .text {
+        height: fit-content;
+        width: fit-content;
+        color: white;
+        font-size: 150%;
+      }
+    }
+  }
 }

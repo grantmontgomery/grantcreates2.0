@@ -7,8 +7,6 @@ const IndexPage = () => {
   return (
     <React.Fragment>
       <Nav></Nav>
-      <div>Home</div>
-      <TestComponent></TestComponent>
     </React.Fragment>
   )
 }
