@@ -6,6 +6,11 @@
   background: transparent;
   justify-content: space-between;
   border: solid 1px white;
+
+  & .logoLink {
+    margin-left: 5%;
+    margin-right: auto;
+  }
   & .linksWrapper {
     position: relative;
     display: flex;
@@ -14,25 +19,123 @@
     margin-right: 5%;
     top: 50%;
     justify-content: right;
-    width: 100%;
+    width: 50%;
     height: 50%;
     transform: translate(0, -50%);
-    border: solid 1px white;
+    & a {
+      text-decoration: none;
+    }
     & .link {
       height: fit-content;
       position: relative;
-      margin-left: 5%;
-      margin-right: 0;
+      margin-left: auto;
       top: 50%;
       transform: translate(0, -50%);
       position: relative;
-      border: solid 1px red;
       & .text {
         height: fit-content;
         width: fit-content;
+        font-family: "Objektiv-mk1";
         color: white;
+        font-weight: medium;
         font-size: 150%;
       }
     }
   }
 }
+
+// Objektiv Mk1 Italic
+
+// font-family: objektiv-mk1, sans-serif;
+
+// font-weight: 400;
+
+// font-style: italic;
+
+// Objektiv Mk1 Regular
+
+// font-family: objektiv-mk1, sans-serif;
+
+// font-weight: 400;
+
+// font-style: normal;
+
+// Objektiv Mk1 Bold
+
+// font-family: objektiv-mk1, sans-serif;
+
+// font-weight: 700;
+
+// font-style: normal;
+
+// Objektiv Mk1 Bold Italic
+
+// font-family: objektiv-mk1, sans-serif;
+
+// font-weight: 700;
+
+// font-style: italic;
+
+// Objektiv Mk2 Italic
+
+// font-family: objektiv-mk2, sans-serif;
+
+// font-weight: 400;
+
+// font-style: italic;
+
+// Objektiv Mk2 Regular
+
+// font-family: objektiv-mk2, sans-serif;
+
+// font-weight: 400;
+
+// font-style: normal;
+
+// Objektiv Mk2 Bold
+
+// font-family: objektiv-mk2, sans-serif;
+
+// font-weight: 700;
+
+// font-style: normal;
+
+// Objektiv Mk2 Bold Italic
+
+// font-family: objektiv-mk2, sans-serif;
+
+// font-weight: 700;
+
+// font-style: italic;
+
+// Objektiv Mk3 Italic
+
+// font-family: objektiv-mk3, sans-serif;
+
+// font-weight: 400;
+
+// font-style: italic;
+
+// Objektiv Mk3 Regular
+
+// font-family: objektiv-mk3, sans-serif;
+
+// font-weight: 400;
+
+// font-style: normal;
+
+// Objektiv Mk3 Bold Italic
+
+// font-family: objektiv-mk3, sans-serif;
+
+// font-weight: 700;
+
+// font-style: italic;
+
+// Objektiv Mk3 Bold
+
+// font-family: objektiv-mk3, sans-serif;
+
+// font-weight: 700;
+
+// font-style: normal;

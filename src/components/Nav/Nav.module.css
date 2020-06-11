@@ -15,6 +15,11 @@
   border: solid 1px white;
 }
 
+.navWrapper .logoLink {
+  margin-left: 5%;
+  margin-right: auto;
+}
+
 .navWrapper .linksWrapper {
   position: relative;
   display: -webkit-box;
@@ -30,11 +35,14 @@
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  width: 100%;
+  width: 50%;
   height: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  border: solid 1px white;
+}
+
+.navWrapper .linksWrapper a {
+  text-decoration: none;
 }
 
 .navWrapper .linksWrapper .link {
@@ -42,13 +50,11 @@
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
-  margin-left: 5%;
-  margin-right: 0;
+  margin-left: auto;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   position: relative;
-  border: solid 1px red;
 }
 
 .navWrapper .linksWrapper .link .text {
@@ -58,7 +64,9 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-family: "Objektiv-mk1";
   color: white;
+  font-weight: medium;
   font-size: 150%;
 }
 /*# sourceMappingURL=Nav.module.css.map */
