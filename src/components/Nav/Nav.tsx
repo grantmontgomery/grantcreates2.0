@@ -1,5 +1,5 @@
 import * as React from "react"
-import { FullLogo, Anvil } from "../Logos"
+import { FullLogo, DarkLogo, Anvil } from "../Logos"
 import css from "./Nav.module.css"
 
 export const Nav = () => {
@@ -7,8 +7,8 @@ export const Nav = () => {
     <nav className={`navWrapper ${css.navWrapper}`}>
       <a href="" className={`logoLink ${css.logoLink}`}>
         <FullLogo location="navBar"></FullLogo>
+        {/* <DarkLogo location="navBar"></DarkLogo> */}
       </a>
-      {/* <Anvil location="navBar"></Anvil> */}
       <div className={`linksWrapper ${css.linksWrapper}`}>
         <div className={`link ${css.link}`}>
           <a href="">

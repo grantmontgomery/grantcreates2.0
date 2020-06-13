@@ -41,10 +41,6 @@
           transform: translate(0, -50%);
 }
 
-.navWrapper .linksWrapper a {
-  text-decoration: none;
-}
-
 .navWrapper .linksWrapper .link {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -57,7 +53,11 @@
   position: relative;
 }
 
-.navWrapper .linksWrapper .link .text {
+.navWrapper .linksWrapper .link a {
+  text-decoration: none;
+}
+
+.navWrapper .linksWrapper .link a .text {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;

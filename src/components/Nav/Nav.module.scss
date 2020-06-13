@@ -22,9 +22,7 @@
     width: 50%;
     height: 50%;
     transform: translate(0, -50%);
-    & a {
-      text-decoration: none;
-    }
+
     & .link {
       height: fit-content;
       position: relative;
@@ -32,13 +30,16 @@
       top: 50%;
       transform: translate(0, -50%);
       position: relative;
-      & .text {
-        height: fit-content;
-        width: fit-content;
-        font-family: "Objektiv-mk1";
-        color: white;
-        font-weight: medium;
-        font-size: 150%;
+      & a {
+        text-decoration: none;
+        & .text {
+          height: fit-content;
+          width: fit-content;
+          font-family: "Objektiv-mk1";
+          color: white;
+          font-weight: medium;
+          font-size: 150%;
+        }
       }
     }
   }
