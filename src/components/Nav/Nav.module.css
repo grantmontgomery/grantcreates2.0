@@ -1,6 +1,6 @@
 .navWrapper {
   width: 100vw;
-  height: 12.5vh;
+  height: 11vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,7 +35,7 @@
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  width: 50%;
+  width: 56%;
   height: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);

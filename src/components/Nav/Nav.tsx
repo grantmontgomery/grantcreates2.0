@@ -12,23 +12,17 @@ export const Nav = () => {
       <div className={`linksWrapper ${css.linksWrapper}`}>
         <div className={`link ${css.link}`}>
           <a href="">
+            <div className={`text ${css.text}`}>About</div>
+          </a>
+        </div>
+        <div className={`link ${css.link}`}>
+          <a href="">
             <div className={`text ${css.text}`}>Creations</div>
           </a>
         </div>
         <div className={`link ${css.link}`}>
           <a href="">
-            <div className={`text ${css.text}`}>Tools</div>
-          </a>
-        </div>
-        <div className={`link ${css.link}`}>
-          <a href="">
             <div className={`text ${css.text}`}>Resume</div>
-          </a>
-        </div>
-        <div className={`link ${css.link}`}>
-          <a href="">
-            {" "}
-            <div className={`text ${css.text}`}>About</div>
           </a>
         </div>
         <div className={`link ${css.link}`}>
