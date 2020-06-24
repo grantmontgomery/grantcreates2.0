@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,oBAAoB;CAC7B",
+    "sources": [
+        "CreationsPage.module.scss"
+    ],
+    "names": [],
+    "file": "CreationsPage.module.css"
+}

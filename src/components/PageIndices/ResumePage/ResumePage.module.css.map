@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,MAAM;CACf",
+    "sources": [
+        "ResumePage.module.scss"
+    ],
+    "names": [],
+    "file": "ResumePage.module.css"
+}
