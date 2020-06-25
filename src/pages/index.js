@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import {
   TestComponent,
   Nav,
@@ -13,9 +13,11 @@ const IndexPage = () => {
   return (
     <React.Fragment>
       <Nav></Nav>
-      <HomePage></HomePage>
-      <AboutPage></AboutPage>
-      <CreationsPage></CreationsPage>
+      <main>
+        <HomePage></HomePage>
+        <AboutPage></AboutPage>
+        <CreationsPage></CreationsPage>
+      </main>
     </React.Fragment>
   )
 }

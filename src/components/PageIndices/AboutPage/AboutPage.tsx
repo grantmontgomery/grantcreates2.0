@@ -9,5 +9,5 @@ import * as React from "react"
 import css from "./AboutPage.module.css"
 
 export const AboutPage = () => {
-  return <div className={`aboutPage ${css.aboutPage}`}></div>
+  return <section id="about" className={`${css.about}`}></section>
 }
