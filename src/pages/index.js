@@ -16,11 +16,6 @@ const IndexPage = () => {
     <React.Fragment>
       <Nav></Nav>
       <main>
-        <Canvas>
-          <ambientLight></ambientLight>
-          <pointLight position={[10, 10, 10]}></pointLight>
-          <BoxTest></BoxTest>
-        </Canvas>
         <HomePage></HomePage>
         <AboutPage></AboutPage>
         <CreationsPage></CreationsPage>
