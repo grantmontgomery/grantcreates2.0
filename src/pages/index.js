@@ -5,8 +5,10 @@ import {
   HomePage,
   AboutPage,
   CreationsPage,
+  BoxTest,
 } from "../components"
 import { Link } from "gatsby"
+import { Canvas } from "react-three-fiber"
 import "./index.css"
 
 const IndexPage = () => {
@@ -14,6 +16,9 @@ const IndexPage = () => {
     <React.Fragment>
       <Nav></Nav>
       <main>
+        <Canvas>
+          <BoxTest></BoxTest>
+        </Canvas>
         <HomePage></HomePage>
         <AboutPage></AboutPage>
         <CreationsPage></CreationsPage>
