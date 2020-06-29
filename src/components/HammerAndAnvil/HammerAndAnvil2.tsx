@@ -1,6 +1,7 @@
 import * as React from "react"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import css from "./HammerAndAnvil.module.css"
+
 import * as THREE from "three"
 
 const HammerAndAnvil = () => {
@@ -11,28 +12,48 @@ const HammerAndAnvil = () => {
     0.1,
     1000
   )
-  const renderer = new THREE.WebGLRenderer({ antialias: true })
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
   renderer.setSize(window.innerWidth, window.innerHeight * 0.89)
+  renderer.setClearColor(0x000000, 0)
   document.getElementById("canvas").appendChild(renderer.domElement)
 
-  const geometry = new THREE.BoxGeometry()
-  const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 })
-  const cube = new THREE.Mesh(geometry, material)
-  scene.add(cube)
+  const ambient = new THREE.AmbientLight(0x404040)
+
+  const point = new THREE.PointLight(0xfffff, 1, 100)
+  point.position.set(50, 50, 50)
+
+  scene.add(point)
+  scene.add(ambient)
+
+  //   const geometry = new THREE.BoxBufferGeometry()
+  //   const material = new THREE.MeshLambertMaterial({ color: 0xffffff })
+  //   const cube = new THREE.Mesh(geometry, material)
+  //   scene.add(cube)
+
+  const loader = new GLTFLoader()
+
+  loader.load(
+    "../../../public/assets/GrantCreates3D.gltf",
+    function (gltf) {
+      scene.add(gltf.scene)
+    },
+    function (loading) {
+      console.log(loading)
+    },
+    function (error) {
+      console.error(error)
+    }
+  )
 
   camera.position.z = 5
 
   const animate = function () {
     requestAnimationFrame(animate)
 
-    cube.rotation.x += 0.01
-    cube.rotation.y += 0.01
-
     renderer.render(scene, camera)
   }
 
   animate()
-  renderer.render(scene, camera)
 }
 
 export const Scene = () => {
