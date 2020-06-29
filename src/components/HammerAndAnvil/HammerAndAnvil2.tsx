@@ -1,5 +1,9 @@
 import * as React from "react"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader"
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader"
+import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader"
+
 import css from "./HammerAndAnvil.module.css"
 
 import * as THREE from "three"
@@ -33,7 +37,7 @@ const HammerAndAnvil = () => {
   const loader = new GLTFLoader()
 
   loader.load(
-    "../../../public/assets/GrantCreates3D.gltf",
+    "static/GrantCreates3DGLB.glb",
     function (gltf) {
       scene.add(gltf.scene)
     },
@@ -45,7 +49,7 @@ const HammerAndAnvil = () => {
     }
   )
 
-  camera.position.z = 5
+  camera.position.z = 0.25
 
   const animate = function () {
     requestAnimationFrame(animate)
