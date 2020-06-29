@@ -21,22 +21,25 @@ const HammerAndAnvil = () => {
   document.getElementById("canvas").appendChild(renderer.domElement)
 
   const controls = new OrbitControls(camera, renderer.domElement)
+  controls.enableZoom = false
+  controls.autoRotate = true
 
-  camera.position.z = 0.15
-  camera.position.y = 0.15
+  controls.maxPolarAngle = 0
+  controls.minPolarAngle = 0.85
+  console.log(controls)
+  camera.position.z = 5
 
-  const ambient = new THREE.AmbientLight(0x404040)
+  const ambient = new THREE.AmbientLight(0x00000)
 
-  const point = new THREE.PointLight(0xfffff, 1, 100)
-  point.position.set(1, 1, 1)
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 2)
+  directionalLight.position.set(0, 300, 500)
+  directionalLight.castShadow = true
+
+  const point = new THREE.PointLight(0xfffff, 2)
+  point.position.set(5, 5, 5)
 
   scene.add(point)
   scene.add(ambient)
-
-  //   const geometry = new THREE.BoxBufferGeometry()
-  //   const material = new THREE.MeshLambertMaterial({ color: 0xffffff })
-  //   const cube = new THREE.Mesh(geometry, material)
-  //   scene.add(cube)
 
   const loader = new GLTFLoader()
 
@@ -44,6 +47,15 @@ const HammerAndAnvil = () => {
     "static/GrantCreates3DGLB.glb",
     function (gltf) {
       scene.add(gltf.scene)
+      console.log(gltf.scene.children)
+
+      gltf.scene.children[0].scale.x = 0.03
+      gltf.scene.children[0].scale.y = 0.03
+      gltf.scene.children[0].scale.z = 0.03
+
+      gltf.scene.children[0].position.x = 0
+      gltf.scene.children[0].position.y = 1
+      gltf.scene.children[0].position.z = 0
     },
     function (loading) {
       console.log(loading)
