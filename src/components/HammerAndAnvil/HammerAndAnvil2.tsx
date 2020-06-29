@@ -1,8 +1,6 @@
 import * as React from "react"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
-import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader"
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader"
-import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader"
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 
 import css from "./HammerAndAnvil.module.css"
 
@@ -16,15 +14,21 @@ const HammerAndAnvil = () => {
     0.1,
     1000
   )
+
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
   renderer.setSize(window.innerWidth, window.innerHeight * 0.89)
   renderer.setClearColor(0x000000, 0)
   document.getElementById("canvas").appendChild(renderer.domElement)
 
+  const controls = new OrbitControls(camera, renderer.domElement)
+
+  camera.position.z = 0.15
+  camera.position.y = 0.15
+
   const ambient = new THREE.AmbientLight(0x404040)
 
   const point = new THREE.PointLight(0xfffff, 1, 100)
-  point.position.set(50, 50, 50)
+  point.position.set(1, 1, 1)
 
   scene.add(point)
   scene.add(ambient)
@@ -49,11 +53,9 @@ const HammerAndAnvil = () => {
     }
   )
 
-  camera.position.z = 0.25
-
   const animate = function () {
     requestAnimationFrame(animate)
-
+    controls.update()
     renderer.render(scene, camera)
   }
 
