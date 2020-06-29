@@ -24,6 +24,7 @@
     "three": "^0.117.1"
   },
   "devDependencies": {
+    "file-loader": "^6.0.0",
     "prettier": "2.0.5"
   },
   "keywords": [

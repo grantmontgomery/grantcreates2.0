@@ -1,14 +1,20 @@
 import * as React from "react"
 import { BoxTest } from "../BoxTest"
-import { Canvas, useThree, useLoader } from "react-three-fiber"
+import {
+  Canvas,
+  useThree,
+  useLoader,
+  useFrame,
+  Renderer,
+} from "react-three-fiber"
 import three from "three"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import css from "./HammerAndAnvil.module.css"
 
 export const HammerAndAnvil = () => {
-  const hammerandanvil = require("./GrantCreates3D.gltf")
+  // const hammerandanvil = require("./GrantCreates3D.gltf")
 
-  const object = useLoader(GLTFLoader, hammerandanvil)
+  // const object = useLoader(GLTFLoader, hammerandanvil)
 
   return (
     <Canvas
@@ -28,9 +34,7 @@ export const HammerAndAnvil = () => {
         near={1}
         far={1000}
       ></perspectiveCamera>
-      <React.Suspense fallback={<BoxTest></BoxTest>}>
-        <primitive object={object}></primitive>
-      </React.Suspense>
+      <BoxTest></BoxTest>
       <scene autoUpdate={true} background={null} environment={null}></scene>
       {/* <BoxTest></BoxTest> */}
     </Canvas>

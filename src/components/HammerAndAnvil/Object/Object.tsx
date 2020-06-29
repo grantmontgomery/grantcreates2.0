@@ -49,3 +49,15 @@
 // };
 
 // animate();
+import * as React from 'react';
+import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader"
+ 
+
+
+ const Object = () => {
+     React.useEffect(() =>{
+        new GLTFLoader().load({
+            id:
+        })
+     })
+ }
