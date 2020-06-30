@@ -44,12 +44,13 @@ const HammerAndAnvil = () => {
   const loader = new GLTFLoader()
 
   loader.load(
-    "static/GrantCreates3DGLB.glb",
+    "static/GrantCreates3DGLB2.glb",
     function (gltf) {
       scene.add(gltf.scene)
 
-      console.log(gltf.scene.children[0].children[0])
-
+      // console.log(gltf.scene.children[0].children[0].children)
+      console.log(gltf.scene.children[0].children[0].children)
+      gltf.scene.children[0].children[0].children
       gltf.scene.children[0].scale.x = 0.03
       gltf.scene.children[0].scale.y = 0.03
       gltf.scene.children[0].scale.z = 0.03
