@@ -8,6 +8,9 @@ import * as THREE from "three"
 
 const HammerAndAnvil = () => {
   const scene = new THREE.Scene()
+
+  ///Camera
+
   const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / (window.innerHeight * 0.89),
@@ -18,8 +21,10 @@ const HammerAndAnvil = () => {
   console.log(camera)
 
   camera.position.z = 5
-  camera.position.y = 3
+  camera.position.y = 4
   camera.position.x = 0
+
+  ///Renderer
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
   renderer.setSize(window.innerWidth * 0.8, window.innerHeight * 0.89 * 0.8)
@@ -29,6 +34,9 @@ const HammerAndAnvil = () => {
   renderer.shadowMap.type = THREE.PCFSoftShadowMap
 
   document.getElementById("canvas").appendChild(renderer.domElement)
+
+  //Controls/////
+
   const controls = new OrbitControls(camera, renderer.domElement)
   controls.enableZoom = false
   controls.autoRotate = true
@@ -39,6 +47,8 @@ const HammerAndAnvil = () => {
 
   console.log(controls)
 
+  // Light //////////////////////////////
+
   const ambient = new THREE.AmbientLight(0x00000)
 
   const directionalLight = new THREE.DirectionalLight(0xffffff, 2)
@@ -46,6 +56,8 @@ const HammerAndAnvil = () => {
   directionalLight.castShadow = true
   directionalLight.shadow.mapSize.width = 1024
   directionalLight.shadow.mapSize.height = 1024
+
+  console.log(directionalLight)
 
   const lightHolder = new THREE.Group()
   lightHolder.add(directionalLight)
@@ -65,6 +77,10 @@ const HammerAndAnvil = () => {
       gltf.scene.children[0].scale.y = 0.04
       gltf.scene.children[0].scale.z = 0.04
 
+      // gltf.scene.children[0].scale.x = 0.03
+      // gltf.scene.children[0].scale.y = 0.03
+      // gltf.scene.children[0].scale.z = 0.03
+
       gltf.scene.children[0].traverse(child => {
         switch (child.type) {
           case "Object3D":
@@ -80,9 +96,12 @@ const HammerAndAnvil = () => {
         }
       })
 
-      gltf.scene.children[0].position.x = 0
-      gltf.scene.children[0].position.y = 0
-      gltf.scene.children[0].position.z = 0
+      const box = new THREE.Box3().setFromObject(gltf.scene)
+      const center = box.getCenter(new THREE.Vector3())
+
+      gltf.scene.position.x += gltf.scene.position.x - center.x
+      gltf.scene.position.y += gltf.scene.position.y - center.y
+      gltf.scene.position.z += gltf.scene.position.z - center.z
       // gltf.scene.children[0].children[1].visible = false
       console.log(gltf.scene)
     },
