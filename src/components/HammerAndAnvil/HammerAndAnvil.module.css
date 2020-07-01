@@ -6,5 +6,6 @@
 .threeD canvas {
   height: 100%;
   width: 100%;
+  outline: none;
 }
 /*# sourceMappingURL=HammerAndAnvil.module.css.map */

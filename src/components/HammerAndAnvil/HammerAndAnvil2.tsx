@@ -15,34 +15,37 @@ const HammerAndAnvil = () => {
     1000
   )
 
+  console.log(camera)
+
+  camera.position.z = 5
+  camera.position.y = 3
+  camera.position.x = 0
+
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-  renderer.setSize(window.innerWidth, window.innerHeight * 0.89)
+  renderer.setSize(window.innerWidth * 0.8, window.innerHeight * 0.89 * 0.8)
   renderer.setClearColor(0x000000, 0)
   renderer.gammaFactor = 2.2
   renderer.shadowMap.enabled = true
   renderer.shadowMap.type = THREE.PCFSoftShadowMap
-  console.log(renderer)
 
   document.getElementById("canvas").appendChild(renderer.domElement)
   const controls = new OrbitControls(camera, renderer.domElement)
   controls.enableZoom = false
   controls.autoRotate = true
   controls.enablePan = false
+  controls.rotateSpeed = 0.25
   controls.maxPolarAngle = 1.5
   controls.minPolarAngle = 0
-  camera.position.z = 5
+
   console.log(controls)
 
   const ambient = new THREE.AmbientLight(0x00000)
-
-  console.log(ambient)
 
   const directionalLight = new THREE.DirectionalLight(0xffffff, 2)
   directionalLight.position.set(30, 30, 15)
   directionalLight.castShadow = true
   directionalLight.shadow.mapSize.width = 1024
   directionalLight.shadow.mapSize.height = 1024
-  console.log(directionalLight)
 
   const lightHolder = new THREE.Group()
   lightHolder.add(directionalLight)
@@ -58,9 +61,9 @@ const HammerAndAnvil = () => {
     function (gltf) {
       scene.add(gltf.scene)
 
-      gltf.scene.children[0].scale.x = 0.03
-      gltf.scene.children[0].scale.y = 0.03
-      gltf.scene.children[0].scale.z = 0.03
+      gltf.scene.children[0].scale.x = 0.04
+      gltf.scene.children[0].scale.y = 0.04
+      gltf.scene.children[0].scale.z = 0.04
 
       gltf.scene.children[0].traverse(child => {
         switch (child.type) {
@@ -78,7 +81,7 @@ const HammerAndAnvil = () => {
       })
 
       gltf.scene.children[0].position.x = 0
-      gltf.scene.children[0].position.y = 1
+      gltf.scene.children[0].position.y = 0
       gltf.scene.children[0].position.z = 0
       // gltf.scene.children[0].children[1].visible = false
       console.log(gltf.scene)
