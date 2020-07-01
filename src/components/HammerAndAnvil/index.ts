@@ -1,1 +1,1 @@
-export { Scene } from "./HammerAndAnvil2"
+export { Scene } from "./HammerAndAnvil"
