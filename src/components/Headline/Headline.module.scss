@@ -1,0 +1,45 @@
+.headlineWrapper {
+  height: 100%;
+  margin-right: auto;
+  margin-left: 5%;
+  & .mainHeadline {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    width: auto;
+    justify-content: space-between;
+    margin-top: 11vh;
+    & h1 {
+      color: white;
+    }
+    & .staticText {
+      white-space: nowrap;
+      width: fit-content;
+      height: fit-content;
+    }
+    & .dynamicText {
+      white-space: nowrap;
+      margin-left: 2.55%;
+      position: relative;
+      height: fit-content;
+    }
+    & .dynamicText::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      border-right: solid 2px white;
+      animation: type 1s infinite ease;
+    }
+  }
+}
+
+@keyframes type {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

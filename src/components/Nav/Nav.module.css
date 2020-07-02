@@ -12,7 +12,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: solid 1px white;
 }
 
 .navWrapper .logoLink {

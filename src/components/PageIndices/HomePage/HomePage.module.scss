@@ -1,5 +1,7 @@
 .homePage {
   width: 100vw;
   height: 89vh;
-  border: solid 1px red;
+  // border: solid 1px red;
+  display: flex;
+  flex-flow: row nowrap;
 }
