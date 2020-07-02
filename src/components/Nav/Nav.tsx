@@ -1,5 +1,7 @@
 import * as React from "react"
 import { FullLogo, DarkLogo, Anvil } from "../Logos"
+import { LinksWrapper } from "../LinksWrapper"
+import { MobileNav } from "../MobileNav"
 import { Props } from "./types"
 import css from "./Nav.module.css"
 
@@ -10,7 +12,8 @@ export const Nav = () => {
         <FullLogo location="navBar"></FullLogo>
         {/* <DarkLogo location="navBar"></DarkLogo> */}
       </a>
-      <div className={`linksWrapper ${css.linksWrapper}`}>
+      <LinksWrapper location="navBar"></LinksWrapper>
+      {/* <div className={`linksWrapper ${css.linksWrapper}`}>
         <div className={`link ${css.link}`}>
           <a href="/#about">
             <div className={`text ${css.text}`}>About</div>
@@ -30,8 +33,9 @@ export const Nav = () => {
           <a href="/#contact">
             <div className={`text ${css.text}`}>Contact</div>
           </a>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
+      <MobileNav></MobileNav>
     </nav>
   )
 }

@@ -1,12 +1,24 @@
 .homePage {
   width: 100vw;
   height: 89vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+      grid-template-areas: "headline hammer";
+}
+
+@media (max-width: 1024px) {
+  .homePage {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "headline headline headline" ". hammer ." ". . .";
+    -ms-grid-columns: 20% 60% 20%;
+        grid-template-columns: 20% 60% 20%;
+    -ms-grid-rows: 25% 50% 25%;
+        grid-template-rows: 25% 50% 25%;
+  }
 }
 /*# sourceMappingURL=HomePage.module.css.map */

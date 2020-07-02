@@ -1,7 +1,17 @@
 .homePage {
   width: 100vw;
   height: 89vh;
-  // border: solid 1px red;
-  display: flex;
-  flex-flow: row nowrap;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 100%;
+  grid-template-areas: "headline hammer";
+}
+
+@media (max-width: 1024px) {
+  .homePage {
+    display: grid;
+    grid-template-areas: "headline headline headline" ". hammer ." ". . .";
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 25% 50% 25%;
+  }
 }

@@ -22,6 +22,7 @@ const HammerAndAnvil = () => {
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
 
   // renderer.setSize()
+
   function resizeCanvasToDisplaySize() {
     const canvas = renderer.domElement
     const width = canvas.clientWidth
@@ -109,6 +110,8 @@ const HammerAndAnvil = () => {
       gltf.scene.position.y += gltf.scene.position.y - center.y
       gltf.scene.position.z += gltf.scene.position.z - center.z
       // gltf.scene.children[0].children[1].visible = false
+
+      console.log(gltf.scene.children[0])
     },
 
     function (loading) {

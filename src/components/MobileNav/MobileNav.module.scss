@@ -1,0 +1,23 @@
+.mobileNavWrapper {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .mobileNavWrapper {
+    display: flex;
+
+    position: relative;
+    height: 75%;
+    width: 15%;
+    margin-right: 5%;
+    margin-left: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: solid 1px white;
+    & .line1 {
+      position: relative;
+      width: 100%;
+      border-top: 1px white;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.mobileNavWrapper {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .mobileNavWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    height: 75%;
+    width: 15%;
+    margin-right: 5%;
+    margin-left: auto;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    border: solid 1px white;
+  }
+  .mobileNavWrapper .line1 {
+    position: relative;
+    width: 100%;
+    border-top: 1px white;
+  }
+}
+/*# sourceMappingURL=MobileNav.module.css.map */
