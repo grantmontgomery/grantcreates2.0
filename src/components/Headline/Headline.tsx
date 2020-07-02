@@ -2,28 +2,6 @@ import * as React from "react"
 import { Typical } from "react-typical"
 import css from "./Headline.module.css"
 
-// const type = (creations: string[]) => {
-//   let count = 0
-//   let index = 0
-//   let currentText = ""
-//   let letter = ""
-
-//   if (count === creations.length) {
-//     count = 0
-//   }
-
-//   currentText = creations[count]
-//   letter = currentText.slice(0, ++index)
-//   document.querySelector(`.${css.dynamicText}`).textContent = letter
-//   if (letter.length === currentText.length) {
-//     count++
-//     index = 0
-//   }
-//   setTimeout(() => {
-//     type(creations)
-//   }, 400)
-// }
-
 export const Headline = () => {
   const creations: string[] = [
     "APPLICATIONS",
@@ -32,27 +10,22 @@ export const Headline = () => {
     "SOLUTIONS",
   ]
 
-  //   React.useEffect(() => type(creations), [])
+  const [creation, setCreation] = React.useState(0)
 
+  // const creationInterval = () => {
+  //   if (creation < creations.length) {
+  //     setCreation(state => state++)
+  //   } else {
+  //     setCreation(0)
+  //   }
+  // }
+
+  // setInterval(() => creationInterval(), 2000)
   return (
     <div className={`${css.headlineWrapper}`}>
       <div className={`${css.mainHeadline}`}>
-        <h1 className={`${css.staticText}`}>
-          I CREATE{" "}
-          {/* <Typical
-            loop={Infinity}
-            steps={[
-              "APPLICATIONS",
-              1000,
-              "WEBSITES",
-              1000,
-              "DESIGNS",
-              1000,
-              "SOLUTIONS",
-              1000,
-            ]}
-          ></Typical> */}
-        </h1>
+        <h1 className={`${css.staticText}`}>I CREATE</h1>
+        <h1 className={`${css.dynamicText}`}>{creations[creation]}</h1>
       </div>
     </div>
   )
