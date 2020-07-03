@@ -52,6 +52,19 @@ const HammerAndAnvil = () => {
   controls.maxPolarAngle = 1.5
   controls.minPolarAngle = 0
 
+  const plane = new THREE.PlaneBufferGeometry(20, 20)
+  const planeMaterial = new THREE.ShadowMaterial()
+
+  planeMaterial.opacity = 0.2
+
+  const planeMesh = new THREE.Mesh(plane, planeMaterial)
+  console.log(planeMesh)
+  planeMesh.receiveShadow = true
+  planeMesh.rotation.x -= Math.PI / 2
+  planeMesh.position.y = -2
+
+  scene.add(planeMesh)
+
   // Light //////////////////////////////
 
   const ambient = new THREE.AmbientLight(0x00000)
@@ -111,7 +124,7 @@ const HammerAndAnvil = () => {
       gltf.scene.position.z += gltf.scene.position.z - center.z
       // gltf.scene.children[0].children[1].visible = false
 
-      console.log(gltf.scene.children[0])
+      console.log(gltf.scene)
     },
 
     function (loading) {
@@ -120,13 +133,6 @@ const HammerAndAnvil = () => {
     function (error) {
       console.error(error)
     }
-  )
-
-  const planeGeometry = new THREE.PlaneGeometry(
-    innerWidth * 0.5,
-    innerHeight * 0.5,
-    10,
-    10
   )
 
   // const geometry = new THREE.PlaneGeometry(5, 20, 32)

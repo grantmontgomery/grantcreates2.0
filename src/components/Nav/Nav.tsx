@@ -13,21 +13,21 @@ interface State {
 export const Nav = () => {
   const [mobileState, setMobileState] = React.useState<State>({ menu: false })
 
-  // const applyTransitions = () => {
-  //   return mobileState.menu ?  (
-  //     <CSSTransition
-  //       timeout={250}
-  //       classNames={{
-  //         enter: `${transitions["modalParts-enter"]}`,
-  //         enterActive: `${transitions["modalParts-enter-active"]}`,
-  //         exit: `${transitions["modalParts-exit"]}`,
-  //         exitActive: `${transitions["modalParts-exit-active"]}`,
-  //       }}
-  //     >
-  //       <PartsModal handlePartsClose={handlePartsClose}></PartsModal>
-  //     </CSSTransition> : null
-  //   );
-  // };
+  const applyTransitions = () => {
+    return mobileState.menu ? (
+      <CSSTransition
+        timeout={250}
+        classNames={{
+          enter: `${css["links-enter"]}`,
+          enterActive: `${css["links-enter-active"]}`,
+          exit: `${css["links-exit"]}`,
+          exitActive: `${css["links-exit-active"]}`,
+        }}
+      >
+        <LinksWrapper location="mobileNav"></LinksWrapper>
+      </CSSTransition>
+    ) : null
+  }
 
   return (
     <nav className={`navWrapper ${css.navWrapper}`}>
@@ -62,9 +62,10 @@ export const Nav = () => {
         setMobileState={setMobileState}
       ></MobileNav>
       <LinksWrapper location="navBar"></LinksWrapper>
-      {mobileState.menu ? (
+      <TransitionGroup>{applyTransitions()}</TransitionGroup>
+      {/* {mobileState.menu ? (
         <LinksWrapper location="mobileNav"></LinksWrapper>
-      ) : null}
+      ) : null} */}
     </nav>
   )
 }
