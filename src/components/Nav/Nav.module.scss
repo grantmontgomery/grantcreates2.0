@@ -1,10 +1,13 @@
 .navWrapper {
+  top: 0;
   width: 100vw;
   height: 11vh;
   display: flex;
   flex-flow: row;
   background: transparent;
   justify-content: space-between;
+  position: sticky;
+  z-index: 3;
 
   & .logoLink {
     margin-left: 5%;

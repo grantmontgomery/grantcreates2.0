@@ -1,4 +1,5 @@
 .navWrapper {
+  top: 0;
   width: 100vw;
   height: 11vh;
   display: -webkit-box;
@@ -12,6 +13,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 3;
 }
 
 .navWrapper .logoLink {

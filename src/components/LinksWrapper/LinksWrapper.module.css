@@ -71,7 +71,8 @@
     height: 100vh;
     border: solid 1px red;
     background: #2c5364;
-    z-index: 3;
+    z-index: 4;
+    overflow: hidden;
   }
   .linksWrapper.mobileNav .link {
     height: -webkit-fit-content;
@@ -79,6 +80,7 @@
     height: fit-content;
     position: relative;
     margin-left: auto;
+    margin-right: auto;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);

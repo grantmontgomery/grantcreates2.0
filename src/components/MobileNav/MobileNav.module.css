@@ -7,16 +7,17 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    z-index: 4;
+    z-index: 5;
     position: relative;
-    height: 75%;
-    width: 15%;
+    height: 7vh;
+    width: 7vh;
     margin-right: 5%;
     margin-left: auto;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     border: solid 1px white;
+    background: red;
   }
   .mobileNavWrapper .line1 {
     position: relative;
