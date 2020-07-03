@@ -1,13 +1,13 @@
-.threeD {
+.hammerAnvil {
   position: relative;
-  grid-area: hammer;
+  grid-area: anvil;
   margin-left: auto;
   margin-right: auto;
   height: 100%;
   width: 100%;
 }
 
-.threeD canvas {
+.hammerAnvil canvas {
   height: 100%;
   width: 100%;
   outline: none;

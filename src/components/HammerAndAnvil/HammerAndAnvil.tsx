@@ -40,7 +40,7 @@ const HammerAndAnvil = () => {
   renderer.shadowMap.enabled = true
   renderer.shadowMap.type = THREE.PCFSoftShadowMap
 
-  document.getElementById("canvas").appendChild(renderer.domElement)
+  document.getElementById("hammerandanvil").appendChild(renderer.domElement)
 
   //Controls/////
 
@@ -168,5 +168,5 @@ export const Scene = () => {
   React.useEffect(() => {
     HammerAndAnvil()
   }, [])
-  return <div className={`${css.threeD}`} id="canvas"></div>
+  return <div className={`${css.hammerAnvil}`} id="hammerandanvil"></div>
 }

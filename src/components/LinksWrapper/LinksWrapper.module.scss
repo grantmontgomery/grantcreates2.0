@@ -49,7 +49,7 @@
       height: 100vh;
       border: solid 1px red;
       background: #2c5364;
-
+      z-index: 3;
       & .link {
         height: fit-content;
         position: relative;

@@ -2,5 +2,12 @@
   width: 100vw;
   height: 100vh;
   border: solid 1px lightblue;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". picture about ." ". hammer tools .";
+  -ms-grid-columns: 5% 55% 35% 5%;
+      grid-template-columns: 5% 55% 35% 5%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
 }
 /*# sourceMappingURL=AboutPage.module.css.map */

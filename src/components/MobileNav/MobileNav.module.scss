@@ -5,7 +5,7 @@
 @media (max-width: 1024px) {
   .mobileNavWrapper {
     display: flex;
-
+    z-index: 4;
     position: relative;
     height: 75%;
     width: 15%;
