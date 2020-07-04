@@ -3,8 +3,9 @@ import { FullLogo, DarkLogo, Anvil } from "../Logos"
 import { LinksWrapper } from "../LinksWrapper"
 import { MobileNav } from "../MobileNav"
 import { Props } from "./types"
+import "./MobileTransition.css"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
-import css from "./Nav.module.css"
+import * as css from "./Nav.module.css"
 
 interface State {
   menu: boolean
@@ -18,10 +19,10 @@ export const Nav = () => {
       <CSSTransition
         timeout={250}
         classNames={{
-          enter: `${css["links-enter"]}`,
-          enterActive: `${css["links-enter-active"]}`,
-          exit: `${css["links-exit"]}`,
-          exitActive: `${css["links-exit-active"]}`,
+          enter: "links-enter",
+          enterActive: "links-enter-active",
+          exit: "links-exit",
+          exitActive: "links-exit-active",
         }}
       >
         <LinksWrapper location="mobileNav"></LinksWrapper>
@@ -33,39 +34,13 @@ export const Nav = () => {
     <nav className={`navWrapper ${css.navWrapper}`}>
       <a href="/" className={`logoLink ${css.logoLink}`}>
         <FullLogo location="navBar"></FullLogo>
-        {/* <DarkLogo location="navBar"></DarkLogo> */}
       </a>
-      {/* <div className={`linksWrapper ${css.linksWrapper}`}>
-        <div className={`link ${css.link}`}>
-          <a href="/#about">
-            <div className={`text ${css.text}`}>About</div>
-          </a>
-        </div>
-        <div className={`link ${css.link}`}>
-          <a href="/#creations">
-            <div className={`text ${css.text}`}>Creations</div>
-          </a>
-        </div>
-        <div className={`link ${css.link}`}>
-          <a href="/#resume">
-            <div className={`text ${css.text}`}>Resume</div>
-          </a>
-        </div>
-        <div className={`link ${css.link}`}>
-          <a href="/#contact">
-            <div className={`text ${css.text}`}>Contact</div>
-          </a>
-        </div> */}
-      {/* </div> */}
       <MobileNav
         menu={mobileState.menu}
         setMobileState={setMobileState}
       ></MobileNav>
       <LinksWrapper location="navBar"></LinksWrapper>
       <TransitionGroup>{applyTransitions()}</TransitionGroup>
-      {/* {mobileState.menu ? (
-        <LinksWrapper location="mobileNav"></LinksWrapper>
-      ) : null} */}
     </nav>
   )
 }

@@ -55,6 +55,7 @@
 @media (max-width: 1024px) {
   .linksWrapper.mobileNav {
     float: right;
+    top: 0;
     right: 0;
     position: absolute;
     display: -webkit-box;
