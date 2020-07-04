@@ -13,12 +13,20 @@
     margin-left: auto;
     top: 50%;
     transform: translate(0, -50%);
-    border: solid 1px white;
-    background: red;
+    // border: solid 1px white;
+    flex-flow: column nowrap;
     & .line1 {
       position: relative;
       width: 100%;
       border-top: 1px white;
+      height: 1px;
+    }
+
+    & .line2 {
+      position: relative;
+      width: 50%;
+      border-top: 1px white;
+      height: 1px;
     }
   }
 }

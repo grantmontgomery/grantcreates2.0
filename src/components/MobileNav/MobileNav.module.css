@@ -16,13 +16,22 @@
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
-    border: solid 1px white;
-    background: red;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
   }
   .mobileNavWrapper .line1 {
     position: relative;
     width: 100%;
     border-top: 1px white;
+    height: 1px;
+  }
+  .mobileNavWrapper .line2 {
+    position: relative;
+    width: 50%;
+    border-top: 1px white;
+    height: 1px;
   }
 }
 /*# sourceMappingURL=MobileNav.module.css.map */

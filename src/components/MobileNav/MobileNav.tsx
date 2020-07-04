@@ -19,9 +19,6 @@ export const MobileNav = ({ setMobileState, menu }) => {
       <div className={`${css.line1}`}></div>
       <div className={`${css.line2}`}></div>
       <div className={`${css.line3}`}></div>
-      {/* {mobileState.menu ? (
-        <LinksWrapper location="mobileNav"></LinksWrapper>
-      ) : null} */}
     </div>
   )
 }
