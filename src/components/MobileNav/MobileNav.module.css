@@ -4,34 +4,139 @@
 
 @media (max-width: 1024px) {
   .mobileNavWrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     z-index: 5;
     position: relative;
-    height: 7vh;
-    width: 7vh;
-    margin-right: 5%;
+    height: 10vh;
+    width: 10vh;
+    margin-right: 2.5%;
     margin-left: auto;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
+    overflow: hidden;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+  }
+  .mobileNavWrapper .animateFrame {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  .mobileNavWrapper .animateFrame.normal {
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    position: relative;
+    transition: 250ms ease-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    transform-origin: center;
+    margin-left: auto;
+    margin-right: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-  }
-  .mobileNavWrapper .line1 {
-    position: relative;
-    width: 100%;
-    border-top: 1px white;
-    height: 1px;
-  }
-  .mobileNavWrapper .line2 {
-    position: relative;
+    height: 50%;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
     width: 50%;
-    border-top: 1px white;
-    height: 1px;
+  }
+  .mobileNavWrapper .animateFrame.normal .line1 {
+    position: relative;
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    background: white;
+    width: 100%;
+    height: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .mobileNavWrapper .animateFrame.normal .line2 {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0;
+    background: white;
+    width: 75%;
+    height: 2px;
+  }
+  .mobileNavWrapper .animateFrame.normal .line3 {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0;
+    background: white;
+    width: 50%;
+    height: 2px;
+  }
+  .mobileNavWrapper .animateFrame.switched {
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    position: relative;
+    transition: 250ms ease-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    transform-origin: center;
+    margin-left: auto;
+    margin-right: 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    height: 50%;
+    top: 50%;
+    -webkit-transform: rotate(180deg) translate(0, 50%);
+            transform: rotate(180deg) translate(0, 50%);
+    width: 50%;
+  }
+  .mobileNavWrapper .animateFrame.switched .line1 {
+    position: relative;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    background: white;
+    width: 100%;
+    height: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .mobileNavWrapper .animateFrame.switched .line2 {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0;
+    background: white;
+    width: 0%;
+    height: 2px;
+  }
+  .mobileNavWrapper .animateFrame.switched .line3 {
+    position: relative;
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background: white;
+    width: 100%;
+    height: 2px;
   }
 }
 /*# sourceMappingURL=MobileNav.module.css.map */

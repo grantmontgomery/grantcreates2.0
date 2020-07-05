@@ -4,29 +4,123 @@
 
 @media (max-width: 1024px) {
   .mobileNavWrapper {
-    display: flex;
+    display: block;
     z-index: 5;
     position: relative;
-    height: 7vh;
-    width: 7vh;
-    margin-right: 5%;
+    height: 10vh;
+    width: 10vh;
+    margin-right: 2.5%;
     margin-left: auto;
     top: 50%;
     transform: translate(0, -50%);
-    // border: solid 1px white;
-    flex-flow: column nowrap;
-    & .line1 {
-      position: relative;
-      width: 100%;
-      border-top: 1px white;
-      height: 1px;
-    }
+    overflow: hidden;
+    transition: 250ms ease-out;
 
-    & .line2 {
-      position: relative;
-      width: 50%;
-      border-top: 1px white;
-      height: 1px;
+    & .animateFrame {
+      transform-origin: center;
+
+      &.normal {
+        transition: 250ms ease-out;
+        transform-origin: center;
+
+        position: relative;
+        transition: 250ms ease-out;
+
+        display: flex;
+        transform-origin: center;
+
+        margin-left: auto;
+        margin-right: auto;
+        flex-flow: column nowrap;
+        height: 50%;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 50%;
+        & .line1 {
+          position: relative;
+          transform-origin: right;
+          background: white;
+          width: 100%;
+          height: 2px;
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: auto;
+          margin-right: 0;
+        }
+
+        & .line2 {
+          position: relative;
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: auto;
+          margin-right: 0;
+          background: white;
+          width: 75%;
+          height: 2px;
+        }
+
+        & .line3 {
+          position: relative;
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: auto;
+          margin-right: 0;
+          background: white;
+          width: 50%;
+          height: 2px;
+        }
+      }
+      &.switched {
+        transition: 250ms ease-out;
+        transform-origin: center;
+        position: relative;
+        transition: 250ms ease-out;
+        display: flex;
+        transform-origin: center;
+        margin-left: auto;
+        margin-right: 10%;
+        flex-flow: column nowrap;
+        height: 50%;
+        top: 50%;
+        transform: rotate(180deg) translate(0, 50%);
+        width: 50%;
+        & .line1 {
+          position: relative;
+          transform: rotate(-45deg);
+          transform-origin: right;
+          background: white;
+          width: 100%;
+          height: 2px;
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: auto;
+          margin-right: 0;
+        }
+
+        & .line2 {
+          position: relative;
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: auto;
+          margin-right: 0;
+          background: white;
+          width: 0%;
+          height: 2px;
+        }
+
+        & .line3 {
+          position: relative;
+          transform-origin: right;
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: auto;
+          margin-right: 0;
+          transform: rotate(45deg);
+          background: white;
+          width: 100%;
+          height: 2px;
+        }
+      }
     }
   }
 }

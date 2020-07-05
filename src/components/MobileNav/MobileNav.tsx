@@ -7,18 +7,21 @@ import css from "./MobileNav.module.css"
 // }
 
 export const MobileNav = ({ setMobileState, menu }) => {
-  // const [mobileState, setMobileState] = React.useState<State>({ menu: false })
-
+  const alterMenu = () => {
+    return menu ? "switched" : "normal"
+  }
   return (
     <div
-      className={`${css.mobileNavWrapper}`}
+      className={`${css.mobileNavWrapper} `}
       onClick={() =>
         menu ? setMobileState({ menu: false }) : setMobileState({ menu: true })
       }
     >
-      <div className={`${css.line1}`}></div>
-      <div className={`${css.line2}`}></div>
-      <div className={`${css.line3}`}></div>
+      <div className={`${css.animateFrame} ${css[`${alterMenu()}`]}`}>
+        <div className={`${css.line1}`}></div>
+        <div className={`${css.line2}`}></div>
+        <div className={`${css.line3}`}></div>
+      </div>
     </div>
   )
 }
