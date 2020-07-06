@@ -1,18 +1,27 @@
 .headlineWrapper {
   grid-area: headline;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 
-.headlineWrapper .mainHeadline {
+.headlineWrapper .firstHeadline {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin: auto;
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -21,17 +30,43 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
 }
 
-.headlineWrapper .mainHeadline h1 {
+.headlineWrapper .firstHeadline h1 {
+  color: white;
+  font-size: 80%;
+}
+
+.headlineWrapper .firstHeadline span {
+  margin-left: 10px;
+  white-space: pre;
   color: white;
   font-size: 100%;
 }
 
-.headlineWrapper .mainHeadline .staticText {
+.headlineWrapper .secondHeadline {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.headlineWrapper .secondHeadline h1 {
+  color: white;
+  font-size: 100%;
+}
+
+.headlineWrapper .secondHeadline .staticText {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   white-space: nowrap;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -41,8 +76,13 @@
   height: fit-content;
 }
 
-.headlineWrapper .mainHeadline .dynamicText {
+.headlineWrapper .secondHeadline .dynamicText {
+  color: white;
+  font-size: 100%;
   white-space: nowrap;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -52,10 +92,9 @@
   height: fit-content;
 }
 
-.headlineWrapper .mainHeadline span {
-  white-space: pre;
+.headlineWrapper .thirdHeadline h1 {
   color: white;
-  font-size: 100%;
+  font-size: 80%;
 }
 
 @-webkit-keyframes type {

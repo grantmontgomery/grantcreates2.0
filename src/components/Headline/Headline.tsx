@@ -5,9 +5,9 @@ import css from "./Headline.module.css"
 export const Headline = () => {
   const creations: string[] = [
     "APPLICATIONS",
-    "WEBSITES",
-    "DESIGNS",
     "SOLUTIONS",
+    "DESIGNS",
+    "EXPERIENCES",
   ]
 
   const [creation, setCreation] = React.useState(0)
@@ -29,10 +29,17 @@ export const Headline = () => {
 
   return (
     <div className={`${css.headlineWrapper}`}>
-      <div className={`${css.mainHeadline}`}>
+      <div className={`${css.firstHeadline}`}>
         <h1 className={`${css.staticText}`}>Hi, I'm Grant</h1>
+      </div>
+      <div className={`${css.secondHeadline}`}>
         <h1 className={`${css.dynamicText}`}>I CREATE</h1>
-        <h1 className={`${css.dynamicText}`}>{` ${creations[creation]}`}</h1>
+        <span
+          className={`${css.dynamicText}`}
+        >{` ${creations[creation]}`}</span>
+      </div>
+      <div className={`${css.thirdHeadline}`}>
+        <h1>Developer from Los Angeles, CA</h1>
       </div>
     </div>
   )
