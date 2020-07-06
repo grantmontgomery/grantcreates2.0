@@ -1,6 +1,6 @@
 import * as React from "react"
 import { LinksWrapper } from "../../LinksWrapper"
-import "./MobileLinks.css"
+import css from "./MobileLinks.module.css"
 import { CSSTransition } from "react-transition-group"
 
 interface Props {
@@ -12,10 +12,10 @@ export const MobileLinks = ({ menu }: Props) => {
     <CSSTransition
       timeout={250}
       classNames={{
-        enter: "links-enter",
-        enterActive: "links-enter-active",
-        exit: "links-exit",
-        exitActive: "links-exit-active",
+        enter: css["links-enter"],
+        enterActive: css["links-enter-active"],
+        exit: css["links-exit"],
+        exitActive: css["links-exit-active"],
       }}
     >
       <LinksWrapper location="mobileNav"></LinksWrapper>

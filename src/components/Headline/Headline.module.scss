@@ -1,7 +1,7 @@
 .headlineWrapper {
   grid-area: headline;
   width: 80%;
-  height: 80%;
+  height: 100%;
   display: flex;
   position: relative;
   top: 50%;
@@ -29,6 +29,7 @@
     }
   }
   & .secondHeadline {
+    position: relative;
     width: 100%;
     height: fit-content;
     display: flex;
@@ -38,6 +39,7 @@
       font-size: 100%;
     }
     & .staticText {
+      position: relative;
       top: 50%;
       transform: translate(0, -50%);
       white-space: nowrap;
@@ -45,6 +47,8 @@
       height: fit-content;
     }
     & .dynamicText {
+      position: relative;
+
       color: white;
       font-size: 100%;
       white-space: nowrap;

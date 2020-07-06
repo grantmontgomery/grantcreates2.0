@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Typical } from "react-typical"
 import css from "./Headline.module.css"
 
 export const Headline = () => {
