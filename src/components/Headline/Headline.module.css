@@ -8,9 +8,8 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  margin: auto;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,15 +17,18 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  width: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 11vh;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .headlineWrapper .mainHeadline h1 {
   color: white;
+  font-size: 100%;
 }
 
 .headlineWrapper .mainHeadline .staticText {
@@ -41,21 +43,13 @@
 
 .headlineWrapper .mainHeadline .dynamicText {
   white-space: nowrap;
-  margin-left: 2.55%;
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-}
-
-.headlineWrapper .mainHeadline .dynamicText::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  border-right: solid 2px white;
-  -webkit-animation: type 1s infinite ease;
-          animation: type 1s infinite ease;
 }
 
 @-webkit-keyframes type {

@@ -12,6 +12,21 @@ export const Headline = () => {
 
   const [creation, setCreation] = React.useState(0)
 
+  const updateCreation = () => {
+    setCreation(state => {
+      return state < creations.length ? (state += 1) : 0
+    })
+  }
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      return setCreation(state => {
+        return state < creations.length ? (state += 1) : 0
+      })
+    }, 2000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <div className={`${css.headlineWrapper}`}>
       <div className={`${css.mainHeadline}`}>
