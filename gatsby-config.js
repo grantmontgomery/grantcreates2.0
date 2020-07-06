@@ -16,6 +16,16 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-web-font-loader`,
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          familes: ["Custom"],
+          urls: ["/static/fonts/fonts.css"],
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

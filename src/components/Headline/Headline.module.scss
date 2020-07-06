@@ -8,6 +8,7 @@
   transform: translate(0, -50%);
   margin: auto;
   flex-flow: column nowrap;
+  font-family: Custom;
 
   & .firstHeadline {
     height: fit-content;
@@ -64,6 +65,18 @@
       color: white;
       font-size: 80%;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .headlineWrapper {
+    pointer-events: none;
+    position: relative;
+    grid-area: anvil;
+    z-index: 2;
+    width: 150%;
+    margin-left: -25%;
+    margin-right: auto;
   }
 }
 

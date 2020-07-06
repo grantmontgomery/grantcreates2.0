@@ -17,7 +17,56 @@
       grid-area: creations;
       height: 100%;
       width: 100%;
-      display: block;
+      display: flex;
+      flex-flow: column nowrap;
+      & .headerWrapper {
+        height: fit-content;
+        width: fit-content;
+        margin-top: 0;
+        margin-right: auto;
+        margin-left: 5%;
+        & h1 {
+          height: fit-content;
+          width: fit-content;
+          white-space: none;
+          color: white;
+        }
+      }
+      & .creationTypes {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        flex-flow: row nowrap;
+        margin-top: 0;
+        margin-bottom: auto;
+        list-style-type: none;
+        justify-content: space-between;
+        overflow: hidden;
+        padding: 0;
+        & .type {
+          border-radius: 50px;
+          height: 100%;
+          width: fit-content;
+          margin-right: auto;
+          margin-left: auto;
+          background: #203a43;
+          color: white;
+          padding-left: 2.5%;
+          padding-right: 2.5%;
+          & span {
+            position: relative;
+            object-fit: contain;
+            height: fit-content;
+            display: block;
+            width: fit-content;
+            font-size: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            top: 50%;
+            transform: translate(0, -50%);
+          }
+        }
+      }
     }
     &.desktop {
       display: none;
