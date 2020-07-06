@@ -69,7 +69,7 @@ const HammerAndAnvil = () => {
 
   const ambient = new THREE.AmbientLight(0x00000)
 
-  const directionalLight = new THREE.DirectionalLight(0xcccccc, 1.5)
+  const directionalLight = new THREE.DirectionalLight(0x7bb3cc, 1.5)
   directionalLight.position.set(30, 80, 100)
   directionalLight.castShadow = true
   directionalLight.shadow.mapSize.width = 1024

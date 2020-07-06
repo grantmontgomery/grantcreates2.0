@@ -14,11 +14,11 @@
   .homePage {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "headline headline headline" ". anvil ." ". . .";
+        grid-template-areas: ". anvil ." "creations creations creations";
     -ms-grid-columns: 20% 60% 20%;
         grid-template-columns: 20% 60% 20%;
-    -ms-grid-rows: 25% 50% 25%;
-        grid-template-rows: 25% 50% 25%;
+    -ms-grid-rows: 50% 50%;
+        grid-template-rows: 50% 50%;
   }
 }
 /*# sourceMappingURL=HomePage.module.css.map */

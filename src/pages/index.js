@@ -18,7 +18,7 @@ const IndexPage = () => {
       <main>
         <HomePage></HomePage>
         <AboutPage></AboutPage>
-        <CreationsPage></CreationsPage>
+        <CreationsPage location="deskTop"></CreationsPage>
       </main>
     </React.Fragment>
   )

@@ -1,6 +1,26 @@
 .creations {
   width: 100vw;
   height: 100vh;
-  border: solid 1px lightgreen;
+  background: #060c0f;
+}
+
+.creations.mobileHome {
+  display: none;
+}
+
+.creations.desktop {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .creations.mobileHome {
+    grid-area: creations;
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+  .creations.desktop {
+    display: none;
+  }
 }
 /*# sourceMappingURL=CreationsPage.module.css.map */
