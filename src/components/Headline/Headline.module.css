@@ -52,6 +52,12 @@
   height: fit-content;
 }
 
+.headlineWrapper .mainHeadline span {
+  white-space: pre;
+  color: white;
+  font-size: 100%;
+}
+
 @-webkit-keyframes type {
   0% {
     opacity: 0;

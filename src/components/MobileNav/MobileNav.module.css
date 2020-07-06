@@ -15,20 +15,20 @@
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     overflow: hidden;
-    -webkit-transition: 250ms ease-out;
-    transition: 250ms ease-out;
+    -webkit-transition: 500ms ease-out;
+    transition: 500ms ease-out;
   }
   .mobileNavWrapper .animateFrame {
     -webkit-transform-origin: center;
             transform-origin: center;
   }
   .mobileNavWrapper .animateFrame.normal {
-    -webkit-transition: 250ms ease-out;
-    transition: 250ms ease-out;
+    -webkit-transition: 500ms ease-out;
+    transition: 500ms ease-out;
     -webkit-transform-origin: center;
             transform-origin: center;
     position: relative;
-    transition: 250ms ease-out;
+    transition: 500ms ease-out;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -78,12 +78,12 @@
     height: 2px;
   }
   .mobileNavWrapper .animateFrame.switched {
-    -webkit-transition: 250ms ease-out;
-    transition: 250ms ease-out;
+    -webkit-transition: 500ms ease-out;
+    transition: 500ms ease-out;
     -webkit-transform-origin: center;
             transform-origin: center;
     position: relative;
-    transition: 250ms ease-out;
+    transition: 500ms ease-out;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

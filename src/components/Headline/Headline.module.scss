@@ -27,6 +27,11 @@
       width: fit-content;
       height: fit-content;
     }
+    & span {
+      white-space: pre;
+      color: white;
+      font-size: 100%;
+    }
   }
 }
 

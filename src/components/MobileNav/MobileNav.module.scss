@@ -14,17 +14,17 @@
     top: 50%;
     transform: translate(0, -50%);
     overflow: hidden;
-    transition: 250ms ease-out;
+    transition: 500ms ease-out;
 
     & .animateFrame {
       transform-origin: center;
 
       &.normal {
-        transition: 250ms ease-out;
+        transition: 500ms ease-out;
         transform-origin: center;
 
         position: relative;
-        transition: 250ms ease-out;
+        transition: 500ms ease-out;
 
         display: flex;
         transform-origin: center;
@@ -71,10 +71,10 @@
         }
       }
       &.switched {
-        transition: 250ms ease-out;
+        transition: 500ms ease-out;
         transform-origin: center;
         position: relative;
-        transition: 250ms ease-out;
+        transition: 500ms ease-out;
         display: flex;
         transform-origin: center;
         margin-left: auto;

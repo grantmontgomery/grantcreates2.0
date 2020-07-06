@@ -30,8 +30,9 @@ export const Headline = () => {
   return (
     <div className={`${css.headlineWrapper}`}>
       <div className={`${css.mainHeadline}`}>
-        <h1 className={`${css.staticText}`}>I CREATE</h1>
-        <h1 className={`${css.dynamicText}`}>{creations[creation]}</h1>
+        <h1 className={`${css.staticText}`}>Hi, I'm Grant</h1>
+        <h1 className={`${css.dynamicText}`}>I CREATE</h1>
+        <h1 className={`${css.dynamicText}`}>{` ${creations[creation]}`}</h1>
       </div>
     </div>
   )
