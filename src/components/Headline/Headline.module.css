@@ -39,7 +39,7 @@
   height: fit-content;
   margin-bottom: -1%;
   margin-top: -1%;
-  color: white;
+  color: #3e768e;
   font-weight: 900;
   font-size: 100%;
 }
@@ -52,6 +52,7 @@
 }
 
 .headlineWrapper .secondHeadline {
+  margin-top: 5%;
   position: relative;
   width: 100%;
   height: -webkit-fit-content;
@@ -68,7 +69,7 @@
 
 .headlineWrapper .secondHeadline h1 {
   margin-top: -1%;
-  color: white;
+  color: #80bab3;
 }
 
 .headlineWrapper .secondHeadline .staticText {
@@ -88,7 +89,7 @@
 .headlineWrapper .secondHeadline .dynamicText {
   position: relative;
   color: white;
-  font-size: 150%;
+  font-size: 100%;
   white-space: nowrap;
   top: 50%;
   -webkit-transform: translate(0, -50%);
@@ -113,8 +114,8 @@
     position: relative;
     grid-area: anvil;
     z-index: 2;
-    width: 150%;
-    margin-left: -25%;
+    height: 100%;
+    width: 80%;
     margin-right: auto;
   }
 }
