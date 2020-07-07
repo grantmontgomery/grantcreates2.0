@@ -14,7 +14,7 @@
   .homePage {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: ". anvil ." "creations creations creations";
+        grid-template-areas: "anvil anvil anvil" "creations creations creations";
     -ms-grid-columns: 20% 60% 20%;
         grid-template-columns: 20% 60% 20%;
     -ms-grid-rows: 50% 50%;

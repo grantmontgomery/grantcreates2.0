@@ -22,10 +22,12 @@
       & .headerWrapper {
         height: fit-content;
         width: fit-content;
-        margin-top: 0;
+        margin-top: 5%;
         margin-right: auto;
         margin-left: 5%;
         & h1 {
+          margin-bottom: -1%;
+          margin-top: -1%;
           font-family: Objektiv Mk2;
           height: fit-content;
           width: fit-content;
@@ -43,23 +45,25 @@
         list-style-type: none;
         justify-content: space-between;
         overflow: hidden;
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 5%;
+        padding-top: 5%;
+
         & .type {
           border-radius: 50px;
           height: 100%;
           width: fit-content;
           margin-right: auto;
           margin-left: auto;
-          background: #203a43;
-          border: solid 1px #203a43;
-          color: white;
+          background: #0f2027;
+          color: #3e768e;
           padding-left: 4%;
           padding-right: 4%;
           transition: 250ms ease-out;
           &.active {
-            border: solid 1px #203a43;
-            background: transparent;
-            color: #203a43;
+            background: #203a43;
+            color: white;
             transition: 250ms ease-out;
 
             & span {

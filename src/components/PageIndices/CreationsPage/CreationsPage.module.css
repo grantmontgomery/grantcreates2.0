@@ -32,11 +32,13 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin-top: 0;
+    margin-top: 5%;
     margin-right: auto;
     margin-left: 5%;
   }
   .creations.mobileHome .headerWrapper h1 {
+    margin-bottom: -1%;
+    margin-top: -1%;
     font-family: Objektiv Mk2;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -64,7 +66,10 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     overflow: hidden;
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 5%;
+    padding-top: 5%;
   }
   .creations.mobileHome .creationTypes .type {
     border-radius: 50px;
@@ -74,18 +79,16 @@
     width: fit-content;
     margin-right: auto;
     margin-left: auto;
-    background: #203a43;
-    border: solid 1px #203a43;
-    color: white;
+    background: #0f2027;
+    color: #3e768e;
     padding-left: 4%;
     padding-right: 4%;
     -webkit-transition: 250ms ease-out;
     transition: 250ms ease-out;
   }
   .creations.mobileHome .creationTypes .type.active {
-    border: solid 1px #203a43;
-    background: transparent;
-    color: #203a43;
+    background: #203a43;
+    color: white;
     -webkit-transition: 250ms ease-out;
     transition: 250ms ease-out;
   }

@@ -18,10 +18,10 @@
 }
 
 .headlineWrapper .firstHeadline {
+  margin-top: 20%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin: auto;
   width: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -34,6 +34,11 @@
 }
 
 .headlineWrapper .firstHeadline h1 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: -1%;
+  margin-top: -1%;
   color: white;
   font-weight: 900;
   font-size: 100%;
@@ -62,6 +67,7 @@
 }
 
 .headlineWrapper .secondHeadline h1 {
+  margin-top: -1%;
   color: white;
 }
 
@@ -82,7 +88,7 @@
 .headlineWrapper .secondHeadline .dynamicText {
   position: relative;
   color: white;
-  font-size: 200%;
+  font-size: 150%;
   white-space: nowrap;
   top: 50%;
   -webkit-transform: translate(0, -50%);

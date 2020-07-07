@@ -10,7 +10,7 @@
 @media (max-width: 1024px) {
   .homePage {
     display: grid;
-    grid-template-areas: ". anvil ." "creations creations creations";
+    grid-template-areas: "anvil anvil anvil" "creations creations creations";
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: 50% 50%;
   }
