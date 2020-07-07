@@ -37,6 +37,7 @@
     margin-left: 5%;
   }
   .creations.mobileHome .headerWrapper h1 {
+    font-family: Objektiv Mk2;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -79,6 +80,7 @@
     padding-right: 2.5%;
   }
   .creations.mobileHome .creationTypes .type span {
+    font-family: Objektiv Mk2;
     position: relative;
     -o-object-fit: contain;
        object-fit: contain;

@@ -8,7 +8,7 @@
   transform: translate(0, -50%);
   margin: auto;
   flex-flow: column nowrap;
-  font-family: Custom;
+  font-family: Objektiv Mk2;
 
   & .firstHeadline {
     height: fit-content;
@@ -17,9 +17,11 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     position: relative;
+
     & h1 {
       color: white;
-      font-size: 80%;
+      font-weight: 900;
+      font-size: 100%;
     }
 
     & span {
@@ -37,7 +39,6 @@
     flex-flow: row nowrap;
     & h1 {
       color: white;
-      font-size: 100%;
     }
     & .staticText {
       position: relative;
@@ -51,7 +52,7 @@
       position: relative;
 
       color: white;
-      font-size: 100%;
+      font-size: 200%;
       white-space: nowrap;
       top: 50%;
       transform: translate(0, -50%);
@@ -62,8 +63,8 @@
   }
   & .thirdHeadline {
     & h1 {
-      color: white;
-      font-size: 80%;
+      color: #3e768e;
+      font-size: 100%;
     }
   }
 }
