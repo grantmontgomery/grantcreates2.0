@@ -51,9 +51,20 @@
           margin-right: auto;
           margin-left: auto;
           background: #203a43;
+          border: solid 1px #203a43;
           color: white;
-          padding-left: 2.5%;
-          padding-right: 2.5%;
+          padding-left: 4%;
+          padding-right: 4%;
+          transition: 250ms ease-out;
+          &.active {
+            border: solid 1px #203a43;
+            background: transparent;
+            color: #203a43;
+            transition: 250ms ease-out;
+
+            & span {
+            }
+          }
           & span {
             font-family: Objektiv Mk2;
             position: relative;
@@ -61,13 +72,18 @@
             height: fit-content;
             display: block;
             width: fit-content;
-            font-size: 90%;
+            font-size: 80%;
             margin-left: auto;
             margin-right: auto;
             top: 50%;
             transform: translate(0, -50%);
           }
         }
+      }
+      & .typeSection {
+        color: white;
+        width: 100%;
+        height: fit-content;
       }
     }
     &.desktop {

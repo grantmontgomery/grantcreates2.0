@@ -5,26 +5,44 @@ interface Props {
   location: string
 }
 
+interface State {
+  type: string
+}
 export const CreationsPage = ({ location }: Props) => {
+  const [state, setState] = React.useState<State>({ type: "Apps" })
+
   return (
     <section id="creations" className={`${css.creations} ${css[location]}`}>
       <div className={`${css.headerWrapper}`}>
         <h1>Creations</h1>
       </div>
       <ul className={`${css.creationTypes}`}>
-        <li className={`${css.type}`}>
+        <li
+          className={`${css.type}`}
+          onClick={() => setState({ type: "Apps" })}
+        >
           <span>Apps</span>
         </li>
-        <li className={`${css.type}`}>
+        <li
+          className={`${css.type}`}
+          onClick={() => setState({ type: "Websites" })}
+        >
           <span>Websites</span>
         </li>
-        <li className={`${css.type}`}>
+        <li
+          className={`${css.type}`}
+          onClick={() => setState({ type: "Designs" })}
+        >
           <span>Designs</span>
         </li>
-        <li className={`${css.type}`}>
+        <li
+          className={`${css.type}`}
+          onClick={() => setState({ type: "Experiences" })}
+        >
           <span>Experiences</span>
         </li>
       </ul>
+      <div className={`${css.typeSection}`}>{state.type}</div>
     </section>
   )
 }

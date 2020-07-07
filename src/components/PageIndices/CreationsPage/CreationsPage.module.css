@@ -75,9 +75,19 @@
     margin-right: auto;
     margin-left: auto;
     background: #203a43;
+    border: solid 1px #203a43;
     color: white;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    padding-left: 4%;
+    padding-right: 4%;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+  }
+  .creations.mobileHome .creationTypes .type.active {
+    border: solid 1px #203a43;
+    background: transparent;
+    color: #203a43;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
   }
   .creations.mobileHome .creationTypes .type span {
     font-family: Objektiv Mk2;
@@ -91,12 +101,19 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    font-size: 90%;
+    font-size: 80%;
     margin-left: auto;
     margin-right: auto;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
+  }
+  .creations.mobileHome .typeSection {
+    color: white;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .creations.desktop {
     display: none;
