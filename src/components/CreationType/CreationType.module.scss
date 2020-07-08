@@ -1,0 +1,19 @@
+.typeWrapper {
+  grid-area: creationtype;
+}
+
+@media (max-width: 1024px) {
+  .typeWrapper {
+    height: 100%;
+    width: 100%;
+    border: solid 1px white;
+    & .innerTypes {
+      top: 50%;
+      transform: translate(0, -50%);
+      height: 80%;
+      width: 100%;
+      position: relative;
+      border: solid 1px red;
+    }
+  }
+}

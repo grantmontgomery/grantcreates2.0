@@ -1,4 +1,5 @@
 import * as React from "react"
+import { CreationType } from "../../CreationType"
 import css from "./CreationsPage.module.css"
 
 interface Props {
@@ -14,7 +15,7 @@ export const CreationsPage = ({ location }: Props) => {
   return (
     <section id="creations" className={`${css.creations} ${css[location]}`}>
       <div className={`${css.headerWrapper}`}>
-        <h1>Creations</h1>
+        <div>Creations</div>
       </div>
       <ul className={`${css.creationTypes}`}>
         <li
@@ -48,7 +49,7 @@ export const CreationsPage = ({ location }: Props) => {
           <span>Experiences</span>
         </li>
       </ul>
-      <div className={`${css.typeSection}`}>{state.type}</div>
+      <CreationType type={state.type}></CreationType>
     </section>
   )
 }

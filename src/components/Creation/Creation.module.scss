@@ -1,0 +1,27 @@
+.creationWrapper {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 25px;
+  height: 15vh;
+  background: white;
+  width: 15vh;
+  transition: 250ms ease-out;
+  &.tapped {
+    position: absolute;
+    border-radius: 0;
+    height: 50vh;
+    width: 100vw;
+    transition: 250ms ease-out;
+    left: 0;
+    top: 0;
+  }
+  & .exit {
+    height: 10%;
+    width: 10%;
+    background: black;
+  }
+}
+
+@media (max-width: 1024px) {
+}

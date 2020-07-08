@@ -1,0 +1,30 @@
+.creationWrapper {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border-radius: 25px;
+  height: 15vh;
+  background: white;
+  width: 15vh;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.creationWrapper.tapped {
+  position: absolute;
+  border-radius: 0;
+  height: 50vh;
+  width: 100vw;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+  left: 0;
+  top: 0;
+}
+
+.creationWrapper .exit {
+  height: 10%;
+  width: 10%;
+  background: black;
+}
+/*# sourceMappingURL=Creation.module.css.map */
