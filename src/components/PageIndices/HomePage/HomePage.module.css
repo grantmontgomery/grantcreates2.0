@@ -17,8 +17,8 @@
         grid-template-areas: "anvil anvil anvil" "creations creations creations";
     -ms-grid-columns: 20% 60% 20%;
         grid-template-columns: 20% 60% 20%;
-    -ms-grid-rows: 50% 50%;
-        grid-template-rows: 50% 50%;
+    -ms-grid-rows: 40% 60%;
+        grid-template-rows: 40% 60%;
   }
 }
 /*# sourceMappingURL=HomePage.module.css.map */
