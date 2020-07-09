@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,aAAa;EACxB,QAAQ,EAAE,MAAM;CAWjB;;AAhBD,AAME,cANY,CAMV,aAAa,CAAC;EACd,MAAM,EAAE,GAAG;EACX,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,eAAe;CACxB;;AAVH,AAYE,cAZY,CAYV,eAAe,CAAC;EAChB,MAAM,EAAE,GAAG;EACX,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "MobileTapped.module.scss"
+    ],
+    "names": [],
+    "file": "MobileTapped.module.css"
+}

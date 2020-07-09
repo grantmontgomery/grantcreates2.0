@@ -1,6 +1,8 @@
 import * as React from "react"
+import { MobileSelector } from "./MobileSelector"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import css from "./Creation.module.css"
+import { MobileTapped } from "./MobileTapped"
 
 interface Props {
   type: string
@@ -38,6 +40,14 @@ export const Creation = ({ type }: Props) => {
     // console.log("X: " + relativeX + "  Y: " + relativeY)
   }
 
+  const changeDisplay = () => {
+    return state.tapped ? (
+      <MobileTapped></MobileTapped>
+    ) : (
+      <MobileSelector></MobileSelector>
+    )
+  }
+
   const applyTransitions = () => {
     return state.tapped ? (
       <CSSTransition
@@ -65,7 +75,9 @@ export const Creation = ({ type }: Props) => {
         ref={creationRef}
         onClick={handleTap}
       >
-        {/* {exit()} */}
+        {changeDisplay()}
+
+        {/* {state.tapped ? <MobileSelector></MobileSelector> : null} */}
         <div
           className={`${css.exit}`}
           style={{
@@ -80,7 +92,7 @@ export const Creation = ({ type }: Props) => {
       {state.tapped ? null : (
         <div className={`${css.selectorTitleWrapper}`}>
           <div className={`${css.selctorTitle}`}>Seknd</div>
-          <div className={`${css.subTitle}`}>React Application</div>
+          <div className={`${css.subTitle}`}>React Web Application</div>
         </div>
       )}
       {/* <TransitionGroup>{applyTransitions()}</TransitionGroup> */}

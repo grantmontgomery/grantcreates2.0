@@ -1,0 +1,1 @@
+export { MobileTapped } from "./MobileTapped"
