@@ -20,7 +20,7 @@
       width: 100%;
       display: grid;
       grid-template-columns: 100%;
-      grid-template-rows: 15% 20% 65%;
+      grid-template-rows: 10% 12.5% auto;
       grid-template-areas: "header" "types" "creationtype";
       & .headerWrapper {
         grid-area: header;
@@ -31,6 +31,7 @@
           margin-left: 5%;
           display: block;
           position: relative;
+          font-size: 2.5vh;
           top: 50%;
           transform: translate(0, -50%);
           font-family: Objektiv Mk2;
@@ -59,7 +60,8 @@
           top: 50%;
           transform: translate(0, -50%);
           border-radius: 50px;
-          height: 50%;
+          height: 5vh;
+          // font-size: 3vw;
           width: fit-content;
           margin-right: auto;
           margin-left: auto;
@@ -86,10 +88,10 @@
             font-family: Objektiv Mk2;
             position: relative;
             object-fit: contain;
+            font-size: 3vw;
             height: fit-content;
             display: block;
             width: fit-content;
-            font-size: 80%;
             margin-left: auto;
             margin-right: auto;
             top: 50%;

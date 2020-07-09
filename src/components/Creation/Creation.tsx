@@ -37,6 +37,16 @@ export const Creation = ({ type }: Props) => {
           top: windowTopCenter - elemTopPosition - halfHeight * 2.25,
         })
 
+    console.log(elemTopPosition)
+    console.log(window.innerHeight / 2)
+
+    // return state.tapped
+    //   ? setState({ tapped: false, top: 0 })
+    //   : setState({
+    //       tapped: true,
+    //       top: windowTopCenter - halfHeight * 2.25,
+    //     })
+
     // console.log("X: " + relativeX + "  Y: " + relativeY)
   }
 

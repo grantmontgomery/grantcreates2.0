@@ -22,8 +22,8 @@
     display: grid;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 15% 20% 65%;
-        grid-template-rows: 15% 20% 65%;
+    -ms-grid-rows: 10% 12.5% auto;
+        grid-template-rows: 10% 12.5% auto;
         grid-template-areas: "header" "types" "creationtype";
   }
   .creations.mobileHome .headerWrapper {
@@ -38,6 +38,7 @@
     margin-left: 5%;
     display: block;
     position: relative;
+    font-size: 2.5vh;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
@@ -80,7 +81,7 @@
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     border-radius: 50px;
-    height: 50%;
+    height: 5vh;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -112,6 +113,7 @@
     position: relative;
     -o-object-fit: contain;
        object-fit: contain;
+    font-size: 3vw;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -119,7 +121,6 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    font-size: 80%;
     margin-left: auto;
     margin-right: auto;
     top: 50%;

@@ -12,6 +12,7 @@
 }
 
 .creationWrapper.tapped {
+  overflow: hidden;
   margin-left: auto;
   margin-right: auto;
   position: fixed;
@@ -98,10 +99,10 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    bottom: 5%;
+    bottom: 7.5%;
   }
   .selectorTitleWrapper .selctorTitle {
-    font-size: 90%;
+    font-size: 2vh;
     margin-left: auto;
     margin-right: auto;
     width: -webkit-fit-content;
@@ -114,7 +115,7 @@
     font-family: Objektiv Mk2;
   }
   .selectorTitleWrapper .subTitle {
-    font-size: 80%;
+    font-size: 1.8vh;
     margin-left: auto;
     margin-right: auto;
     width: -webkit-fit-content;

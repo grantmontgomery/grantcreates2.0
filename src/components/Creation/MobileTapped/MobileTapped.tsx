@@ -8,9 +8,10 @@ export const MobileTapped = () => {
         <img src="" alt="" />
       </div>
       <div className={`${css.detailsWrapper}`}>
-        <div className={`${css.titleWrapper}`}></div>
+        <div className={`${css.titleWrapper}`}>Seknd (Second)</div>
         <div className={`${css.descriptionWrapper}`}></div>
         <div className={`${css.technologiesWrapper}`}></div>
+        <div className={`${css.linksWrapper}`}></div>
       </div>
     </div>
   )

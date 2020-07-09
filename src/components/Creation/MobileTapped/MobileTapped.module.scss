@@ -1,17 +1,33 @@
 .tappedWrapper {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: grid;
+  // grid-template-areas: ;
   flex-flow: column nowrap;
   overflow: hidden;
   & .imageWrapper {
     height: 50%;
     width: 100%;
-    border: solid white 1px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px;
   }
 
   & .detailsWrapper {
     height: 50%;
     width: 100%;
+    & .titleWrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      height: fit-content;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2.5%;
+      font-family: Objektiv Mk2;
+      color: white;
+      display: block;
+      margin-left: 5%;
+    }
   }
 }

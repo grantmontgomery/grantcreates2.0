@@ -8,6 +8,7 @@
   transition: 250ms ease-out;
   left: 50%;
   &.tapped {
+    overflow: hidden;
     margin-left: auto;
     margin-right: auto;
     position: fixed;
@@ -82,9 +83,9 @@
     transform: translate(-50%, 0);
     transition: 250ms ease-out;
     flex-flow: column nowrap;
-    bottom: 5%;
+    bottom: 7.5%;
     & .selctorTitle {
-      font-size: 90%;
+      font-size: 2vh;
       margin-left: auto;
       margin-right: auto;
       width: fit-content;
@@ -93,7 +94,7 @@
       font-family: Objektiv Mk2;
     }
     & .subTitle {
-      font-size: 80%;
+      font-size: 1.8vh;
       margin-left: auto;
       margin-right: auto;
       width: fit-content;
