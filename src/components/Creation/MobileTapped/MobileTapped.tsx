@@ -39,9 +39,15 @@ export const MobileTapped = () => {
       </div>
 
       <div className={`${css.detailsWrapper}`}>
-        <div className={`${css.descriptionWrapper}`}></div>
+        <div className={`${css.descriptionWrapper}`}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora a
+          nesciunt illum enim itaque in, fuga rerum quas inventore tenetur eos,
+          est nulla esse id assumenda illo libero. Labore, eaque.
+        </div>
       </div>
-      <div className={`${css.technologiesWrapper}`}></div>
+      <div className={`${css.technologiesWrapper}`}>
+        <div className={`${css.technologies}`}>React Express Redux Sass</div>
+      </div>
     </div>
   )
 }

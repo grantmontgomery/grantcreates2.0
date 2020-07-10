@@ -23,13 +23,31 @@
     grid-area: details;
     width: 100%;
     & .descriptionWrapper {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: Objektiv Mk2;
+      font-size: 2vh;
+      color: white;
     }
   }
 
   & .technologiesWrapper {
-    grid-area: details;
+    grid-area: technologies;
     height: 100%;
     width: 100%;
+    & .technologies {
+      font-weight: 200;
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin-left: 5%;
+      font-family: Objektiv Mk2;
+      color: #61dbfb;
+      height: fit-content;
+      font-size: 2vh;
+      width: fit-content;
+    }
   }
 
   & .headerWrapper {

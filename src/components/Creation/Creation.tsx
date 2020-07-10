@@ -34,7 +34,7 @@ export const Creation = ({ type }: Props) => {
       ? setState({ tapped: false, top: 0 })
       : setState({
           tapped: true,
-          top: windowTopCenter - elemTopPosition - halfHeight * 2.25,
+          top: windowTopCenter - elemTopPosition - halfHeight * 2.5,
         })
   }
 

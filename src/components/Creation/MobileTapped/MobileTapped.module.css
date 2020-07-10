@@ -37,12 +37,39 @@
   width: 100%;
 }
 
+.tappedWrapper .detailsWrapper .descriptionWrapper {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Objektiv Mk2;
+  font-size: 2vh;
+  color: white;
+}
+
 .tappedWrapper .technologiesWrapper {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
-  grid-area: details;
+  grid-area: technologies;
   height: 100%;
   width: 100%;
+}
+
+.tappedWrapper .technologiesWrapper .technologies {
+  font-weight: 200;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin-left: 5%;
+  font-family: Objektiv Mk2;
+  color: #61dbfb;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 2vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .tappedWrapper .headerWrapper {
