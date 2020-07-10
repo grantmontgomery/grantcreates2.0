@@ -10,7 +10,7 @@ export const MobileTapped = () => {
       <div className={`${css.headerWrapper}`}>
         <div className={`${css.titleWrapper}`}>Seknd (second)</div>
         <div className={`${css.linksWrapper}`}>
-          <a href="">
+          <a target="blank" href="https://github.com/grantmontgomery/seknd">
             <div className={`${css.linkWrapper}`}>
               <svg
                 role="img"
