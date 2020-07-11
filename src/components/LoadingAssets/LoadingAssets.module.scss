@@ -1,0 +1,35 @@
+.assets {
+  height: 50%;
+  width: 50%;
+
+  & .chainWrapper {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    & svg {
+      height: 500px;
+      width: auto;
+      animation-name: rotate;
+      animation-duration: 6s;
+      animation-timing-function: linear;
+    }
+  }
+  & .anvilWrapper {
+    top: 50%;
+    position: absolute;
+    transform: translate(0, -50%);
+    & svg {
+      height: 500px;
+      width: auto;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

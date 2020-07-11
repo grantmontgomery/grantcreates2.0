@@ -1,1 +1,1 @@
-export { Chain } from "./Chain"
+export { LoadingAssets } from "./LoadingAssets"
