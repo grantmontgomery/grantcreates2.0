@@ -1,13 +1,11 @@
-// let bro: {
-//   [key: number]: string
-//   classes: number[]
-// } = { 12: "math", classes: [12, 1, 2, 3] }
-
-// console.log(bro)
-
 import * as React from "react"
+import { Chain } from "../../LoadingAssets"
 import css from "./AboutPage.module.css"
 
 export const AboutPage = () => {
-  return <section id="about" className={`${css.about}`}></section>
+  return (
+    <section id="about" className={`${css.about}`}>
+      <Chain></Chain>
+    </section>
+  )
 }
