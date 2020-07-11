@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import {
   TestComponent,
   Nav,
@@ -12,6 +12,14 @@ import { Canvas } from "react-three-fiber"
 import "./index.css"
 
 const IndexPage = () => {
+  const [loading, load] = useState(false)
+
+  const loadingFunc = () => {
+    return !loading ? <div className="loading">Loading...</div> : null
+  }
+  React.useEffect(() => {
+    load(true)
+  }, [])
   return (
     <React.Fragment>
       <Nav></Nav>
@@ -20,6 +28,7 @@ const IndexPage = () => {
         <AboutPage></AboutPage>
         <CreationsPage location="desktop"></CreationsPage>
       </main>
+      {loadingFunc()}
     </React.Fragment>
   )
 }

@@ -4,4 +4,29 @@
   margin: 0;
   padding: 0;
 }
+
+.preload #chain {
+  animation-name: chain;
+  animation-duration: 4s;
+  /* animation-timing-function: linear; */
+}
+
+.preloadFinish {
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.loading {
+  color: white;
+}
+
+@keyframes chain {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*# sourceMappingURL=index.css.map */
