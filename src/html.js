@@ -17,6 +17,7 @@ export default function HTML(props) {
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <div
+          id="___loader"
           key={`loader`}
           style={{
             background: "#0F2027",
@@ -25,7 +26,6 @@ export default function HTML(props) {
             margin: "0",
             padding: "0",
           }}
-          id="___loader"
         >
           <LoadingAssets></LoadingAssets>
         </div>
