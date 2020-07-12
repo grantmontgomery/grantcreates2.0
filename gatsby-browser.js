@@ -7,8 +7,23 @@
 // You can delete this file if you're not using it
 
 exports.onInitialClientRender = () => {
-  document.getElementById("___gatsby").style.display = "block"
-  setTimeout(function () {
+  console.log("loaded")
+  // setTimeout(() => {
+  //   document.getElementById("___gatsby").style.display = "block"
+  // }, 5000)
+
+  setTimeout(() => {
+    document.getElementById("___loader").style.opacity = "0"
+    console.log("loader changed.")
+  }, 1000)
+  setTimeout(() => {
     document.getElementById("___loader").style.display = "none"
-  }, 200)
+    console.log("loader removed")
+  }, 2000)
+  setTimeout(() => {
+    document.getElementById("___gatsby").style.display = "block"
+  }, 5000)
+  setTimeout(() => {
+    document.getElementById("___gatsby").style.opacity = 1
+  }, 6000)
 }

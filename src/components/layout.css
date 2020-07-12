@@ -14,6 +14,26 @@ body {
   overflow-x: hidden;
 }
 
+#___gatsby {
+  display: none;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  transition: 250ms ease-out;
+  opacity: 0;
+}
+
+#___loader {
+  transition: 250ms ease-out;
+  opacity: 1;
+}
+
+/* .fadeOut{
+  transition: 250ms ease_out;
+  opacity: 0;
+} */
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
