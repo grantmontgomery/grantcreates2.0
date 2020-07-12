@@ -5,13 +5,16 @@ import css from "./LoadingAssets.module.css"
 
 export const LoadingAssets = () => {
   return (
-    <div className={`${css.assets}`}>
+    // <div className={`${css.assets}`}>
+    <React.Fragment>
       <div className={css.chainWrapper}>
         <Chain></Chain>
       </div>
       <div className={css.anvilWrapper}>
         <LoadingAnvil></LoadingAnvil>
       </div>
-    </div>
+    </React.Fragment>
+
+    // </div>
   )
 }

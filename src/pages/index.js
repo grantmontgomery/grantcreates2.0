@@ -5,6 +5,7 @@ import {
   HomePage,
   AboutPage,
   CreationsPage,
+  LoadingAssets,
   BoxTest,
 } from "../components"
 import { Link } from "gatsby"
@@ -21,15 +22,16 @@ const IndexPage = () => {
     load(true)
   }, [])
   return (
-    <React.Fragment>
-      <Nav></Nav>
-      <main>
-        <HomePage></HomePage>
-        <AboutPage></AboutPage>
-        <CreationsPage location="desktop"></CreationsPage>
-      </main>
-      {loadingFunc()}
-    </React.Fragment>
+    <LoadingAssets></LoadingAssets>
+    // <React.Fragment>
+    //   <Nav></Nav>
+    //   <main>
+    //     <HomePage></HomePage>
+    //     <AboutPage></AboutPage>
+    //     <CreationsPage location="desktop"></CreationsPage>
+    //   </main>
+    //   {loadingFunc()}
+    // </React.Fragment>
   )
 }
 
