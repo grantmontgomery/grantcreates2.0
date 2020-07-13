@@ -8,9 +8,6 @@
 
 exports.onInitialClientRender = () => {
   console.log("loaded")
-  // setTimeout(() => {
-  //   document.getElementById("___gatsby").style.display = "block"
-  // }, 5000)
 
   setTimeout(() => {
     document.getElementById("___loader").style.opacity = "0"
@@ -22,8 +19,8 @@ exports.onInitialClientRender = () => {
   }, 2000)
   setTimeout(() => {
     document.getElementById("___gatsby").style.display = "block"
-  }, 5000)
+  }, 2000)
   setTimeout(() => {
     document.getElementById("___gatsby").style.opacity = 1
-  }, 6000)
+  }, 3000)
 }

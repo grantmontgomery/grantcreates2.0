@@ -171,7 +171,7 @@ export const FullLogo = ({ location }: LogoProps) => {
             </g>
             <g>
               <linearGradient
-                id="SVGID_1_"
+                id="g1"
                 gradientUnits="userSpaceOnUse"
                 x1="269.2244"
                 y1="211.1037"
@@ -193,7 +193,7 @@ export const FullLogo = ({ location }: LogoProps) => {
 				C153.5,201.6,249.6,354.8,249.6,419.1z"
               />
               <linearGradient
-                id="SVGID_2_"
+                id="g2"
                 gradientUnits="userSpaceOnUse"
                 x1="225.8066"
                 y1="-94.6623"
@@ -213,7 +213,7 @@ export const FullLogo = ({ location }: LogoProps) => {
 				C49,153,30.1,131.2,17.5,105.7l0,0C6.3,83,0,57.5,0,30.6h169.5V0h30.6c27.3,0,49.5,22.1,49.5,49.5V91z"
               />
               <linearGradient
-                id="SVGID_3_"
+                id="gradient3"
                 gradientUnits="userSpaceOnUse"
                 x1="174.6387"
                 y1="48.1331"
@@ -234,7 +234,7 @@ export const FullLogo = ({ location }: LogoProps) => {
                 d="M249.6,195.8v223.3c0-64.3-96-217.5-97.5-219.9C152,199.2,188.1,204.5,249.6,195.8z"
               />
               <linearGradient
-                id="SVGID_4_"
+                id="gradient4"
                 gradientUnits="userSpaceOnUse"
                 x1="292.0424"
                 y1="255.4058"
@@ -255,7 +255,7 @@ export const FullLogo = ({ location }: LogoProps) => {
 				c-10.8,21.8-17,46.3-17.4,72.2c1.1,106.2,62.5,202.9,151.6,248.1C541.6,525.2,548.6,536.3,548.6,548.6z"
               />
               <linearGradient
-                id="SVGID_5_"
+                id="gradient5"
                 gradientUnits="userSpaceOnUse"
                 x1="291.3172"
                 y1="33.5091"
@@ -276,7 +276,7 @@ export const FullLogo = ({ location }: LogoProps) => {
 				C347.3,175.6,405.6,156.4,470.7,123.7z"
               />
               <linearGradient
-                id="SVGID_6_"
+                id="gradient6"
                 gradientUnits="userSpaceOnUse"
                 x1="343.0484"
                 y1="-77.5286"
