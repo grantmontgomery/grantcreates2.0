@@ -1,9 +1,16 @@
 import * as React from "react"
 import css from "./Chain.module.css"
 
-export const Chain = () => {
+interface Props {
+  height: string
+  width: string
+}
+
+export const Chain = ({ height, width }: Props) => {
   return (
     <svg
+      className={css.chain}
+      style={{ height, width }}
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       x="0px"

@@ -1,10 +1,19 @@
-svg {
+.chain {
   height: 45vh;
   width: auto;
   animation-name: rotate;
   animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .st0 {

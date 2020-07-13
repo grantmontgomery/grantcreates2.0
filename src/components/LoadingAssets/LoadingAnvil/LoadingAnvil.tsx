@@ -2,9 +2,15 @@ import * as React from "react"
 import { string } from "prop-types"
 import css from "./LoadingAnvil.module.css"
 
-export const LoadingAnvil = () => {
+interface Props {
+  height: string
+  width: string
+}
+
+export const LoadingAnvil = ({ height, width }: Props) => {
   return (
     <svg
+      style={{ height, width }}
       version="1.1"
       x="0px"
       y="0px"

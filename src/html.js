@@ -1,5 +1,6 @@
 import React from "react"
 import { LoadingAssets } from "./components/LoadingAssets"
+import { Chain, LoadingAnvil } from "./components/LoadingAssets"
 import PropTypes from "prop-types"
 
 export default function HTML(props) {
@@ -27,7 +28,34 @@ export default function HTML(props) {
             padding: "0",
           }}
         >
-          <LoadingAssets></LoadingAssets>
+          <LoadingAssets
+            position="absolute"
+            top="50%"
+            left="50%"
+            transform="translate(-50%, -50%)"
+            height="45vh"
+            width="auto"
+          ></LoadingAssets>
+          {/* <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+            <LoadingAnvil height="45vh" width="auto"></LoadingAnvil>
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+            <Chain height="45vh" width="auto"></Chain>
+          </div> */}
         </div>
         <div
           key={`body`}
