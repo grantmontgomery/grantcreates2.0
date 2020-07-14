@@ -12,13 +12,14 @@ exports.onInitialClientRender = () => {
     console.log("loader changed.")
   }, 1000)
   setTimeout(() => {
-    document.getElementById("___loader").style.display = "none"
+    // document.getElementById("___loader").style.display = "none"
+    document.getElementById("___loader").remove()
     console.log("loader removed")
-  }, 2000)
+  }, 1500)
   setTimeout(() => {
     document.getElementById("___gatsby").style.display = "block"
-  }, 2000)
+  }, 1500)
   setTimeout(() => {
     document.getElementById("___gatsby").style.opacity = 1
-  }, 3000)
+  }, 2000)
 }

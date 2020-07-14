@@ -15,7 +15,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes}>
+      <body {...props.bodyAttributes} style={{background: }}>
         {props.preBodyComponents}
         <div
           id="___loader"
@@ -36,26 +36,6 @@ export default function HTML(props) {
             height="45vh"
             width="auto"
           ></LoadingAssets>
-          {/* <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-            }}
-          >
-            <LoadingAnvil height="45vh" width="auto"></LoadingAnvil>
-          </div>
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-            }}
-          >
-            <Chain height="45vh" width="auto"></Chain>
-          </div> */}
         </div>
         <div
           key={`body`}

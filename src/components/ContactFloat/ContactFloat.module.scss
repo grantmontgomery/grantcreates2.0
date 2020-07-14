@@ -10,14 +10,122 @@
   right: 3vh;
   transition: 250ms ease-out;
   bottom: 3vh;
+  font-family: Objektiv Mk2;
   &.extended {
-    width: 50vh;
+    width: 100vw;
     transition: 250ms ease-out;
     float: none;
     right: 0;
-    height: 50vh;
-    bottom: 40vh;
+    height: 100vh;
+    bottom: -11vh;
+    border-radius: 0;
     transform: translate(50%);
     right: 50%;
+
+    & .formWrapper {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      display: grid;
+      grid-template-columns: 80% 20%;
+      grid-template-rows: 10% 10% 10% 10% 10% 50%;
+      grid-template-areas: "name exit" "company ." "email email" "phone phone" "subject subject" "text text";
+      & .xWrapper {
+        grid-area: exit;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        height: 5vh;
+        width: 5vh;
+        top: 50%;
+        transform: translate(0, -50%);
+        border-radius: 5vh;
+        border: solid 1px white;
+        & .x {
+          color: white;
+          font-size: 2.5vh;
+          top: 54%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: fit-content;
+          position: relative;
+        }
+      }
+      & .nameWrapper {
+        grid-area: name;
+        height: 100%;
+        width: auto;
+        overflow: hidden;
+        margin-left: 5vw;
+        & input {
+          text-overflow: ellipsis;
+          display: block;
+          position: relative;
+          top: 50%;
+          transform: translate(0, -50%);
+          border-radius: 10px;
+          font-family: Objektiv Mk2;
+          font-size: 3vh;
+          background: transparent;
+          border: solid 1px white;
+          &::placeholder {
+            left: 5vh;
+          }
+        }
+      }
+      & .companyWrapper {
+        grid-area: company;
+        & input {
+          margin-left: auto;
+          margin-right: auto;
+          width: 90%;
+          text-overflow: ellipsis;
+          display: block;
+          position: relative;
+          top: 50%;
+          transform: translate(0, -50%);
+          border-radius: 10px;
+          font-family: Objektiv Mk2;
+          font-size: 3vh;
+          background: transparent;
+          border: solid 1px white;
+          &::placeholder {
+            left: 5vh;
+          }
+        }
+      }
+      & .emailWrapper {
+        grid-area: email;
+        & input {
+          margin-left: auto;
+          margin-right: auto;
+          width: 90%;
+          text-overflow: ellipsis;
+          display: block;
+          position: relative;
+          top: 50%;
+          transform: translate(0, -50%);
+          border-radius: 10px;
+          font-family: Objektiv Mk2;
+          font-size: 3vh;
+          background: transparent;
+          border: solid 1px white;
+          &::placeholder {
+            left: 5vh;
+          }
+        }
+      }
+      & .phoneWrapper {
+        grid-area: phone;
+      }
+      & .subjectWrapper {
+        grid-area: subject;
+      }
+      & .textWrapper {
+        grid-area: text;
+        & textarea {
+        }
+      }
+    }
   }
 }
