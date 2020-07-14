@@ -1,0 +1,28 @@
+.contactWrapper {
+  height: 10vh;
+  width: 10vh;
+  background: #2c5363;
+  position: fixed;
+  border-radius: 10vh;
+  z-index: 4;
+  bottom: 10vh;
+  float: right;
+  right: 3vh;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+  bottom: 3vh;
+}
+
+.contactWrapper.extended {
+  width: 50vh;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+  float: none;
+  right: 0;
+  height: 50vh;
+  bottom: 40vh;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+  right: 50%;
+}
+/*# sourceMappingURL=ContactFloat.module.css.map */

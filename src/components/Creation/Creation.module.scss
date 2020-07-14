@@ -23,24 +23,27 @@
   }
   & .exit {
     background: transparent;
-    border-radius: 50%;
+    border-radius: 5vh;
     position: absolute;
     float: right;
     right: 5%;
     top: 5%;
-    height: 12.5%;
-    width: 12.5%;
+    height: 5vh;
+    width: 5vh;
     border: solid 1px white;
     & .xWrapper {
       position: relative;
       width: fit-content;
-      height: fit-content;
+      // height: fit-content;
       color: white;
-      top: 50%;
-      transform: translate(0, -50%);
+      display: block;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       font-family: Objektiv Mk2;
-      margin-left: auto;
-      margin-right: auto;
+      // margin-left: auto;
+      // margin-right: auto;
+      font-size: 2.5vh;
     }
     // background: black;
   }

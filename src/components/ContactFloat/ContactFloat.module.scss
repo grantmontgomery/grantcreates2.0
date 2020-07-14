@@ -1,0 +1,23 @@
+.contactWrapper {
+  height: 10vh;
+  width: 10vh;
+  background: #2c5363;
+  position: fixed;
+  border-radius: 10vh;
+  z-index: 4;
+  bottom: 10vh;
+  float: right;
+  right: 3vh;
+  transition: 250ms ease-out;
+  bottom: 3vh;
+  &.extended {
+    width: 50vh;
+    transition: 250ms ease-out;
+    float: none;
+    right: 0;
+    height: 50vh;
+    bottom: 40vh;
+    transform: translate(50%);
+    right: 50%;
+  }
+}

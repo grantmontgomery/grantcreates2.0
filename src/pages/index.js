@@ -7,6 +7,7 @@ import {
   CreationsPage,
   LoadingAssets,
   BoxTest,
+  ContactFloat,
 } from "../components"
 import { Link } from "gatsby"
 import { Canvas } from "react-three-fiber"
@@ -25,6 +26,7 @@ const IndexPage = () => {
     // <LoadingAssets></LoadingAssets>
     <React.Fragment>
       <Nav></Nav>
+      <ContactFloat></ContactFloat>
       <main>
         <HomePage></HomePage>
         <AboutPage></AboutPage>

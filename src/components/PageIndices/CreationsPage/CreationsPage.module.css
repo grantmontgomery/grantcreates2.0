@@ -14,7 +14,7 @@
 
 @media (max-width: 1024px) {
   .creations.mobileHome {
-    z-index: 3;
+    z-index: 2;
     grid-area: creations;
     height: 100%;
     width: 100%;
