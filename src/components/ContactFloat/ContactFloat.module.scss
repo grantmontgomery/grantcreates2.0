@@ -1,7 +1,7 @@
 .contactWrapper {
   height: 10vh;
   width: 10vh;
-  background: #2c5363;
+  background: #203a43;
   position: fixed;
   border-radius: 10vh;
   z-index: 4;
@@ -11,120 +11,66 @@
   transition: 250ms ease-out;
   bottom: 3vh;
   font-family: Objektiv Mk2;
+  & .iconWrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
   &.extended {
-    width: 100vw;
+    width: 90vw;
     transition: 250ms ease-out;
     float: none;
     right: 0;
-    height: 100vh;
-    bottom: -11vh;
-    border-radius: 0;
+    height: 50vh;
+    bottom: 40vh;
+    border-radius: 5vh;
     transform: translate(50%);
     right: 50%;
-
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas: ". exit" "form form" ". .";
     & .formWrapper {
+      grid-area: form;
       height: 100%;
       width: 100%;
+      & .innerForm {
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100%;
+        width: 200%;
+        display: flex;
+        flex-flow: row nowrap;
+      }
+    }
+    & .xWrapper {
       position: relative;
-      display: grid;
-      grid-template-columns: 80% 20%;
-      grid-template-rows: 10% 10% 10% 10% 10% 50%;
-      grid-template-areas: "name exit" "company ." "email email" "phone phone" "subject subject" "text text";
-      & .xWrapper {
-        grid-area: exit;
+      border-radius: 5vh;
+      grid-area: exit;
+      height: 5vh;
+      width: 5vh;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin-left: auto;
+      margin-right: auto;
+      border: solid 1px white;
+      & .x {
+        top: 55%;
+        display: block;
+        text-align: center;
+        transform: translate(0, -50%);
+        width: fit-content;
         position: relative;
         margin-left: auto;
         margin-right: auto;
-        height: 5vh;
-        width: 5vh;
-        top: 50%;
-        transform: translate(0, -50%);
-        border-radius: 5vh;
-        border: solid 1px white;
-        & .x {
-          color: white;
-          font-size: 2.5vh;
-          top: 54%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: fit-content;
-          position: relative;
-        }
-      }
-      & .nameWrapper {
-        grid-area: name;
-        height: 100%;
-        width: auto;
-        overflow: hidden;
-        margin-left: 5vw;
-        & input {
-          text-overflow: ellipsis;
-          display: block;
-          position: relative;
-          top: 50%;
-          transform: translate(0, -50%);
-          border-radius: 10px;
-          font-family: Objektiv Mk2;
-          font-size: 3vh;
-          background: transparent;
-          border: solid 1px white;
-          &::placeholder {
-            left: 5vh;
-          }
-        }
-      }
-      & .companyWrapper {
-        grid-area: company;
-        & input {
-          margin-left: auto;
-          margin-right: auto;
-          width: 90%;
-          text-overflow: ellipsis;
-          display: block;
-          position: relative;
-          top: 50%;
-          transform: translate(0, -50%);
-          border-radius: 10px;
-          font-family: Objektiv Mk2;
-          font-size: 3vh;
-          background: transparent;
-          border: solid 1px white;
-          &::placeholder {
-            left: 5vh;
-          }
-        }
-      }
-      & .emailWrapper {
-        grid-area: email;
-        & input {
-          margin-left: auto;
-          margin-right: auto;
-          width: 90%;
-          text-overflow: ellipsis;
-          display: block;
-          position: relative;
-          top: 50%;
-          transform: translate(0, -50%);
-          border-radius: 10px;
-          font-family: Objektiv Mk2;
-          font-size: 3vh;
-          background: transparent;
-          border: solid 1px white;
-          &::placeholder {
-            left: 5vh;
-          }
-        }
-      }
-      & .phoneWrapper {
-        grid-area: phone;
-      }
-      & .subjectWrapper {
-        grid-area: subject;
-      }
-      & .textWrapper {
-        grid-area: text;
-        & textarea {
-        }
+        font-family: Objektiv Mk2;
+        font-size: 2.5vh;
+        color: white;
       }
     }
   }

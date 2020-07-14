@@ -1,0 +1,43 @@
+.senderWrapper {
+  height: 100%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-areas: "name name" "company company" "email email" "phone next";
+  & .nameWrapper {
+    grid-area: name;
+    display: flex;
+    flex-flow: column nowrap;
+    & label {
+      margin-left: 5%;
+      font-size: 2vh;
+      color: white;
+    }
+    & input {
+      margin-left: 5%;
+      font-family: Objektiv Mk2;
+      border-radius: 10px;
+      font-size: 2.5vh;
+      background: transparent;
+      color: white;
+      width: 80%;
+      border: solid 1px white;
+    }
+  }
+  & .companyWrapper {
+    grid-area: company;
+    display: flex;
+    flex-flow: row column;
+  }
+  & .emailWrapper {
+    grid-area: email;
+    display: flex;
+    flex-flow: row column;
+  }
+  & .phoneWrapper {
+    grid-area: phone;
+    display: flex;
+    flex-flow: row column;
+  }
+}

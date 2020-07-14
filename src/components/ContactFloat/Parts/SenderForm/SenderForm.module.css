@@ -1,0 +1,84 @@
+.senderWrapper {
+  height: 100%;
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 75% 25%;
+      grid-template-columns: 75% 25%;
+  -ms-grid-rows: 25% 25% 25% 25%;
+      grid-template-rows: 25% 25% 25% 25%;
+      grid-template-areas: "name name" "company company" "email email" "phone next";
+}
+
+.senderWrapper .nameWrapper {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: name;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.senderWrapper .nameWrapper label {
+  margin-left: 5%;
+  font-size: 2vh;
+  color: white;
+}
+
+.senderWrapper .nameWrapper input {
+  margin-left: 5%;
+  font-family: Objektiv Mk2;
+  border-radius: 10px;
+  font-size: 2.5vh;
+  background: transparent;
+  color: white;
+  width: 80%;
+  border: solid 1px white;
+}
+
+.senderWrapper .companyWrapper {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: company;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row column;
+          flex-flow: row column;
+}
+
+.senderWrapper .emailWrapper {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: email;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row column;
+          flex-flow: row column;
+}
+
+.senderWrapper .phoneWrapper {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: phone;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row column;
+          flex-flow: row column;
+}
+/*# sourceMappingURL=SenderForm.module.css.map */

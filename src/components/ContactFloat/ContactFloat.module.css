@@ -1,7 +1,7 @@
 .contactWrapper {
   height: 10vh;
   width: 10vh;
-  background: #2c5363;
+  background: #203a43;
   position: fixed;
   border-radius: 10vh;
   z-index: 4;
@@ -14,199 +14,92 @@
   font-family: Objektiv Mk2;
 }
 
+.contactWrapper .iconWrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
 .contactWrapper.extended {
-  width: 100vw;
+  width: 90vw;
   -webkit-transition: 250ms ease-out;
   transition: 250ms ease-out;
   float: none;
   right: 0;
-  height: 100vh;
-  bottom: -11vh;
-  border-radius: 0;
+  height: 50vh;
+  bottom: 40vh;
+  border-radius: 5vh;
   -webkit-transform: translate(50%);
           transform: translate(50%);
   right: 50%;
-}
-
-.contactWrapper.extended .formWrapper {
-  height: 100%;
-  width: 100%;
-  position: relative;
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 80% 20%;
       grid-template-columns: 80% 20%;
-  -ms-grid-rows: 10% 10% 10% 10% 10% 50%;
-      grid-template-rows: 10% 10% 10% 10% 10% 50%;
-      grid-template-areas: "name exit" "company ." "email email" "phone phone" "subject subject" "text text";
+  -ms-grid-rows: 20% 70% 10%;
+      grid-template-rows: 20% 70% 10%;
+      grid-template-areas: ". exit" "form form" ". .";
 }
 
-.contactWrapper.extended .formWrapper .xWrapper {
+.contactWrapper.extended .formWrapper {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: form;
+  height: 100%;
+  width: 100%;
+}
+
+.contactWrapper.extended .formWrapper .innerForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  height: 100%;
+  width: 200%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.contactWrapper.extended .xWrapper {
+  position: relative;
+  border-radius: 5vh;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: exit;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
   height: 5vh;
   width: 5vh;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  border-radius: 5vh;
+  margin-left: auto;
+  margin-right: auto;
   border: solid 1px white;
 }
 
-.contactWrapper.extended .formWrapper .xWrapper .x {
-  color: white;
-  font-size: 2.5vh;
-  top: 54%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.contactWrapper.extended .xWrapper .x {
+  top: 55%;
+  display: block;
+  text-align: center;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-}
-
-.contactWrapper.extended .formWrapper .nameWrapper {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: name;
-  height: 100%;
-  width: auto;
-  overflow: hidden;
-  margin-left: 5vw;
-}
-
-.contactWrapper.extended .formWrapper .nameWrapper input {
-  text-overflow: ellipsis;
-  display: block;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  border-radius: 10px;
-  font-family: Objektiv Mk2;
-  font-size: 3vh;
-  background: transparent;
-  border: solid 1px white;
-}
-
-.contactWrapper.extended .formWrapper .nameWrapper input::-webkit-input-placeholder {
-  left: 5vh;
-}
-
-.contactWrapper.extended .formWrapper .nameWrapper input:-ms-input-placeholder {
-  left: 5vh;
-}
-
-.contactWrapper.extended .formWrapper .nameWrapper input::-ms-input-placeholder {
-  left: 5vh;
-}
-
-.contactWrapper.extended .formWrapper .nameWrapper input::placeholder {
-  left: 5vh;
-}
-
-.contactWrapper.extended .formWrapper .companyWrapper {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: company;
-}
-
-.contactWrapper.extended .formWrapper .companyWrapper input {
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
-  text-overflow: ellipsis;
-  display: block;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  border-radius: 10px;
   font-family: Objektiv Mk2;
-  font-size: 3vh;
-  background: transparent;
-  border: solid 1px white;
-}
-
-.contactWrapper.extended .formWrapper .companyWrapper input::-webkit-input-placeholder {
-  left: 5vh;
-}
-
-.contactWrapper.extended .formWrapper .companyWrapper input:-ms-input-placeholder {
-  left: 5vh;
-}
-
-.contactWrapper.extended .formWrapper .companyWrapper input::-ms-input-placeholder {
-  left: 5vh;
-}
-
-.contactWrapper.extended .formWrapper .companyWrapper input::placeholder {
-  left: 5vh;
-}
-
-.contactWrapper.extended .formWrapper .emailWrapper {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: email;
-}
-
-.contactWrapper.extended .formWrapper .emailWrapper input {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  text-overflow: ellipsis;
-  display: block;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  border-radius: 10px;
-  font-family: Objektiv Mk2;
-  font-size: 3vh;
-  background: transparent;
-  border: solid 1px white;
-}
-
-.contactWrapper.extended .formWrapper .emailWrapper input::-webkit-input-placeholder {
-  left: 5vh;
-}
-
-.contactWrapper.extended .formWrapper .emailWrapper input:-ms-input-placeholder {
-  left: 5vh;
-}
-
-.contactWrapper.extended .formWrapper .emailWrapper input::-ms-input-placeholder {
-  left: 5vh;
-}
-
-.contactWrapper.extended .formWrapper .emailWrapper input::placeholder {
-  left: 5vh;
-}
-
-.contactWrapper.extended .formWrapper .phoneWrapper {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: phone;
-}
-
-.contactWrapper.extended .formWrapper .subjectWrapper {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: subject;
-}
-
-.contactWrapper.extended .formWrapper .textWrapper {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: text;
+  font-size: 2.5vh;
+  color: white;
 }
 /*# sourceMappingURL=ContactFloat.module.css.map */
