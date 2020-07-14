@@ -30,19 +30,17 @@ export const Creation = ({ type }: Props) => {
 
     const windowTopCenter = window.innerHeight / 2
 
-    return state.tapped
-      ? setState({ tapped: false, top: 0 })
-      : setState({
-          tapped: true,
-          top: windowTopCenter - elemTopPosition - halfHeight * 2.5,
-        })
+    return setState({
+      tapped: true,
+      top: windowTopCenter - elemTopPosition - halfHeight * 2.5,
+    })
   }
 
   const changeDisplay = () => {
     return state.tapped ? (
       <MobileTapped></MobileTapped>
     ) : (
-      <MobileSelector></MobileSelector>
+      <MobileSelector handleTap={handleTap}></MobileSelector>
     )
   }
 
@@ -71,7 +69,7 @@ export const Creation = ({ type }: Props) => {
         className={`${css.creationWrapper} ${state.tapped ? css.tapped : null}`}
         style={{ top: `${state.top}px` }}
         ref={creationRef}
-        onClick={handleTap}
+        // onClick={handleTap}
       >
         {changeDisplay()}
 
