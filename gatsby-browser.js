@@ -7,8 +7,6 @@
 // You can delete this file if you're not using it
 
 exports.onInitialClientRender = () => {
-  console.log("loaded")
-
   setTimeout(() => {
     document.getElementById("___loader").style.opacity = "0"
     console.log("loader changed.")

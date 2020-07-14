@@ -2,6 +2,7 @@ import * as React from "react"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper"
+import { TWEEN } from "tweenjs"
 import css from "./HammerAndAnvil.module.css"
 
 import * as THREE from "three"
@@ -17,6 +18,7 @@ const HammerAndAnvil = () => {
   camera.position.y = 4
   camera.position.x = 0
 
+  console.log(camera)
   ///Renderer
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
@@ -58,7 +60,6 @@ const HammerAndAnvil = () => {
   planeMaterial.opacity = 0.2
 
   const planeMesh = new THREE.Mesh(plane, planeMaterial)
-  console.log(planeMesh)
   planeMesh.receiveShadow = true
   planeMesh.rotation.x -= Math.PI / 2
   planeMesh.position.y = -2
@@ -123,8 +124,6 @@ const HammerAndAnvil = () => {
       gltf.scene.position.y += gltf.scene.position.y - center.y
       gltf.scene.position.z += gltf.scene.position.z - center.z
       // gltf.scene.children[0].children[1].visible = false
-
-      console.log(gltf.scene)
     },
 
     function (loading) {
@@ -153,7 +152,6 @@ const HammerAndAnvil = () => {
   rectLight.position.set(0, 5, 0)
 
   rectLight.lookAt(0, 0, 0)
-  // console.log(rectLight)
   // scene.add(rectLight)
 
   const helper = new RectAreaLightHelper(rectLight)

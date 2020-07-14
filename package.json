@@ -19,6 +19,7 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-transformer-sharp": "^2.5.3",
+    "gsap": "^3.4.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -32,6 +33,7 @@
     "style-loader": "^1.2.1",
     "three": "^0.117.1",
     "tslint": "^6.1.2",
+    "tweenjs": "^1.0.2",
     "typescript": "^3.9.6",
     "typescript-plugin-css-modules": "^2.4.0",
     "typings-for-css-modules-loader": "^1.7.0"
