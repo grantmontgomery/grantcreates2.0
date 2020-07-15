@@ -31,8 +31,8 @@
   transition: 250ms ease-out;
   float: none;
   right: 0;
-  height: 50vh;
-  bottom: 40vh;
+  height: 70vh;
+  bottom: 30vh;
   border-radius: 5vh;
   -webkit-transform: translate(50%);
           transform: translate(50%);

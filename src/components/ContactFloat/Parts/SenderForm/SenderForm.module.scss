@@ -5,39 +5,81 @@
   grid-template-columns: 75% 25%;
   grid-template-rows: 25% 25% 25% 25%;
   grid-template-areas: "name name" "company company" "email email" "phone next";
-  & .nameWrapper {
+  & .sectionWrapper {
+    height: 100%;
     grid-area: name;
     display: flex;
     flex-flow: column nowrap;
-    & label {
-      margin-left: 5%;
-      font-size: 2vh;
-      color: white;
+    &:first-child {
+      grid-area: name;
     }
-    & input {
-      margin-left: 5%;
-      font-family: Objektiv Mk2;
-      border-radius: 10px;
-      font-size: 2.5vh;
-      background: transparent;
-      color: white;
-      width: 80%;
-      border: solid 1px white;
+    &:nth-child(2) {
+      grid-area: company;
     }
-  }
-  & .companyWrapper {
-    grid-area: company;
-    display: flex;
-    flex-flow: row column;
-  }
-  & .emailWrapper {
-    grid-area: email;
-    display: flex;
-    flex-flow: row column;
-  }
-  & .phoneWrapper {
-    grid-area: phone;
-    display: flex;
-    flex-flow: row column;
+    &:nth-child(3) {
+      grid-area: email;
+    }
+    &:last-child {
+      grid-area: phone;
+    }
+    & .labelWrapper {
+      margin-left: 5%;
+
+      height: 4.5vh;
+      & label {
+        position: relative;
+        display: block;
+        height: fit-content;
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: 2vh;
+        color: #60a2be;
+      }
+    }
+    & .inputWrapper {
+      position: relative;
+      height: 5vh;
+      & input {
+        position: relative;
+        height: 4vh;
+        text-align: left;
+        vertical-align: center;
+        margin-left: 5%;
+        font-family: Objektiv Mk2;
+        text-indent: 2%;
+        border-radius: 10px;
+        font-size: 2vh;
+        top: 50%;
+        transform: translate(0, -50%);
+        background: transparent;
+        color: white;
+        width: 80%;
+        border: solid 0.25vh white;
+        outline: none;
+        &:focus {
+          border: solid #61dbfb;
+          color: #61dbfb;
+          &::placeholder {
+            color: #61dbfb;
+          }
+        }
+        &::placeholder {
+          color: lightgrey;
+        }
+      }
+    }
+    & .errorWrapper {
+      margin-left: 5%;
+      height: 5vh;
+      & .error {
+        width: 100%;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        height: fit-content;
+        font-size: 2vh;
+        color: #ed4548;
+      }
+    }
   }
 }

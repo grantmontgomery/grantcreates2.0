@@ -10,7 +10,8 @@
       grid-template-areas: "name name" "company company" "email email" "phone next";
 }
 
-.senderWrapper .nameWrapper {
+.senderWrapper .sectionWrapper {
+  height: 100%;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -24,61 +25,128 @@
           flex-flow: column nowrap;
 }
 
-.senderWrapper .nameWrapper label {
-  margin-left: 5%;
-  font-size: 2vh;
-  color: white;
+.senderWrapper .sectionWrapper:first-child {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: name;
 }
 
-.senderWrapper .nameWrapper input {
-  margin-left: 5%;
-  font-family: Objektiv Mk2;
-  border-radius: 10px;
-  font-size: 2.5vh;
-  background: transparent;
-  color: white;
-  width: 80%;
-  border: solid 1px white;
-}
-
-.senderWrapper .companyWrapper {
+.senderWrapper .sectionWrapper:nth-child(2) {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: company;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row column;
-          flex-flow: row column;
 }
 
-.senderWrapper .emailWrapper {
+.senderWrapper .sectionWrapper:nth-child(3) {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: email;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row column;
-          flex-flow: row column;
 }
 
-.senderWrapper .phoneWrapper {
+.senderWrapper .sectionWrapper:last-child {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: phone;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row column;
-          flex-flow: row column;
+}
+
+.senderWrapper .sectionWrapper .labelWrapper {
+  margin-left: 5%;
+  height: 4.5vh;
+}
+
+.senderWrapper .sectionWrapper .labelWrapper label {
+  position: relative;
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-size: 2vh;
+  color: #60a2be;
+}
+
+.senderWrapper .sectionWrapper .inputWrapper {
+  position: relative;
+  height: 5vh;
+}
+
+.senderWrapper .sectionWrapper .inputWrapper input {
+  position: relative;
+  height: 4vh;
+  text-align: left;
+  vertical-align: center;
+  margin-left: 5%;
+  font-family: Objektiv Mk2;
+  text-indent: 2%;
+  border-radius: 10px;
+  font-size: 2vh;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background: transparent;
+  color: white;
+  width: 80%;
+  border: solid 0.25vh white;
+  outline: none;
+}
+
+.senderWrapper .sectionWrapper .inputWrapper input:focus {
+  border: solid #61dbfb;
+  color: #61dbfb;
+}
+
+.senderWrapper .sectionWrapper .inputWrapper input:focus::-webkit-input-placeholder {
+  color: #61dbfb;
+}
+
+.senderWrapper .sectionWrapper .inputWrapper input:focus:-ms-input-placeholder {
+  color: #61dbfb;
+}
+
+.senderWrapper .sectionWrapper .inputWrapper input:focus::-ms-input-placeholder {
+  color: #61dbfb;
+}
+
+.senderWrapper .sectionWrapper .inputWrapper input:focus::placeholder {
+  color: #61dbfb;
+}
+
+.senderWrapper .sectionWrapper .inputWrapper input::-webkit-input-placeholder {
+  color: lightgrey;
+}
+
+.senderWrapper .sectionWrapper .inputWrapper input:-ms-input-placeholder {
+  color: lightgrey;
+}
+
+.senderWrapper .sectionWrapper .inputWrapper input::-ms-input-placeholder {
+  color: lightgrey;
+}
+
+.senderWrapper .sectionWrapper .inputWrapper input::placeholder {
+  color: lightgrey;
+}
+
+.senderWrapper .sectionWrapper .errorWrapper {
+  margin-left: 5%;
+  height: 5vh;
+}
+
+.senderWrapper .sectionWrapper .errorWrapper .error {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 2vh;
+  color: #ed4548;
 }
 /*# sourceMappingURL=SenderForm.module.css.map */
