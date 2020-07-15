@@ -21,6 +21,15 @@
     }
     &:last-child {
       grid-area: phone;
+      & .labelWrapper {
+        margin-left: 6%;
+      }
+      & .inputWrapper {
+        margin-left: 6%;
+      }
+      & .errorWrapper {
+        margin-left: 6%;
+      }
     }
     & .labelWrapper {
       margin-left: 5%;
@@ -37,14 +46,15 @@
       }
     }
     & .inputWrapper {
+      margin-left: 5%;
       position: relative;
+      width: 90%;
       height: 5vh;
       & input {
         position: relative;
         height: 4vh;
         text-align: left;
         vertical-align: center;
-        margin-left: 5%;
         font-family: Objektiv Mk2;
         text-indent: 2%;
         border-radius: 10px;
@@ -53,11 +63,11 @@
         transform: translate(0, -50%);
         background: transparent;
         color: white;
-        width: 80%;
+        width: 97%;
         border: solid 0.25vh white;
         outline: none;
         &:focus {
-          border: solid #61dbfb;
+          border: solid 0.25vh #61dbfb;
           color: #61dbfb;
           &::placeholder {
             color: #61dbfb;
