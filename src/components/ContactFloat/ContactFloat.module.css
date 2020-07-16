@@ -40,17 +40,89 @@
   overflow: hidden;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 80% 20%;
-      grid-template-columns: 80% 20%;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
   -ms-grid-rows: 10vh 60vh;
       grid-template-rows: 10vh 60vh;
-      grid-template-areas: ". exit" "form form";
+      grid-template-areas: "header" "form";
+}
+
+.contactWrapper.extended .headerWrapper {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.contactWrapper.extended .headerWrapper .titleWrapper {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 3vh;
+  color: white;
+  margin-left: 5%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.contactWrapper.extended .headerWrapper .pointerWrapper {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.contactWrapper.extended .headerWrapper .xWrapper {
+  position: relative;
+  border-radius: 5vh;
+  height: 5vh;
+  width: 5vh;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin-left: auto;
+  margin-right: 5%;
+  border: solid 1px white;
+}
+
+.contactWrapper.extended .headerWrapper .xWrapper .x {
+  top: 55%;
+  display: block;
+  text-align: center;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Objektiv Mk2;
+  font-size: 2.5vh;
+  color: white;
 }
 
 .contactWrapper.extended .formWrapper {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: form;
   height: 100%;
   width: 100%;
@@ -70,38 +142,5 @@
   width: 200%;
   display: flex;
   flex-flow: row nowrap;
-}
-
-.contactWrapper.extended .xWrapper {
-  position: relative;
-  border-radius: 5vh;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: exit;
-  height: 5vh;
-  width: 5vh;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  margin-left: auto;
-  margin-right: auto;
-  border: solid 1px white;
-}
-
-.contactWrapper.extended .xWrapper .x {
-  top: 55%;
-  display: block;
-  text-align: center;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: Objektiv Mk2;
-  font-size: 2.5vh;
-  color: white;
 }
 /*# sourceMappingURL=ContactFloat.module.css.map */

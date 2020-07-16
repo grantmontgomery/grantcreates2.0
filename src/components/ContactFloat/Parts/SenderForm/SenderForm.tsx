@@ -12,7 +12,7 @@ export const SenderForm = ({ setState }) => {
           <input type="text" />
         </div>
         <div className={css.errorWrapper}>
-          <div className={css.error}>No empty fields.</div>
+          <div className={css.error}></div>
         </div>
       </div>
 

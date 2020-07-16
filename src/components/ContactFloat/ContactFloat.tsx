@@ -30,14 +30,19 @@ export const ContactFloat = () => {
     >
       {state.tapped ? (
         <React.Fragment>
-          <div className={css.xWrapper}>
-            <div
-              className={css.x}
-              onClick={() => setState(state => ({ ...state, tapped: false }))}
-            >
-              X
+          <div className={css.headerWrapper}>
+            <div className={css.titleWrapper}>Write Me</div>
+            <div className={css.pointerWrapper}></div>
+            <div className={css.xWrapper}>
+              <div
+                className={css.x}
+                onClick={() => setState(state => ({ ...state, tapped: false }))}
+              >
+                X
+              </div>
             </div>
           </div>
+
           <div className={css.formWrapper}>
             <div
               className={css.innerForm}

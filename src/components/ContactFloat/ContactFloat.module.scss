@@ -32,9 +32,60 @@
     right: 50%;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 100%;
     grid-template-rows: 10vh 60vh;
-    grid-template-areas: ". exit" "form form";
+    grid-template-areas: "header" "form";
+    & .headerWrapper {
+      grid-area: header;
+      display: flex;
+      flex-flow: row nowrap;
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      display: block;
+      height: 100%;
+
+      width: 100%;
+      & .titleWrapper {
+        position: relative;
+        height: fit-content;
+        width: fit-content;
+        font-size: 3vh;
+        color: white;
+        margin-left: 5%;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      & .pointerWrapper {
+        position: relative;
+        width: fit-content;
+      }
+
+      & .xWrapper {
+        position: relative;
+        border-radius: 5vh;
+        height: 5vh;
+        width: 5vh;
+        top: 50%;
+        transform: translate(0, -50%);
+        margin-left: auto;
+        margin-right: 5%;
+        border: solid 1px white;
+        & .x {
+          top: 55%;
+          display: block;
+          text-align: center;
+          transform: translate(0, -50%);
+          width: fit-content;
+          position: relative;
+          margin-left: auto;
+          margin-right: auto;
+          font-family: Objektiv Mk2;
+          font-size: 2.5vh;
+          color: white;
+        }
+      }
+    }
     & .formWrapper {
       grid-area: form;
       height: 100%;
@@ -47,31 +98,6 @@
         width: 200%;
         display: flex;
         flex-flow: row nowrap;
-      }
-    }
-    & .xWrapper {
-      position: relative;
-      border-radius: 5vh;
-      grid-area: exit;
-      height: 5vh;
-      width: 5vh;
-      top: 50%;
-      transform: translate(0, -50%);
-      margin-left: auto;
-      margin-right: auto;
-      border: solid 1px white;
-      & .x {
-        top: 55%;
-        display: block;
-        text-align: center;
-        transform: translate(0, -50%);
-        width: fit-content;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        font-family: Objektiv Mk2;
-        font-size: 2.5vh;
-        color: white;
       }
     }
   }

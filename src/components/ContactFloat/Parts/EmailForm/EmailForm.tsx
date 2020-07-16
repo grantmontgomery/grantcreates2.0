@@ -29,7 +29,7 @@ export const EmailForm = ({ setState }) => {
           ></textarea>
         </div>
         <div className={css.errorWrapper}>
-          <div className={css.error}>Can't leave blank</div>
+          <div className={css.error}></div>
         </div>
       </div>
       <div

@@ -10,6 +10,19 @@
       grid-template-areas: "subject subject subject subject" "message message message message" "back . send send";
 }
 
+.emailWrapper .sectionWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .emailWrapper .sectionWrapper .errorWrapper {
   height: 4vh;
   margin-left: 5%;
@@ -29,6 +42,16 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: subject;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .emailWrapper .sectionWrapper:nth-child(1) .labelWrapper {
@@ -84,6 +107,13 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: message;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 
 .emailWrapper .sectionWrapper:nth-child(2) .labelWrapper {
@@ -116,7 +146,7 @@
   border-radius: 2vh;
   padding: 2%;
   text-indent: 10%;
-  height: 90%;
+  height: 85%;
   width: 95%;
   outline: none;
   font-family: Objektiv Mk2;
@@ -161,6 +191,21 @@
   color: #61dbfb;
 }
 
+.emailWrapper .sectionWrapper:nth-child(2) .errorWrapper {
+  height: 4vh;
+}
+
+.emailWrapper .sectionWrapper:nth-child(2) .errorWrapper .error {
+  font-size: 2vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
 .emailWrapper .sendWrapper {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
@@ -168,7 +213,10 @@
   grid-area: send;
   height: 9vh;
   width: 80%;
+  border-radius: 4.5vh;
   background: #0f2027;
+  margin-left: auto;
+  margin-right: 10%;
 }
 
 .emailWrapper .backWrapper {

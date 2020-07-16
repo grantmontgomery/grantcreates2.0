@@ -6,6 +6,9 @@
   grid-template-rows: 13vh 32vh 15vh;
   grid-template-areas: "subject subject subject subject" "message message message message" "back . send send";
   & .sectionWrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     & .errorWrapper {
       height: 4vh;
       margin-left: 5%;
@@ -19,6 +22,9 @@
     }
     &:nth-child(1) {
       grid-area: subject;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
       & .labelWrapper {
         margin-left: 5%;
         height: 4vh;
@@ -61,6 +67,8 @@
     }
     &:nth-child(2) {
       grid-area: message;
+      display: flex;
+      flex-flow: column nowrap;
       & .labelWrapper {
         margin-left: 5%;
         height: 4vh;
@@ -84,7 +92,7 @@
           border-radius: 2vh;
           padding: 2%;
           text-indent: 10%;
-          height: 90%;
+          height: 85%;
           width: 95%;
           outline: none;
           font-family: Objektiv Mk2;
@@ -102,13 +110,26 @@
           }
         }
       }
+      & .errorWrapper {
+        height: 4vh;
+        & .error {
+          font-size: 2vh;
+          height: fit-content;
+          position: relative;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+      }
     }
   }
   & .sendWrapper {
     grid-area: send;
     height: 9vh;
     width: 80%;
+    border-radius: 4.5vh;
     background: #0f2027;
+    margin-left: auto;
+    margin-right: 10%;
   }
   & .backWrapper {
     position: relative;
