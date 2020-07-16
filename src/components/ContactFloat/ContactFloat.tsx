@@ -9,6 +9,8 @@ interface State {
   phone: string
   subject: string
   email: string
+  next: boolean
+  formSide: string
 }
 export const ContactFloat = () => {
   const [state, setState] = React.useState<State>({
@@ -18,6 +20,8 @@ export const ContactFloat = () => {
     email: "",
     phone: "",
     company: "",
+    next: false,
+    formSide: "sender",
   })
 
   return (
@@ -35,9 +39,16 @@ export const ContactFloat = () => {
             </div>
           </div>
           <div className={css.formWrapper}>
-            <div className={css.innerForm}>
-              <SenderForm></SenderForm>
-              <EmailForm></EmailForm>
+            <div
+              className={css.innerForm}
+              style={{
+                transform: `translate(${
+                  state.formSide === "sender" ? "0" : "-50%"
+                })`,
+              }}
+            >
+              <SenderForm setState={setState}></SenderForm>
+              <EmailForm setState={setState}></EmailForm>
             </div>
           </div>
         </React.Fragment>

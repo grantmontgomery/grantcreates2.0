@@ -42,9 +42,9 @@
   display: grid;
   -ms-grid-columns: 80% 20%;
       grid-template-columns: 80% 20%;
-  -ms-grid-rows: 20% 70% 10%;
-      grid-template-rows: 20% 70% 10%;
-      grid-template-areas: ". exit" "form form" ". .";
+  -ms-grid-rows: 10vh 60vh;
+      grid-template-rows: 10vh 60vh;
+      grid-template-areas: ". exit" "form form";
 }
 
 .contactWrapper.extended .formWrapper {
@@ -57,6 +57,8 @@
 }
 
 .contactWrapper.extended .formWrapper .innerForm {
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

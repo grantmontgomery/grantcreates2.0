@@ -1,7 +1,7 @@
 import * as React from "react"
 import css from "./SenderForm.module.css"
 
-export const SenderForm = () => {
+export const SenderForm = ({ setState }) => {
   return (
     <div className={css.senderWrapper}>
       <div className={css.sectionWrapper}>
@@ -49,6 +49,10 @@ export const SenderForm = () => {
           <div className={css.error}></div>
         </div>
       </div>
+      <div
+        className={css.nextButton}
+        onClick={() => setState(state => ({ ...state, formSide: "email" }))}
+      ></div>
     </div>
   )
 }

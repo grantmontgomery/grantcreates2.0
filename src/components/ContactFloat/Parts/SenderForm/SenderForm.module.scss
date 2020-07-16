@@ -3,7 +3,7 @@
   width: 50%;
   display: grid;
   grid-template-columns: 75% 25%;
-  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-rows: 13vh 13vh 13vh 21vh;
   grid-template-areas: "name name" "company company" "email email" "phone next";
   & .sectionWrapper {
     height: 100%;
@@ -19,7 +19,7 @@
     &:nth-child(3) {
       grid-area: email;
     }
-    &:last-child {
+    &:nth-child(4) {
       grid-area: phone;
       & .labelWrapper {
         margin-left: 6%;
@@ -33,8 +33,7 @@
     }
     & .labelWrapper {
       margin-left: 5%;
-
-      height: 4.5vh;
+      height: 4vh;
       & label {
         position: relative;
         display: block;
@@ -57,7 +56,7 @@
         vertical-align: center;
         font-family: Objektiv Mk2;
         text-indent: 2%;
-        border-radius: 10px;
+        border-radius: 4vh;
         font-size: 2vh;
         top: 50%;
         transform: translate(0, -50%);
@@ -80,7 +79,7 @@
     }
     & .errorWrapper {
       margin-left: 5%;
-      height: 5vh;
+      height: 4vh;
       & .error {
         width: 100%;
         position: relative;
@@ -91,5 +90,17 @@
         color: #ed4548;
       }
     }
+  }
+  & .nextButton {
+    position: relative;
+    grid-area: next;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 9vh;
+    border-radius: 9vh;
+    width: 9vh;
+    margin-left: auto;
+    margin-right: 20%;
+    background: #0f2027;
   }
 }

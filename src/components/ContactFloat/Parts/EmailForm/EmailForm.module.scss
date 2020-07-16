@@ -1,4 +1,126 @@
 .emailWrapper {
   height: 100%;
   width: 50%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 13vh 32vh 15vh;
+  grid-template-areas: "subject subject subject subject" "message message message message" "back . send send";
+  & .sectionWrapper {
+    & .errorWrapper {
+      height: 4vh;
+      margin-left: 5%;
+      & .error {
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        color: #ed4548;
+        height: 2vh;
+      }
+    }
+    &:nth-child(1) {
+      grid-area: subject;
+      & .labelWrapper {
+        margin-left: 5%;
+        height: 4vh;
+        & label {
+          display: block;
+          height: fit-content;
+          top: 50%;
+          transform: translate(0, -50%);
+          position: relative;
+          font-size: 2vh;
+          color: #60a2be;
+        }
+      }
+      & .inputWrapper {
+        margin-left: auto;
+        margin-right: auto;
+        height: 5vh;
+        width: 90%;
+        & input {
+          width: 97%;
+          text-indent: 2%;
+          font-family: Objektiv Mk2;
+          color: white;
+          border-radius: 4vh;
+          outline: none;
+          height: 4vh;
+          font-size: 2vh;
+          background: transparent;
+          border: solid 0.25vh white;
+          &:focus {
+            border: solid 0.25vh #61dbfb;
+            color: #61dbfb;
+          }
+        }
+        & textarea {
+          background: transparent;
+          border: solid 0.25vh white;
+        }
+      }
+    }
+    &:nth-child(2) {
+      grid-area: message;
+      & .labelWrapper {
+        margin-left: 5%;
+        height: 4vh;
+        & label {
+          display: block;
+          height: fit-content;
+          top: 50%;
+          transform: translate(0, -50%);
+          position: relative;
+          font-size: 2vh;
+          color: #60a2be;
+        }
+      }
+      & .inputWrapper {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: 22vh;
+        & textarea {
+          background: transparent;
+          border-radius: 2vh;
+          padding: 2%;
+          text-indent: 10%;
+          height: 90%;
+          width: 95%;
+          outline: none;
+          font-family: Objektiv Mk2;
+          border: solid 0.25vh white;
+          font-size: 2vh;
+          &::placeholder {
+            color: lightgrey;
+          }
+          &:focus {
+            border: solid 0.25vh #61dbfb;
+            color: #61dbfb;
+            &::placeholder {
+              color: #61dbfb;
+            }
+          }
+        }
+      }
+    }
+  }
+  & .sendWrapper {
+    grid-area: send;
+    height: 9vh;
+    width: 80%;
+    background: #0f2027;
+  }
+  & .backWrapper {
+    position: relative;
+    top: 0;
+    // top: 50%;
+    // transform: translate(0, -50%);
+    grid-area: back;
+    height: 9vh;
+    width: 9vh;
+    border-radius: 9vh;
+    margin-left: 20%;
+    margin-right: auto;
+    background: #0f2027;
+  }
 }

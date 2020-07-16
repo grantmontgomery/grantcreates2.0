@@ -15,7 +15,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes} style={{background: }}>
+      <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <div
           id="___loader"

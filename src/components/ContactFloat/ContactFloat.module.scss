@@ -33,13 +33,14 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: 80% 20%;
-    grid-template-rows: 20% 70% 10%;
-    grid-template-areas: ". exit" "form form" ". .";
+    grid-template-rows: 10vh 60vh;
+    grid-template-areas: ". exit" "form form";
     & .formWrapper {
       grid-area: form;
       height: 100%;
       width: 100%;
       & .innerForm {
+        transition: 250ms ease-out;
         display: flex;
         flex-flow: row nowrap;
         height: 100%;
