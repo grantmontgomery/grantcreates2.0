@@ -1,0 +1,53 @@
+.pointerWrapper {
+  height: 50%;
+  width: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  position: relative;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.pointerWrapper .page1 {
+  height: 2vh;
+  border: solid 1px white;
+  width: 2vh;
+  border-radius: 2vh;
+  top: 50%;
+  position: relative;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin-left: auto;
+}
+
+.pointerWrapper .line {
+  position: relative;
+  border-top: solid 1px white;
+  height: 1px;
+  width: 4vh;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.pointerWrapper .page2 {
+  display: block;
+  height: 2vh;
+  position: relative;
+  border: solid 1px white;
+  width: 2vh;
+  margin-right: auto;
+  border-radius: 2vh;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+/*# sourceMappingURL=Pointer.module.css.map */

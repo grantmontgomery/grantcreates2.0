@@ -1,5 +1,5 @@
 import * as React from "react"
-import { EmailForm, SenderForm } from "./Parts"
+import { EmailForm, SenderForm, Pointer } from "./Parts"
 import css from "./ContactFloat.module.css"
 
 interface State {
@@ -32,7 +32,7 @@ export const ContactFloat = () => {
         <React.Fragment>
           <div className={css.headerWrapper}>
             <div className={css.titleWrapper}>Write Me</div>
-            <div className={css.pointerWrapper}></div>
+            <Pointer></Pointer>
             <div className={css.xWrapper}>
               <div
                 className={css.x}
