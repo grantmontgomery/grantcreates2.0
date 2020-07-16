@@ -1,0 +1,62 @@
+.iconWrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  & svg {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 4vh;
+    width: auto;
+
+    & .bottomFold {
+      fill: white;
+    }
+    & .rightFold {
+      fill: white;
+    }
+    & .leftFold {
+      fill: white;
+    }
+    & .topFold {
+      fill: white;
+    }
+    // & .st2 {
+    //   fill: url(#mailGradient1);
+    // }
+    // & .st146 {
+    //   fill: none;
+    //   stroke: #999999;
+    //   stroke-width: 2;
+    //   stroke-miterlimit: 10;
+    // }
+  }
+}
+.st0 {
+  fill: none;
+  stroke: #000000;
+  stroke-miterlimit: 10;
+}
+.st1 {
+  fill: #0f2027;
+}
+.st2 {
+  fill: url(#SVGID_1_);
+}
+
+.st8 {
+  fill: #ffffff;
+}
+.st146 {
+  fill: none;
+  stroke: #999999;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}

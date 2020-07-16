@@ -1,0 +1,1 @@
+export { MailIcon } from "./MailIcon"

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { EmailForm, SenderForm, Pointer } from "./Parts"
+import { EmailForm, SenderForm, Pointer, MailIcon } from "./Parts"
 import css from "./ContactFloat.module.css"
 
 interface State {
@@ -58,10 +58,7 @@ export const ContactFloat = () => {
           </div>
         </React.Fragment>
       ) : (
-        <div
-          className={css.iconWrapper}
-          onClick={() => setState(state => ({ ...state, tapped: true }))}
-        ></div>
+        <MailIcon setState={setState}></MailIcon>
       )}
     </div>
   )
