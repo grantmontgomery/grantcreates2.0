@@ -15,6 +15,9 @@
     transform: translate(0, -50%);
     height: 4vh;
     width: auto;
+    & polygon {
+      filter: drop-shadow(18px 18px 18px red);
+    }
 
     & .bottomFold {
       fill: white;
