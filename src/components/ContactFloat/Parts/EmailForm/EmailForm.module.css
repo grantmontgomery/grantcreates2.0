@@ -229,6 +229,18 @@
   border-radius: 9vh;
   margin-left: 20%;
   margin-right: auto;
-  background: #0f2027;
+  background: #2c5363;
+}
+
+.emailWrapper .backWrapper svg {
+  height: 5vh;
+  width: auto;
+  position: relative;
+  display: block;
+  top: 50%;
+  -webkit-transform: rotate(180deg) translate(0, 50%);
+          transform: rotate(180deg) translate(0, 50%);
+  margin-left: auto;
+  margin-right: auto;
 }
 /*# sourceMappingURL=EmailForm.module.css.map */

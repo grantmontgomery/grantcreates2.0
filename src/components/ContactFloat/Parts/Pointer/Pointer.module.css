@@ -1,6 +1,8 @@
 .pointerWrapper {
   height: 50%;
-  width: 10vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,7 +18,7 @@
           transform: translate(0, -50%);
 }
 
-.pointerWrapper .page1 {
+.pointerWrapper .page {
   height: 2vh;
   border: solid 1px white;
   width: 2vh;
@@ -25,7 +27,22 @@
   position: relative;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.pointerWrapper .page.page:nth-child(1) {
   margin-left: auto;
+}
+
+.pointerWrapper .page.page:nth-child(2) {
+  margin-right: auto;
+}
+
+.pointerWrapper .page.fill {
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  background: white;
 }
 
 .pointerWrapper .line {
@@ -33,19 +50,6 @@
   border-top: solid 1px white;
   height: 1px;
   width: 4vh;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-}
-
-.pointerWrapper .page2 {
-  display: block;
-  height: 2vh;
-  position: relative;
-  border: solid 1px white;
-  width: 2vh;
-  margin-right: auto;
-  border-radius: 2vh;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);

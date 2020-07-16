@@ -52,7 +52,21 @@ export const SenderForm = ({ setState }) => {
       <div
         className={css.nextButton}
         onClick={() => setState(state => ({ ...state, formSide: "email" }))}
-      ></div>
+      >
+        <svg
+          version="1.1"
+          x="0px"
+          y="0px"
+          viewBox="0 0 178 322"
+          enableBackground="new 0 0 178 322"
+        >
+          <path
+            fill="#3e768e"
+            d="M17,319.5c-3.7,0-7.4-1.4-10.3-4.2c-5.7-5.7-5.7-14.8,0-20.5L140.5,161L6.7,27.3c-5.7-5.7-5.7-14.8,0-20.5
+		c5.7-5.7,14.8-5.7,20.5,0l144,144c5.7,5.7,5.7,14.8,0,20.5l-144,144C24.4,318.1,20.7,319.5,17,319.5z"
+          />
+        </svg>
+      </div>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 .pointerWrapper {
   height: 50%;
-  width: 10vh;
+  width: fit-content;
   display: flex;
   flex-flow: row nowrap;
   position: relative;
@@ -8,7 +8,7 @@
   margin-left: auto;
   margin-right: auto;
   transform: translate(0, -50%);
-  & .page1 {
+  & .page {
     height: 2vh;
     border: solid 1px white;
     width: 2vh;
@@ -16,24 +16,25 @@
     top: 50%;
     position: relative;
     transform: translate(0, -50%);
-    margin-left: auto;
+    transition: 250ms;
+
+    &.page:nth-child(1) {
+      margin-left: auto;
+    }
+    &.page:nth-child(2) {
+      margin-right: auto;
+    }
+    &.fill {
+      transition: 250ms;
+
+      background: white;
+    }
   }
   & .line {
     position: relative;
     border-top: solid 1px white;
     height: 1px;
     width: 4vh;
-    top: 50%;
-    transform: translate(0, -50%);
-  }
-  & .page2 {
-    display: block;
-    height: 2vh;
-    position: relative;
-    border: solid 1px white;
-    width: 2vh;
-    margin-right: auto;
-    border-radius: 2vh;
     top: 50%;
     transform: translate(0, -50%);
   }

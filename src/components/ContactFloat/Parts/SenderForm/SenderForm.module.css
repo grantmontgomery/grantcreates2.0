@@ -178,4 +178,16 @@
   margin-right: 20%;
   background: #0f2027;
 }
+
+.senderWrapper .nextButton svg {
+  height: 5vh;
+  width: auto;
+  position: relative;
+  display: block;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin-left: auto;
+  margin-right: auto;
+}
 /*# sourceMappingURL=SenderForm.module.css.map */
