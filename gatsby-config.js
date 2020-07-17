@@ -18,6 +18,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-web-font-loader`,
     {
+      resolve: `gatsby-plugin-express`,
+      options: {
+        output: `config/gatsby-express.json`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
