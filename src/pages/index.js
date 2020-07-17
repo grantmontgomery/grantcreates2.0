@@ -16,9 +16,6 @@ import "./index.css"
 const IndexPage = () => {
   const [loading, load] = useState(false)
 
-  const loadingFunc = () => {
-    return !loading ? <div className="loading">Loading...</div> : null
-  }
   React.useEffect(() => {
     load(true)
   }, [])
@@ -32,7 +29,6 @@ const IndexPage = () => {
         <AboutPage></AboutPage>
         <CreationsPage location="desktop"></CreationsPage>
       </main>
-      {loadingFunc()}
     </React.Fragment>
   )
 }

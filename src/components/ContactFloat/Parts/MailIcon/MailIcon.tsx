@@ -7,6 +7,28 @@ export const MailIcon = ({ setState }) => {
       className={css.iconWrapper}
       onClick={() => setState(state => ({ ...state, tapped: true }))}
     >
+      {/* <svg
+        version="1.1"
+        viewBox="0 0 905 605"
+        enableBackground="new 0 0 905 605"
+        className={css.bottomFold}
+      >
+        <polygon
+          fill="#FFFFFF"
+          points="902.49,602.49 2.49,602.49 327.3,277.68 452.5,383.76 577.69,277.69 		"
+        />
+      </svg>
+      <svg
+        version="1.1"
+        x="0px"
+        y="0px"
+        viewBox="0 0 905 605"
+        enableBackground="new 0 0 905 605"
+        className={css.leftFold}
+      >
+        <polygon fill="#FFFFFF" points="327.3,277.68 2.49,602.49 2.49,2.49 		" />
+      </svg> */}
+
       <svg
         version="1.1"
         x="0px"
