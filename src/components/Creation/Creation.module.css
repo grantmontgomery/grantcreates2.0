@@ -51,7 +51,7 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-family: Objektiv Mk2;
+  font-family: Objektiv Mk2 Bold;
   font-size: 2.5vh;
 }
 
@@ -110,7 +110,7 @@
     height: -moz-fit-content;
     height: fit-content;
     color: white;
-    font-family: Objektiv Mk2;
+    font-family: Objektiv Mk2 Bold;
   }
   .selectorTitleWrapper .subTitle {
     font-size: 1.8vh;
@@ -123,7 +123,7 @@
     height: -moz-fit-content;
     height: fit-content;
     color: lightgrey;
-    font-family: Objektiv Mk2;
+    font-family: Objektiv Mk2 Bold;
   }
 }
 /*# sourceMappingURL=Creation.module.css.map */

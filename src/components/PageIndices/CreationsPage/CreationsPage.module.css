@@ -42,7 +42,7 @@
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
-    font-family: Objektiv Mk2;
+    font-family: Objektiv Mk2 Bold;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -109,7 +109,7 @@
     transition: 250ms ease-out;
   }
   .creations.mobileHome .creationTypes .type span {
-    font-family: Objektiv Mk2;
+    font-family: Objektiv Mk2 Bold;
     position: relative;
     -o-object-fit: contain;
        object-fit: contain;

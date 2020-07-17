@@ -11,7 +11,7 @@
   -webkit-transition: 250ms ease-out;
   transition: 250ms ease-out;
   bottom: 3vh;
-  font-family: Objektiv Mk2;
+  font-family: Objektiv Mk2 Bold;
 }
 
 .contactWrapper .iconWrapper {
@@ -111,7 +111,7 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  font-family: Objektiv Mk2;
+  font-family: Objektiv Mk2 Bold;
   font-size: 2.5vh;
   color: white;
 }
