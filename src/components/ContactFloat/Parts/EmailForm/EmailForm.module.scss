@@ -129,6 +129,37 @@
     background: #0f2027;
     margin-left: auto;
     margin-right: 10%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    & .send {
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      height: fit-content;
+      width: fit-content;
+      font-size: 2.5vh;
+      color: #60a2be;
+      font-style: italic;
+    }
+    & .planeWrapper {
+      height: fit-content;
+      width: fit-content;
+      display: block;
+      top: 50%;
+      transform: translate(0, -50%);
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      & svg {
+        display: block;
+        height: 5vh;
+        width: auto;
+      }
+    }
   }
   & .backWrapper {
     position: relative;
@@ -153,4 +184,33 @@
       margin-right: auto;
     }
   }
+}
+
+.white2 {
+  fill: url(#planeWhite_1_);
+}
+
+.white3 {
+  fill: url(#planeWhite_2_);
+}
+
+.white4 {
+  fill: url(#planeWhite_3_);
+}
+
+.white5 {
+  fill: url(#planeWhite_4_);
+}
+
+.blue2 {
+  fill: url(#planeBlue_1_);
+}
+.blue3 {
+  fill: url(#planeBlue_2_);
+}
+.blue4 {
+  fill: url(#planeBlue_3_);
+}
+.blue5 {
+  fill: url(#planeBlue_4_);
 }

@@ -83,6 +83,7 @@ export const MailIcon = ({ setState }) => {
           y1="278.46"
           x2="901.35"
           y2="601.35"
+          strokeWidth="4px"
         />
         <line
           className={`${css.st146}`}
@@ -90,12 +91,14 @@ export const MailIcon = ({ setState }) => {
           y1="601.02"
           x2="323.87"
           y2="281.11"
+          strokeWidth="4px"
         />
         <line
           className={`${css.st146}`}
           x1="455.43"
           y1="381.28"
           x2="898.71"
+          strokeWidth="4px"
           y2="5.7"
         />
         <line
@@ -103,6 +106,7 @@ export const MailIcon = ({ setState }) => {
           x1="452.5"
           y1="383.76"
           x2="4.7"
+          strokeWidth="4px"
           y2="4.36"
         />
 
