@@ -5,3 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+
+// import { wrapRootElement } from "./src/redux"
+
+// export const wrappedElement = wrapRootElement
