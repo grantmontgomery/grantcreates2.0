@@ -21,9 +21,14 @@ export const ContactFloat = () => {
     email: "",
     phone: "",
     company: "",
+    message: "",
     next: false,
     formSide: "sender",
   })
+
+  // React.useEffect(() => {
+  //   console.log(state)
+  // }, [state])
 
   return (
     <div
@@ -60,7 +65,11 @@ export const ContactFloat = () => {
                 company={state.company}
                 setState={setState}
               ></SenderForm>
-              <EmailForm setState={setState}></EmailForm>
+              <EmailForm
+                setState={setState}
+                message={state.message}
+                subject={state.subject}
+              ></EmailForm>
             </div>
           </div>
         </React.Fragment>

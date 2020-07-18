@@ -1,7 +1,13 @@
 import * as React from "react"
 import css from "./EmailForm.module.css"
 
-export const EmailForm = ({ setState }) => {
+type EmailProps = {
+  message: string
+  subject: string
+  setState: any
+}
+
+export const EmailForm = ({ setState, message, subject }: EmailProps) => {
   return (
     <div className={css.emailWrapper}>
       <div className={css.sectionWrapper}>
@@ -9,7 +15,13 @@ export const EmailForm = ({ setState }) => {
           <label htmlFor="">Subject</label>
         </div>
         <div className={css.inputWrapper}>
-          <input type="text" />
+          <input
+            type="text"
+            value={subject}
+            onChange={({ target }) =>
+              setState(state => ({ ...state, subject: target.value }))
+            }
+          />
         </div>
         <div className={css.errorWrapper}>
           <div className={css.error}></div>
@@ -26,6 +38,10 @@ export const EmailForm = ({ setState }) => {
             cols="30"
             rows="10"
             placeholder="(Length goes beyond section border)"
+            value={message}
+            onChange={({ target }) =>
+              setState(state => ({ ...state, message: target.value }))
+            }
           ></textarea>
         </div>
         <div className={css.errorWrapper}>
