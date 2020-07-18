@@ -1,7 +1,22 @@
 import * as React from "react"
+import { State } from "../../types"
 import css from "./SenderForm.module.css"
+import { stateContext } from "react-three-fiber"
 
-export const SenderForm = ({ setState }) => {
+type SenderProps = {
+  setState: any
+  name: string
+  phone: string
+  company: string
+  email: string
+}
+export const SenderForm = ({
+  name,
+  phone,
+  company,
+  email,
+  setState,
+}: SenderProps) => {
   return (
     <div className={css.senderWrapper}>
       <div className={css.sectionWrapper}>
@@ -9,7 +24,13 @@ export const SenderForm = ({ setState }) => {
           <label htmlFor="">Name</label>
         </div>
         <div className={css.inputWrapper}>
-          <input type="text" />
+          <input
+            type="text"
+            value={name}
+            onChange={({ target: { value } }) =>
+              setState(state => ({ ...state, name: value }))
+            }
+          />
         </div>
         <div className={css.errorWrapper}>
           <div className={css.error}></div>
@@ -21,7 +42,14 @@ export const SenderForm = ({ setState }) => {
           <label htmlFor="">Company</label>
         </div>
         <div className={css.inputWrapper}>
-          <input type="text" placeholder="(Optional)" />
+          <input
+            type="text"
+            placeholder="(Optional)"
+            value={company}
+            onChange={({ target: { value } }) =>
+              setState(state => ({ ...state, company: value }))
+            }
+          />
         </div>
         <div className={css.errorWrapper}>
           <div className={css.error}></div>
@@ -32,7 +60,13 @@ export const SenderForm = ({ setState }) => {
           <label htmlFor="">Email</label>
         </div>
         <div className={css.inputWrapper}>
-          <input type="text" />
+          <input
+            type="text"
+            value={email}
+            onChange={({ target: { value } }) =>
+              setState(state => ({ ...state, email: value }))
+            }
+          />
         </div>
         <div className={css.errorWrapper}>
           <div className={css.error}></div>
@@ -43,7 +77,13 @@ export const SenderForm = ({ setState }) => {
           <label htmlFor="">Phone</label>
         </div>
         <div className={css.inputWrapper}>
-          <input type="text" />
+          <input
+            type="text"
+            value={phone}
+            onChange={({ target: { value } }) =>
+              setState(state => ({ ...state, phone: value }))
+            }
+          />
         </div>
         <div className={css.errorWrapper}>
           <div className={css.error}></div>

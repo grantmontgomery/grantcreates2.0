@@ -1,17 +1,18 @@
 import * as React from "react"
 import { EmailForm, SenderForm, Pointer, MailIcon } from "./Parts"
+import { State } from "./types"
 import css from "./ContactFloat.module.css"
 
-interface State {
-  tapped: boolean
-  name: string
-  company: string
-  phone: string
-  subject: string
-  email: string
-  next: boolean
-  formSide: string
-}
+// interface State {
+//   tapped: boolean
+//   name: string
+//   company: string
+//   phone: string
+//   subject: string
+//   email: string
+//   next: boolean
+//   formSide: string
+// }
 export const ContactFloat = () => {
   const [state, setState] = React.useState<State>({
     tapped: false,
@@ -52,7 +53,13 @@ export const ContactFloat = () => {
                 })`,
               }}
             >
-              <SenderForm setState={setState}></SenderForm>
+              <SenderForm
+                name={state.name}
+                phone={state.phone}
+                email={state.email}
+                company={state.company}
+                setState={setState}
+              ></SenderForm>
               <EmailForm setState={setState}></EmailForm>
             </div>
           </div>
