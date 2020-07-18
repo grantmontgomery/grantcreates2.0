@@ -7,7 +7,7 @@ const nodemailer = require("nodemailer")
 const app = express()
 
 // app.use(cors())
-app.get("/", (req, res) => {
+app.get("/send", (req, res) => {
   res.send("<h1>Hello World</h1>")
 })
 
