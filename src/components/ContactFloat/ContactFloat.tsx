@@ -1,5 +1,6 @@
 import * as React from "react"
 import { EmailForm, SenderForm, Pointer, MailIcon } from "./Parts"
+import { sendmail } from "./Logic"
 import { State } from "./types"
 import css from "./ContactFloat.module.css"
 
@@ -26,9 +27,7 @@ export const ContactFloat = () => {
     formSide: "sender",
   })
 
-  // React.useEffect(() => {
-  //   console.log(state)
-  // }, [state])
+  const submit = () => sendmail(state)
 
   return (
     <div

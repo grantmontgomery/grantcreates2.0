@@ -1,7 +1,14 @@
 import { State } from "../types"
 import fetch from "node-fetch"
 
-function sendmail({ name, phone, company, email, subject, message }: State) {
+async function postmail(
+  name: string,
+  phone: string,
+  company: string,
+  email: string,
+  subject: string,
+  message: string
+) {
   return fetch("http://localhost:5000/send", {
     headers: {
       Accept: "application/json",
@@ -17,6 +24,20 @@ function sendmail({ name, phone, company, email, subject, message }: State) {
       message,
     }),
   })
+}
+
+export default function sendMail({
+  name,
+  phone,
+  company,
+  email,
+  subject,
+  message,
+}: State) {
+  return postmail(name, phone, company, email, subject, message)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error))
 }
 
 // export default
