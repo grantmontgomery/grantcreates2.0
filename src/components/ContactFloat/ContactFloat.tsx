@@ -27,7 +27,9 @@ export const ContactFloat = () => {
     formSide: "sender",
   })
 
-  const submit = () => sendmail(state)
+  function submit(state: State) {
+    sendmail(state)
+  }
 
   return (
     <div
@@ -65,6 +67,8 @@ export const ContactFloat = () => {
                 setState={setState}
               ></SenderForm>
               <EmailForm
+                submit={submit}
+                state={state}
                 setState={setState}
                 message={state.message}
                 subject={state.subject}

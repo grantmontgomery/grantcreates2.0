@@ -1,13 +1,22 @@
 import * as React from "react"
+import { State } from "../../types"
 import css from "./EmailForm.module.css"
 
 type EmailProps = {
   message: string
   subject: string
   setState: any
+  state: State
+  submit: any
 }
 
-export const EmailForm = ({ setState, message, subject }: EmailProps) => {
+export const EmailForm = ({
+  setState,
+  message,
+  subject,
+  submit,
+  state,
+}: EmailProps) => {
   return (
     <div className={css.emailWrapper}>
       <div className={css.sectionWrapper}>
@@ -66,7 +75,7 @@ export const EmailForm = ({ setState, message, subject }: EmailProps) => {
           />
         </svg>
       </div>
-      <div className={css.sendWrapper}>
+      <div className={css.sendWrapper} onClick={() => submit(state)}>
         {/* <div className={css.send}>Send</div> */}
         <div className={css.planeWrapper}>
           <svg
