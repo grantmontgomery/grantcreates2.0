@@ -4,7 +4,15 @@ const cors = require("cors")
 const express = require("express")
 
 const nodemailer = require("nodemailer")
+//transporter: the object that is able to send the email
+//transport: the transport config object, connection url or a transport plugin instance
+//defaults an object defines default values for mail options
+
+// const transporter = nodemailer.createTransport()
+
 const app = express()
+
+console.log(process.env.GATSBY_BROWSER)
 
 app.use(cors())
 

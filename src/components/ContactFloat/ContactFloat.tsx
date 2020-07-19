@@ -28,6 +28,17 @@ export const ContactFloat = () => {
   })
 
   function submit(state: State) {
+    setState({
+      tapped: false,
+      name: "",
+      subject: "",
+      email: "",
+      phone: "",
+      company: "",
+      message: "",
+      next: false,
+      formSide: "sender",
+    })
     sendmail(state)
   }
 
