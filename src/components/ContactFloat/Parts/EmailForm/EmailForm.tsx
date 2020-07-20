@@ -34,6 +34,27 @@ export const EmailForm = ({
   subjectError,
   messageError,
 }: EmailProps) => {
+  const handleChange = ({ target: { value, id } }) => {
+    switch (id) {
+      case "subjectInput":
+        return (
+          setFields(fields => ({ ...fields, subject: value })),
+          setErrors(errors => ({
+            ...errors,
+            subjectError: { error: false, message: "" },
+          }))
+        )
+      case "messageInput":
+        return (
+          setFields(fields => ({ ...fields, message: value })),
+          setErrors(errors => ({
+            ...errors,
+            messageError: { error: false, message: "" },
+          }))
+        )
+    }
+  }
+
   return (
     <div className={css.emailWrapper}>
       <div className={css.sectionWrapper}>
@@ -43,11 +64,10 @@ export const EmailForm = ({
         <div className={css.inputWrapper}>
           <input
             type="text"
+            id="subjectInput"
             value={subject}
             className={subjectError.error ? css.error : ""}
-            onChange={({ target }) =>
-              setFields(state => ({ ...state, subject: target.value }))
-            }
+            onChange={handleChange}
           />
         </div>
         <div className={css.errorWrapper}>
@@ -62,14 +82,12 @@ export const EmailForm = ({
           <textarea
             className={messageError.error ? css.error : ""}
             name=""
-            id=""
+            id="messageInput"
             cols="30"
             rows="10"
             placeholder="(Length goes beyond section border)"
             value={message}
-            onChange={({ target }) =>
-              setFields(state => ({ ...state, message: target.value }))
-            }
+            onChange={handleChange}
           ></textarea>
         </div>
         <div className={css.errorWrapper}>

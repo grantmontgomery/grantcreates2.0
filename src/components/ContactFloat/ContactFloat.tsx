@@ -186,6 +186,7 @@ export const ContactFloat = () => {
                 next={state.next}
                 setFields={setFields}
                 setState={setState}
+                setErrors={setErrors}
                 nameError={errors.nameError}
                 phoneError={errors.phoneError}
                 emailError={errors.emailError}

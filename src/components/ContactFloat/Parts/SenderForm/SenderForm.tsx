@@ -6,6 +6,7 @@ import { stateContext } from "react-three-fiber"
 type SenderProps = {
   setFields: any
   setState: any
+  setErrors: any
   name: string
   phone: string
   company: string
@@ -23,10 +24,42 @@ export const SenderForm = ({
   email,
   setFields,
   setState,
+  setErrors,
   nameError,
   phoneError,
   emailError,
 }: SenderProps) => {
+  const handleChange = ({ target: { id, value } }) => {
+    switch (id) {
+      case "nameInput":
+        return (
+          setFields(fields => ({ ...fields, name: value })),
+          setErrors(errors => ({
+            ...errors,
+            nameError: { error: false, message: "" },
+          }))
+        )
+      case "companyInput":
+        return setFields(fields => ({ ...fields, company: value }))
+      case "phoneInput":
+        return (
+          setFields(fields => ({ ...fields, phone: value })),
+          setErrors(errors => ({
+            ...errors,
+            phoneError: { error: false, message: "" },
+          }))
+        )
+      case "emailInput":
+        return (
+          setFields(fields => ({ ...fields, email: value })),
+          setErrors(errors => ({
+            ...errors,
+            emailError: { error: false, message: "" },
+          }))
+        )
+    }
+  }
+
   return (
     <div className={css.senderWrapper}>
       <div className={css.sectionWrapper}>
@@ -37,10 +70,9 @@ export const SenderForm = ({
           <input
             type="text"
             value={name}
+            id="nameInput"
             className={nameError.error ? css.error : ""}
-            onChange={({ target: { value } }) =>
-              setFields(state => ({ ...state, name: value }))
-            }
+            onChange={handleChange}
           />
         </div>
         <div className={css.errorWrapper}>
@@ -56,10 +88,9 @@ export const SenderForm = ({
           <input
             type="text"
             placeholder="(Optional)"
+            id="companyInput"
             value={company}
-            onChange={({ target: { value } }) =>
-              setFields(state => ({ ...state, company: value }))
-            }
+            onChange={handleChange}
           />
         </div>
         <div className={css.errorWrapper}>
@@ -73,11 +104,10 @@ export const SenderForm = ({
         <div className={css.inputWrapper}>
           <input
             type="text"
+            id="emailInput"
             className={emailError.error ? css.error : ""}
             value={email}
-            onChange={({ target: { value } }) =>
-              setFields(state => ({ ...state, email: value }))
-            }
+            onChange={handleChange}
           />
         </div>
         <div className={css.errorWrapper}>
@@ -91,11 +121,10 @@ export const SenderForm = ({
         <div className={css.inputWrapper}>
           <input
             type="text"
+            id="phoneInput"
             value={phone}
             className={phoneError.error ? css.error : ""}
-            onChange={({ target: { value } }) =>
-              setFields(state => ({ ...state, phone: value }))
-            }
+            onChange={handleChange}
           />
         </div>
         <div className={css.errorWrapper}>
