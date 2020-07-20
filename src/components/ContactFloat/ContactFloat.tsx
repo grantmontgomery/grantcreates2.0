@@ -1,46 +1,48 @@
 import * as React from "react"
 import { EmailForm, SenderForm, Pointer, MailIcon } from "./Parts"
 import { sendmail } from "./Logic"
-import { State } from "./types"
+import { FormFields, FormErrors, FormState } from "./types"
 import css from "./ContactFloat.module.css"
 
-// interface State {
-//   tapped: boolean
-//   name: string
-//   company: string
-//   phone: string
-//   subject: string
-//   email: string
-//   next: boolean
-//   formSide: string
-// }
 export const ContactFloat = () => {
-  const [state, setState] = React.useState<State>({
-    tapped: false,
+  const [fields, setFields] = React.useState<FormFields>({
     name: "",
     subject: "",
     email: "",
     phone: "",
     company: "",
     message: "",
+  })
+
+  const [state, setState] = React.useState<FormState>({
+    tapped: false,
     next: false,
     formSide: "sender",
   })
 
-  function submit(state: State) {
-    setState({
-      tapped: false,
-      name: "",
-      subject: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: "",
-      next: false,
-      formSide: "sender",
-    })
-    sendmail(state)
-  }
+  const [errors, setErrors] = React.useState<FormErrors>({
+    nameError: { error: false, message: "" },
+    companyError: { error: false, message: "" },
+    phoneError: { error: false, message: "" },
+    emailError: { error: false, message: "" },
+    subjectError: { error: false, message: "" },
+    messageError: { error: false, message: "" },
+  })
+
+  // function submit(state: State) {
+  //   setState({
+  //     tapped: false,
+  //     name: "",
+  //     subject: "",
+  //     email: "",
+  //     phone: "",
+  //     company: "",
+  //     message: "",
+  //     next: false,
+  //     formSide: "sender",
+  //   })
+  //   sendmail(state)
+  // }
 
   return (
     <div
@@ -71,18 +73,20 @@ export const ContactFloat = () => {
               }}
             >
               <SenderForm
-                name={state.name}
-                phone={state.phone}
-                email={state.email}
-                company={state.company}
+                name={fields.name}
+                phone={fields.phone}
+                email={fields.email}
+                company={fields.company}
+                setFields={setFields}
                 setState={setState}
               ></SenderForm>
               <EmailForm
+                setState={setState}
                 submit={submit}
                 state={state}
-                setState={setState}
-                message={state.message}
-                subject={state.subject}
+                setFields={setFields}
+                message={fields.message}
+                subject={fields.subject}
               ></EmailForm>
             </div>
           </div>

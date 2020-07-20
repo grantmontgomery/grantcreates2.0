@@ -5,6 +5,7 @@ import css from "./EmailForm.module.css"
 type EmailProps = {
   message: string
   subject: string
+  setFields: any
   setState: any
   state: State
   submit: any
@@ -12,6 +13,7 @@ type EmailProps = {
 
 export const EmailForm = ({
   setState,
+  setFields,
   message,
   subject,
   submit,
@@ -28,7 +30,7 @@ export const EmailForm = ({
             type="text"
             value={subject}
             onChange={({ target }) =>
-              setState(state => ({ ...state, subject: target.value }))
+              setFields(state => ({ ...state, subject: target.value }))
             }
           />
         </div>
@@ -49,7 +51,7 @@ export const EmailForm = ({
             placeholder="(Length goes beyond section border)"
             value={message}
             onChange={({ target }) =>
-              setState(state => ({ ...state, message: target.value }))
+              setFields(state => ({ ...state, message: target.value }))
             }
           ></textarea>
         </div>

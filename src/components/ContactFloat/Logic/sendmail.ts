@@ -34,10 +34,18 @@ export default function sendMail({
   subject,
   message,
 }: State) {
-  return postmail(name, phone, company, email, subject, message)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error))
+  if (
+    name !== "" &&
+    phone !== "" &&
+    email !== "" &&
+    subject !== "" &&
+    message !== ""
+  ) {
+    return postmail(name, phone, company, email, subject, message)
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.log(error))
+  }
 }
 
 // export default

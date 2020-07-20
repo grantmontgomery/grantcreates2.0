@@ -4,6 +4,7 @@ import css from "./SenderForm.module.css"
 import { stateContext } from "react-three-fiber"
 
 type SenderProps = {
+  setFields: any
   setState: any
   name: string
   phone: string
@@ -15,7 +16,7 @@ export const SenderForm = ({
   phone,
   company,
   email,
-  setState,
+  setFields,
 }: SenderProps) => {
   return (
     <div className={css.senderWrapper}>
@@ -28,7 +29,7 @@ export const SenderForm = ({
             type="text"
             value={name}
             onChange={({ target: { value } }) =>
-              setState(state => ({ ...state, name: value }))
+              setFields(state => ({ ...state, name: value }))
             }
           />
         </div>
@@ -47,7 +48,7 @@ export const SenderForm = ({
             placeholder="(Optional)"
             value={company}
             onChange={({ target: { value } }) =>
-              setState(state => ({ ...state, company: value }))
+              setFields(state => ({ ...state, company: value }))
             }
           />
         </div>
@@ -64,7 +65,7 @@ export const SenderForm = ({
             type="text"
             value={email}
             onChange={({ target: { value } }) =>
-              setState(state => ({ ...state, email: value }))
+              setFields(state => ({ ...state, email: value }))
             }
           />
         </div>
@@ -81,7 +82,7 @@ export const SenderForm = ({
             type="text"
             value={phone}
             onChange={({ target: { value } }) =>
-              setState(state => ({ ...state, phone: value }))
+              setFields(state => ({ ...state, phone: value }))
             }
           />
         </div>
