@@ -1,5 +1,5 @@
 import * as React from "react"
-import { State } from "../../types"
+import { FormFields } from "../../types"
 import css from "./EmailForm.module.css"
 
 type EmailProps = {
@@ -9,6 +9,14 @@ type EmailProps = {
   setState: any
   state: State
   submit: any
+  subjectError: {
+    error: boolean
+    message: string
+  }
+  messageError: {
+    error: boolean
+    message: string
+  }
 }
 
 export const EmailForm = ({
@@ -18,6 +26,8 @@ export const EmailForm = ({
   subject,
   submit,
   state,
+  subjectError,
+  messageError,
 }: EmailProps) => {
   return (
     <div className={css.emailWrapper}>
@@ -29,13 +39,14 @@ export const EmailForm = ({
           <input
             type="text"
             value={subject}
+            className={subjectError.error ? css.error : ""}
             onChange={({ target }) =>
               setFields(state => ({ ...state, subject: target.value }))
             }
           />
         </div>
         <div className={css.errorWrapper}>
-          <div className={css.error}></div>
+          <div className={css.error}>{subjectError.message}</div>
         </div>
       </div>
       <div className={css.sectionWrapper}>
@@ -44,6 +55,7 @@ export const EmailForm = ({
         </div>
         <div className={css.inputWrapper}>
           <textarea
+            className={messageError.error ? css.error : ""}
             name=""
             id=""
             cols="30"
@@ -56,7 +68,7 @@ export const EmailForm = ({
           ></textarea>
         </div>
         <div className={css.errorWrapper}>
-          <div className={css.error}></div>
+          <div className={css.error}>{messageError.message}</div>
         </div>
       </div>
       <div

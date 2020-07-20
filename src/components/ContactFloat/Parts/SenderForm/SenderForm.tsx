@@ -1,5 +1,5 @@
 import * as React from "react"
-import { State } from "../../types"
+import { FormFields } from "../../types"
 import css from "./SenderForm.module.css"
 import { stateContext } from "react-three-fiber"
 
@@ -10,13 +10,21 @@ type SenderProps = {
   phone: string
   company: string
   email: string
+  next: boolean
+  nameError: { error: boolean; message: string }
+  phoneError: { error: boolean; message: string }
+  emailError: { error: boolean; message: string }
 }
 export const SenderForm = ({
   name,
   phone,
   company,
+  next,
   email,
   setFields,
+  nameError,
+  phoneError,
+  emailError,
 }: SenderProps) => {
   return (
     <div className={css.senderWrapper}>
@@ -28,13 +36,14 @@ export const SenderForm = ({
           <input
             type="text"
             value={name}
+            className={nameError ? css.error : ""}
             onChange={({ target: { value } }) =>
               setFields(state => ({ ...state, name: value }))
             }
           />
         </div>
         <div className={css.errorWrapper}>
-          <div className={css.error}></div>
+          <div className={css.error}>{nameError.message}</div>
         </div>
       </div>
 
@@ -63,6 +72,7 @@ export const SenderForm = ({
         <div className={css.inputWrapper}>
           <input
             type="text"
+            className={emailError ? css.error : ""}
             value={email}
             onChange={({ target: { value } }) =>
               setFields(state => ({ ...state, email: value }))
@@ -70,7 +80,7 @@ export const SenderForm = ({
           />
         </div>
         <div className={css.errorWrapper}>
-          <div className={css.error}></div>
+          <div className={css.error}>{emailError.message}</div>
         </div>
       </div>
       <div className={css.sectionWrapper}>
@@ -81,13 +91,14 @@ export const SenderForm = ({
           <input
             type="text"
             value={phone}
+            className={phoneError ? css.error : ""}
             onChange={({ target: { value } }) =>
               setFields(state => ({ ...state, phone: value }))
             }
           />
         </div>
         <div className={css.errorWrapper}>
-          <div className={css.error}></div>
+          <div className={css.error}>{phoneError.message}</div>
         </div>
       </div>
       <div

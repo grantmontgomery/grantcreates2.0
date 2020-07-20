@@ -22,7 +22,6 @@ export const ContactFloat = () => {
 
   const [errors, setErrors] = React.useState<FormErrors>({
     nameError: { error: false, message: "" },
-    companyError: { error: false, message: "" },
     phoneError: { error: false, message: "" },
     emailError: { error: false, message: "" },
     subjectError: { error: false, message: "" },
@@ -77,8 +76,12 @@ export const ContactFloat = () => {
                 phone={fields.phone}
                 email={fields.email}
                 company={fields.company}
+                next={state.next}
                 setFields={setFields}
                 setState={setState}
+                nameError={errors.nameError}
+                phoneError={errors.phoneError}
+                emailError={errors.emailError}
               ></SenderForm>
               <EmailForm
                 setState={setState}
@@ -87,6 +90,8 @@ export const ContactFloat = () => {
                 setFields={setFields}
                 message={fields.message}
                 subject={fields.subject}
+                subjectError={errors.subjectError}
+                messageError={errors.messageError}
               ></EmailForm>
             </div>
           </div>

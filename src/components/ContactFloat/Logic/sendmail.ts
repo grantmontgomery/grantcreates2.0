@@ -1,4 +1,4 @@
-import { State } from "../types"
+import { FormFields } from "../types"
 import fetch from "node-fetch"
 
 async function postmail(
@@ -33,19 +33,13 @@ export default function sendMail({
   email,
   subject,
   message,
-}: State) {
-  if (
-    name !== "" &&
-    phone !== "" &&
-    email !== "" &&
-    subject !== "" &&
-    message !== ""
-  ) {
+}: FormFields) {
+  
     return postmail(name, phone, company, email, subject, message)
       .then(response => response.json())
       .then(data => console.log(data))
       .catch(error => console.log(error))
-  }
+  
 }
 
 // export default
