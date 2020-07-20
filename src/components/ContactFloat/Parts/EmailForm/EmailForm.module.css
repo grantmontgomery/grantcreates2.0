@@ -92,6 +92,12 @@
   border: solid 0.25vh white;
 }
 
+.emailWrapper .sectionWrapper:nth-child(1) .inputWrapper input.error {
+  border: solid 0.25vh #ed4548;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
 .emailWrapper .sectionWrapper:nth-child(1) .inputWrapper input:focus {
   border: solid 0.25vh #61dbfb;
   color: #61dbfb;
@@ -168,6 +174,10 @@
 
 .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea::placeholder {
   color: lightgrey;
+}
+
+.emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea.error {
+  border: solid 0.25vh #ed4548;
 }
 
 .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea:focus {

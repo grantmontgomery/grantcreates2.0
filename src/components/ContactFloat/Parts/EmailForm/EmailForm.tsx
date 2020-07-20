@@ -5,10 +5,8 @@ import css from "./EmailForm.module.css"
 type EmailProps = {
   message: string
   subject: string
-  setFields: any
-  setState: any
-  state: State
-  submit: any
+
+  fields: FormFields
   subjectError: {
     error: boolean
     message: string
@@ -17,6 +15,11 @@ type EmailProps = {
     error: boolean
     message: string
   }
+  setFields: any
+  sendMail: any
+  checkFields: any
+  setState: any
+  setErrors: any
 }
 
 export const EmailForm = ({
@@ -24,8 +27,10 @@ export const EmailForm = ({
   setFields,
   message,
   subject,
-  submit,
-  state,
+  sendMail,
+  checkFields,
+  fields,
+  setErrors,
   subjectError,
   messageError,
 }: EmailProps) => {
@@ -89,7 +94,7 @@ export const EmailForm = ({
           />
         </svg>
       </div>
-      <div className={css.sendWrapper} onClick={() => submit(state)}>
+      <div className={css.sendWrapper} onClick={checkFields}>
         {/* <div className={css.send}>Send</div> */}
         <div className={css.planeWrapper}>
           <svg

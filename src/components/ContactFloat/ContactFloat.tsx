@@ -1,6 +1,6 @@
 import * as React from "react"
 import { EmailForm, SenderForm, Pointer, MailIcon } from "./Parts"
-import { sendmail } from "./Logic"
+import { sendMail } from "./Logic"
 import { FormFields, FormErrors, FormState } from "./types"
 import css from "./ContactFloat.module.css"
 
@@ -28,20 +28,127 @@ export const ContactFloat = () => {
     messageError: { error: false, message: "" },
   })
 
-  // function submit(state: State) {
-  //   setState({
-  //     tapped: false,
-  //     name: "",
-  //     subject: "",
-  //     email: "",
-  //     phone: "",
-  //     company: "",
-  //     message: "",
-  //     next: false,
-  //     formSide: "sender",
-  //   })
-  //   sendmail(state)
-  // }
+  const checkFields = () => {
+    const { name, phone, email, subject, message } = fields
+    if (
+      name !== "" &&
+      phone !== "" &&
+      email !== "" &&
+      subject !== "" &&
+      message !== ""
+    ) {
+      return sendMail(fields)
+    } else {
+      const fieldKeys = Object.keys(fields)
+      const fieldValues = Object.values(fields)
+      const errorKeys = Object.keys(errors)
+
+      return fieldKeys.forEach(field => {
+        if (fields[field] === "") {
+          errorKeys.forEach(error => {
+            if (error.includes(field)) {
+              console.log("we got an empty")
+              let errorStart = "Please enter in"
+              switch (field) {
+                case "name":
+                  return setErrors(errors => ({
+                    ...errors,
+                    [error]: {
+                      error: true,
+                      message: `${errorStart} a name.`,
+                    },
+                  }))
+                case "phone":
+                  return setErrors(errors => ({
+                    ...errors,
+                    [error]: {
+                      error: true,
+                      message: `${errorStart} a phone number.`,
+                    },
+                  }))
+                case "email":
+                  return setErrors(errors => ({
+                    ...errors,
+                    [error]: {
+                      error: true,
+                      message: `${errorStart} an email.`,
+                    },
+                  }))
+                case "subject":
+                  return setErrors(errors => ({
+                    ...errors,
+                    [error]: {
+                      error: true,
+                      message: `${errorStart} a subject.`,
+                    },
+                  }))
+                case "message":
+                  return setErrors(errors => ({
+                    ...errors,
+                    [error]: {
+                      error: true,
+                      message: `${errorStart} a message.`,
+                    },
+                  }))
+              }
+            }
+          })
+        }
+      })
+
+      // for (let i = 0; i < fieldKeys.length; i++) {
+      //   if (fieldKeys[i] === "") {
+      //     for (let j = 0; j < errorKeys.length; i++) {
+      //       if (errorKeys[j].includes(fieldKeys[i])) {
+      //         let errorStart = "Please enter in"
+      //         switch (fieldKeys[i]) {
+      //           case "name":
+      //             return setErrors(errors => ({
+      //               ...errors,
+      //               [errorKeys[j]]: {
+      //                 error: true,
+      //                 message: `${errorStart} a name.`,
+      //               },
+      //             }))
+      //           case "phone":
+      //             return setErrors(errors => ({
+      //               ...errors,
+      //               [errorKeys[j]]: {
+      //                 error: true,
+      //                 message: `${errorStart} a phone number.`,
+      //               },
+      //             }))
+      //           case "email":
+      //             return setErrors(errors => ({
+      //               ...errors,
+      //               [errorKeys[j]]: {
+      //                 error: true,
+      //                 message: `${errorStart} an email.`,
+      //               },
+      //             }))
+      //           case "subject":
+      //             return setErrors(errors => ({
+      //               ...errors,
+      //               [errorKeys[j]]: {
+      //                 error: true,
+      //                 message: `${errorStart} a subject.`,
+      //               },
+      //             }))
+      //           case "message":
+      //             return setErrors(errors => ({
+      //               ...errors,
+      //               [errorKeys[j]]: {
+      //                 error: true,
+      //                 message: `${errorStart} a message.`,
+      //               },
+      //             }))
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+    }
+  }
 
   return (
     <div
@@ -85,13 +192,15 @@ export const ContactFloat = () => {
               ></SenderForm>
               <EmailForm
                 setState={setState}
-                submit={submit}
-                state={state}
+                fields={fields}
                 setFields={setFields}
                 message={fields.message}
                 subject={fields.subject}
                 subjectError={errors.subjectError}
                 messageError={errors.messageError}
+                sendMail={sendMail}
+                checkFields={checkFields}
+                setErrors={setErrors}
               ></EmailForm>
             </div>
           </div>

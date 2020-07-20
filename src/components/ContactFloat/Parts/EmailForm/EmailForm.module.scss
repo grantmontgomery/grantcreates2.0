@@ -54,6 +54,10 @@
           font-size: 2vh;
           background: transparent;
           border: solid 0.25vh white;
+          &.error {
+            border: solid 0.25vh #ed4548;
+            transition: 250ms ease-out;
+          }
           &:focus {
             border: solid 0.25vh #61dbfb;
             color: #61dbfb;
@@ -100,6 +104,9 @@
           font-size: 2vh;
           &::placeholder {
             color: lightgrey;
+          }
+          &.error {
+            border: solid 0.25vh #ed4548;
           }
           &:focus {
             border: solid 0.25vh #61dbfb;

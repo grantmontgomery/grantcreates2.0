@@ -22,6 +22,7 @@ export const SenderForm = ({
   next,
   email,
   setFields,
+  setState,
   nameError,
   phoneError,
   emailError,
@@ -36,7 +37,7 @@ export const SenderForm = ({
           <input
             type="text"
             value={name}
-            className={nameError ? css.error : ""}
+            className={nameError.error ? css.error : ""}
             onChange={({ target: { value } }) =>
               setFields(state => ({ ...state, name: value }))
             }
@@ -72,7 +73,7 @@ export const SenderForm = ({
         <div className={css.inputWrapper}>
           <input
             type="text"
-            className={emailError ? css.error : ""}
+            className={emailError.error ? css.error : ""}
             value={email}
             onChange={({ target: { value } }) =>
               setFields(state => ({ ...state, email: value }))
@@ -91,7 +92,7 @@ export const SenderForm = ({
           <input
             type="text"
             value={phone}
-            className={phoneError ? css.error : ""}
+            className={phoneError.error ? css.error : ""}
             onChange={({ target: { value } }) =>
               setFields(state => ({ ...state, phone: value }))
             }

@@ -65,6 +65,10 @@
         width: 97%;
         border: solid 0.25vh white;
         outline: none;
+        &.error {
+          transition: 250ms ease-out;
+          border: solid 0.25vh #ed4548;
+        }
         &:focus {
           border: solid 0.25vh #61dbfb;
           color: #61dbfb;

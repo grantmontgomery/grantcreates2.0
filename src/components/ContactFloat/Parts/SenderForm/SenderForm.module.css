@@ -108,6 +108,12 @@
   outline: none;
 }
 
+.senderWrapper .sectionWrapper .inputWrapper input.error {
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+  border: solid 0.25vh #ed4548;
+}
+
 .senderWrapper .sectionWrapper .inputWrapper input:focus {
   border: solid 0.25vh #61dbfb;
   color: #61dbfb;
