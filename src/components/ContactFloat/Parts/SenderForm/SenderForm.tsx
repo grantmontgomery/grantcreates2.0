@@ -1,5 +1,6 @@
 import * as React from "react"
 import { FormFields } from "../../types"
+import { formatNumber } from "./Logic"
 import css from "./SenderForm.module.css"
 import { stateContext } from "react-three-fiber"
 
@@ -9,6 +10,7 @@ type SenderProps = {
   setErrors: any
   name: string
   phone: string
+  phoneFormat: string
   company: string
   email: string
   next: boolean
@@ -23,6 +25,7 @@ export const SenderForm = ({
   next,
   email,
   setFields,
+  phoneFormat,
   setState,
   setErrors,
   nameError,
@@ -43,7 +46,10 @@ export const SenderForm = ({
         return setFields(fields => ({ ...fields, company: value }))
       case "phoneInput":
         return (
-          setFields(fields => ({ ...fields, phone: value })),
+          setFields(fields => ({
+            ...fields,
+            phone: formatNumber(value),
+          })),
           setErrors(errors => ({
             ...errors,
             phoneError: { error: false, message: "" },
@@ -119,9 +125,23 @@ export const SenderForm = ({
           <label htmlFor="">Phone</label>
         </div>
         <div className={css.inputWrapper}>
+          <div
+            className={css.phoneFormat}
+            onClick={() =>
+              phoneFormat === "us"
+                ? setState(state => ({ ...state, phoneFormat: "eu" }))
+                : setState(state => ({ ...state, phoneFormat: "us" }))
+            }
+          >
+            <div className={phoneFormat === "us" ? css.format : ""}>US</div>
+            <div className={css.line}>|</div>
+            <div className={phoneFormat === "us" ? "" : css.format}>EU</div>
+          </div>
+
           <input
             type="text"
             id="phoneInput"
+            maxLength="16"
             value={phone}
             className={phoneError.error ? css.error : ""}
             onChange={handleChange}

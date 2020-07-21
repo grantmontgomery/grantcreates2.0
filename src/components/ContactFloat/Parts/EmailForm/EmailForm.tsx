@@ -113,7 +113,6 @@ export const EmailForm = ({
         </svg>
       </div>
       <div className={css.sendWrapper} onClick={checkFields}>
-        {/* <div className={css.send}>Send</div> */}
         <div className={css.planeWrapper}>
           <svg
             version="1.1"

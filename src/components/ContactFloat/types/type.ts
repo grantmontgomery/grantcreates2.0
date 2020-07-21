@@ -10,6 +10,7 @@ export interface FormFields {
 export interface FormState {
   tapped: boolean
   next: boolean
+  phoneFormat: string
   formSide: string
 }
 

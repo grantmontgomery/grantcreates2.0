@@ -18,6 +18,7 @@ export const ContactFloat = () => {
     tapped: false,
     next: false,
     formSide: "sender",
+    phoneFormat: "us",
   })
 
   const [errors, setErrors] = React.useState<FormErrors>({
@@ -95,58 +96,6 @@ export const ContactFloat = () => {
           })
         }
       })
-
-      // for (let i = 0; i < fieldKeys.length; i++) {
-      //   if (fieldKeys[i] === "") {
-      //     for (let j = 0; j < errorKeys.length; i++) {
-      //       if (errorKeys[j].includes(fieldKeys[i])) {
-      //         let errorStart = "Please enter in"
-      //         switch (fieldKeys[i]) {
-      //           case "name":
-      //             return setErrors(errors => ({
-      //               ...errors,
-      //               [errorKeys[j]]: {
-      //                 error: true,
-      //                 message: `${errorStart} a name.`,
-      //               },
-      //             }))
-      //           case "phone":
-      //             return setErrors(errors => ({
-      //               ...errors,
-      //               [errorKeys[j]]: {
-      //                 error: true,
-      //                 message: `${errorStart} a phone number.`,
-      //               },
-      //             }))
-      //           case "email":
-      //             return setErrors(errors => ({
-      //               ...errors,
-      //               [errorKeys[j]]: {
-      //                 error: true,
-      //                 message: `${errorStart} an email.`,
-      //               },
-      //             }))
-      //           case "subject":
-      //             return setErrors(errors => ({
-      //               ...errors,
-      //               [errorKeys[j]]: {
-      //                 error: true,
-      //                 message: `${errorStart} a subject.`,
-      //               },
-      //             }))
-      //           case "message":
-      //             return setErrors(errors => ({
-      //               ...errors,
-      //               [errorKeys[j]]: {
-      //                 error: true,
-      //                 message: `${errorStart} a message.`,
-      //               },
-      //             }))
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
     }
   }
 
@@ -186,6 +135,7 @@ export const ContactFloat = () => {
                 next={state.next}
                 setFields={setFields}
                 setState={setState}
+                phoneFormat={state.phoneFormat}
                 setErrors={setErrors}
                 nameError={errors.nameError}
                 phoneError={errors.phoneError}

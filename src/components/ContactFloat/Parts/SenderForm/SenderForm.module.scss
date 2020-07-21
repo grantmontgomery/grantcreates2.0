@@ -44,11 +44,42 @@
         color: #60a2be;
       }
     }
+
     & .inputWrapper {
       margin-left: 5%;
       position: relative;
       width: 90%;
       height: 5vh;
+      & .phoneFormat {
+        top: 50%;
+        transform: translate(0, -50%);
+        float: right;
+        right: 5%;
+        position: absolute;
+        height: 3vh;
+        width: 7vh;
+        display: flex;
+        z-index: 2;
+        flex-flow: row nowrap;
+        & div {
+          font-family: Objektiv Mk2;
+          font-size: 1.75vh;
+          position: relative;
+          top: 50%;
+          transform: translate(0, -50%);
+          display: block;
+          height: fit-content;
+          margin-left: auto;
+          margin-right: auto;
+          width: fit-content;
+          transition: 250ms ease-out;
+          color: grey;
+          &.format {
+            color: white;
+            transition: 250ms ease-out;
+          }
+        }
+      }
       & input {
         position: relative;
         height: 4vh;
