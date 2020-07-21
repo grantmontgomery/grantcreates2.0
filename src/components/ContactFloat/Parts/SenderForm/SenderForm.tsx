@@ -1,6 +1,6 @@
 import * as React from "react"
 import { FormFields } from "../../types"
-import { formatNumber } from "./Logic"
+import { formatNumber, correctEmailFormat, correctPhoneFormat } from "./Logic"
 import css from "./SenderForm.module.css"
 import { stateContext } from "react-three-fiber"
 
@@ -113,6 +113,17 @@ export const SenderForm = ({
             id="emailInput"
             className={emailError.error ? css.error : ""}
             value={email}
+            onBlur={() =>
+              correctEmailFormat(email)
+                ? null
+                : setErrors(errors => ({
+                    ...errors,
+                    emailError: {
+                      error: true,
+                      message: "Check email formatting",
+                    },
+                  }))
+            }
             onChange={handleChange}
           />
         </div>
@@ -142,7 +153,21 @@ export const SenderForm = ({
             type="text"
             id="phoneInput"
             maxLength="16"
+            placeHolder={
+              phoneFormat === "us" ? "___  ____  -  _____" : "__  ____  ______"
+            }
             value={phone}
+            onBlur={() =>
+              correctPhoneFormat(phone, phoneFormat)
+                ? null
+                : setErrors(errors => ({
+                    ...errors,
+                    phoneError: {
+                      error: true,
+                      message: "Check phone formatting.",
+                    },
+                  }))
+            }
             className={phoneError.error ? css.error : ""}
             onChange={handleChange}
           />

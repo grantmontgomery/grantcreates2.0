@@ -1,11 +1,12 @@
 import * as React from "react"
-import { FormFields } from "../../types"
+import { senderErrors } from "./Logic"
+import { FormFields, FormErrors } from "../../types"
 import css from "./EmailForm.module.css"
 
 type EmailProps = {
   message: string
   subject: string
-
+  errors: FormErrors
   fields: FormFields
   subjectError: {
     error: boolean
@@ -33,7 +34,10 @@ export const EmailForm = ({
   setErrors,
   subjectError,
   messageError,
+  errors,
 }: EmailProps) => {
+  const { nameError, emailError, phoneError } = errors
+
   const handleChange = ({ target: { value, id } }) => {
     switch (id) {
       case "subjectInput":
@@ -95,7 +99,11 @@ export const EmailForm = ({
         </div>
       </div>
       <div
-        className={css.backWrapper}
+        className={`${css.backWrapper} ${
+          senderErrors(nameError, emailError, phoneError)
+            ? css.senderErrors
+            : null
+        }`}
         onClick={() => setState(state => ({ ...state, formSide: "sender" }))}
       >
         <svg

@@ -181,6 +181,15 @@
     margin-left: 20%;
     margin-right: auto;
     background: #2c5363;
+    transition: 250ms ease-out;
+
+    &.senderErrors {
+      transition: 250ms ease-out;
+      background: #ed4548;
+      & svg {
+        fill: white;
+      }
+    }
     & svg {
       height: 5vh;
       width: auto;

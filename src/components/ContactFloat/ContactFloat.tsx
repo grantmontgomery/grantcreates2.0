@@ -1,6 +1,10 @@
 import * as React from "react"
 import { EmailForm, SenderForm, Pointer, MailIcon } from "./Parts"
 import { sendMail } from "./Logic"
+import {
+  correctPhoneFormat,
+  correctEmailFormat,
+} from "./Parts/SenderForm/Logic"
 import { FormFields, FormErrors, FormState } from "./types"
 import css from "./ContactFloat.module.css"
 
@@ -38,17 +42,32 @@ export const ContactFloat = () => {
       subject !== "" &&
       message !== ""
     ) {
-      return sendMail(fields)
+      if (
+        correctPhoneFormat(phone, state.phoneFormat) &&
+        correctEmailFormat(email)
+      ) {
+        return sendMail(fields)
+      } else {
+        if (!correctPhoneFormat(phone, state.phoneFormat)) {
+          return setErrors(errors => ({
+            ...errors,
+            phoneError: { error: true, message: "Check phone formatting." },
+          }))
+        } else if (!correctEmailFormat(email)) {
+          return setErrors(errors => ({
+            ...errors,
+            emailError: { error: true, message: "Check email formatting." },
+          }))
+        }
+      }
     } else {
       const fieldKeys = Object.keys(fields)
-      const fieldValues = Object.values(fields)
       const errorKeys = Object.keys(errors)
 
       return fieldKeys.forEach(field => {
         if (fields[field] === "") {
           errorKeys.forEach(error => {
             if (error.includes(field)) {
-              console.log("we got an empty")
               let errorStart = "Please enter in"
               switch (field) {
                 case "name":
@@ -151,6 +170,7 @@ export const ContactFloat = () => {
                 messageError={errors.messageError}
                 sendMail={sendMail}
                 checkFields={checkFields}
+                errors={errors}
                 setErrors={setErrors}
               ></EmailForm>
             </div>

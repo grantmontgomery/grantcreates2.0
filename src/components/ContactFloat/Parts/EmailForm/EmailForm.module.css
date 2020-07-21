@@ -292,6 +292,18 @@
   margin-left: 20%;
   margin-right: auto;
   background: #2c5363;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.emailWrapper .backWrapper.senderErrors {
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+  background: #ed4548;
+}
+
+.emailWrapper .backWrapper.senderErrors svg {
+  fill: white;
 }
 
 .emailWrapper .backWrapper svg {
