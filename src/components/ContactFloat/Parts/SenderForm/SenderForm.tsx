@@ -48,7 +48,7 @@ export const SenderForm = ({
         return (
           setFields(fields => ({
             ...fields,
-            phone: formatNumber(value),
+            phone: formatNumber(phoneFormat, value),
           })),
           setErrors(errors => ({
             ...errors,

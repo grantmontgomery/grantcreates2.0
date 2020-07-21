@@ -74,6 +74,9 @@
           width: fit-content;
           transition: 250ms ease-out;
           color: grey;
+          &.line {
+            color: white;
+          }
           &.format {
             color: white;
             transition: 250ms ease-out;

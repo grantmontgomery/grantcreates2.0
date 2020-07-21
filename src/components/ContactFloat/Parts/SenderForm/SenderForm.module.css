@@ -129,6 +129,10 @@
   color: grey;
 }
 
+.senderWrapper .sectionWrapper .inputWrapper .phoneFormat div.line {
+  color: white;
+}
+
 .senderWrapper .sectionWrapper .inputWrapper .phoneFormat div.format {
   color: white;
   -webkit-transition: 250ms ease-out;
