@@ -6,38 +6,38 @@
   grid-template-rows: 13vh 32vh 15vh;
   grid-template-areas: "subject subject subject subject" "message message message message" "back . send send";
   & .sectionWrapper {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
     & .errorWrapper {
       height: 4vh;
       margin-left: 5%;
+      position: relative;
       & .error {
+        font-family: Objektiv Mk2 Bold;
         position: relative;
+        font-size: 2vh;
+        color: #ed4548;
+        height: fit-content;
+        position: relative;
+      }
+    }
+    & .labelWrapper {
+      margin-left: 5%;
+      height: 4vh;
+      & label {
+        display: block;
+        height: fit-content;
         top: 50%;
         transform: translate(0, -50%);
-        color: #ed4548;
-        height: 2vh;
+        position: relative;
+        font-size: 2vh;
+        color: #60a2be;
       }
     }
     &:nth-child(1) {
       grid-area: subject;
       display: flex;
       flex-flow: column nowrap;
-      justify-content: space-between;
-      & .labelWrapper {
-        margin-left: 5%;
-        height: 4vh;
-        & label {
-          display: block;
-          height: fit-content;
-          top: 50%;
-          transform: translate(0, -50%);
-          position: relative;
-          font-size: 2vh;
-          color: #60a2be;
-        }
-      }
+      justify-content: center;
+
       & .inputWrapper {
         margin-left: auto;
         margin-right: auto;
@@ -73,26 +73,19 @@
       grid-area: message;
       display: flex;
       flex-flow: column nowrap;
-      & .labelWrapper {
-        margin-left: 5%;
-        height: 4vh;
-        & label {
-          display: block;
-          height: fit-content;
-          top: 50%;
-          transform: translate(0, -50%);
-          position: relative;
-          font-size: 2vh;
-          color: #60a2be;
-        }
-      }
+      justify-content: center;
       & .inputWrapper {
         margin-left: auto;
         margin-right: auto;
         width: 90%;
         height: 22vh;
         & textarea {
+          position: relative;
+          margin-left: auto;
+          margin-right: auto;
           background: transparent;
+          top: 50%;
+          transform: translate(0, -50%);
           border-radius: 2vh;
           padding: 2%;
           height: 85%;

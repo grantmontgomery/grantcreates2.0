@@ -23,7 +23,7 @@ type EmailProps = {
   setErrors: any
 }
 
-export const EmailForm = ({
+export const EmailForm: React.FC<EmailProps> = ({
   setState,
   setFields,
   message,
@@ -35,7 +35,7 @@ export const EmailForm = ({
   subjectError,
   messageError,
   errors,
-}: EmailProps) => {
+}) => {
   const { nameError, emailError, phoneError } = errors
 
   const handleChange = ({ target: { value, id } }) => {

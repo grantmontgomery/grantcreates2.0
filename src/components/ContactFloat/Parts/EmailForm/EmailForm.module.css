@@ -10,31 +10,39 @@
       grid-template-areas: "subject subject subject subject" "message message message message" "back . send send";
 }
 
-.emailWrapper .sectionWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .emailWrapper .sectionWrapper .errorWrapper {
   height: 4vh;
   margin-left: 5%;
+  position: relative;
 }
 
 .emailWrapper .sectionWrapper .errorWrapper .error {
+  font-family: Objektiv Mk2 Bold;
   position: relative;
+  font-size: 2vh;
+  color: #ed4548;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.emailWrapper .sectionWrapper .labelWrapper {
+  margin-left: 5%;
+  height: 4vh;
+}
+
+.emailWrapper .sectionWrapper .labelWrapper label {
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  color: #ed4548;
-  height: 2vh;
+  position: relative;
+  font-size: 2vh;
+  color: #60a2be;
 }
 
 .emailWrapper .sectionWrapper:nth-child(1) {
@@ -49,27 +57,9 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.emailWrapper .sectionWrapper:nth-child(1) .labelWrapper {
-  margin-left: 5%;
-  height: 4vh;
-}
-
-.emailWrapper .sectionWrapper:nth-child(1) .labelWrapper label {
-  display: block;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  position: relative;
-  font-size: 2vh;
-  color: #60a2be;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .emailWrapper .sectionWrapper:nth-child(1) .inputWrapper {
@@ -120,24 +110,9 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-}
-
-.emailWrapper .sectionWrapper:nth-child(2) .labelWrapper {
-  margin-left: 5%;
-  height: 4vh;
-}
-
-.emailWrapper .sectionWrapper:nth-child(2) .labelWrapper label {
-  display: block;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  position: relative;
-  font-size: 2vh;
-  color: #60a2be;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper {
@@ -148,7 +123,13 @@
 }
 
 .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
   background: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   border-radius: 2vh;
   padding: 2%;
   height: 85%;

@@ -208,7 +208,7 @@
 
 .senderWrapper .sectionWrapper .errorWrapper .error {
   width: 100%;
-  font-family: "Objektiv Mk2";
+  font-family: Objektiv Mk2 Bold;
   position: relative;
   top: 50%;
   -webkit-transform: translate(0, -50%);
