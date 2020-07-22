@@ -1,21 +1,14 @@
 import * as React from "react"
+import { CreationDataInterface } from "../../Data"
 import css from "./MobileTapped.module.css"
 
-type Props = {
-  detailsName: string
-  details: string
-  technologies: string
-  githublink: string
-  link: string
-}
-
-export const MobileTapped = ({
+export const MobileTapped: React.FunctionComponent<CreationDataInterface> = ({
   detailsName,
   details,
   technologies,
   githublink,
   link,
-}: Props) => {
+}) => {
   return (
     <div className={`${css.tappedWrapper}`}>
       <div className={`${css.imageWrapper}`}>

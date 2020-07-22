@@ -1,1 +1,1 @@
-export { Creations } from "./Creations"
+export { displayCreations } from "./displayCreations"

@@ -1,9 +1,15 @@
 import * as React from "react"
-import { creationsData } from "./Data"
+import { creationsData, CreationDataInterface } from "./Data"
 import { Creation } from "./Creation"
-import css from "./Creations.module.css"
 
-export const Creations = (type: string) => {
+type CreationProps = {
+  type: string
+  data: CreationDataInterface
+}
+
+type CreationsType = (type: string) => React.FC<CreationProps>[]
+
+export const displayCreations: CreationsType = type => {
   switch (type) {
     case "apps":
       return creationsData.apps.map(creation => {

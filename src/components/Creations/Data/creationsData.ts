@@ -1,16 +1,16 @@
-interface CreationData {
-  name: string
-  subTitle: string
-  detailsName: string
-  details: string
-  technologies: string
-  githublink: string
-  link: string
+export interface CreationDataInterface {
+  name?: string
+  subTitle?: string
+  detailsName?: string
+  details?: string
+  technologies?: string
+  githublink?: string
+  link?: string
 }
 
 type Data = {
-  apps: CreationData[]
-  websites: CreationData[]
+  apps: CreationDataInterface[]
+  websites: CreationDataInterface[]
 }
 
 export const creationsData: Data = {

@@ -1,12 +1,12 @@
 import * as React from "react"
 import { MobileSelector } from "./MobileSelector"
-import { CreationData } from "../../../data"
+import { CreationDataInterface } from "../Data"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import css from "./Creation.module.css"
 import { MobileTapped } from "./MobileTapped"
 
 interface Props {
-  data: CreationData
+  data: CreationDataInterface
   type: string
 }
 
@@ -15,7 +15,7 @@ interface State {
   top: number
 }
 
-export const Creation = ({ data, type }: Props) => {
+export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
   const [state, setState] = React.useState<State>({ tapped: false, top: 0 })
 
   const creationRef = React.useRef<HTMLDivElement>(null)
@@ -49,7 +49,7 @@ export const Creation = ({ data, type }: Props) => {
       ></MobileTapped>
     ) : (
       <MobileSelector
-        name={name}
+        name={data.name}
         handleTap={handleTap}
         type={type}
       ></MobileSelector>
