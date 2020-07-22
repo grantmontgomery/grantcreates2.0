@@ -32,22 +32,6 @@ export const CreationsPage = ({ location }: Props) => {
         >
           <span>Websites</span>
         </li>
-        <li
-          className={`${css.type} ${
-            state.type === "Designs" ? css.active : null
-          }`}
-          onClick={() => setState({ type: "Designs" })}
-        >
-          <span>Designs</span>
-        </li>
-        <li
-          className={`${css.type} ${
-            state.type === "Experiences" ? css.active : null
-          }`}
-          onClick={() => setState({ type: "Experiences" })}
-        >
-          <span>Experiences</span>
-        </li>
       </ul>
       <CreationType type={state.type}></CreationType>
     </section>

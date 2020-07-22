@@ -18,9 +18,16 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-transformer-json``gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-web-font-loader`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
     {
       resolve: `gatsby-plugin-express`,
       options: {

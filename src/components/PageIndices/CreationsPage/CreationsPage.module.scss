@@ -49,7 +49,7 @@
         margin: 0;
         flex-flow: row nowrap;
         list-style-type: none;
-        justify-content: space-between;
+        justify-content: left;
         overflow: hidden;
         padding-left: 0;
         padding-right: 0;
@@ -61,10 +61,8 @@
           transform: translate(0, -50%);
           border-radius: 50px;
           height: 5vh;
-          // font-size: 3vw;
           width: fit-content;
-          margin-right: auto;
-          margin-left: auto;
+
           background: #0f2027;
           color: #3e768e;
           padding-left: 3.5%;
@@ -73,11 +71,11 @@
 
           &.type:nth-child(1) {
             margin-left: 5%;
-            margin-right: auto;
+            margin-right: 5%;
           }
           &.type:last-child {
-            margin-left: auto;
-            margin-right: 5%;
+            margin-left: 0;
+            margin-right: auto;
           }
           &.active {
             background: #203a43;

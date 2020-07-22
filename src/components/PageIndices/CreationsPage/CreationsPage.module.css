@@ -67,9 +67,9 @@
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
     list-style-type: none;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     overflow: hidden;
     padding-left: 0;
     padding-right: 0;
@@ -85,8 +85,6 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin-right: auto;
-    margin-left: auto;
     background: #0f2027;
     color: #3e768e;
     padding-left: 3.5%;
@@ -96,11 +94,11 @@
   }
   .creations.mobileHome .creationTypes .type.type:nth-child(1) {
     margin-left: 5%;
-    margin-right: auto;
+    margin-right: 5%;
   }
   .creations.mobileHome .creationTypes .type.type:last-child {
-    margin-left: auto;
-    margin-right: 5%;
+    margin-left: 0;
+    margin-right: auto;
   }
   .creations.mobileHome .creationTypes .type.active {
     background: #203a43;
