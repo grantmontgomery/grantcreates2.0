@@ -1,6 +1,13 @@
 import * as React from "react"
 import css from "./MobileTapped.module.css"
-import { CreationData } from "../../../../data"
+
+type Props = {
+  detailsName: string
+  details: string
+  technologies: string
+  githublink: string
+  link: string
+}
 
 export const MobileTapped = ({
   detailsName,
@@ -8,7 +15,7 @@ export const MobileTapped = ({
   technologies,
   githublink,
   link,
-}: CreationData) => {
+}: Props) => {
   return (
     <div className={`${css.tappedWrapper}`}>
       <div className={`${css.imageWrapper}`}>
@@ -44,7 +51,6 @@ export const MobileTapped = ({
           </a>
         </div>
       </div>
-
       <div className={`${css.detailsWrapper}`}>
         <div className={`${css.descriptionWrapper}`}>{details}</div>
       </div>

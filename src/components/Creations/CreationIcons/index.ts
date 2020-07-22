@@ -1,0 +1,1 @@
+export { SekndIcon } from "./apps"

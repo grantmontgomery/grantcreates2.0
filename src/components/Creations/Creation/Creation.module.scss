@@ -58,25 +58,6 @@
 //   background: rgba(32, 58, 67, 0.5);
 // }
 
-.modalEnter {
-  transition: 250ms ease-out;
-  opacity: 0;
-  &.modalEnterActive {
-    opacity: 1;
-    transition: 250ms ease-out;
-  }
-}
-
-.modalExit {
-  transition: 250ms ease-out;
-
-  opacity: 1;
-  &.modalExitActive {
-    opacity: 0;
-    transition: 250ms ease-out;
-  }
-}
-
 @media (max-width: 1024px) {
   .selectorTitleWrapper {
     display: flex;

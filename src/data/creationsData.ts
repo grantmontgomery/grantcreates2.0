@@ -1,4 +1,4 @@
-export type CreationData = {
+export interface CreationData {
   name: string
   subTitle: string
   detailsName: string

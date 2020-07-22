@@ -7,6 +7,7 @@ import { MobileTapped } from "./MobileTapped"
 
 interface Props {
   data: CreationData
+  type: string
 }
 
 interface State {
@@ -14,7 +15,7 @@ interface State {
   top: number
 }
 
-export const Creation = ({ data }: Props) => {
+export const Creation = ({ data, type }: Props) => {
   const [state, setState] = React.useState<State>({ tapped: false, top: 0 })
 
   const creationRef = React.useRef<HTMLDivElement>(null)
@@ -47,40 +48,23 @@ export const Creation = ({ data }: Props) => {
         link={data.link}
       ></MobileTapped>
     ) : (
-      <MobileSelector></MobileSelector>
+      <MobileSelector
+        name={name}
+        handleTap={handleTap}
+        type={type}
+      ></MobileSelector>
     )
   }
 
-  const applyTransitions = () => {
-    return state.tapped ? (
-      <CSSTransition
-        timeout={250}
-        classNames={{
-          enter: css["modalEnter"],
-          enterActive: css["modalEnterActive"],
-          exit: css["modalExit"],
-          exitActive: css["modalExitActive"],
-        }}
-      >
-        <div
-          className={`${css.modalDark}`}
-          onClick={() => setState({ tapped: false, top: 0 })}
-          // onTouchStart={() => setState({ tapped: false })}
-        ></div>
-      </CSSTransition>
-    ) : null
-  }
   return (
     <React.Fragment>
       <div
         className={`${css.creationWrapper} ${state.tapped ? css.tapped : null}`}
         style={{ top: `${state.top}px` }}
         ref={creationRef}
-        // onClick={handleTap}
       >
         {changeDisplay()}
 
-        {/* {state.tapped ? <MobileSelector></MobileSelector> : null} */}
         <div
           className={`${css.exit}`}
           style={{
@@ -98,7 +82,6 @@ export const Creation = ({ data }: Props) => {
           <div className={`${css.subTitle}`}>{data.subTitle}</div>
         </div>
       )}
-      {/* <TransitionGroup>{applyTransitions()}</TransitionGroup> */}
     </React.Fragment>
   )
 }

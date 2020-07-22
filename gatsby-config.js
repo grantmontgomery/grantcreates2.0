@@ -18,7 +18,8 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-json``gatsby-plugin-sharp`,
+    `gatsby-transformer-json`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-web-font-loader`,
     {

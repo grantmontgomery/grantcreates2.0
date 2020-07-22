@@ -55,30 +55,6 @@
   font-size: 2.5vh;
 }
 
-.modalEnter {
-  -webkit-transition: 250ms ease-out;
-  transition: 250ms ease-out;
-  opacity: 0;
-}
-
-.modalEnter.modalEnterActive {
-  opacity: 1;
-  -webkit-transition: 250ms ease-out;
-  transition: 250ms ease-out;
-}
-
-.modalExit {
-  -webkit-transition: 250ms ease-out;
-  transition: 250ms ease-out;
-  opacity: 1;
-}
-
-.modalExit.modalExitActive {
-  opacity: 0;
-  -webkit-transition: 250ms ease-out;
-  transition: 250ms ease-out;
-}
-
 @media (max-width: 1024px) {
   .selectorTitleWrapper {
     display: -webkit-box;
