@@ -12,7 +12,6 @@ interface State {
 
 export const Nav = () => {
   const [mobileState, setMobileState] = React.useState<State>({ menu: false })
-  console.log(css["links-enter"])
   const applyTransitions = () => {
     return mobileState.menu ? (
       <CSSTransition

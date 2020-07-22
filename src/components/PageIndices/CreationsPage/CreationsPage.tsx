@@ -10,7 +10,7 @@ interface State {
   type: string
 }
 export const CreationsPage = ({ location }: Props) => {
-  const [state, setState] = React.useState<State>({ type: "Apps" })
+  const [state, setState] = React.useState<State>({ type: "apps" })
 
   return (
     <section id="creations" className={`${css.creations} ${css[location]}`}>
@@ -19,16 +19,16 @@ export const CreationsPage = ({ location }: Props) => {
       </div>
       <ul className={`${css.creationTypes}`}>
         <li
-          className={`${css.type} ${state.type === "Apps" ? css.active : null}`}
-          onClick={() => setState({ type: "Apps" })}
+          className={`${css.type} ${state.type === "apps" ? css.active : null}`}
+          onClick={() => setState({ type: "apps" })}
         >
           <span>Apps</span>
         </li>
         <li
           className={`${css.type} ${
-            state.type === "Websites" ? css.active : null
+            state.type === "websites" ? css.active : null
           }`}
-          onClick={() => setState({ type: "Websites" })}
+          onClick={() => setState({ type: "websites" })}
         >
           <span>Websites</span>
         </li>

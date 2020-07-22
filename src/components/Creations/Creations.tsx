@@ -1,5 +1,5 @@
 import * as React from "react"
-import { creationsData } from "../../data"
+import { creationsData } from "./Data"
 import { Creation } from "./Creation"
 import css from "./Creations.module.css"
 
