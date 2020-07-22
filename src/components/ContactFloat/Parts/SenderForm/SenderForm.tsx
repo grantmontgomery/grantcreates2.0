@@ -153,7 +153,7 @@ export const SenderForm = ({
             type="text"
             id="phoneInput"
             maxLength="16"
-            placeHolder={
+            placeholder={
               phoneFormat === "us" ? "___  ____  -  _____" : "__  ____  ______"
             }
             value={phone}

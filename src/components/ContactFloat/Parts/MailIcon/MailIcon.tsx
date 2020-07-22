@@ -41,15 +41,15 @@ export const MailIcon = ({ setState }) => {
             <feDropShadow dx="0.2" dy="0.4" stdDeviation="0.2" />
           </filter>
           <filter id="leftFold">
-            <feDropShadow dx="0" dy="0" stdDeviation="0.5" flood-color="cyan" />
+            <feDropShadow dx="0" dy="0" stdDeviation="0.5" floodColor="cyan" />
           </filter>
           <filter id="rightFold">
             <feDropShadow
               dx="-0.8"
               dy="-0.8"
               stdDeviation="0"
-              flood-color="pink"
-              flood-opacity="0.5"
+              floodColor="pink"
+              floodOpacity="0.5"
             />
           </filter>
           <filter id="bottomFold">
@@ -57,8 +57,8 @@ export const MailIcon = ({ setState }) => {
               dx="-0.8"
               dy="-0.8"
               stdDeviation="0"
-              flood-color="pink"
-              flood-opacity="0.5"
+              floodColor="pink"
+              floodOpacity="0.5"
             />
           </filter>
         </defs>

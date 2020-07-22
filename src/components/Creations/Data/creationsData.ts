@@ -31,7 +31,7 @@ export const creationsData: Data = {
       subTitle: "Gatsby Portfolio Website",
       detailsName: "Grant Creates",
       details: "My portfolio site",
-      technologies: "Typescript Gatsby React Express Sass",
+      technologies: "Typescript Gatsby Express Sass",
       githublink: "https://github.com/grantmontgomery/grantcreates2.0",
       link: "",
     },

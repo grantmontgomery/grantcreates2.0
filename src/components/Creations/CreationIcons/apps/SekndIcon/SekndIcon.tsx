@@ -1,11 +1,17 @@
 import * as React from "react"
+import css from "./SekndIcon.module.css"
 
-export const SekndIcon: React.FunctionComponent = () => {
+type Props = {
+  location: string
+}
+
+export const SekndIcon: React.FunctionComponent<Props> = ({ location }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 228.98 49.14"
       style={{ fill: "white" }}
+      className={css[`${location}`]}
     >
       <title>AltLogoBlack</title>
       <g id="Layer_2" data-name="Layer 2">

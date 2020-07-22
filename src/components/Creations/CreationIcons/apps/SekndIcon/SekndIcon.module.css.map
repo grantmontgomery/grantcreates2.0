@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACR,QAAQ,EAAE,QAAQ;EAClB,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI;EAClB,GAAG,EAAE,GAAG;EACR,SAAS,EAAE,kBAAkB;EAC7B,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "SekndIcon.module.scss"
+    ],
+    "names": [],
+    "file": "SekndIcon.module.css"
+}
