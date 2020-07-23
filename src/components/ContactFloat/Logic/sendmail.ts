@@ -29,14 +29,14 @@ async function postmail(
 const handleSendFail = (setState: any) => {
   setTimeout(() => {
     return setState(state => ({ ...state, mailStatus: "failed" }))
-  }, 250)
+  }, 500)
   setTimeout(() => {
     return setState(state => ({
       ...state,
       formSide: "email",
       mailStatus: "not sent",
     }))
-  }, 2250)
+  }, 2500)
 }
 
 const handleSendSuccess = (accepted: number, setState: any, setFields: any) => {
@@ -44,7 +44,7 @@ const handleSendSuccess = (accepted: number, setState: any, setFields: any) => {
     setTimeout(() => {
       console.log("sucessStarted")
       return setState(state => ({ ...state, mailStatus: "delivered" }))
-    }, 250)
+    }, 500)
     setTimeout(() => {
       console.log("success ended")
       return (
@@ -63,7 +63,7 @@ const handleSendSuccess = (accepted: number, setState: any, setFields: any) => {
           message: "",
         })
       )
-    }, 2250)
+    }, 2500)
   } else {
     return handleSendFail(setState)
   }

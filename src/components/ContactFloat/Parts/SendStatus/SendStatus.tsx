@@ -13,7 +13,7 @@ export const SendStatus: React.FC<Props> = ({ mailStatus }) => {
       case "delivered":
         return "Delivered!"
       case "failed":
-        return "Couldn't Deliver"
+        return "Not Delivered"
     }
   }
 

@@ -135,8 +135,13 @@
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   height: 100%;
-  width: 300%;
+  width: 200%;
   display: flex;
   flex-flow: row nowrap;
+}
+
+.contactWrapper.extended .formWrapper .innerForm.statusSide {
+  width: 100%;
+  display: block;
 }
 /*# sourceMappingURL=ContactFloat.module.css.map */

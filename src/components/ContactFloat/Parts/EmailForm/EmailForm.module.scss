@@ -1,6 +1,6 @@
 .emailWrapper {
   height: 100%;
-  width: calc(100% / 3);
+  width: 50%;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 13vh 32vh 15vh;
@@ -168,18 +168,6 @@
         display: block;
         height: 5vh;
         width: auto;
-      }
-      &.mailSend {
-        position: absolute;
-        left: 50%;
-        transform: translate(300%, -50%);
-        animation-name: fly;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-out;
-        & svg {
-          height: 10vh;
-        }
       }
     }
   }

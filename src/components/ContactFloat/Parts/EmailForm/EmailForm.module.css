@@ -1,6 +1,6 @@
 .emailWrapper {
   height: 100%;
-  width: calc(100% / 3);
+  width: 50%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 25% 25% 25% 25%;
@@ -270,25 +270,6 @@
   display: block;
   height: 5vh;
   width: auto;
-}
-
-.emailWrapper .sendWrapper .planeWrapper.mailSend {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(300%, -50%);
-          transform: translate(300%, -50%);
-  -webkit-animation-name: fly;
-          animation-name: fly;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-
-.emailWrapper .sendWrapper .planeWrapper.mailSend svg {
-  height: 10vh;
 }
 
 .emailWrapper .backWrapper {

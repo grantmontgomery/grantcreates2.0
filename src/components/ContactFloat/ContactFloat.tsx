@@ -128,9 +128,9 @@ export const ContactFloat: React.FC = () => {
       case "sender":
         return "0"
       case "email":
-        return "calc(-100%/3)"
+        return "-50%"
       case "status":
-        return "calc(-200%/3)"
+        return "0"
     }
   }
 
@@ -155,39 +155,46 @@ export const ContactFloat: React.FC = () => {
 
           <div className={css.formWrapper}>
             <div
-              className={css.innerForm}
+              className={`${css.innerForm} ${
+                state.formSide !== "status" ? null : css.statusSide
+              }`}
               style={{
                 transform: `translate(${slideForm(state.formSide)})`,
               }}
             >
-              <SenderForm
-                name={fields.name}
-                phone={fields.phone}
-                email={fields.email}
-                company={fields.company}
-                setFields={setFields}
-                setState={setState}
-                phoneFormat={state.phoneFormat}
-                setErrors={setErrors}
-                nameError={errors.nameError}
-                phoneError={errors.phoneError}
-                emailError={errors.emailError}
-              ></SenderForm>
-              <EmailForm
-                setState={setState}
-                fields={fields}
-                setFields={setFields}
-                message={fields.message}
-                formSide={state.formSide}
-                subject={fields.subject}
-                subjectError={errors.subjectError}
-                messageError={errors.messageError}
-                sendMail={sendMail}
-                checkFields={checkFields}
-                errors={errors}
-                setErrors={setErrors}
-              ></EmailForm>
-              <SendStatus mailStatus={state.mailStatus}></SendStatus>
+              {state.formSide !== "status" ? (
+                <React.Fragment>
+                  <SenderForm
+                    name={fields.name}
+                    phone={fields.phone}
+                    email={fields.email}
+                    company={fields.company}
+                    setFields={setFields}
+                    setState={setState}
+                    phoneFormat={state.phoneFormat}
+                    setErrors={setErrors}
+                    nameError={errors.nameError}
+                    phoneError={errors.phoneError}
+                    emailError={errors.emailError}
+                  ></SenderForm>
+                  <EmailForm
+                    setState={setState}
+                    fields={fields}
+                    setFields={setFields}
+                    message={fields.message}
+                    formSide={state.formSide}
+                    subject={fields.subject}
+                    subjectError={errors.subjectError}
+                    messageError={errors.messageError}
+                    sendMail={sendMail}
+                    checkFields={checkFields}
+                    errors={errors}
+                    setErrors={setErrors}
+                  ></EmailForm>
+                </React.Fragment>
+              ) : (
+                <SendStatus mailStatus={state.mailStatus}></SendStatus>
+              )}
             </div>
           </div>
         </React.Fragment>

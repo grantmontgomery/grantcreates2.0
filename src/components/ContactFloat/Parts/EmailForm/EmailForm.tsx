@@ -141,11 +141,7 @@ export const EmailForm: React.FC<EmailProps> = ({
         className={`${css.sendWrapper} ${css[`${changeColors()}Plane`]}`}
         onClick={handleSend}
       >
-        <div
-          className={`${css.planeWrapper} ${
-            formSide === "status" ? css.mailSend : null
-          }`}
-        >
+        <div className={css.planeWrapper}>
           <svg
             version="1.1"
             x="0px"
