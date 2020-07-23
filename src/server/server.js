@@ -68,7 +68,7 @@ app.post(
       }
 
       console.log(`Message sent`, info.messageId)
-      res.send("Delivered")
+      res.send(info)
     })
   }
 )

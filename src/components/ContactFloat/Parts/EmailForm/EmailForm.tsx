@@ -72,7 +72,14 @@ export const EmailForm: React.FC<EmailProps> = ({
       : "blue"
   }
 
-  console.log(changeColors())
+  const handleSend = () => {
+    return setState(state => ({
+      ...state,
+      mailStatus: "sent",
+      formSide: "status",
+    })), checkFields(fields)
+  }
+
 
   return (
     <div className={css.emailWrapper}>
@@ -137,12 +144,7 @@ export const EmailForm: React.FC<EmailProps> = ({
       </div>
       <div
         className={`${css.sendWrapper} ${css[`${changeColors()}Plane`]}`}
-        onClick={() =>
-          setState(state => ({
-            ...state,
-            mailStatus: "sent",
-            formSide: "status",
-          }))
+        onClick={handleSend
         }
       >
         <div

@@ -26,20 +26,57 @@ async function postmail(
   })
 }
 
-export default function sendMail({
-  name,
-  phone,
-  company,
-  email,
-  subject,
-  message,
-}: FormFields) {
-  
-    return postmail(name, phone, company, email, subject, message)
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.log(error))
-  
+const handleSendFail = (setState: any) => {
+  setTimeout(() => setState(state => ({ ...state, mailStatus: "failed" })), 250)
+  setTimeout(
+    () =>
+      setState(state => ({
+        ...state,
+        formSide: "email",
+        mailStatus: "not sent",
+      })),
+    750
+  )
 }
 
-// export default
+const handleSendSuccess = (accepted: number, setState: any, setFields: any) => {
+  if (accepted > 0) {
+    setTimeout(
+      () => setState(state => ({ ...state, mailStatus: "delivered" })),
+      250
+    )
+    setTimeout(
+      () =>
+        setState({
+          tapped: false,
+          formSide: "sender",
+          phoneFormat: "us",
+          mailStatus: "not sent",
+        }),
+      setFields({
+        name: "",
+        subject: "",
+        email: "",
+        phone: "",
+        company: "",
+        message: "",
+      }),
+      1250
+    )
+  } else {
+    return handleSendFail(setState)
+  }
+}
+
+export default function sendMail(
+  { name, phone, company, email, subject, message }: FormFields,
+  setState: any,
+  setFields: any
+) {
+  return postmail(name, phone, company, email, subject, message)
+    .then(response => response.json())
+    .then(message =>
+      handleSendSuccess(message.accepted.length, setState, setFields)
+    )
+    .catch(() => handleSendFail(setState))
+}
