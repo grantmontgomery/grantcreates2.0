@@ -61,6 +61,19 @@ export const EmailForm: React.FC<EmailProps> = ({
     }
   }
 
+  const changeColors = () => {
+    const { name, phone, email, subject, message } = fields
+    return name !== "" &&
+      phone !== "" &&
+      email !== "" &&
+      subject !== "" &&
+      message !== ""
+      ? "white"
+      : "blue"
+  }
+
+  console.log(changeColors())
+
   return (
     <div className={css.emailWrapper}>
       <div className={css.sectionWrapper}>
@@ -123,7 +136,7 @@ export const EmailForm: React.FC<EmailProps> = ({
         </svg>
       </div>
       <div
-        className={css.sendWrapper}
+        className={`${css.sendWrapper} ${css[`${changeColors()}Plane`]}`}
         onClick={() =>
           setState(state => ({
             ...state,
@@ -172,7 +185,7 @@ export const EmailForm: React.FC<EmailProps> = ({
               <stop offset="0.6706" stopColor="#60A2BE" />
             </linearGradient>
             <polygon
-              className={css.blue2}
+              className={css[`${changeColors()}2`]}
               points="451.86,2.5 73.99,118.93 2.5,49.48 		"
             />
             <linearGradient
@@ -206,7 +219,7 @@ export const EmailForm: React.FC<EmailProps> = ({
               <stop offset="1" stopColor="#234757" />
             </linearGradient>
             <polygon
-              className={css.blue3}
+              className={css[`${changeColors()}3`]}
               points="451.86,2.5 227.18,300.71 138.38,203.89 106.67,169.31 		"
             />
             <linearGradient
@@ -240,7 +253,7 @@ export const EmailForm: React.FC<EmailProps> = ({
               <stop offset="1" stopColor="#234757" />
             </linearGradient>
             <polygon
-              className={css.blue4}
+              className={css[`${changeColors()}4`]}
               points="451.86,2.5 106.67,169.31 73.99,239.44 73.99,118.93 		"
             />
             <linearGradient
@@ -274,7 +287,7 @@ export const EmailForm: React.FC<EmailProps> = ({
               <stop offset="1" stopColor="#234757" />
             </linearGradient>
             <polygon
-              className={css.blue5}
+              className={css[`${changeColors()}5`]}
               points="138.38,203.89 73.99,239.44 106.67,169.31 		"
             />
           </svg>

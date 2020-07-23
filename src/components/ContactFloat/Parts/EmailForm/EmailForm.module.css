@@ -205,7 +205,6 @@
   height: 9vh;
   width: 80%;
   border-radius: 4.5vh;
-  background: #0f2027;
   margin-left: auto;
   margin-right: 10%;
   display: -webkit-box;
@@ -218,6 +217,16 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.emailWrapper .sendWrapper.bluePlane {
+  background: #0f2027;
+}
+
+.emailWrapper .sendWrapper.whitePlane {
+  background: #2c5363;
 }
 
 .emailWrapper .sendWrapper .send {
@@ -318,6 +327,8 @@
           transform: rotate(180deg) translate(0, 50%);
   margin-left: auto;
   margin-right: auto;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
 }
 
 @-webkit-keyframes fly {

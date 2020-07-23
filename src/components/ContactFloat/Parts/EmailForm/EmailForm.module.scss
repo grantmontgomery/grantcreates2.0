@@ -127,12 +127,20 @@
     height: 9vh;
     width: 80%;
     border-radius: 4.5vh;
-    background: #0f2027;
     margin-left: auto;
     margin-right: 10%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    transition: 250ms ease-out;
+
+    &.bluePlane {
+      background: #0f2027;
+    }
+    &.whitePlane {
+      background: #2c5363;
+    }
+
     & .send {
       position: relative;
       top: 50%;
@@ -203,6 +211,7 @@
       transform: rotate(180deg) translate(0, 50%);
       margin-left: auto;
       margin-right: auto;
+      transition: 250ms ease-out;
     }
   }
 }
