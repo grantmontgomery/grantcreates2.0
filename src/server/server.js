@@ -38,6 +38,7 @@ app.post(
   <li>Message: ${message} </li>
   </ul>
   `
+
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
       service: `gmail`,
@@ -63,10 +64,11 @@ app.post(
 
     transporter.sendMail(mailoptions, (error, info) => {
       if (error) {
-        return console.log(error)
+        return console.log(error), res.send(error)
       }
 
       console.log(`Message sent`, info.messageId)
+      res.send("Delivered")
     })
   }
 )
