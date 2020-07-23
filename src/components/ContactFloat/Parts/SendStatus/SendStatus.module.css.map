@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,oBAAoB,CAAC;EACnB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,cAAc;EACrB,UAAU,EAAE,GAAG;CAGhB",
+    "sources": [
+        "SendStatus.module.scss"
+    ],
+    "names": [],
+    "file": "SendStatus.module.css"
+}

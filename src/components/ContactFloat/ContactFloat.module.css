@@ -135,7 +135,7 @@
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   height: 100%;
-  width: 200%;
+  width: 300%;
   display: flex;
   flex-flow: row nowrap;
 }

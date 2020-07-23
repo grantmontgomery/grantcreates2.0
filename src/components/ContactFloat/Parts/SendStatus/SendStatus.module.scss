@@ -1,0 +1,7 @@
+.senderStatusWrapper {
+  height: 100%;
+  width: calc(100% / 3);
+  background: red;
+  & .statusWrapper {
+  }
+}

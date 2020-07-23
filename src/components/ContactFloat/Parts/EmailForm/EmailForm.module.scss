@@ -1,6 +1,6 @@
 .emailWrapper {
   height: 100%;
-  width: 50%;
+  width: calc(100% / 3);
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 13vh 32vh 15vh;

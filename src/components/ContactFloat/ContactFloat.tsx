@@ -1,5 +1,5 @@
 import * as React from "react"
-import { EmailForm, SenderForm, Pointer, MailIcon } from "./Parts"
+import { EmailForm, SenderForm, SendStatus, Pointer, MailIcon } from "./Parts"
 import { sendMail } from "./Logic"
 import {
   correctPhoneFormat,
@@ -8,7 +8,7 @@ import {
 import { FormFields, FormErrors, FormState } from "./types"
 import css from "./ContactFloat.module.css"
 
-export const ContactFloat = () => {
+export const ContactFloat: React.FC = () => {
   const [fields, setFields] = React.useState<FormFields>({
     name: "",
     subject: "",
@@ -118,6 +118,17 @@ export const ContactFloat = () => {
     }
   }
 
+  const slideForm = (formside: string) => {
+    switch (formside) {
+      case "sender":
+        return "0"
+      case "email":
+        return "calc(-100%/3)"
+      case "status":
+        return "calc(-200%/3)"
+    }
+  }
+
   return (
     <div
       className={`${css.contactWrapper} ${state.tapped ? css.extended : null}`}
@@ -141,9 +152,7 @@ export const ContactFloat = () => {
             <div
               className={css.innerForm}
               style={{
-                transform: `translate(${
-                  state.formSide === "sender" ? "0" : "-50%"
-                })`,
+                transform: `translate(${slideForm(state.formSide)})`,
               }}
             >
               <SenderForm
@@ -173,6 +182,7 @@ export const ContactFloat = () => {
                 errors={errors}
                 setErrors={setErrors}
               ></EmailForm>
+              <SendStatus></SendStatus>
             </div>
           </div>
         </React.Fragment>

@@ -1,6 +1,6 @@
 .senderWrapper {
   height: 100%;
-  width: 50%;
+  width: calc(100% / 3);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 75% 25%;

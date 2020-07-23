@@ -120,7 +120,7 @@ export const EmailForm: React.FC<EmailProps> = ({
           />
         </svg>
       </div>
-      <div className={css.sendWrapper} onClick={checkFields}>
+      <div className={css.sendWrapper} onClick={() => setState(state => ({...state, formSide: "status"})}>
         <div className={css.planeWrapper}>
           <svg
             version="1.1"
