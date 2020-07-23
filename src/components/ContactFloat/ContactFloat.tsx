@@ -20,9 +20,9 @@ export const ContactFloat: React.FC = () => {
 
   const [state, setState] = React.useState<FormState>({
     tapped: false,
-    next: false,
     formSide: "sender",
     phoneFormat: "us",
+    mailStatus: "not sent",
   })
 
   const [errors, setErrors] = React.useState<FormErrors>({
@@ -160,7 +160,6 @@ export const ContactFloat: React.FC = () => {
                 phone={fields.phone}
                 email={fields.email}
                 company={fields.company}
-                next={state.next}
                 setFields={setFields}
                 setState={setState}
                 phoneFormat={state.phoneFormat}
@@ -174,6 +173,7 @@ export const ContactFloat: React.FC = () => {
                 fields={fields}
                 setFields={setFields}
                 message={fields.message}
+                formSide={state.formSide}
                 subject={fields.subject}
                 subjectError={errors.subjectError}
                 messageError={errors.messageError}
@@ -182,7 +182,7 @@ export const ContactFloat: React.FC = () => {
                 errors={errors}
                 setErrors={setErrors}
               ></EmailForm>
-              <SendStatus></SendStatus>
+              <SendStatus mailStatus={state.mailStatus}></SendStatus>
             </div>
           </div>
         </React.Fragment>

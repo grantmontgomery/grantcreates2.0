@@ -21,6 +21,7 @@ type EmailProps = {
   checkFields: any
   setState: any
   setErrors: any
+  formSide: string
 }
 
 export const EmailForm: React.FC<EmailProps> = ({
@@ -30,6 +31,7 @@ export const EmailForm: React.FC<EmailProps> = ({
   subject,
   sendMail,
   checkFields,
+  formSide,
   fields,
   setErrors,
   subjectError,
@@ -120,8 +122,21 @@ export const EmailForm: React.FC<EmailProps> = ({
           />
         </svg>
       </div>
-      <div className={css.sendWrapper} onClick={() => setState(state => ({...state, formSide: "status"})}>
-        <div className={css.planeWrapper}>
+      <div
+        className={css.sendWrapper}
+        onClick={() =>
+          setState(state => ({
+            ...state,
+            mailStatus: "sent",
+            formSide: "status",
+          }))
+        }
+      >
+        <div
+          className={`${css.planeWrapper} ${
+            formSide === "status" ? css.mailSend : null
+          }`}
+        >
           <svg
             version="1.1"
             x="0px"

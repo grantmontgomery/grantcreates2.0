@@ -8,21 +8,19 @@ type SenderProps = {
   setFields: any
   setState: any
   setErrors: any
-  name: string
   phone: string
   phoneFormat: string
   company: string
+  name: string
   email: string
-  next: boolean
   nameError: { error: boolean; message: string }
   phoneError: { error: boolean; message: string }
   emailError: { error: boolean; message: string }
 }
-export const SenderForm = ({
+export const SenderForm: React.FC<SenderProps> = ({
   name,
   phone,
   company,
-  next,
   email,
   setFields,
   phoneFormat,
@@ -31,7 +29,7 @@ export const SenderForm = ({
   nameError,
   phoneError,
   emailError,
-}: SenderProps) => {
+}) => {
   const handleChange = ({ target: { id, value } }) => {
     switch (id) {
       case "nameInput":

@@ -155,18 +155,29 @@
       position: relative;
       margin-left: auto;
       margin-right: auto;
+      transition: 250ms ease-out;
       & svg {
         display: block;
         height: 5vh;
         width: auto;
+      }
+      &.mailSend {
+        position: absolute;
+        left: 50%;
+        transform: translate(300%, -50%);
+        animation-name: fly;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+        & svg {
+          height: 10vh;
+        }
       }
     }
   }
   & .backWrapper {
     position: relative;
     top: 0;
-    // top: 50%;
-    // transform: translate(0, -50%);
     grid-area: back;
     height: 9vh;
     width: 9vh;
@@ -193,6 +204,18 @@
       margin-left: auto;
       margin-right: auto;
     }
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(300%, -65%);
+  }
+  50% {
+    transform: translate(300%, -35%);
+  }
+  100% {
+    transform: translate(300%, -65%);
   }
 }
 
