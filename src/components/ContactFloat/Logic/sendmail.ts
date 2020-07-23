@@ -27,42 +27,43 @@ async function postmail(
 }
 
 const handleSendFail = (setState: any) => {
-  setTimeout(() => setState(state => ({ ...state, mailStatus: "failed" })), 250)
-  setTimeout(
-    () =>
-      setState(state => ({
-        ...state,
-        formSide: "email",
-        mailStatus: "not sent",
-      })),
-    750
-  )
+  setTimeout(() => {
+    return setState(state => ({ ...state, mailStatus: "failed" }))
+  }, 250)
+  setTimeout(() => {
+    return setState(state => ({
+      ...state,
+      formSide: "email",
+      mailStatus: "not sent",
+    }))
+  }, 2250)
 }
 
 const handleSendSuccess = (accepted: number, setState: any, setFields: any) => {
   if (accepted > 0) {
-    setTimeout(
-      () => setState(state => ({ ...state, mailStatus: "delivered" })),
-      250
-    )
-    setTimeout(
-      () =>
+    setTimeout(() => {
+      console.log("sucessStarted")
+      return setState(state => ({ ...state, mailStatus: "delivered" }))
+    }, 250)
+    setTimeout(() => {
+      console.log("success ended")
+      return (
         setState({
           tapped: false,
           formSide: "sender",
           phoneFormat: "us",
           mailStatus: "not sent",
         }),
-      setFields({
-        name: "",
-        subject: "",
-        email: "",
-        phone: "",
-        company: "",
-        message: "",
-      }),
-      1250
-    )
+        setFields({
+          name: "",
+          subject: "",
+          email: "",
+          phone: "",
+          company: "",
+          message: "",
+        })
+      )
+    }, 2250)
   } else {
     return handleSendFail(setState)
   }
