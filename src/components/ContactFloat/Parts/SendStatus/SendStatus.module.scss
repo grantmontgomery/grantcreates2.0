@@ -25,6 +25,17 @@
     }
   }
 
+  .redX {
+    & path {
+      stroke-dasharray: 597.028;
+      stroke: #ed4548;
+      animation-name: circleDraw;
+      animation-duration: 5s;
+      animation-timing-function: ease-out;
+      fill: none;
+    }
+  }
+
   & .statusWrapper {
     font-size: 4vh;
     height: fit-content;
@@ -47,6 +58,20 @@
   }
 }
 
+@keyframes circleDraw {
+  0% {
+    stroke-dashoffset: 597.028px;
+    fill: none;
+  }
+  50% {
+    stroke-dashoffset: 0px;
+    fill: none;
+  }
+  100% {
+    fill: #ed4548;
+  }
+}
+
 @keyframes fly {
   0% {
     transform: translate(-50%, -65%);
@@ -57,4 +82,10 @@
   100% {
     transform: translate(-50%, -65%);
   }
+}
+
+.greenCheckCircle {
+  // pathLength = 597.028
+}
+.greenCheck {
 }

@@ -160,9 +160,12 @@ export const ContactFloat: React.FC = () => {
               }`}
               style={{
                 transform: `translate(${slideForm(state.formSide)})`,
+                width: "100%",
               }}
             >
-              {state.formSide !== "status" ? (
+              <SendStatus mailStatus={state.mailStatus}></SendStatus>
+
+              {/* {state.formSide !== "status" ? (
                 <React.Fragment>
                   <SenderForm
                     name={fields.name}
@@ -194,7 +197,7 @@ export const ContactFloat: React.FC = () => {
                 </React.Fragment>
               ) : (
                 <SendStatus mailStatus={state.mailStatus}></SendStatus>
-              )}
+              )} */}
             </div>
           </div>
         </React.Fragment>

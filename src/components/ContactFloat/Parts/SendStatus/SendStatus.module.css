@@ -38,6 +38,18 @@
   height: 10vh;
 }
 
+.senderStatusWrapper .redX path {
+  stroke-dasharray: 597.028;
+  stroke: #ed4548;
+  -webkit-animation-name: circleDraw;
+          animation-name: circleDraw;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  fill: none;
+}
+
 .senderStatusWrapper .statusWrapper {
   font-size: 4vh;
   height: -webkit-fit-content;
@@ -65,6 +77,34 @@
 
 .senderStatusWrapper .statusWrapper.failed {
   color: #ed4548;
+}
+
+@-webkit-keyframes circleDraw {
+  0% {
+    stroke-dashoffset: 597.028px;
+    fill: none;
+  }
+  50% {
+    stroke-dashoffset: 0px;
+    fill: none;
+  }
+  100% {
+    fill: #ed4548;
+  }
+}
+
+@keyframes circleDraw {
+  0% {
+    stroke-dashoffset: 597.028px;
+    fill: none;
+  }
+  50% {
+    stroke-dashoffset: 0px;
+    fill: none;
+  }
+  100% {
+    fill: #ed4548;
+  }
 }
 
 @-webkit-keyframes fly {

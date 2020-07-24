@@ -169,7 +169,26 @@ export const SendStatus: React.FC<Props> = ({ mailStatus }) => {
           mailStatus === "sent" ? css.planeSending : null
         }`}
       >
-        {iconToUse()}
+        {/* {iconToUse()} */}
+        <svg
+          x="0px"
+          y="0px"
+          viewBox="0 0 110 110"
+          enableBackground="new 0 0 110 110"
+          className={css.redX}
+        >
+          <path
+            d="M55,107.5C26.05,107.5,2.5,83.95,2.5,55C2.5,26.05,26.05,2.5,55,2.5s52.5,23.55,52.5,52.5
+          C107.5,83.95,83.95,107.5,55,107.5z M55,7.5C28.81,7.5,7.5,28.81,7.5,55s21.31,47.5,47.5,47.5s47.5-21.31,47.5-47.5
+          S81.19,7.5,55,7.5z"
+          />
+
+          <polygon
+            fill="#ED4548"
+            points="62.07,55 86.82,79.75 79.75,86.82 55,62.07 30.25,86.82 23.18,79.75 47.93,55 23.18,30.25 
+            30.25,23.18 55,47.93 79.75,23.18 86.82,30.25 	"
+          />
+        </svg>
       </div>
       <div className={`${css.statusWrapper} ${css[`${mailStatus}`]}`}>
         {checkStatus()}

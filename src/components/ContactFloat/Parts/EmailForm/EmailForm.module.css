@@ -312,36 +312,6 @@
   transition: 250ms ease-out;
 }
 
-@-webkit-keyframes fly {
-  0% {
-    -webkit-transform: translate(300%, -65%);
-            transform: translate(300%, -65%);
-  }
-  50% {
-    -webkit-transform: translate(300%, -35%);
-            transform: translate(300%, -35%);
-  }
-  100% {
-    -webkit-transform: translate(300%, -65%);
-            transform: translate(300%, -65%);
-  }
-}
-
-@keyframes fly {
-  0% {
-    -webkit-transform: translate(300%, -65%);
-            transform: translate(300%, -65%);
-  }
-  50% {
-    -webkit-transform: translate(300%, -35%);
-            transform: translate(300%, -35%);
-  }
-  100% {
-    -webkit-transform: translate(300%, -65%);
-            transform: translate(300%, -65%);
-  }
-}
-
 .white2 {
   fill: url(#planeWhite_1_);
 }
