@@ -19,20 +19,55 @@
       animation-timing-function: ease-out;
       animation-iteration-count: infinite;
       animation-duration: 2s;
+
       & svg {
         height: 10vh;
       }
     }
   }
 
+  .greenCheck {
+    & path {
+      fill: none;
+      stroke-dasharray: 610px;
+      stroke-width: 1px;
+      stroke: #57c769;
+      animation-name: greenCircleDraw;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
+    & polygon {
+      fill: rgba($color: #57c769, $alpha: 0);
+      stroke: #57c769;
+      stroke-width: 1px;
+      stroke-dasharray: 280;
+      animation-name: greenCheckDraw;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
+  }
+
   .redX {
     & path {
-      stroke-dasharray: 597.028;
+      stroke-dasharray: 330;
       stroke: #ed4548;
-      animation-name: circleDraw;
-      animation-duration: 5s;
+      fill: rgba($color: #ed4548, $alpha: 0);
+      animation-name: redCircleDraw;
+      animation-duration: 1.5s;
       animation-timing-function: ease-out;
-      fill: none;
+      animation-fill-mode: forwards;
+    }
+    & polygon {
+      fill: rgba($color: #ed4548, $alpha: 0);
+      stroke: #ed4548;
+      stroke-width: 1px;
+      stroke-dasharray: 330;
+      animation-name: redXDraw;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
     }
   }
 
@@ -57,18 +92,60 @@
     }
   }
 }
-
-@keyframes circleDraw {
+@keyframes greenCircleDraw {
   0% {
-    stroke-dashoffset: 597.028px;
-    fill: none;
+    stroke-dashoffset: 610px;
+    fill: rgba($color: #57c769, $alpha: 0);
   }
-  50% {
-    stroke-dashoffset: 0px;
-    fill: none;
+  75% {
+    fill: rgba($color: #57c769, $alpha: 0);
   }
   100% {
-    fill: #ed4548;
+    fill: rgba($color: #57c769, $alpha: 1);
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes greenCheckDraw {
+  0% {
+    stroke-dashoffset: 280px;
+    fill: rgba($color: #57c769, $alpha: 0);
+  }
+  75% {
+    fill: rgba($color: #57c769, $alpha: 0);
+  }
+  100% {
+    stroke-dashoffset: 0px;
+    fill: rgba($color: #57c769, $alpha: 1);
+  }
+}
+
+@keyframes redXDraw {
+  0% {
+    stroke-dashoffset: 330px;
+    fill: rgba($color: #ed4548, $alpha: 0);
+  }
+  75% {
+    fill: rgba($color: #ed4548, $alpha: 0);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba($color: #ed4548, $alpha: 1);
+  }
+}
+
+@keyframes redCircleDraw {
+  0% {
+    stroke-dashoffset: 330px;
+    fill: rgba($color: #ed4548, $alpha: 0);
+  }
+
+  75% {
+    fill: rgba($color: #ed4548, $alpha: 0);
+  }
+
+  100% {
+    stroke-dashoffset: 0px;
+    fill: rgba($color: #ed4548, $alpha: 1);
   }
 }
 
@@ -82,10 +159,4 @@
   100% {
     transform: translate(-50%, -65%);
   }
-}
-
-.greenCheckCircle {
-  // pathLength = 597.028
-}
-.greenCheck {
 }

@@ -38,16 +38,63 @@
   height: 10vh;
 }
 
-.senderStatusWrapper .redX path {
-  stroke-dasharray: 597.028;
-  stroke: #ed4548;
-  -webkit-animation-name: circleDraw;
-          animation-name: circleDraw;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+.senderStatusWrapper .greenCheck path {
+  fill: none;
+  stroke-dasharray: 610px;
+  stroke-width: 1px;
+  stroke: #57c769;
+  -webkit-animation-name: greenCircleDraw;
+          animation-name: greenCircleDraw;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
-  fill: none;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.senderStatusWrapper .greenCheck polygon {
+  fill: rgba(87, 199, 105, 0);
+  stroke: #57c769;
+  stroke-width: 1px;
+  stroke-dasharray: 280;
+  -webkit-animation-name: greenCheckDraw;
+          animation-name: greenCheckDraw;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.senderStatusWrapper .redX path {
+  stroke-dasharray: 330;
+  stroke: #ed4548;
+  fill: rgba(237, 69, 72, 0);
+  -webkit-animation-name: redCircleDraw;
+          animation-name: redCircleDraw;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.senderStatusWrapper .redX polygon {
+  fill: rgba(237, 69, 72, 0);
+  stroke: #ed4548;
+  stroke-width: 1px;
+  stroke-dasharray: 330;
+  -webkit-animation-name: redXDraw;
+          animation-name: redXDraw;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .senderStatusWrapper .statusWrapper {
@@ -79,30 +126,114 @@
   color: #ed4548;
 }
 
-@-webkit-keyframes circleDraw {
+@-webkit-keyframes greenCircleDraw {
   0% {
-    stroke-dashoffset: 597.028px;
-    fill: none;
+    stroke-dashoffset: 610px;
+    fill: rgba(87, 199, 105, 0);
   }
-  50% {
-    stroke-dashoffset: 0px;
-    fill: none;
+  75% {
+    fill: rgba(87, 199, 105, 0);
   }
   100% {
+    fill: #57c769;
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes greenCircleDraw {
+  0% {
+    stroke-dashoffset: 610px;
+    fill: rgba(87, 199, 105, 0);
+  }
+  75% {
+    fill: rgba(87, 199, 105, 0);
+  }
+  100% {
+    fill: #57c769;
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes greenCheckDraw {
+  0% {
+    stroke-dashoffset: 280px;
+    fill: rgba(87, 199, 105, 0);
+  }
+  75% {
+    fill: rgba(87, 199, 105, 0);
+  }
+  100% {
+    stroke-dashoffset: 0px;
+    fill: #57c769;
+  }
+}
+
+@keyframes greenCheckDraw {
+  0% {
+    stroke-dashoffset: 280px;
+    fill: rgba(87, 199, 105, 0);
+  }
+  75% {
+    fill: rgba(87, 199, 105, 0);
+  }
+  100% {
+    stroke-dashoffset: 0px;
+    fill: #57c769;
+  }
+}
+
+@-webkit-keyframes redXDraw {
+  0% {
+    stroke-dashoffset: 330px;
+    fill: rgba(237, 69, 72, 0);
+  }
+  75% {
+    fill: rgba(237, 69, 72, 0);
+  }
+  100% {
+    stroke-dashoffset: 0;
     fill: #ed4548;
   }
 }
 
-@keyframes circleDraw {
+@keyframes redXDraw {
   0% {
-    stroke-dashoffset: 597.028px;
-    fill: none;
+    stroke-dashoffset: 330px;
+    fill: rgba(237, 69, 72, 0);
   }
-  50% {
-    stroke-dashoffset: 0px;
-    fill: none;
+  75% {
+    fill: rgba(237, 69, 72, 0);
   }
   100% {
+    stroke-dashoffset: 0;
+    fill: #ed4548;
+  }
+}
+
+@-webkit-keyframes redCircleDraw {
+  0% {
+    stroke-dashoffset: 330px;
+    fill: rgba(237, 69, 72, 0);
+  }
+  75% {
+    fill: rgba(237, 69, 72, 0);
+  }
+  100% {
+    stroke-dashoffset: 0px;
+    fill: #ed4548;
+  }
+}
+
+@keyframes redCircleDraw {
+  0% {
+    stroke-dashoffset: 330px;
+    fill: rgba(237, 69, 72, 0);
+  }
+  75% {
+    fill: rgba(237, 69, 72, 0);
+  }
+  100% {
+    stroke-dashoffset: 0px;
     fill: #ed4548;
   }
 }
