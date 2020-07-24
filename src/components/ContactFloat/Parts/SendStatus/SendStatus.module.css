@@ -17,6 +17,12 @@
           transform: translate(-50%, -50%);
 }
 
+.senderStatusWrapper .iconWrapper svg {
+  height: 15vh;
+  width: auto;
+  display: block;
+}
+
 .senderStatusWrapper .iconWrapper.planeSending {
   -webkit-animation-name: fly;
           animation-name: fly;
@@ -28,10 +34,8 @@
           animation-duration: 2s;
 }
 
-.senderStatusWrapper .iconWrapper svg {
+.senderStatusWrapper .iconWrapper.planeSending svg {
   height: 10vh;
-  width: auto;
-  display: block;
 }
 
 .senderStatusWrapper .statusWrapper {
