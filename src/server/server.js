@@ -27,8 +27,8 @@ app.post(
   "/send",
   ({ body: { name, phone, email, subject, message, company } }, res) => {
     const output = `
-  <p>You have a new contact request</p>
-  <h3>Contact Details</h3>
+  <p>A new visitor reached out!</p>
+  <h3>Message Details</h3>
   <ul>
   <li>Name: ${name} </li>
   <li>Company: ${company} </li>
@@ -46,8 +46,8 @@ app.post(
       port: 587,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: `nodetest69@gmail.com`, // generated ethereal user
-        pass: "bruh", // fake password.
+        user: `${process.env.GATSBY_EMAIL_SENDER}`, // generated ethereal user
+        pass: `${process.env.GATSBY_EMAIL_SENDER_PASSWORD}`, // fake password.
       },
       tls: {
         rejectUnauthorized: false,
@@ -55,9 +55,9 @@ app.post(
     })
 
     const mailoptions = {
-      from: `"Nodemailer Contact" <nodetest69@gmail.com>`,
-      to: `nodetest69@gmail.com`,
-      subject: `Node Contact Request`,
+      from: `"Grant Creates Visitor"`,
+      to: `grant@grantcreates.com`,
+      subject: `Visitor Contact Request`,
       text: `Hello World?`,
       html: output,
     }
