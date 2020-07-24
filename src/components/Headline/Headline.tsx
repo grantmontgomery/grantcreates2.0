@@ -1,7 +1,7 @@
 import * as React from "react"
 import css from "./Headline.module.css"
 
-export const Headline = () => {
+export const Headline: React.FC = () => {
   const creations: string[] = [
     "APPLICATIONS",
     "SOLUTIONS",

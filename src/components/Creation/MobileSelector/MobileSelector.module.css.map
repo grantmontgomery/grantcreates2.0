@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACf,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CAYZ;;AAdD,AAGE,gBAHc,CAGZ,GAAG,CAAC;EACJ,IAAI,EAAE,KAAK;EACX,QAAQ,EAAE,QAAQ;EAClB,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI;EAClB,GAAG,EAAE,GAAG;EACR,SAAS,EAAE,kBAAkB;EAC7B,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;CACb",
-    "sources": [
-        "MobileSelector.module.scss"
-    ],
-    "names": [],
-    "file": "MobileSelector.module.css"
-}

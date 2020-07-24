@@ -10,12 +10,12 @@ export const LinksWrapper = ({ location }: Props) => {
     <div className={`${css.linksWrapper} ${css[`${location}`]}`}>
       <div className={`link ${css.link}`}>
         <a href="/#about">
-          <div className={`text ${css.text}`}>About</div>
+          <div className={`text ${css.text}`}>Creations</div>
         </a>
       </div>
       <div className={`link ${css.link}`}>
         <a href="/#creations">
-          <div className={`text ${css.text}`}>Creations</div>
+          <div className={`text ${css.text}`}>About</div>
         </a>
       </div>
       <div className={`link ${css.link}`}>

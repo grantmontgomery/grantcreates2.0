@@ -10,7 +10,7 @@ interface State {
   menu: boolean
 }
 
-export const Nav = () => {
+export const Nav: React.FC = () => {
   const [mobileState, setMobileState] = React.useState<State>({ menu: false })
   const applyTransitions = () => {
     return mobileState.menu ? (
@@ -28,8 +28,23 @@ export const Nav = () => {
     ) : null
   }
 
+  React.useEffect(() => {
+    console.log(document.getElementById("NavBar"))
+  }, [])
+
+  // let prevScrollpos = window.pageYOffset
+  // window.onscroll = function () {
+  //   let currentScrollPos = window.pageYOffset
+  //   if (prevScrollpos > currentScrollPos) {
+  //     document.getElementById("NavBar").style.top = "0"
+  //   } else {
+  //     document.getElementById("NavBar").style.top = "-50px"
+  //   }
+  //   prevScrollpos = currentScrollPos
+  // }
+
   return (
-    <nav className={`navWrapper ${css.navWrapper}`}>
+    <nav className={css.navWrapper} id="NavBar">
       <a href="/" className={`logoLink ${css.logoLink}`}>
         <FullLogo location="navBar"></FullLogo>
       </a>

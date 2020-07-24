@@ -1,11 +1,12 @@
 import * as React from "react"
-import { LoadingAssets } from "../../LoadingAssets"
 import css from "./AboutPage.module.css"
 
-export const AboutPage = () => {
+export const AboutPage: React.FC = () => {
   return (
-    <section id="about" className={`${css.about}`}>
-      <LoadingAssets></LoadingAssets>
+    <section id="about" className={css.about}>
+      <div className={css.headerWrapper}>
+        <div>About</div>
+      </div>
     </section>
   )
 }

@@ -1,7 +1,6 @@
 .about {
   width: 100vw;
   height: 100vh;
-  border: solid 1px lightblue;
   display: -ms-grid;
   display: grid;
       grid-template-areas: ". picture about ." ". hammer tools .";
@@ -9,6 +8,7 @@
       grid-template-columns: 5% 55% 35% 5%;
   -ms-grid-rows: 50% 50%;
       grid-template-rows: 50% 50%;
+  background: #060c0f;
 }
 
 .about svg {
@@ -22,25 +22,39 @@
           animation-timing-function: linear;
 }
 
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+@media (max-width: 1024px) {
+  .about {
+        grid-template-areas: "header" "about" "technologies" "picture";
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 10% 30% 30% 30%;
+        grid-template-rows: 10% 30% 30% 30%;
   }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  .about .headerWrapper {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: header;
+    height: 100%;
+    width: 100%;
   }
-}
-
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  .about .headerWrapper div {
+    margin-right: auto;
+    margin-left: 5%;
+    display: block;
+    position: relative;
+    font-size: 2.5vh;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    font-family: Objektiv Mk2 Bold;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    white-space: none;
+    color: white;
   }
 }
 /*# sourceMappingURL=AboutPage.module.css.map */
