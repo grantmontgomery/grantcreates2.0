@@ -1,6 +1,27 @@
 .senderStatusWrapper {
   height: 100%;
   width: 100%;
+
+  & .iconWrapper {
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &.planeSending {
+      animation-name: fly;
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite;
+      animation-duration: 2s;
+    }
+    & svg {
+      height: 10vh;
+      width: auto;
+      display: block;
+    }
+  }
+
   & .statusWrapper {
     font-size: 4vh;
     height: fit-content;
@@ -20,5 +41,17 @@
     &.failed {
       color: #ed4548;
     }
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(-50%, -65%);
+  }
+  50% {
+    transform: translate(-50%, -35%);
+  }
+  100% {
+    transform: translate(-50%, -65%);
   }
 }
