@@ -74,6 +74,7 @@
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
     bottom: 7.5%;
+    z-index: -1;
   }
   .selectorTitleWrapper .selctorTitle {
     font-size: 2vh;

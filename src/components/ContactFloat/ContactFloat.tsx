@@ -142,7 +142,10 @@ export const ContactFloat: React.FC = () => {
         <React.Fragment>
           <div className={css.headerWrapper}>
             <div className={css.titleWrapper}>Write Me</div>
-            <Pointer formSide={state.formSide}></Pointer>
+            <Pointer
+              mailStatus={state.mailStatus}
+              formSide={state.formSide}
+            ></Pointer>
             <div className={css.xWrapper}>
               <div
                 className={css.x}

@@ -3,11 +3,12 @@ import css from "./Pointer.module.css"
 
 interface Props {
   formSide: string
+  mailStatus: string
 }
 
-export const Pointer = ({ formSide }: Props) => {
+export const Pointer: React.FC<Props> = ({ formSide, mailStatus }) => {
   return (
-    <div className={css.pointerWrapper}>
+    <div className={`${css.pointerWrapper} ${css[`${mailStatus}`]}`}>
       <div
         className={`${css.page} ${formSide === "sender" ? css.fill : null}`}
       ></div>

@@ -45,8 +45,8 @@
   stroke: #57c769;
   -webkit-animation-name: greenCircleDraw;
           animation-name: greenCircleDraw;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
   -webkit-animation-fill-mode: forwards;
@@ -60,8 +60,8 @@
   stroke-dasharray: 280;
   -webkit-animation-name: greenCheckDraw;
           animation-name: greenCheckDraw;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
   -webkit-animation-fill-mode: forwards;
@@ -74,8 +74,8 @@
   fill: rgba(237, 69, 72, 0);
   -webkit-animation-name: redCircleDraw;
           animation-name: redCircleDraw;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
   -webkit-animation-fill-mode: forwards;
@@ -89,8 +89,8 @@
   stroke-dasharray: 330;
   -webkit-animation-name: redXDraw;
           animation-name: redXDraw;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
   -webkit-animation-fill-mode: forwards;

@@ -29,7 +29,16 @@ export const Nav: React.FC = () => {
   }
 
   React.useEffect(() => {
-    console.log(document.getElementById("NavBar"))
+    let prevScrollpos = window.pageYOffset
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("NavBar").style.top = "0"
+      } else {
+        document.getElementById("NavBar").style.top = "-100%"
+      }
+      prevScrollpos = currentScrollPos
+    }
   }, [])
 
   // let prevScrollpos = window.pageYOffset
@@ -38,7 +47,7 @@ export const Nav: React.FC = () => {
   //   if (prevScrollpos > currentScrollPos) {
   //     document.getElementById("NavBar").style.top = "0"
   //   } else {
-  //     document.getElementById("NavBar").style.top = "-50px"
+  //     document.getElementById("NavBar").style.top = "-100%"
   //   }
   //   prevScrollpos = currentScrollPos
   // }

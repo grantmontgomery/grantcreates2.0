@@ -36,7 +36,7 @@ const handleSendFail = (setState: any) => {
       formSide: "email",
       mailStatus: "not sent",
     }))
-  }, 5000)
+  }, 4000)
 }
 
 const handleSendSuccess = (accepted: number, setState: any, setFields: any) => {
@@ -63,7 +63,7 @@ const handleSendSuccess = (accepted: number, setState: any, setFields: any) => {
           message: "",
         })
       )
-    }, 5000)
+    }, 4000)
   } else {
     return handleSendFail(setState)
   }

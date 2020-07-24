@@ -1,11 +1,9 @@
-#NavBar {
-  top: -100px;
-}
-
 .navWrapper {
   top: 0;
   width: 100vw;
   height: 11vh;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

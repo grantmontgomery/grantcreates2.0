@@ -33,7 +33,7 @@
       stroke-width: 1px;
       stroke: #57c769;
       animation-name: greenCircleDraw;
-      animation-duration: 1.5s;
+      animation-duration: 1s;
       animation-timing-function: ease-out;
       animation-fill-mode: forwards;
     }
@@ -43,7 +43,7 @@
       stroke-width: 1px;
       stroke-dasharray: 280;
       animation-name: greenCheckDraw;
-      animation-duration: 1.5s;
+      animation-duration: 1s;
       animation-timing-function: ease-out;
       animation-fill-mode: forwards;
     }
@@ -55,7 +55,7 @@
       stroke: #ed4548;
       fill: rgba($color: #ed4548, $alpha: 0);
       animation-name: redCircleDraw;
-      animation-duration: 1.5s;
+      animation-duration: 1s;
       animation-timing-function: ease-out;
       animation-fill-mode: forwards;
     }
@@ -65,7 +65,7 @@
       stroke-width: 1px;
       stroke-dasharray: 330;
       animation-name: redXDraw;
-      animation-duration: 1.5s;
+      animation-duration: 1s;
       animation-timing-function: ease-out;
       animation-fill-mode: forwards;
     }

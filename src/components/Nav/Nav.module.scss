@@ -1,11 +1,8 @@
-#NavBar {
-  top: -100px;
-}
-
 .navWrapper {
   top: 0;
   width: 100vw;
   height: 11vh;
+  transition: 250ms ease-out;
   display: flex;
   flex-flow: row;
   background: transparent;
