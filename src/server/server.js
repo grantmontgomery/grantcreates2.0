@@ -55,7 +55,7 @@ app.post(
     })
 
     const mailoptions = {
-      from: `"Grant Creates Visitor"`,
+      from: `"Portfolio Visitor"<nodetest69@gmail.com>`,
       to: `grant@grantcreates.com`,
       subject: `Visitor Contact Request`,
       text: `Hello World?`,

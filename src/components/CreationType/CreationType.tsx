@@ -10,10 +10,7 @@ interface Props {
 export const CreationType: React.FC<Props> = ({ type }) => {
   return (
     <div className={`${css.typeWrapper}`}>
-      <div className={`${css.innerTypes}`}>
-        {/* <Creation type={type}></Creation> */}
-        {displayCreations(type)}
-      </div>
+      <div className={`${css.innerTypes}`}>{displayCreations(type)}</div>
     </div>
   )
 }

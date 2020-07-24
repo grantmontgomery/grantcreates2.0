@@ -1,6 +1,6 @@
 import * as React from "react"
 import { MobileSelector } from "./MobileSelector"
-import { CreationDataInterface } from "../Data"
+import { CreationDataInterface, creationsData } from "../Data"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import css from "./Creation.module.css"
 import { MobileTapped } from "./MobileTapped"
@@ -18,24 +18,26 @@ interface State {
 export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
   const [state, setState] = React.useState<State>({ tapped: false, top: 0 })
 
-  const creationRef = React.useRef<HTMLDivElement>(null)
+  const creationRef = React.useRef<HTMLDivElement | null>(null)
 
   const handleTap = () => {
-    creationRef.current?.focus()
-    const boundingObject = creationRef.current?.getBoundingClientRect()
-    const elemTopPosition = boundingObject?.top
+    if (creationRef.current) {
+      creationRef.current?.focus()
+      const boundingObject = creationRef.current?.getBoundingClientRect()
+      const elemTopPosition = boundingObject?.top
 
-    const creationElement = creationRef.current
-    const elementHeight = creationElement?.offsetHeight
+      const creationElement = creationRef.current
+      const elementHeight = creationElement?.offsetHeight
 
-    const halfHeight = elementHeight / 2
+      const halfHeight = elementHeight / 2
 
-    const windowTopCenter = window.innerHeight / 2
+      const windowTopCenter = window.innerHeight / 2
 
-    return setState({
-      tapped: true,
-      top: windowTopCenter - elemTopPosition - halfHeight * 2.5,
-    })
+      return setState({
+        tapped: true,
+        top: windowTopCenter - elemTopPosition - halfHeight * 2.5,
+      })
+    }
   }
 
   const changeDisplay = () => {
