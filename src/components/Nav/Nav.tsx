@@ -40,10 +40,9 @@ export const Nav: React.FC = () => {
     let prevScrollpos = window.pageYOffset
     window.onscroll = function () {
       let currentScrollPos = window.pageYOffset
-      console.log(currentScrollPos)
-      console.log(currentScrollPos + 100)
       if (navRef.current) {
         const navHeight = navRef.current.offsetHeight
+
         if (prevScrollpos > currentScrollPos) {
           navRef.current.style.top = "0"
         } else {
