@@ -38,7 +38,7 @@ app.post(
   <li>Message: ${message} </li>
   </ul>
   `
-
+    // `${process.env.GATSBY_EMAIL_SENDER_PASSWORD}`
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
       service: `gmail`,

@@ -10,11 +10,13 @@ interface State {
   menu: boolean
 }
 
+type Props = {}
+
 export const Nav: React.FC = () => {
   const [mobileState, setMobileState] = React.useState<State>({ menu: false })
   const navRef = React.useRef<HTMLElement | null>(null)
 
-  const applyTransitions = () => {
+  const applyLinksTransitions = () => {
     return mobileState.menu ? (
       <CSSTransition
         timeout={250}
@@ -38,9 +40,10 @@ export const Nav: React.FC = () => {
     let prevScrollpos = window.pageYOffset
     window.onscroll = function () {
       let currentScrollPos = window.pageYOffset
-
+      console.log(currentScrollPos)
+      console.log(currentScrollPos + 100)
       if (navRef.current) {
-        const navHeight: number = navRef.current.offsetHeight
+        const navHeight = navRef.current.offsetHeight
         if (prevScrollpos > currentScrollPos) {
           navRef.current.style.top = "0"
         } else {
@@ -50,17 +53,6 @@ export const Nav: React.FC = () => {
       }
     }
   }, [])
-
-  // let prevScrollpos = window.pageYOffset
-  // window.onscroll = function () {
-  //   let currentScrollPos = window.pageYOffset
-  //   if (prevScrollpos > currentScrollPos) {
-  //     document.getElementById("NavBar").style.top = "0"
-  //   } else {
-  //     document.getElementById("NavBar").style.top = "-100%"
-  //   }
-  //   prevScrollpos = currentScrollPos
-  // }
 
   return (
     <nav className={css.navWrapper} ref={navRef}>
@@ -72,7 +64,7 @@ export const Nav: React.FC = () => {
         setMobileState={setMobileState}
       ></MobileNav>
       <LinksWrapper location="navBar"></LinksWrapper>
-      <TransitionGroup>{applyTransitions()}</TransitionGroup>
+      <TransitionGroup>{applyLinksTransitions()}</TransitionGroup>
     </nav>
   )
 }

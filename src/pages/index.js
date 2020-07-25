@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useRef, useState, useLayoutEffect, useEffect } from "react"
 import {
   Nav,
   HomePage,
