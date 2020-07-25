@@ -48,124 +48,23 @@
   }
 }
 
-// .links-enter {
-//   transition: all 250ms ease-out;
-//   transform: translate(-100%, 0);
-//   opacity: 0;
-//   &.links-enter-active {
-//     transform: translate(0, 0);
-//     opacity: 1;
+.navEnter {
+  transition: 250ms ease-out;
 
-//     transition: all 250ms ease-out;
-//   }
-// }
+  &.navEnterActive {
+    transition: 250ms ease-out;
+  }
+}
 
-// .links-exit {
-//   transform: translate(0, 0);
-//   opacity: 1;
-//   transition: all 250ms ease-out;
-//   &.links-exit-active {
-//     transition: all 250ms ease-out;
-//     transform: translate(-100%, 0);
-//     opacity: 0;
-//   }
-// }
+//slightly less black #11232C
+//slightly more black #0B171D
 
-// Objektiv Mk1 Italic
-
-// font-family: objektiv-mk1, sans-serif;
-
-// font-weight: 400;
-
-// font-style: italic;
-
-// Objektiv Mk1 Regular
-
-// font-family: objektiv-mk1, sans-serif;
-
-// font-weight: 400;
-
-// font-style: normal;
-
-// Objektiv Mk1 Bold
-
-// font-family: objektiv-mk1, sans-serif;
-
-// font-weight: 700;
-
-// font-style: normal;
-
-// Objektiv Mk1 Bold Italic
-
-// font-family: objektiv-mk1, sans-serif;
-
-// font-weight: 700;
-
-// font-style: italic;
-
-// Objektiv Mk2 Bold Italic
-
-// font-family: objektiv-mk2, sans-serif;
-
-// font-weight: 400;
-
-// font-style: italic;
-
-// Objektiv Mk2 Bold Regular
-
-// font-family: objektiv-mk2, sans-serif;
-
-// font-weight: 400;
-
-// font-style: normal;
-
-// Objektiv Mk2 Bold Bold
-
-// font-family: objektiv-mk2, sans-serif;
-
-// font-weight: 700;
-
-// font-style: normal;
-
-// Objektiv Mk2 Bold Bold Italic
-
-// font-family: objektiv-mk2, sans-serif;
-
-// font-weight: 700;
-
-// font-style: italic;
-
-// Objektiv Mk3 Italic
-
-// font-family: objektiv-mk3, sans-serif;
-
-// font-weight: 400;
-
-// font-style: italic;
-
-// Objektiv Mk3 Regular
-
-// font-family: objektiv-mk3, sans-serif;
-
-// font-weight: 400;
-
-// font-style: normal;
-
-// Objektiv Mk3 Bold Italic
-
-// font-family: objektiv-mk3, sans-serif;
-
-// font-weight: 700;
-
-// font-style: italic;
-
-// Objektiv Mk3 Bold
-
-// font-family: objektiv-mk3, sans-serif;
-
-// font-weight: 700;
-
-// font-style: normal;
+.navExit {
+  transition: 250ms ease-out;
+  &.navExitActive {
+    transition: 250ms ease-out;
+  }
+}
 
 .linksEnter {
   transition: all 250ms ease-out;

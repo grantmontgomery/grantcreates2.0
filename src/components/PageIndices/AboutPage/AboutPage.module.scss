@@ -5,7 +5,9 @@
   grid-template-areas: ". picture about ." ". hammer tools .";
   grid-template-columns: 5% 55% 35% 5%;
   grid-template-rows: 50% 50%;
-  background: #060c0f;
+  // background: #060c0f;
+  background: #0b171d;
+
   & svg {
     height: 100%;
     width: auto;

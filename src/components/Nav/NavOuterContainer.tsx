@@ -7,7 +7,7 @@ type State = {
   scroll: string
 }
 
-export const NavOuterContainer = (): React.FC => {
+export const NavOuterContainer = (): object => {
   const navRef = React.useRef<HTMLElement | null>(null)
 
   const [state, setState] = React.useState<State>({ scroll: "up" })
@@ -33,22 +33,21 @@ export const NavOuterContainer = (): React.FC => {
     }
   }, [])
 
-  const applyLinksTransitions = () => {
+  const applyNavTransitions = () => {
     return state.scroll === "up" ? (
       <CSSTransition
         timeout={250}
         classNames={{
-          enter: css["linksEnter"],
-          enterActive: css["linksEnterActive"],
-          exit: css["linksExit"],
-          exitActive: css["linksExitActive"],
+          enter: css["navEnter"],
+          enterActive: css["navEnterActive"],
+          exit: css["navExit"],
+          exitActive: css["navExitActive"],
         }}
       >
-        <LinksWrapper location="mobileNav"></LinksWrapper>
+        <Nav></Nav>
       </CSSTransition>
     ) : null
   }
 
-  const applyNavTransitions = () => {}
-  return <TransitionGroup></TransitionGroup>
+  return <TransitionGroup>{applyNavTransitions()}</TransitionGroup>
 }

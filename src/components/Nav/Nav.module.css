@@ -75,6 +75,26 @@
   font-size: 150%;
 }
 
+.navEnter {
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.navEnter.navEnterActive {
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.navExit {
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.navExit.navExitActive {
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
 .linksEnter {
   -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
