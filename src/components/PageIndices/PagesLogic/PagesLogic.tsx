@@ -17,11 +17,27 @@ export const PagesLogic: React.FC = () => {
     contactRef.current?.focus()
   })
 
+  const observer = new IntersectionObserver(entries => {
+    console.log(entries)
+    for (let i = 0; i < entries.length; i++) {
+      if (entries[i].target === hammerAnvilRef.current) {
+      }
+    }
+  })
+
   React.useEffect(() => {
-    console.log(hammerAnvilRef.current)
-    console.log(creationsRef.current)
-    console.log(aboutRef.current)
-    console.log(contactRef.current)
+    if (hammerAnvilRef.current) {
+      observer.observe(hammerAnvilRef.current)
+    }
+    if (creationsRef.current) {
+      observer.observe(creationsRef.current)
+    }
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current)
+    }
+    if (contactRef.current) {
+      observer.observe(contactRef.current)
+    }
   }, [])
 
   const { Provider } = homePageContext
