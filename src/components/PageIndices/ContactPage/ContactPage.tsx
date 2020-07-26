@@ -1,6 +1,16 @@
 import * as React from "react"
 import css from "./ContactPage.module.css"
 
-export const ContactPage = () => {
-  return <section id="contact" className={`${css.contact}`}></section>
+type Props = {
+  contactRef: React.Ref<HTMLElement>
+}
+
+export const ContactPage: React.FC<Props> = ({ contactRef }) => {
+  return (
+    <section
+      id="contact"
+      ref={contactRef}
+      className={`${css.contact}`}
+    ></section>
+  )
 }

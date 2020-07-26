@@ -9,7 +9,7 @@ interface Props {
 interface State {
   type: string
 }
-export const CreationsPage = ({ location }: Props) => {
+export const CreationsPage: React.FC<Props> = ({ location }) => {
   const [state, setState] = React.useState<State>({ type: "apps" })
 
   return (

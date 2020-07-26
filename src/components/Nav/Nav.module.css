@@ -18,6 +18,8 @@
   position: -webkit-sticky;
   position: sticky;
   z-index: 3;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
 }
 
 .navWrapper .logoLink {

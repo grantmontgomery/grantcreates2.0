@@ -16,8 +16,9 @@ const IndexPage = () => {
       <ContactFloat></ContactFloat>
       <main>
         <HomePage></HomePage>
-        <AboutPage></AboutPage>
         <CreationsPage location="desktop"></CreationsPage>
+
+        <AboutPage></AboutPage>
       </main>
     </React.Fragment>
   )

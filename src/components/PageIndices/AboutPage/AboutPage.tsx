@@ -1,9 +1,13 @@
 import * as React from "react"
 import css from "./AboutPage.module.css"
 
-export const AboutPage: React.FC = () => {
+type Props = {
+  aboutRef: React.Ref<HTMLElement>
+}
+
+export const AboutPage: React.FC<Props> = ({ aboutRef }) => {
   return (
-    <section id="about" className={css.about}>
+    <section ref={aboutRef} id="about" className={css.about}>
       <div className={css.headerWrapper}>
         <div>About</div>
       </div>

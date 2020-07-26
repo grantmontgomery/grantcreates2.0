@@ -21,7 +21,7 @@ export default function HTML(props) {
           id="___loader"
           key={`loader`}
           style={{
-            background: "#0F2027",
+            background: "#0b171d",
             height: "100%",
             width: "100%",
             margin: "0",
