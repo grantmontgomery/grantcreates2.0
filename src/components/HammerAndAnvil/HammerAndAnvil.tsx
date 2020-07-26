@@ -173,12 +173,12 @@ export const Scene: React.FC = () => {
     HammerAndAnvil()
   }, [])
 
-  const { value: hammerAnvilRef } = React.useContext(homePageContext)
+  const { hammerAnvilRef } = React.useContext(homePageContext)
 
   return (
     <div
       className={`${css.hammerAnvil}`}
-      ref={() => (hammerAnvilRef ? hammerAnvilRef : null)}
+      ref={hammerAnvilRef}
       id="hammerandanvil"
     ></div>
   )

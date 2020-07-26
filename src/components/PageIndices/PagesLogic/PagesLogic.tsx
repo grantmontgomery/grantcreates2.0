@@ -17,6 +17,13 @@ export const PagesLogic: React.FC = () => {
     contactRef.current?.focus()
   })
 
+  React.useEffect(() => {
+    console.log(hammerAnvilRef.current)
+    console.log(creationsRef.current)
+    console.log(aboutRef.current)
+    console.log(contactRef.current)
+  }, [])
+
   const { Provider } = homePageContext
 
   return (

@@ -12,7 +12,7 @@ interface State {
 }
 export const CreationsPage: React.FC<Props> = ({ location }) => {
   const [state, setState] = React.useState<State>({ type: "apps" })
-  const { value: creationsRef } = React.useContext(homePageContext)
+  const { creationsRef } = React.useContext(homePageContext)
 
   return (
     <section
