@@ -1,5 +1,5 @@
 export { Nav } from "./Nav"
-export { HomePage, AboutPage, CreationsPage } from "./PageIndices"
+export { HomePage, AboutPage, CreationsPage, PagesLogic } from "./PageIndices"
 export { ContactFloat } from "./ContactFloat"
 export { LoadingAssets } from "./LoadingAssets"
 // export { Controls } from "./Controls"

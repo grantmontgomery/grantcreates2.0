@@ -1,5 +1,6 @@
 import * as React from "react"
 import { CreationType } from "../../CreationType"
+import { homePageContext } from "../PagesLogic/Context"
 import css from "./CreationsPage.module.css"
 
 interface Props {
@@ -11,9 +12,14 @@ interface State {
 }
 export const CreationsPage: React.FC<Props> = ({ location }) => {
   const [state, setState] = React.useState<State>({ type: "apps" })
+  const { value: creationsRef } = React.useContext(homePageContext)
 
   return (
-    <section id="creations" className={`${css.creations} ${css[location]}`}>
+    <section
+      id="creations"
+      ref={creationsRef}
+      className={`${css.creations} ${css[location]}`}
+    >
       <div className={`${css.headerWrapper}`}>
         <div>Creations</div>
       </div>

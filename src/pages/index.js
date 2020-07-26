@@ -5,20 +5,30 @@ import {
   AboutPage,
   CreationsPage,
   ContactFloat,
+  PagesLogic,
 } from "../components"
 import { Link } from "gatsby"
 import "./index.css"
 
 const IndexPage = () => {
+  // return (
+  //   <React.Fragment>
+  //     <Nav></Nav>
+  //     <ContactFloat></ContactFloat>
+  //     <main>
+  //       <HomePage></HomePage>
+  //       <CreationsPage location="desktop"></CreationsPage>
+
+  //       <AboutPage></AboutPage>
+  //     </main>
+  //   </React.Fragment>
+  // )
   return (
     <React.Fragment>
       <Nav></Nav>
       <ContactFloat></ContactFloat>
       <main>
-        <HomePage></HomePage>
-        <CreationsPage location="desktop"></CreationsPage>
-
-        <AboutPage></AboutPage>
+        <PagesLogic></PagesLogic>
       </main>
     </React.Fragment>
   )

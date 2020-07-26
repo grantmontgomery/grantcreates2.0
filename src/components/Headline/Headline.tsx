@@ -11,12 +11,6 @@ export const Headline: React.FC = () => {
 
   const [creation, setCreation] = React.useState(0)
 
-  const updateCreation = () => {
-    setCreation(state => {
-      return state < creations.length ? (state += 1) : 0
-    })
-  }
-
   React.useEffect(() => {
     const interval = setInterval(() => {
       return setCreation(state => {

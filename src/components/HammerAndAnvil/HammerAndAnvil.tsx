@@ -2,7 +2,7 @@ import * as React from "react"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper"
-import { TWEEN } from "tweenjs"
+import { homePageContext } from "../PageIndices/PagesLogic/Context"
 import css from "./HammerAndAnvil.module.css"
 
 import * as THREE from "three"
@@ -168,9 +168,18 @@ const HammerAndAnvil = () => {
   animate()
 }
 
-export const Scene = () => {
+export const Scene: React.FC = () => {
   React.useEffect(() => {
     HammerAndAnvil()
   }, [])
-  return <div className={`${css.hammerAnvil}`} id="hammerandanvil"></div>
+
+  const { value: hammerAnvilRef } = React.useContext(homePageContext)
+
+  return (
+    <div
+      className={`${css.hammerAnvil}`}
+      ref={() => (hammerAnvilRef ? hammerAnvilRef : null)}
+      id="hammerandanvil"
+    ></div>
+  )
 }
