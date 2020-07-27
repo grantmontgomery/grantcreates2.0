@@ -7,8 +7,27 @@
   width: 100%;
 }
 
+.hammerAnvil .dragBar {
+  position: absolute;
+  height: 100%;
+  width: 20vw;
+  background: none;
+  top: 0;
+}
+
+.hammerAnvil .dragBar:nth-child(1) {
+  float: left;
+  left: 0;
+}
+
+.hammerAnvil .dragBar:nth-child(2) {
+  float: right;
+  right: 0;
+}
+
 .hammerAnvil canvas {
   height: 100%;
+  position: relative;
   width: 100%;
   outline: none;
 }

@@ -10,7 +10,7 @@
   .typeWrapper .innerTypes {
     -webkit-transform: translate(0, 10%);
             transform: translate(0, 10%);
-    height: 70%;
+    height: 80%;
     width: 100%;
     position: relative;
   }

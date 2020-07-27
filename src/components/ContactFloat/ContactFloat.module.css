@@ -1,9 +1,9 @@
 .contactWrapper {
-  height: 10vh;
-  width: 10vh;
+  height: 18vw;
+  width: 18vw;
   background: #203a43;
   position: fixed;
-  border-radius: 10vh;
+  border-radius: 18vw;
   z-index: 4;
   bottom: 10vh;
   float: right;

@@ -6,8 +6,24 @@
   height: 100%;
   width: 100%;
   // z-index: -2;
+  & .dragBar {
+    position: absolute;
+    height: 100%;
+    width: 20vw;
+    background: none;
+    top: 0;
+    &:nth-child(1) {
+      float: left;
+      left: 0;
+    }
+    &:nth-child(2) {
+      float: right;
+      right: 0;
+    }
+  }
   & canvas {
     height: 100%;
+    position: relative;
     width: 100%;
     outline: none;
   }

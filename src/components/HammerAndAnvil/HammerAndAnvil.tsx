@@ -178,10 +178,9 @@ export const Scene: React.FC = () => {
   const { hammerAnvilRef } = React.useContext(homePageContext)
 
   return (
-    <div
-      className={`${css.hammerAnvil}`}
-      ref={hammerAnvilRef}
-      id="hammerandanvil"
-    ></div>
+    <div className={css.hammerAnvil} ref={hammerAnvilRef} id="hammerandanvil">
+      <div className={css.dragBar}></div>
+      <div className={css.dragBar}></div>
+    </div>
   )
 }
