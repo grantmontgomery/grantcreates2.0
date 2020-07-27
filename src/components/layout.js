@@ -11,18 +11,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
 import { ContactFloat } from "./ContactFloat"
+import { Nav } from "./Nav"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+export const Layout = () => {
   return (
     <React.Fragment>
       <Nav></Nav>
@@ -30,9 +21,3 @@ const Layout = ({ children }) => {
     </React.Fragment>
   )
 }
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout

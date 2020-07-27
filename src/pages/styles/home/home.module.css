@@ -1,1 +1,24 @@
-/* No CSS *//*# sourceMappingURL=home.module.css.map */
+.homePage {
+  width: 100vw;
+  height: 89vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 35% 55% 5%;
+      grid-template-columns: 5% 35% 55% 5%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+      grid-template-areas: ". headline anvil .";
+}
+
+@media (max-width: 1024px) {
+  .homePage {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "headline headline headline" "anvil anvil anvil" "creations creations creations";
+    -ms-grid-columns: 20% 60% 20%;
+        grid-template-columns: 20% 60% 20%;
+    -ms-grid-rows: 20% 30% 50%;
+        grid-template-rows: 20% 30% 50%;
+  }
+}
+/*# sourceMappingURL=home.module.css.map */

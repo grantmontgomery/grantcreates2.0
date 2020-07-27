@@ -6,7 +6,9 @@ import {
   CreationsPage,
   ContactFloat,
   PagesLogic,
+  Layout,
 } from "../components"
+import { Home } from "./home"
 import { Link } from "gatsby"
 import "./index.css"
 
@@ -25,10 +27,10 @@ const IndexPage = () => {
   // )
   return (
     <React.Fragment>
-      <Nav></Nav>
-      <ContactFloat></ContactFloat>
+      <Layout></Layout>
       <main>
-        <PagesLogic></PagesLogic>
+        <Home></Home>
+        {/* <PagesLogic></PagesLogic> */}
       </main>
     </React.Fragment>
   )
