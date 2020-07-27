@@ -22,12 +22,11 @@ export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
 
   const handleTap = () => {
     if (creationRef.current) {
-      creationRef.current?.focus()
-      const boundingObject = creationRef.current?.getBoundingClientRect()
-      const elemTopPosition = boundingObject?.top
+      const boundingObject = creationRef.current.getBoundingClientRect()
+      const elemTopPosition = boundingObject.top
 
       const creationElement = creationRef.current
-      const elementHeight = creationElement?.offsetHeight
+      const elementHeight = creationElement.offsetHeight
 
       const halfHeight = elementHeight / 2
 

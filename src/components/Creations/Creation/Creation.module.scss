@@ -1,7 +1,7 @@
 .creationWrapper {
   position: relative;
   transform: translate(-50%, 0%);
-  border-radius: 25px;
+  border-radius: 5vw;
   height: 20vh;
   background: #2c5363;
   width: 20vh;
@@ -13,9 +13,9 @@
     margin-right: auto;
     position: fixed;
     border-radius: 0;
-    height: 50vh;
+    height: 100vw;
     z-index: 4;
-    width: 45vh;
+    width: 90vw;
     transition: 250ms ease-out;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -34,29 +34,17 @@
     & .xWrapper {
       position: relative;
       width: fit-content;
-      // height: fit-content;
       color: white;
       display: block;
       top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-family: Objektiv Mk2 Bold;
-      // margin-left: auto;
-      // margin-right: auto;
+
       font-size: 2.5vh;
     }
-    // background: black;
   }
 }
-// .modalDark {
-//   top: 0;
-//   z-index: 3;
-//   left: 0;
-//   position: fixed;
-//   height: 100vh;
-//   width: 100vw;
-//   background: rgba(32, 58, 67, 0.5);
-// }
 
 @media (max-width: 1024px) {
   .selectorTitleWrapper {

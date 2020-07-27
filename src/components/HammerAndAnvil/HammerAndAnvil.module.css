@@ -13,6 +13,7 @@
   width: 20vw;
   background: none;
   top: 0;
+  z-index: 1;
 }
 
 .hammerAnvil .dragBar:nth-child(1) {

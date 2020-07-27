@@ -2,7 +2,7 @@
   position: relative;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
-  border-radius: 25px;
+  border-radius: 5vw;
   height: 20vh;
   background: #2c5363;
   width: 20vh;
@@ -17,9 +17,9 @@
   margin-right: auto;
   position: fixed;
   border-radius: 0;
-  height: 50vh;
+  height: 100vw;
   z-index: 4;
-  width: 45vh;
+  width: 90vw;
   -webkit-transition: 250ms ease-out;
   transition: 250ms ease-out;
   left: 50%;
