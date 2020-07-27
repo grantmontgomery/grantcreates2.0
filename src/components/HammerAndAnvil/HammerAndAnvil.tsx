@@ -14,7 +14,9 @@ const HammerAndAnvil = () => {
 
   const camera = new THREE.PerspectiveCamera(75, 0.45, 1, 1000)
 
-  camera.position.z = 5
+  // camera.position.z = 5
+  camera.position.z = 4
+
   camera.position.y = 4
   camera.position.x = 0
 
