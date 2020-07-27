@@ -16,16 +16,18 @@ function SEO({ description, lang, meta, title }) {
       query {
         site {
           siteMetadata {
-            title
-            description
-            author
+            seo {
+              title
+              description
+              author
+            }
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.seo.description
 
   return (
     <Helmet

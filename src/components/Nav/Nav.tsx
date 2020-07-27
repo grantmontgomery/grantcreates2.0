@@ -2,6 +2,7 @@ import * as React from "react"
 import { FullLogo, DarkLogo, Anvil } from "../Logos"
 import { LinksWrapper } from "../LinksWrapper"
 import { MobileNav } from "../MobileNav"
+import { Link } from "gatsby"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { MobileLinks } from "./MobileLinks"
 import css from "./Nav.module.css"
@@ -55,9 +56,9 @@ export const Nav: React.FC = () => {
 
   return (
     <nav className={css.navWrapper} ref={navRef}>
-      <a href="/" className={`logoLink ${css.logoLink}`}>
+      <Link to="/" className={css.logoLink}>
         <FullLogo location="navBar"></FullLogo>
-      </a>
+      </Link>
       <MobileNav
         menu={mobileState.menu}
         setMobileState={setMobileState}

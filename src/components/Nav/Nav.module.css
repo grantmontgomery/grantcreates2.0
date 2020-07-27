@@ -25,6 +25,7 @@
 .navWrapper .logoLink {
   margin-left: 5%;
   margin-right: auto;
+  outline: none;
 }
 
 .navWrapper .linksWrapper {
