@@ -1,5 +1,5 @@
 import * as React from "react"
-import { CreationDataInterface } from "../../Data"
+import { CreationDataInterface } from "../../types"
 import css from "./MobileTapped.module.css"
 
 export const MobileTapped: React.FunctionComponent<CreationDataInterface> = ({

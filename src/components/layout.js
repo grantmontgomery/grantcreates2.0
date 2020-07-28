@@ -13,11 +13,12 @@ import "./layout.css"
 import { ContactFloat } from "./ContactFloat"
 import { Nav } from "./Nav"
 
-export const Layout = () => {
+export const Layout = ({ children }) => {
   return (
     <React.Fragment>
       <Nav></Nav>
       <ContactFloat></ContactFloat>
+      <main>{children}</main>
     </React.Fragment>
   )
 }

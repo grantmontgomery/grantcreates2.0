@@ -1,6 +1,6 @@
 import * as React from "react"
 import { MobileSelector } from "./MobileSelector"
-import { CreationDataInterface, creationsData } from "../Data"
+import { CreationDataInterface } from "../types"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import css from "./Creation.module.css"
 import { MobileTapped } from "./MobileTapped"
@@ -34,7 +34,7 @@ export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
 
       return setState({
         tapped: true,
-        top: windowTopCenter - elemTopPosition - halfHeight * 2.5,
+        top: windowTopCenter - elemTopPosition - halfHeight * 3,
       })
     }
   }

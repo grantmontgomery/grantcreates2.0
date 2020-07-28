@@ -4,38 +4,13 @@
 
 module.exports = {
   siteMetadata: {
-    seo: {
-      title: "Grant Creates",
-      description: "The Portfolio Site of Grant Montgomery",
-      author: "Grant Montgomery",
-    },
-    creations: {
-      apps: [
-        {
-          name: "Seknd",
-          subTitle: "React Web Application",
-          detailsName: "Seknd (Second)",
-          details: "",
-          technologies: "React Redux Express Sass",
-          githublink: "https://github.com/grantmontgomery/seknd",
-          link: "sekndapp.com",
-        },
-      ],
-      websites: [
-        {
-          name: "Grant Creates",
-          subTitle: "Gatsby Portfolio Website",
-          detailsName: "Grant Creates",
-          details: "My portfolio site",
-          technologies: "Typescript Gatsby Express Sass",
-          githublink: "https://github.com/grantmontgomery/grantcreates2.0",
-          link: "",
-        },
-      ],
-    },
+    title: "Grant Creates",
+    description: "The Portfolio Site of Grant Montgomery",
+    author: "Grant Montgomery",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -44,10 +19,9 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-json`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-web-font-loader`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

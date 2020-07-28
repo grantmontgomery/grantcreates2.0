@@ -1,37 +1,32 @@
 import * as React from "react"
-// import { creationsData } from "./Data"
 import { graphql, useStaticQuery } from "gatsby"
 import { Creation } from "./Creation"
 
 export const displayCreations = (type: string) => {
   const {
-    site: {
-      siteMetadata: { creations },
-    },
+    allDataJson: { nodes },
   } = useStaticQuery(
     graphql`
       query MyQuery {
-        site(siteMetadata: { creations: {} }) {
-          siteMetadata {
-            creations {
-              apps {
-                name
-                subTitle
-                detailsName
-                details
-                technologies
-                githublink
-                link
-              }
-              websites {
-                name
-                subTitle
-                detailsName
-                details
-                technologies
-                githublink
-                link
-              }
+        allDataJson {
+          nodes {
+            apps {
+              name
+              subTitle
+              detailsName
+              details
+              technologies
+              githublink
+              link
+            }
+            websites {
+              name
+              subTitle
+              detailsName
+              details
+              technologies
+              githublink
+              link
             }
           }
         }
@@ -39,9 +34,11 @@ export const displayCreations = (type: string) => {
     `
   )
 
+  const { apps, websites } = nodes[0]
+
   switch (type) {
     case "apps":
-      return creations.apps.map(creation => {
+      return apps.map(creation => {
         return (
           <Creation
             key={`${creation.name}${creation.technologies}`}
@@ -51,7 +48,7 @@ export const displayCreations = (type: string) => {
         )
       })
     case "websites":
-      return creations.websites.map(creation => {
+      return websites.map(creation => {
         return (
           <Creation
             key={`${creation.name}${creation.technologies}`}

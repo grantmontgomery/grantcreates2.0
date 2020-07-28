@@ -10,23 +10,16 @@ import {
   Headline,
   Layout,
 } from "../components"
-import { Home } from "./home"
-import { Link } from "gatsby"
 import "./index.css"
+import { ContactPage } from "../components/PageIndices"
 
 const IndexPage = () => {
   return (
-    <React.Fragment>
-      <Layout></Layout>
-      <main>
-        <section className="homePage">
-          <Headline></Headline>
-          <Scene></Scene>
-          <CreationsPage location="mobileHome"></CreationsPage>
-        </section>
-        {/* <PagesLogic></PagesLogic> */}
-      </main>
-    </React.Fragment>
+    <Layout>
+      <HomePage></HomePage>
+      <AboutPage></AboutPage>
+      <ContactPage></ContactPage>
+    </Layout>
   )
 }
 

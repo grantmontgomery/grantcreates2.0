@@ -1,6 +1,5 @@
 import * as React from "react"
 import { SekndIcon } from "../../CreationIcons"
-import { CreationDataInterface } from "../../Data"
 import { Anvil } from "../../../Logos"
 import css from "./MobileSelector.module.css"
 

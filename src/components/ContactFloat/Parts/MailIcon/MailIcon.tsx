@@ -1,7 +1,25 @@
 import * as React from "react"
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 import css from "./MailIcon.module.css"
 
 export const MailIcon = ({ setState }) => {
+  // const { data } = useStaticQuery(graphql`
+  //   query MyQuery {
+  //     file(relativePath: { eq: "MailIconCompressed.png" }) {
+  //       childImageSharp {
+  //         fluid {
+  //           aspectRatio
+  //           base64
+  //           sizes
+  //           src
+  //           srcSet
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  // console.log(data)
   return (
     <div
       className={css.iconWrapper}
