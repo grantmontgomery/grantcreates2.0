@@ -1,11 +1,6 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+// const React = require("react")
+// const { GlobalStateProvider } = require("./src/state")
 
-// You can delete this file if you're not using it
-
-// import { wrapRootElement } from "./src/redux"
-
-// export const wrappedElement = wrapRootElement
+// exports.wrapRootElement = ({ element }) => {
+//   return <GlobalStateProvider>{element}</GlobalStateProvider>
+// }

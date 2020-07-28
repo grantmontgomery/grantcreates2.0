@@ -72,21 +72,17 @@
 .linksEnter {
   transition: all 250ms ease-out;
   transform: translate(100%, 0);
-  opacity: 0;
   &.linksEnterActive {
     transform: translate(0, 0);
-    opacity: 1;
     transition: all 250ms ease-out;
   }
 }
 
 .linksExit {
   transform: translate(0, 0);
-  opacity: 1;
   transition: all 250ms ease-out;
   &.linksExitActive {
     transition: all 250ms ease-out;
     transform: translate(100%, 0);
-    opacity: 0;
   }
 }

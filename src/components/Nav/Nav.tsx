@@ -11,8 +11,6 @@ interface State {
   menu: boolean
 }
 
-type Props = {}
-
 export const Nav: React.FC = () => {
   const [mobileState, setMobileState] = React.useState<State>({ menu: false })
   const navRef = React.useRef<HTMLElement | null>(null)
@@ -28,7 +26,10 @@ export const Nav: React.FC = () => {
           exitActive: css["linksExitActive"],
         }}
       >
-        <LinksWrapper location="mobileNav"></LinksWrapper>
+        <LinksWrapper
+          setMobileState={setMobileState}
+          location="mobileNav"
+        ></LinksWrapper>
       </CSSTransition>
     ) : null
   }

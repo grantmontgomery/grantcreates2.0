@@ -103,13 +103,11 @@
   transition: all 250ms ease-out;
   -webkit-transform: translate(100%, 0);
           transform: translate(100%, 0);
-  opacity: 0;
 }
 
 .linksEnter.linksEnterActive {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-  opacity: 1;
   -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
 }
@@ -117,7 +115,6 @@
 .linksExit {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-  opacity: 1;
   -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
 }
@@ -127,6 +124,5 @@
   transition: all 250ms ease-out;
   -webkit-transform: translate(100%, 0);
           transform: translate(100%, 0);
-  opacity: 0;
 }
 /*# sourceMappingURL=Nav.module.css.map */

@@ -7,7 +7,7 @@ interface Props {
   menu: boolean
 }
 
-export const MobileLinks = ({ menu }: Props) => {
+export const MobileLinks: React.FC<Props> = ({ menu }) => {
   return menu ? (
     <CSSTransition
       timeout={250}
