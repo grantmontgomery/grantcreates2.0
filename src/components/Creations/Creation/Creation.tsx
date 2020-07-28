@@ -27,14 +27,15 @@ export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
 
       const creationElement = creationRef.current
       const elementHeight = creationElement.offsetHeight
-
+      const elementWidth = creationElement.offsetWidth
+      const halfWidth = elementWidth / 2
       const halfHeight = elementHeight / 2
 
       const windowTopCenter = window.innerHeight / 2
 
       return setState({
         tapped: true,
-        top: windowTopCenter - elemTopPosition - halfHeight * 3,
+        top: windowTopCenter - elemTopPosition - elementWidth * 1.75,
       })
     }
   }
