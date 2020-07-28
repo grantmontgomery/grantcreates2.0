@@ -39,7 +39,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          familes: ["Custom"],
+          familes: ["Objektiv Mk2, Objektiv Mk2 Bold"],
           urls: ["/static/fonts/fonts.css"],
         },
       },

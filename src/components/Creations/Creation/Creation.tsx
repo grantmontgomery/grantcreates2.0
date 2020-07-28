@@ -26,10 +26,7 @@ export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
       const elemTopPosition = boundingObject.top
 
       const creationElement = creationRef.current
-      const elementHeight = creationElement.offsetHeight
       const elementWidth = creationElement.offsetWidth
-      const halfWidth = elementWidth / 2
-      const halfHeight = elementHeight / 2
 
       const windowTopCenter = window.innerHeight / 2
 
