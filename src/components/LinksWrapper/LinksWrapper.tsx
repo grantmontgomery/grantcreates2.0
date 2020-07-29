@@ -7,6 +7,8 @@ interface Props {
 }
 
 export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
+  console.log("rerender Links")
+
   return (
     <div className={`${css.linksWrapper} ${css[`${location}`]}`}>
       <div className={css.link}>

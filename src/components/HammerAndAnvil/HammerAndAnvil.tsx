@@ -170,12 +170,14 @@ const HammerAndAnvil = () => {
   animate()
 }
 
-export const Scene: React.FC = () => {
+type Props = {
+  hammerAnvilRef: React.Ref<HTMLDivElement>
+}
+
+export const Scene: React.FC<Props> = ({ hammerAnvilRef }) => {
   React.useEffect(() => {
     HammerAndAnvil()
   }, [])
-
-  const { hammerAnvilRef } = React.useContext(homePageContext)
 
   return (
     <div className={css.hammerAnvil} ref={hammerAnvilRef} id="hammerandanvil">

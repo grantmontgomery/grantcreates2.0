@@ -44,9 +44,7 @@ export const PagesLogic: React.FC = () => {
 
   return (
     <React.Fragment>
-      <Provider
-        value={{ hammerAnvilRef: hammerAnvilRef, creationsRef: creationsRef }}
-      >
+      <Provider value={{ hammerAnvilRef: hammerAnvilRef }}>
         <HomePage></HomePage>
       </Provider>
 

@@ -3,18 +3,16 @@ import { FullLogo, DarkLogo, Anvil } from "../Logos"
 import { LinksWrapper } from "../LinksWrapper"
 import { MobileNav } from "../MobileNav"
 import { Link } from "gatsby"
+import { useNavState } from "../../state/NavGlobal"
 import { ModalDark } from "../ModalDark"
 import { useModalDispatch, useModalState } from "../../state/ModalGlobal"
 import { modalActions } from "../../state/actions"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import css from "./Nav.module.css"
 
-// interface State {
-//   menu: boolean
-// }
-
 export const Nav: React.FC = () => {
-  // const [mobileState, setMobileState] = React.useState<State>({ menu: false })
+  const navState = useNavState()
+  console.log(navState)
   const navRef = React.useRef<HTMLElement | null>(null)
   const {
     windows: { navLinks },
@@ -46,7 +44,6 @@ export const Nav: React.FC = () => {
       let currentScrollPos = window.pageYOffset
       if (navRef.current) {
         const navHeight = navRef.current.offsetHeight
-
         navRef.current.style.opacity = "1"
         if (prevScrollpos > currentScrollPos) {
           navRef.current.style.top = "0"
@@ -75,7 +72,7 @@ export const Nav: React.FC = () => {
   }
 
   return (
-    <nav className={css.navWrapper} ref={navRef}>
+    <nav className={css.navWrapper} id="navBar" ref={navRef}>
       <Link to="/" className={css.logoLink}>
         <FullLogo location="navBar"></FullLogo>
       </Link>
