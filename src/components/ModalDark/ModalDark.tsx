@@ -1,10 +1,15 @@
 import * as React from "react"
+import { useModalState, useModalDispatch } from "../../state/ModalGlobal"
+import { modalActions } from "../../state/actions"
 import css from "./ModalDark.module.css"
 
-interface Props {
-  component: string
-}
-
-export const ModalDark = () => {
-  ;<div className={css.modalWrapper}></div>
+export const ModalDark: React.FC = () => {
+  const { modal } = useModalState()
+  const modalDispatch = useModalDispatch()
+  return modal ? (
+    <div
+      className={css.modalWrapper}
+      onClick={() => modalDispatch(modalActions("CLOSE"))}
+    ></div>
+  ) : null
 }

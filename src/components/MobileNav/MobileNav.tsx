@@ -13,10 +13,6 @@ export const MobileNav: React.FC<Props> = ({ setMobileState, menu }) => {
     return menu ? "switched" : "normal"
   }
 
-  const state = useModalState()
-
-  console.log(state)
-
   return (
     <div
       className={`${css.mobileNavWrapper} `}

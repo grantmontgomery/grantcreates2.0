@@ -9,10 +9,12 @@ import React from "react"
 import "./layout.css"
 import { ContactFloat } from "./ContactFloat"
 import { Nav } from "./Nav"
+import { ModalDark } from "./ModalDark"
 
 export const Layout = ({ children }) => {
   return (
     <React.Fragment>
+      <ModalDark></ModalDark>
       <Nav></Nav>
       <ContactFloat></ContactFloat>
       <main>{children}</main>
