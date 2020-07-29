@@ -1,6 +1,5 @@
 .homePage {
   width: 100vw;
-  height: 89vh;
   display: grid;
   grid-template-columns: 5% 35% 55% 5%;
   grid-template-rows: 100%;
@@ -9,9 +8,10 @@
 
 @media (max-width: 1024px) {
   .homePage {
+    height: 44.5vh;
     display: grid;
-    grid-template-areas: "headline headline headline" "anvil anvil anvil" "creations creations creations";
+    grid-template-areas: "headline headline headline" "anvil anvil anvil";
     grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 20% 30% 50%;
+    grid-template-rows: 40% 60%;
   }
 }

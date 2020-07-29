@@ -22,7 +22,7 @@ export const CreationsPage: React.FC<Props> = ({ location }) => {
     <section
       id="creations"
       ref={creationsRef}
-      className={`${css.creations} ${css[location]}`}
+      className={css.creations}
       style={{ zIndex: creation ? 4 : 2 }}
     >
       <div className={`${css.headerWrapper}`}>

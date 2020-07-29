@@ -1,6 +1,5 @@
 .homePage {
   width: 100vw;
-  height: 89vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 5% 35% 55% 5%;
@@ -12,13 +11,14 @@
 
 @media (max-width: 1024px) {
   .homePage {
+    height: 44.5vh;
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "headline headline headline" "anvil anvil anvil" "creations creations creations";
+        grid-template-areas: "headline headline headline" "anvil anvil anvil";
     -ms-grid-columns: 20% 60% 20%;
         grid-template-columns: 20% 60% 20%;
-    -ms-grid-rows: 20% 30% 50%;
-        grid-template-rows: 20% 30% 50%;
+    -ms-grid-rows: 40% 60%;
+        grid-template-rows: 40% 60%;
   }
 }
 /*# sourceMappingURL=HomePage.module.css.map */

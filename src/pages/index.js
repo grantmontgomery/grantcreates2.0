@@ -17,6 +17,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <HomePage></HomePage>
+      <CreationsPage></CreationsPage>
       <AboutPage></AboutPage>
       <ContactPage></ContactPage>
     </Layout>

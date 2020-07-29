@@ -9,7 +9,6 @@ export const HomePage: React.FC = () => {
     <section className={`homePage ${css.homePage}`}>
       <Headline></Headline>
       <Scene></Scene>
-      <CreationsPage location="mobileHome"></CreationsPage>
     </section>
   )
 }

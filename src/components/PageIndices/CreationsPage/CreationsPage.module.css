@@ -13,10 +13,9 @@
 }
 
 @media (max-width: 1024px) {
-  .creations.mobileHome {
-    grid-area: creations;
-    height: 100%;
-    width: 100%;
+  .creations {
+    height: 44.5vh;
+    width: 100vw;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100%;
@@ -25,14 +24,14 @@
         grid-template-rows: 10% 12.5% auto;
         grid-template-areas: "header" "types" "creationtype";
   }
-  .creations.mobileHome .headerWrapper {
+  .creations .headerWrapper {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: header;
     height: 100%;
     width: 100%;
   }
-  .creations.mobileHome .headerWrapper div {
+  .creations .headerWrapper div {
     margin-right: auto;
     margin-left: 5%;
     display: block;
@@ -51,7 +50,7 @@
     white-space: none;
     color: white;
   }
-  .creations.mobileHome .creationTypes {
+  .creations .creationTypes {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: types;
@@ -73,7 +72,7 @@
     padding-left: 0;
     padding-right: 0;
   }
-  .creations.mobileHome .creationTypes .type {
+  .creations .creationTypes .type {
     position: relative;
     display: block;
     top: 50%;
@@ -91,21 +90,21 @@
     -webkit-transition: 250ms ease-out;
     transition: 250ms ease-out;
   }
-  .creations.mobileHome .creationTypes .type.type:nth-child(1) {
+  .creations .creationTypes .type.type:nth-child(1) {
     margin-left: 5%;
     margin-right: 5%;
   }
-  .creations.mobileHome .creationTypes .type.type:last-child {
+  .creations .creationTypes .type.type:last-child {
     margin-left: 0;
     margin-right: auto;
   }
-  .creations.mobileHome .creationTypes .type.active {
+  .creations .creationTypes .type.active {
     background: #203a43;
     color: white;
     -webkit-transition: 250ms ease-out;
     transition: 250ms ease-out;
   }
-  .creations.mobileHome .creationTypes .type span {
+  .creations .creationTypes .type span {
     font-family: Objektiv Mk2 Bold;
     position: relative;
     -o-object-fit: contain;
@@ -124,14 +123,14 @@
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
   }
-  .creations.mobileHome .typeSection {
+  .creations .typeSection {
     color: white;
     width: 100%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
-  .creations.desktop {
+  .desktop {
     display: none;
   }
 }
