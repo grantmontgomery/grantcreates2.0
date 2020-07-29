@@ -3,20 +3,30 @@ import { useModalState, useModalDispatch } from "../../state/ModalGlobal"
 import { modalActions } from "../../state/actions"
 import css from "./ModalDark.module.css"
 
-export const ModalDark: React.FC = () => {
-  const { modal } = useModalState()
+type Props = {
+  inMobileNav?: boolean
+}
+
+export const ModalDark: React.FC<Props> = ({ inMobileNav }) => {
+  const {
+    modal,
+    windows: { navLinks },
+  } = useModalState()
   const modalDispatch = useModalDispatch()
 
-  // const modalDarkRef = React.useRef<HTMLElement|null>(null)
-
-  // React.useLayoutEffect(() =>
-  //   modalDarkRef.current?.focus()
-  // )
-
-  return modal ? (
-    <div
-      className={css.modalWrapper}
-      onClick={() => modalDispatch(modalActions("CLOSE"))}
-    ></div>
-  ) : null
+  if (navLinks) {
+    return inMobileNav && modal ? (
+      <div
+        className={css.modalWrapper}
+        onClick={() => modalDispatch(modalActions("CLOSE"))}
+      ></div>
+    ) : null
+  } else {
+    return modal && !navLinks ? (
+      <div
+        className={css.modalWrapper}
+        onClick={() => modalDispatch(modalActions("CLOSE"))}
+      ></div>
+    ) : null
+  }
 }

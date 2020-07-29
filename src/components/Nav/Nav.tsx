@@ -3,10 +3,10 @@ import { FullLogo, DarkLogo, Anvil } from "../Logos"
 import { LinksWrapper } from "../LinksWrapper"
 import { MobileNav } from "../MobileNav"
 import { Link } from "gatsby"
+import { ModalDark } from "../ModalDark"
 import { useModalDispatch, useModalState } from "../../state/ModalGlobal"
 import { modalActions } from "../../state/actions"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
-import { MobileLinks } from "./MobileLinks"
 import css from "./Nav.module.css"
 
 // interface State {
@@ -81,6 +81,7 @@ export const Nav: React.FC = () => {
       </Link>
       <MobileNav navLinks={navLinks} handleTap={handleTap}></MobileNav>
       <LinksWrapper location="navBar"></LinksWrapper>
+      <ModalDark inMobileNav={true}></ModalDark>
       <TransitionGroup>{applyLinksTransitions()}</TransitionGroup>
     </nav>
   )
