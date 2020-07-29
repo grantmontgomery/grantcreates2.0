@@ -6,6 +6,9 @@ import {
   correctEmailFormat,
 } from "./Parts/SenderForm/Logic"
 import { FormFields, FormErrors, FormState } from "./types"
+import { useModalDispatch } from "../../state/ModalGlobal"
+import { modalActions } from "../../state/actions"
+
 import css from "./ContactFloat.module.css"
 
 export const ContactFloat: React.FC = () => {
@@ -32,6 +35,8 @@ export const ContactFloat: React.FC = () => {
     subjectError: { error: false, message: "" },
     messageError: { error: false, message: "" },
   })
+
+  const modalDispatch = useModalDispatch()
 
   const checkFields = () => {
     const { name, phone, email, subject, message } = fields
@@ -134,6 +139,13 @@ export const ContactFloat: React.FC = () => {
     }
   }
 
+  const handleExit = () => {
+    return (
+      setState(state => ({ ...state, tapped: false })),
+      modalDispatch(modalActions("CLOSE"))
+    )
+  }
+
   return (
     <div
       className={`${css.contactWrapper} ${state.tapped ? css.extended : null}`}
@@ -147,10 +159,7 @@ export const ContactFloat: React.FC = () => {
               formSide={state.formSide}
             ></Pointer>
             <div className={css.xWrapper}>
-              <div
-                className={css.x}
-                onClick={() => setState(state => ({ ...state, tapped: false }))}
-              >
+              <div className={css.x} onClick={handleExit}>
                 X
               </div>
             </div>

@@ -1,14 +1,20 @@
 import * as React from "react"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import { useModalState, useModalDispatch } from "../../../../state/ModalGlobal"
+import { modalActions } from "../../../../state/actions"
 import css from "./MailIcon.module.css"
 
 export const MailIcon = ({ setState }) => {
+  const modalDispatch = useModalDispatch()
+
+  const handleTap = () => {
+    return (
+      setState(state => ({ ...state, tapped: true })),
+      modalDispatch(modalActions("CONTACT_FLOAT"))
+    )
+  }
+
   return (
-    <div
-      className={css.iconWrapper}
-      onClick={() => setState(state => ({ ...state, tapped: true }))}
-    >
+    <div className={css.iconWrapper} onClick={handleTap}>
       <svg
         version="1.1"
         x="0px"
