@@ -57,7 +57,7 @@
     float: right;
     top: 0;
     right: 0;
-    position: absolute;
+    position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

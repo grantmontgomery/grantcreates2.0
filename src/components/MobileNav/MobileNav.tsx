@@ -1,25 +1,18 @@
 import * as React from "react"
-import { LinksWrapper } from "../LinksWrapper"
 import css from "./MobileNav.module.css"
-import { useModalState } from "../../state/ModalGlobal"
 
 type Props = {
-  menu: boolean
-  setMobileState: any
+  navLinks: boolean
+  handleTap: () => void
 }
 
-export const MobileNav: React.FC<Props> = ({ setMobileState, menu }) => {
+export const MobileNav: React.FC<Props> = ({ navLinks, handleTap }) => {
   const alterMenu = () => {
-    return menu ? "switched" : "normal"
+    return navLinks ? "switched" : "normal"
   }
 
   return (
-    <div
-      className={`${css.mobileNavWrapper} `}
-      onClick={() =>
-        menu ? setMobileState({ menu: false }) : setMobileState({ menu: true })
-      }
-    >
+    <div className={`${css.mobileNavWrapper} `} onClick={handleTap}>
       <div className={`${css.animateFrame} ${css[`${alterMenu()}`]}`}>
         <div className={`${css.line1}`}></div>
         <div className={`${css.line2}`}></div>

@@ -3,21 +3,25 @@ import { FullLogo, DarkLogo, Anvil } from "../Logos"
 import { LinksWrapper } from "../LinksWrapper"
 import { MobileNav } from "../MobileNav"
 import { Link } from "gatsby"
-import { useModalState } from "../../state/ModalGlobal"
+import { useModalDispatch, useModalState } from "../../state/ModalGlobal"
+import { modalActions } from "../../state/actions"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import { MobileLinks } from "./MobileLinks"
 import css from "./Nav.module.css"
 
-interface State {
-  menu: boolean
-}
+// interface State {
+//   menu: boolean
+// }
 
 export const Nav: React.FC = () => {
-  const [mobileState, setMobileState] = React.useState<State>({ menu: false })
+  // const [mobileState, setMobileState] = React.useState<State>({ menu: false })
   const navRef = React.useRef<HTMLElement | null>(null)
-  const { modal } = useModalState()
+  const {
+    windows: { navLinks },
+  } = useModalState()
+  const modalDispatch = useModalDispatch()
   const applyLinksTransitions = () => {
-    return mobileState.menu ? (
+    return navLinks ? (
       <CSSTransition
         timeout={250}
         classNames={{
@@ -27,10 +31,7 @@ export const Nav: React.FC = () => {
           exitActive: css["linksExitActive"],
         }}
       >
-        <LinksWrapper
-          setMobileState={setMobileState}
-          location="mobileNav"
-        ></LinksWrapper>
+        <LinksWrapper handleTap={handleTap} location="mobileNav"></LinksWrapper>
       </CSSTransition>
     ) : null
   }
@@ -57,15 +58,28 @@ export const Nav: React.FC = () => {
     }
   }, [])
 
+  const handleTap = () => {
+    if (!navLinks) {
+      const body: HTMLBodyElement | null = document.querySelector("body")
+      if (body) {
+        body.style.overflowY = "hidden"
+      }
+      return modalDispatch(modalActions("NAV_LINKS"))
+    } else {
+      const body: HTMLBodyElement | null = document.querySelector("body")
+      if (body) {
+        body.style.overflowY = "scroll"
+      }
+      return modalDispatch(modalActions("CLOSE"))
+    }
+  }
+
   return (
     <nav className={css.navWrapper} ref={navRef}>
       <Link to="/" className={css.logoLink}>
         <FullLogo location="navBar"></FullLogo>
       </Link>
-      <MobileNav
-        menu={mobileState.menu}
-        setMobileState={setMobileState}
-      ></MobileNav>
+      <MobileNav navLinks={navLinks} handleTap={handleTap}></MobileNav>
       <LinksWrapper location="navBar"></LinksWrapper>
       <TransitionGroup>{applyLinksTransitions()}</TransitionGroup>
     </nav>
