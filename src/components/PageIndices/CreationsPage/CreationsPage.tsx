@@ -1,6 +1,7 @@
 import * as React from "react"
 import { CreationType } from "../../CreationType"
 import { homePageContext } from "../PagesLogic/Context"
+import { useModalState } from "../../../state/ModalGlobal"
 import css from "./CreationsPage.module.css"
 
 interface Props {
@@ -14,6 +15,9 @@ export const CreationsPage: React.FC<Props> = ({ location }) => {
   const [state, setState] = React.useState<State>({ type: "apps" })
   const { creationsRef } = React.useContext(homePageContext)
 
+  const {
+    windows: { creation },
+  } = useModalState()
   return (
     <section
       id="creations"

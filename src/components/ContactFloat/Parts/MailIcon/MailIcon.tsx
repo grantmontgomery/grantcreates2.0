@@ -7,6 +7,10 @@ export const MailIcon = ({ setState }) => {
   const modalDispatch = useModalDispatch()
 
   const handleTap = () => {
+    const body: HTMLBodyElement | null = document.querySelector("body")
+    if (body) {
+      body.style.overflowY = "hidden"
+    }
     return (
       setState(state => ({ ...state, tapped: true })),
       modalDispatch(modalActions("CONTACT_FLOAT"))

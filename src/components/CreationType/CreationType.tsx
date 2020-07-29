@@ -1,6 +1,6 @@
 import * as React from "react"
-// import { Creation } from "../Creation"
 import { displayCreations } from "../Creations"
+import { ModalDark } from "../ModalDark"
 import css from "./CreationType.module.css"
 
 interface Props {
@@ -10,7 +10,10 @@ interface Props {
 export const CreationType: React.FC<Props> = ({ type }) => {
   return (
     <div className={`${css.typeWrapper}`}>
-      <div className={`${css.innerTypes}`}>{displayCreations(type)}</div>
+      <div className={`${css.innerTypes}`}>
+        <ModalDark location="creationTypes"></ModalDark>
+        {displayCreations(type)}
+      </div>
     </div>
   )
 }

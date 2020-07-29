@@ -140,6 +140,10 @@ export const ContactFloat: React.FC = () => {
   }
 
   const handleExit = () => {
+    const body: HTMLBodyElement | null = document.querySelector("body")
+    if (body) {
+      body.style.overflowY = "scroll"
+    }
     return (
       setState(state => ({ ...state, tapped: false })),
       modalDispatch(modalActions("CLOSE"))
