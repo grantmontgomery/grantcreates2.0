@@ -4,7 +4,7 @@
   background: #203a43;
   position: fixed;
   border-radius: 18vw;
-  z-index: 3;
+  z-index: 2;
   bottom: 10vh;
   float: right;
   right: 3vh;
@@ -27,6 +27,7 @@
     right: 0;
     height: 70vh;
     bottom: 25vh;
+    z-index: 3;
     border-radius: 5vh;
     transform: translate(50%);
     right: 50%;

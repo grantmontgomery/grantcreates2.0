@@ -61,7 +61,7 @@ export const Nav: React.FC = () => {
     <nav
       className={css.navWrapper}
       ref={navRef}
-      style={{ zIndex: modal ? 2 : 3 }}
+      // style={{ zIndex: modal ? 2 : 3 }}
     >
       <Link to="/" className={css.logoLink}>
         <FullLogo location="navBar"></FullLogo>
