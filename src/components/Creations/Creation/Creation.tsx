@@ -2,7 +2,7 @@ import * as React from "react"
 import { MobileSelector } from "./MobileSelector"
 import { CreationDataInterface } from "../types"
 import { modalActions } from "../../../state/actions"
-import { useModalDispatch } from "../../../state/ModalGlobal"
+import { useModalDispatch, useModalState } from "../../../state/ModalGlobal"
 import css from "./Creation.module.css"
 import { MobileTapped } from "./MobileTapped"
 
