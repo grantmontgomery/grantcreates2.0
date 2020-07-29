@@ -7,8 +7,14 @@ export interface FormFields {
   message: string
 }
 
+// export interface FormState {
+//   tapped: boolean
+//   phoneFormat: string
+//   formSide: string
+//   mailStatus: string
+// }
+
 export interface FormState {
-  tapped: boolean
   phoneFormat: string
   formSide: string
   mailStatus: string

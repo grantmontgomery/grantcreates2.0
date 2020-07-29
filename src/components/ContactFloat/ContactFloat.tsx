@@ -6,7 +6,7 @@ import {
   correctEmailFormat,
 } from "./Parts/SenderForm/Logic"
 import { FormFields, FormErrors, FormState } from "./types"
-import { useModalDispatch } from "../../state/ModalGlobal"
+import { useModalDispatch, useModalState } from "../../state/ModalGlobal"
 import { modalActions } from "../../state/actions"
 
 import css from "./ContactFloat.module.css"
@@ -22,7 +22,6 @@ export const ContactFloat: React.FC = () => {
   })
 
   const [state, setState] = React.useState<FormState>({
-    tapped: false,
     formSide: "sender",
     phoneFormat: "us",
     mailStatus: "not sent",
@@ -37,6 +36,9 @@ export const ContactFloat: React.FC = () => {
   })
 
   const modalDispatch = useModalDispatch()
+  const {
+    windows: { contactFloat },
+  } = useModalState()
 
   const checkFields = () => {
     const { name, phone, email, subject, message } = fields
@@ -144,17 +146,22 @@ export const ContactFloat: React.FC = () => {
     if (body) {
       body.style.overflowY = "scroll"
     }
-    return (
-      setState(state => ({ ...state, tapped: false })),
-      modalDispatch(modalActions("CLOSE"))
-    )
+    return modalDispatch(modalActions("CLOSE"))
+  }
+
+  const handleTap = () => {
+    const body: HTMLBodyElement | null = document.querySelector("body")
+    if (body) {
+      body.style.overflowY = "hidden"
+    }
+    return modalDispatch(modalActions("CONTACT_FLOAT"))
   }
 
   return (
     <div
-      className={`${css.contactWrapper} ${state.tapped ? css.extended : null}`}
+      className={`${css.contactWrapper} ${contactFloat ? css.extended : null}`}
     >
-      {state.tapped ? (
+      {contactFloat ? (
         <React.Fragment>
           <div className={css.headerWrapper}>
             <div className={css.titleWrapper}>Write Me</div>
@@ -215,7 +222,7 @@ export const ContactFloat: React.FC = () => {
           </div>
         </React.Fragment>
       ) : (
-        <MailIcon setState={setState}></MailIcon>
+        <MailIcon handleTap={handleTap}></MailIcon>
       )}
     </div>
   )

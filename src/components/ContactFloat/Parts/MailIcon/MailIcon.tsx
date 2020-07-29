@@ -1,22 +1,11 @@
 import * as React from "react"
-import { useModalState, useModalDispatch } from "../../../../state/ModalGlobal"
-import { modalActions } from "../../../../state/actions"
 import css from "./MailIcon.module.css"
 
-export const MailIcon = ({ setState }) => {
-  const modalDispatch = useModalDispatch()
+type Props = {
+  handleTap: () => void
+}
 
-  const handleTap = () => {
-    const body: HTMLBodyElement | null = document.querySelector("body")
-    if (body) {
-      body.style.overflowY = "hidden"
-    }
-    return (
-      setState(state => ({ ...state, tapped: true })),
-      modalDispatch(modalActions("CONTACT_FLOAT"))
-    )
-  }
-
+export const MailIcon: React.FC<Props> = ({ handleTap }) => {
   return (
     <div className={css.iconWrapper} onClick={handleTap}>
       <svg
