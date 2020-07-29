@@ -1,9 +1,9 @@
-// const React = require("react")
-// const { GlobalStateProvider } = require("./src/state")
+const React = require("react")
+const { ModalProvider } = require("./src/state/ModalGlobal")
 
-// exports.wrapRootElement = ({ element }) => {
-//   return <GlobalStateProvider>{element}</GlobalStateProvider>
-// }
+exports.wrapRootElement = ({ element }) => {
+  return <ModalProvider>{element}</ModalProvider>
+}
 
 exports.onInitialClientRender = () => {
   setTimeout(() => {

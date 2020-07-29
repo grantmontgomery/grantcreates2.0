@@ -1,5 +1,5 @@
 import * as React from "react"
-import { ModalState } from "../../globalTypes"
+import { ModalState } from "../globalTypes"
 
 type Action = {
   type: string
@@ -69,4 +69,20 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
       </ModalDispatchContext.Provider>
     </ModalStateContext.Provider>
   )
+}
+
+export const useModalState = (): ModalState => {
+  const context = React.useContext(ModalStateContext)
+  if (undefined === context) {
+    throw new Error("Please use within ModalProvider.")
+  }
+  return context
+}
+
+export const useModalDispatch = (): React.Dispatch<Action> => {
+  const context = React.useContext(ModalDispatchContext)
+  if (undefined === context) {
+    throw new Error("Please use within ModalProvider.")
+  }
+  return context
 }
