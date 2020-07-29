@@ -14,7 +14,7 @@ import { ModalDark } from "./ModalDark"
 export const Layout = ({ children }) => {
   return (
     <React.Fragment>
-      <ModalDark location="layout"></ModalDark>
+      <ModalDark></ModalDark>
       <Nav></Nav>
       <ContactFloat></ContactFloat>
       <main>{children}</main>

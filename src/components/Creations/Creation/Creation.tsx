@@ -46,6 +46,16 @@ export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
     }
   }
 
+  const handleExit = () => {
+    const body: HTMLBodyElement | null = document.querySelector("body")
+    if (body) {
+      body.style.overflowY = "scroll"
+    }
+    return (
+      setState({ tapped: false, top: 0 }), modalDispatch(modalActions("CLOSE"))
+    )
+  }
+
   const changeDisplay = () => {
     return state.tapped ? (
       <MobileTapped
@@ -79,7 +89,7 @@ export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
             display: state.tapped ? "block" : "none",
             transition: "250ms ease-out",
           }}
-          onClick={() => setState({ tapped: false, top: 0 })}
+          onClick={handleExit}
         >
           <div className={`${css.xWrapper}`}>X</div>
         </div>
