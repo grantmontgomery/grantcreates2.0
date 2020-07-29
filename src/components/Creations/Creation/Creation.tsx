@@ -11,15 +11,28 @@ interface Props {
   type: string
 }
 
-interface State {
-  tapped: boolean
+type State = {
   top: number
 }
 
 export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
   const modalDispatch = useModalDispatch()
+  const {
+    modal,
+    windows: { creation },
+  } = useModalState()
 
-  const [state, setState] = React.useState<State>({ tapped: false, top: 0 })
+  React.useEffect(() => {
+    if (!modal) {
+      const body: HTMLBodyElement | null = document.querySelector("body")
+      if (body) {
+        body.style.overflowY = "scroll"
+      }
+      setState({ top: 0 })
+    }
+  }, [modal])
+
+  const [state, setState] = React.useState<State>({ top: 0 })
   const creationRef = React.useRef<HTMLDivElement | null>(null)
 
   const handleTap = () => {
@@ -38,7 +51,6 @@ export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
 
       return (
         setState({
-          tapped: true,
           top: windowTopCenter - elemTopPosition - elementWidth * 1.75,
         }),
         modalDispatch(modalActions("CREATION"))
@@ -51,13 +63,11 @@ export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
     if (body) {
       body.style.overflowY = "scroll"
     }
-    return (
-      setState({ tapped: false, top: 0 }), modalDispatch(modalActions("CLOSE"))
-    )
+    return setState({ top: 0 }), modalDispatch(modalActions("CLOSE"))
   }
 
   const changeDisplay = () => {
-    return state.tapped ? (
+    return creation ? (
       <MobileTapped
         detailsName={data.detailsName}
         details={data.details}
@@ -77,7 +87,7 @@ export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
   return (
     <React.Fragment>
       <div
-        className={`${css.creationWrapper} ${state.tapped ? css.tapped : null}`}
+        className={`${css.creationWrapper} ${creation ? css.tapped : null}`}
         style={{ top: `${state.top}px` }}
         ref={creationRef}
       >
@@ -86,7 +96,7 @@ export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
         <div
           className={`${css.exit}`}
           style={{
-            display: state.tapped ? "block" : "none",
+            display: creation ? "block" : "none",
             transition: "250ms ease-out",
           }}
           onClick={handleExit}
@@ -94,7 +104,7 @@ export const Creation: React.FunctionComponent<Props> = ({ data, type }) => {
           <div className={`${css.xWrapper}`}>X</div>
         </div>
       </div>
-      {state.tapped ? null : (
+      {creation ? null : (
         <div className={`${css.selectorTitleWrapper}`}>
           <div className={`${css.selctorTitle}`}>{data.name}</div>
           <div className={`${css.subTitle}`}>{data.subTitle}</div>
