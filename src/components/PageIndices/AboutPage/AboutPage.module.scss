@@ -21,9 +21,11 @@
 
 @media (max-width: 1024px) {
   .about {
-    grid-template-areas: "header" "about" "technologies" "picture";
+    width: 100vw;
+    height: 150vh;
+    grid-template-areas: "header" "picture" "about" "hammer" "tools";
     grid-template-columns: 100%;
-    grid-template-rows: 10% 30% 30% 30%;
+    grid-template-rows: 5% 30% 25% 15% 25%;
     & .headerWrapper {
       grid-area: header;
       height: 100%;
@@ -41,6 +43,28 @@
         width: fit-content;
         white-space: none;
         color: white;
+      }
+    }
+    & .imageWrapper {
+      grid-area: picture;
+    }
+    & .descriptionWrapper {
+      grid-area: about;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      & p {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: auto;
+        width: 80%;
+        text-indent: 5vh;
+        font-family: Objektiv Mk2;
+        color: white;
+        font-size: 2vh;
       }
     }
   }
