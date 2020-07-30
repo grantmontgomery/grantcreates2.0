@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Tools } from "./Tools"
+import { Scene } from "../../Hammer"
 import css from "./AboutPage.module.css"
 
 export const AboutPage: React.FC = () => {
@@ -45,9 +46,7 @@ export const AboutPage: React.FC = () => {
 
   return (
     <section id="about" ref={aboutRef} className={css.about}>
-      <div className={css.headerWrapper}>
-        <div>About</div>
-      </div>
+      <div className={css.header}>About</div>
       <div className={css.imageWrapper}></div>
       <div className={css.descriptionWrapper}>
         <p>
@@ -57,6 +56,9 @@ export const AboutPage: React.FC = () => {
           Quisquam, laboriosam.
         </p>
       </div>
+      <div className={css.toolsHeader}>Tools</div>
+      <div className={css.hammer}></div>
+      <Scene></Scene>
       <Tools></Tools>
     </section>
   )

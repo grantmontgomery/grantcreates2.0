@@ -22,29 +22,27 @@
 @media (max-width: 1024px) {
   .about {
     width: 100vw;
-    height: 150vh;
-    grid-template-areas: "header" "picture" "about" "hammer" "tools";
+    height: 175vh;
+    grid-template-areas: "." "header" "picture" "about" "toolsHeader" "hammer" "tools";
     grid-template-columns: 100%;
-    grid-template-rows: 5% 30% 25% 15% 25%;
-    & .headerWrapper {
+    grid-template-rows: 20vh 8vh 30vh 45vh 8vh 20vh auto;
+
+    & .header {
+      margin-right: auto;
       grid-area: header;
-      height: 100%;
-      width: 100%;
-      & div {
-        margin-right: auto;
-        margin-left: 5%;
-        display: block;
-        position: relative;
-        font-size: 2.5vh;
-        top: 50%;
-        transform: translate(0, -50%);
-        font-family: Objektiv Mk2 Bold;
-        height: fit-content;
-        width: fit-content;
-        white-space: none;
-        color: white;
-      }
+      margin-left: 5%;
+      display: block;
+      position: relative;
+      font-size: 2.5vh;
+      top: 50%;
+      transform: translate(0, -50%);
+      font-family: Objektiv Mk2 Bold;
+      height: fit-content;
+      width: fit-content;
+      white-space: none;
+      color: white;
     }
+
     & .imageWrapper {
       grid-area: picture;
     }
@@ -66,6 +64,19 @@
         color: white;
         font-size: 2vh;
       }
+    }
+    & .toolsHeader {
+      grid-area: toolsHeader;
+      font-size: 2.5vh;
+      display: block;
+      position: relative;
+      height: fit-content;
+      width: fit-content;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin-left: 5%;
+      font-family: Objektiv Mk2 Bold;
+      color: white;
     }
   }
 }

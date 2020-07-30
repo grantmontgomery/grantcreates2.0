@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link } from "gatsby"
 import css from "./LinksWrapper.module.css"
 
 interface Props {
@@ -12,9 +13,9 @@ export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
   return (
     <div className={`${css.linksWrapper} ${css[`${location}`]}`}>
       <div className={css.link}>
-        <a href="/#creations" onClick={handleTap}>
+        <Link to="/" onClick={handleTap}>
           <div className={css.text}>Creations</div>
-        </a>
+        </Link>
       </div>
       <div className={css.link}>
         <a href="/#about" onClick={handleTap}>

@@ -40,7 +40,7 @@ export const HomePage: React.FC = () => {
     }
   })
   return (
-    <section className={`homePage ${css.homePage}`}>
+    <section className={css.homePage}>
       <Headline></Headline>
       <Scene hammerAnvilRef={hammerAnvilRef}></Scene>
     </section>

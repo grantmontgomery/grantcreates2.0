@@ -25,22 +25,18 @@
 @media (max-width: 1024px) {
   .about {
     width: 100vw;
-    height: 150vh;
-        grid-template-areas: "header" "picture" "about" "hammer" "tools";
+    height: 175vh;
+        grid-template-areas: "." "header" "picture" "about" "toolsHeader" "hammer" "tools";
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 5% 30% 25% 15% 25%;
-        grid-template-rows: 5% 30% 25% 15% 25%;
+    -ms-grid-rows: 20vh 8vh 30vh 45vh 8vh 20vh auto;
+        grid-template-rows: 20vh 8vh 30vh 45vh 8vh 20vh auto;
   }
-  .about .headerWrapper {
-    -ms-grid-row: 1;
+  .about .header {
+    margin-right: auto;
+    -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: header;
-    height: 100%;
-    width: 100%;
-  }
-  .about .headerWrapper div {
-    margin-right: auto;
     margin-left: 5%;
     display: block;
     position: relative;
@@ -59,12 +55,12 @@
     color: white;
   }
   .about .imageWrapper {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: picture;
   }
   .about .descriptionWrapper {
-    -ms-grid-row: 3;
+    -ms-grid-row: 4;
     -ms-grid-column: 1;
     grid-area: about;
     height: 100%;
@@ -83,6 +79,26 @@
     font-family: Objektiv Mk2;
     color: white;
     font-size: 2vh;
+  }
+  .about .toolsHeader {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: toolsHeader;
+    font-size: 2.5vh;
+    display: block;
+    position: relative;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    margin-left: 5%;
+    font-family: Objektiv Mk2 Bold;
+    color: white;
   }
 }
 /*# sourceMappingURL=AboutPage.module.css.map */
