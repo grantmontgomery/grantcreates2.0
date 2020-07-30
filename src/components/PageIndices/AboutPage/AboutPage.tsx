@@ -2,11 +2,7 @@ import * as React from "react"
 import { Tools } from "./Tools"
 import css from "./AboutPage.module.css"
 
-type Props = {
-  aboutRef: React.Ref<HTMLElement>
-}
-
-export const AboutPage: React.FC<Props> = ({ aboutRef }) => {
+export const AboutPage: React.FC = () => {
   //For When I need to drop in a picture of myself.
   // const { file } = useStaticQuery(graphql`
   //   query NewQuery {
@@ -24,8 +20,31 @@ export const AboutPage: React.FC<Props> = ({ aboutRef }) => {
   //   }
   // `)
 
+  const aboutRef = React.useRef<HTMLElement | null>(null)
+
+  // const observer = new IntersectionObserver(
+  //   entries => {
+  //     const opacityBar2: HTMLElement | null = document.getElementById(
+  //       "opacityBar2"
+  //     )
+
+  //     if (entries.length === 1) {
+  //       return entries[0].intersectionRatio > 0.05
+  //     }
+  //   },
+  //   { threshold: [0, 0.05, 0.1, 0.15] }
+  // )
+
+  React.useLayoutEffect(() => aboutRef.current?.focus())
+
+  // React.useEffect(() => {
+  //   if (aboutRef.current) {
+  //     observer.observe(aboutRef.current)
+  //   }
+  // }, [])
+
   return (
-    <section ref={aboutRef} id="about" className={css.about}>
+    <section id="about" ref={aboutRef} className={css.about}>
       <div className={css.headerWrapper}>
         <div>About</div>
       </div>

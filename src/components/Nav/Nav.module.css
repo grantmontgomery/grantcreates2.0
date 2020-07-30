@@ -20,6 +20,7 @@
   position: sticky;
   -webkit-transition-delay: 250ms;
           transition-delay: 250ms;
+  background: transparent;
 }
 
 .navWrapper .logoLink {
