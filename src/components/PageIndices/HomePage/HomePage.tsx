@@ -14,6 +14,7 @@ export const HomePage: React.FC = () => {
   const observer = new IntersectionObserver(
     entries => {
       if (entries.length === 1) {
+        console.log(window.scrollY)
         const navBar: HTMLElement | null = document.getElementById("navBar")
         if (navBar) {
           return entries[0].intersectionRatio > 0.3

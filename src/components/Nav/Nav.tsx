@@ -1,19 +1,21 @@
 import * as React from "react"
-import { FullLogo, DarkLogo, Anvil } from "../Logos"
+import { FullLogo } from "../Logos"
 import { LinksWrapper } from "../LinksWrapper"
 import { MobileNav } from "../MobileNav"
 import { Link } from "gatsby"
-import { useNavState } from "../../state/NavGlobal"
 import { ModalDark } from "../ModalDark"
 import { useModalDispatch, useModalState } from "../../state/ModalGlobal"
 import { modalActions } from "../../state/actions"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import css from "./Nav.module.css"
 
+type State = {
+  boxShadow: string
+}
+
 export const Nav: React.FC = () => {
-  const navState = useNavState()
-  console.log(navState)
   const navRef = React.useRef<HTMLElement | null>(null)
+  // const [state, setState] = React.useState<State>({ boxShadow: "none" })
   const {
     windows: { navLinks },
   } = useModalState()
@@ -72,7 +74,17 @@ export const Nav: React.FC = () => {
   }
 
   return (
-    <nav className={css.navWrapper} id="navBar" ref={navRef}>
+    <nav
+      className={css.navWrapper}
+      id="navBar"
+      ref={navRef}
+      // style={{
+      //   boxShadow: `${window.scrollY > 0.0 ? "0px 1vh 1vh #0B181D" : "none"}`,
+      // }}
+      // style={{
+      //   boxShadow: state.boxShadow,
+      // }}
+    >
       <Link to="/" className={css.logoLink}>
         <FullLogo location="navBar"></FullLogo>
       </Link>
