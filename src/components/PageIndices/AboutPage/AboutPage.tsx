@@ -35,7 +35,7 @@ export const AboutPage: React.FC = () => {
   //   { threshold: [0, 0.05, 0.1, 0.15] }
   // )
 
-  React.useLayoutEffect(() => aboutRef.current?.focus())
+  // React.useLayoutEffect(() => aboutRef.current?.focus())
 
   // React.useEffect(() => {
   //   if (aboutRef.current) {

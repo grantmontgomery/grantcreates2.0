@@ -50,7 +50,7 @@ export const Nav: React.FC = () => {
         if (prevScrollpos > currentScrollPos) {
           navRef.current.style.top = "0"
         } else {
-          navRef.current.style.top = `-${navHeight}px`
+          navRef.current.style.top = `-${navHeight * 1.5}px`
         }
         prevScrollpos = currentScrollPos
       }
@@ -74,17 +74,7 @@ export const Nav: React.FC = () => {
   }
 
   return (
-    <nav
-      className={css.navWrapper}
-      id="navBar"
-      ref={navRef}
-      // style={{
-      //   boxShadow: `${window.scrollY > 0.0 ? "0px 1vh 1vh #0B181D" : "none"}`,
-      // }}
-      // style={{
-      //   boxShadow: state.boxShadow,
-      // }}
-    >
+    <nav className={css.navWrapper} id="navBar" ref={navRef}>
       <Link to="/" className={css.logoLink}>
         <FullLogo location="navBar"></FullLogo>
       </Link>

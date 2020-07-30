@@ -13,7 +13,6 @@ export const HomePage: React.FC = () => {
 
   const observer = new IntersectionObserver(
     entries => {
-      const navBar: HTMLElement | null = document.getElementById("navBar")
       const opacityBar1: HTMLElement | null = document.getElementById(
         "opacityBar1"
       )
@@ -22,19 +21,13 @@ export const HomePage: React.FC = () => {
       )
       if (opacityBar1 && opacityBar2) {
         if (entries[0].intersectionRatio > 0) {
-          opacityBar1.style.height = "11vh"
-          opacityBar2.style.height = "11vh"
+          opacityBar1.style.height = "10vh"
+          opacityBar2.style.height = "10vh"
         } else {
           opacityBar1.style.height = "20vh"
           opacityBar2.style.height = "20vh"
         }
       }
-      // if (navBar) {
-      //   return entries[0].intersectionRatio > 0.3
-      //     ? (navBar.style.background = "#0f2027")
-      //     : (navBar.style.background = "transparent")
-      //   // : (navBar.style.background = "#0b171d")
-      // }
     },
     {
       threshold: [0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5],
