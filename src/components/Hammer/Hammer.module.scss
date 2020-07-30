@@ -1,9 +1,26 @@
 .hammer {
   grid-area: hammer;
   width: 100%;
+  position: relative;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+  & .dragBar {
+    position: absolute;
+    height: 100%;
+    width: 20vw;
+    background: none;
+    top: 0;
+    z-index: 1;
+    &:nth-child(1) {
+      float: left;
+      left: 0;
+    }
+    &:nth-child(2) {
+      float: right;
+      right: 0;
+    }
+  }
   & canvas {
     height: 100%;
     width: 100%;

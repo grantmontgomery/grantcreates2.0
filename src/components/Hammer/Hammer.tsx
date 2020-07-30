@@ -14,9 +14,8 @@ const Hammer: () => void = () => {
   const camera = new THREE.PerspectiveCamera(75, 0.45, 1, 1000)
 
   // camera.position.z = 5
-  camera.position.z = 1
-
-  camera.position.y = 4
+  camera.position.z = 4
+  camera.position.y = 0
   camera.position.x = 0
 
   console.log(camera)
@@ -52,11 +51,13 @@ const Hammer: () => void = () => {
 
   const controls = new OrbitControls(camera, renderer.domElement)
   controls.enableZoom = false
-  controls.autoRotate = true
+  controls.autoRotate = false
   controls.enablePan = false
-  controls.rotateSpeed = 0.1
-  controls.maxPolarAngle = 1.5
-  controls.minPolarAngle = 0
+  // controls.rotateSpeed = 0.1
+  // controls.maxPolarAngle = 1
+  // controls.minPolarAngle = 0
+  // controls.maxAzimuthAngle = 0
+  // controls.minAzimuthAngle = Math.PI
 
   const plane = new THREE.PlaneBufferGeometry(20, 20)
   const planeMaterial = new THREE.ShadowMaterial()
@@ -93,6 +94,7 @@ const Hammer: () => void = () => {
     "static/OnlyHammer.glb",
     function (gltf) {
       scene.add(gltf.scene)
+      console.log(gltf.scene)
 
       // gltf.scene.children[0].scale.x = 0.04
       // gltf.scene.children[0].scale.y = 0.04
@@ -164,7 +166,7 @@ const Hammer: () => void = () => {
   const animate = function () {
     resizeCanvasToDisplaySize()
     requestAnimationFrame(animate)
-    // controls.update()
+    controls.update()
     lightHolder.quaternion.copy(camera.quaternion)
     renderer.render(scene, camera)
   }
@@ -177,5 +179,10 @@ export const Scene: React.FC = () => {
     Hammer()
   }, [])
 
-  return <div className={css.hammer} id="hammer"></div>
+  return (
+    <div className={css.hammer} id="hammer">
+      <div className={css.dragBar}></div>
+      <div className={css.dragBar}></div>
+    </div>
+  )
 }

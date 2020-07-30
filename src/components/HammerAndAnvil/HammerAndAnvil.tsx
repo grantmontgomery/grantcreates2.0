@@ -44,7 +44,12 @@ const HammerAndAnvil = () => {
   renderer.shadowMap.enabled = true
   renderer.shadowMap.type = THREE.PCFSoftShadowMap
 
-  document.getElementById("hammerandanvil").appendChild(renderer.domElement)
+  const hammerAnvil: HTMLElement | null = document.getElementById(
+    "hammerandanvil"
+  )
+  if (hammerAnvil) {
+    hammerAnvil.appendChild(renderer.domElement)
+  }
 
   //Controls/////
 
