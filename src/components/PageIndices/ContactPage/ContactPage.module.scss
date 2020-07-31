@@ -39,7 +39,7 @@
       width: fit-content;
       position: relative;
       margin: auto;
-      color: #61dbfb;
+      color: white;
       margin: auto;
       grid-area: contact;
       font-family: Objektiv Mk2;
@@ -47,7 +47,7 @@
     }
 
     & svg {
-      width: 15vw;
+      width: 10vw;
       height: auto;
       margin: auto;
     }
@@ -62,7 +62,7 @@
     font-family: Objektiv Mk2 Bold;
     margin-right: auto;
     margin-left: auto;
-    color: #61dbfb;
+    color: white;
     background: #2c5363;
     border: solid 0.5vh #2c5363;
     outline: none;
@@ -76,6 +76,8 @@
       background: none;
       transition: 100ms ease-out;
       user-select: none;
+      color: #61dbfb;
+
       border: solid 0.5vh #61dbfb;
     }
   }

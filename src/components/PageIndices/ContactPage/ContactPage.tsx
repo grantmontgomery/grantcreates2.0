@@ -31,26 +31,26 @@ export const ContactPage: React.FC<Props> = ({ contactRef }) => {
         >
           <polygon
             fill="none"
-            stroke="#61dbfb"
+            stroke="white"
             strokeWidth="3vh"
             points="902.49,602.49 2.49,602.49 327.3,277.68 452.5,383.76 577.69,277.69 		"
           />
 
           <polygon
             fill="none"
-            stroke="#61dbfb"
+            stroke="white"
             strokeWidth="3vh"
             points="902.49,2.49 902.49,602.49 577.69,277.69 		"
           />
 
           <polygon
-            stroke="#61dbfb"
+            stroke="white"
             strokeWidth="3vh"
             fill="none"
             points="327.3,277.68 2.49,602.49 2.49,2.49 		"
           />
           <polygon
-            stroke="#61dbfb"
+            stroke="white"
             strokeWidth="3vh"
             fill="none"
             points="902.49,2.49 577.69,277.69 452.5,383.76 327.3,277.68 2.49,2.49 	"
