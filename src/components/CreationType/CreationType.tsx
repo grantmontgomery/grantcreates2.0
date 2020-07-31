@@ -12,6 +12,7 @@ export const CreationType: React.FC<Props> = ({ type }) => {
   const {
     windows: { creation },
   } = useModalState()
+
   return (
     <div className={css.typeWrapper}>
       <div className={css.innerTypes} style={{ zIndex: creation ? 3 : 1 }}>
