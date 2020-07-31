@@ -26,6 +26,10 @@
 .navWrapper .logoLink {
   margin-left: 5%;
   margin-right: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   outline: none;
 }
 

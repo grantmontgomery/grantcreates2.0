@@ -4,7 +4,7 @@ import { LogoProps } from "../types"
 
 export const FullLogo = ({ location }: LogoProps) => {
   return (
-    <div className={`fullLogoWrapper ${location} ${css[`${location}`]}`}>
+    <div className={`fullLogoWrapper ${css[`${location}`]}`}>
       <svg
         version="1.1"
         x="0px"

@@ -7,14 +7,20 @@
   top: 50%;
   transform: translate(0, -50%);
   //   border: solid 1px black;
+  user-select: none;
+
   outline: none;
   & svg {
     height: 100%;
     width: auto;
     outline: none;
+    user-select: none;
+    pointer-events: none;
+    &::selection {
+      background: none;
+    }
   }
 }
-
 
 .st2 {
   fill: url(#g1);
@@ -72,4 +78,3 @@
 .st94 {
   fill: url(#gradient85);
 }
-

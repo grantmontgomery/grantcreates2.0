@@ -9,6 +9,10 @@
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   outline: none;
 }
 
@@ -16,6 +20,19 @@
   height: 100%;
   width: auto;
   outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.navBar svg::-moz-selection {
+  background: none;
+}
+
+.navBar svg::selection {
+  background: none;
 }
 
 .st2 {
