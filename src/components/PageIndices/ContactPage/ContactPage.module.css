@@ -122,4 +122,47 @@
   color: #61dbfb;
   border: solid 0.5vh #61dbfb;
 }
+
+.contact .socialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: links;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.contact .socialLinks a {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: auto;
+}
+
+.contact .socialLinks a svg {
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
+  height: 10vw;
+  width: auto;
+  fill: #e3eef2;
+}
 /*# sourceMappingURL=ContactPage.module.css.map */
