@@ -1,4 +1,33 @@
 .contact {
   width: 100vw;
+  grid-template-areas: "." "header" "email" "hireMe" "links" ".";
+  grid-template-rows: 20vh 8vh 12vh 20vh 20vh;
+  grid-template-columns: 100%;
   height: 100vh;
+  display: grid;
+  background-color: #0b171d;
+  & .header {
+    padding: 0;
+    grid-area: header;
+    white-space: none;
+    margin-top: none;
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    margin-left: 5%;
+    font-size: 2.5vh;
+    color: white;
+    display: block;
+    font-family: Objektiv Mk2 Bold;
+  }
+  & .email {
+    grid-area: emal;
+    color: lightblue;
+  }
+  & .hireMe {
+    grid-area: hireMe;
+    position: relative;
+    height: 80%;
+    width: 100%;
+  }
 }
