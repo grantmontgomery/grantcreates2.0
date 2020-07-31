@@ -1,4 +1,5 @@
 .toolWrapper {
+  margin-left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,5 +7,45 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  width: auto;
+  height: 5vh;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5%;
+}
+
+.toolWrapper svg {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: auto;
+  height: 3vh;
+  display: block;
+}
+
+.toolWrapper p {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-overflow: ellipsis;
+  margin-left: 5%;
+  font-family: Objektiv Mk2;
+  position: relative;
+  display: block;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-size: 3vw;
+  color: white;
 }
 /*# sourceMappingURL=Tool.module.css.map */

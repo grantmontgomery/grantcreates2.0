@@ -11,17 +11,6 @@
   background: #0b171d;
 }
 
-.about svg {
-  height: 100%;
-  width: auto;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-
 @media (max-width: 1024px) {
   .about {
     width: 100vw;
