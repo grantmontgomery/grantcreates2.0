@@ -1,8 +1,8 @@
 .contact {
   width: 100vw;
-      grid-template-areas: "." "header" "hireMe" "contact" "links" ".";
-  -ms-grid-rows: 20vh 8vh 20vh 12vh 20vh;
-      grid-template-rows: 20vh 8vh 20vh 12vh 20vh;
+      grid-template-areas: "." "header" "contact" "hireMe" "links" ".";
+  -ms-grid-rows: 20vh 8vh 12vh 20vh 20vh;
+      grid-template-rows: 20vh 8vh 12vh 20vh 20vh;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
   height: 100vh;
@@ -41,7 +41,7 @@
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   width: 80%;
-  -ms-grid-row: 4;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: contact;
   height: -webkit-fit-content;
@@ -70,7 +70,7 @@
   margin: auto;
   color: white;
   margin: auto;
-  -ms-grid-row: 4;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: contact;
   font-family: Objektiv Mk2;
@@ -84,7 +84,7 @@
 }
 
 .contact .hireMe {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: hireMe;
   position: relative;

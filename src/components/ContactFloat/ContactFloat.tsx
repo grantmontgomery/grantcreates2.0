@@ -58,7 +58,7 @@ export const ContactFloat: React.FC = () => {
           mailStatus: "sent",
           formSide: "status",
         }))
-        return sendMail(fields, setState, setFields)
+        return sendMail(fields, handleExit, setState, setFields)
       } else {
         if (!correctPhoneFormat(phone, state.phoneFormat)) {
           return setErrors(errors => ({

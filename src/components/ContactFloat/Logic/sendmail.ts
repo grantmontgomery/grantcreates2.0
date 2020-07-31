@@ -1,4 +1,4 @@
-import { FormFields } from "../types"
+import { FormFields, Form } from "../types"
 import fetch from "node-fetch"
 
 async function postmail(
@@ -39,7 +39,12 @@ const handleSendFail = (setState: any) => {
   }, 4000)
 }
 
-const handleSendSuccess = (accepted: number, setState: any, setFields: any) => {
+const handleSendSuccess = (
+  accepted: number,
+  setState: any,
+  handleExit: () => void,
+  setFields: any
+) => {
   if (accepted > 0) {
     setTimeout(() => {
       console.log("sucessStarted")
@@ -54,6 +59,7 @@ const handleSendSuccess = (accepted: number, setState: any, setFields: any) => {
           phoneFormat: "us",
           mailStatus: "not sent",
         }),
+        handleExit(),
         setFields({
           name: "",
           subject: "",
@@ -71,13 +77,19 @@ const handleSendSuccess = (accepted: number, setState: any, setFields: any) => {
 
 export default function sendMail(
   { name, phone, company, email, subject, message }: FormFields,
+  handleExit: () => void,
   setState: any,
   setFields: any
 ) {
   return postmail(name, phone, company, email, subject, message)
     .then(response => response.json())
     .then(message =>
-      handleSendSuccess(message.accepted.length, setState, setFields)
+      handleSendSuccess(
+        message.accepted.length,
+        setState,
+        handleExit,
+        setFields
+      )
     )
     .catch(() => handleSendFail(setState))
 }
