@@ -4,29 +4,31 @@ import { Creation } from "./Creation"
 
 export const displayCreations = (type: string) => {
   const {
-    allDataJson: { nodes },
+    allCreationsJson: { edges },
   } = useStaticQuery(
     graphql`
       query MyQuery {
-        allDataJson {
-          nodes {
-            apps {
-              name
-              subTitle
-              detailsName
-              details
-              technologies
-              githublink
-              link
-            }
-            websites {
-              name
-              subTitle
-              detailsName
-              details
-              technologies
-              githublink
-              link
+        allCreationsJson {
+          edges {
+            node {
+              apps {
+                details
+                detailsName
+                githublink
+                link
+                name
+                subTitle
+                technologies
+              }
+              websites {
+                details
+                detailsName
+                githublink
+                link
+                name
+                technologies
+                subTitle
+              }
             }
           }
         }
@@ -34,7 +36,7 @@ export const displayCreations = (type: string) => {
     `
   )
 
-  const { apps, websites } = nodes[0]
+  const { apps, websites } = edges[0].node
 
   switch (type) {
     case "apps":

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Tools } from "./Tools"
+import { Tools } from "../../Tools"
 import { Scene } from "../../Hammer"
 import css from "./AboutPage.module.css"
 
