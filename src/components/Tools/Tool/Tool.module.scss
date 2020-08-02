@@ -68,10 +68,45 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 450px), (max-width: 1024px) {
+  .toolWrapper {
+    display: flex;
+    position: relative;
+    margin-left: 5%;
+    flex-flow: row nowrap;
+    width: fit-content;
+    height: fit-content;
+    justify-content: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    & svg {
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 5vw;
+      height: auto;
+      display: block;
+    }
+    & p {
+      height: fit-content;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      text-overflow: ellipsis;
+      margin-left: 2vw;
+      font-family: Objektiv Mk2;
+      width: fit-content;
+      position: relative;
+      display: block;
+      top: 50%;
+      transform: translate(0, -50%);
+      font-size: 3vw;
+      color: white;
+    }
+  }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 449px) {
   .toolWrapper {
     display: flex;
     position: relative;
