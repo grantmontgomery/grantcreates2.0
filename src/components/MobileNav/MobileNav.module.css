@@ -1,142 +1,45 @@
-.mobileNavWrapper {
+.mobileNav {
   display: none;
 }
 
 @media (max-width: 1024px) {
-  .mobileNavWrapper {
+  .mobileNav {
     display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    right: 5%;
+    float: right;
+    height: 6vh;
+    width: 6vh;
     z-index: 5;
-    position: relative;
-    height: 10vh;
-    width: 10vh;
-    margin-right: 2.5%;
-    margin-left: auto;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    overflow: hidden;
-    -webkit-transition: 500ms ease-out;
-    transition: 500ms ease-out;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
   }
-  .mobileNavWrapper .animateFrame {
-    -webkit-transform-origin: center;
-            transform-origin: center;
+  .mobileNav.normal .path1 {
+    stroke-dasharray: 326px;
+    stroke-dashoffset: -192px;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
   }
-  .mobileNavWrapper .animateFrame.normal {
-    -webkit-transition: 500ms ease-out;
-    transition: 500ms ease-out;
-    -webkit-transform-origin: center;
-            transform-origin: center;
-    position: relative;
-    transition: 500ms ease-out;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    transform-origin: center;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    height: 50%;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    width: 50%;
+  .mobileNav.normal .path2 {
+    stroke-dashoffset: -192px;
+    stroke-dasharray: 202px;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
   }
-  .mobileNavWrapper .animateFrame.normal .line1 {
-    position: relative;
-    -webkit-transform-origin: right;
-            transform-origin: right;
-    background: white;
-    width: 100%;
-    height: 2px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: 0;
+  .switched .path1 {
+    stroke-dasharray: 179px;
+    stroke-dashoffset: 22;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
   }
-  .mobileNavWrapper .animateFrame.normal .line2 {
-    position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: 0;
-    background: white;
-    width: 75%;
-    height: 2px;
-  }
-  .mobileNavWrapper .animateFrame.normal .line3 {
-    position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: 0;
-    background: white;
-    width: 50%;
-    height: 2px;
-  }
-  .mobileNavWrapper .animateFrame.switched {
-    -webkit-transition: 500ms ease-out;
-    transition: 500ms ease-out;
-    -webkit-transform-origin: center;
-            transform-origin: center;
-    position: relative;
-    transition: 500ms ease-out;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    transform-origin: center;
-    margin-left: auto;
-    margin-right: 10%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    height: 50%;
-    top: 50%;
-    -webkit-transform: rotate(180deg) translate(0, 50%);
-            transform: rotate(180deg) translate(0, 50%);
-    width: 50%;
-  }
-  .mobileNavWrapper .animateFrame.switched .line1 {
-    position: relative;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-    background: white;
-    width: 100%;
-    height: 2px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: 0;
-  }
-  .mobileNavWrapper .animateFrame.switched .line2 {
-    position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: 0;
-    background: white;
-    width: 0%;
-    height: 2px;
-  }
-  .mobileNavWrapper .animateFrame.switched .line3 {
-    position: relative;
-    -webkit-transform-origin: right;
-            transform-origin: right;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: 0;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    background: white;
-    width: 100%;
-    height: 2px;
+  .switched .path2 {
+    stroke-dasharray: 163px;
+    stroke-dashoffset: 8px;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
   }
 }
 /*# sourceMappingURL=MobileNav.module.css.map */

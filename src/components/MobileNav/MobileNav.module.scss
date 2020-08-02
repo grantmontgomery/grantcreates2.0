@@ -1,126 +1,42 @@
-.mobileNavWrapper {
+.mobileNav {
   display: none;
 }
 
 @media (max-width: 1024px) {
-  .mobileNavWrapper {
+  .mobileNav {
     display: block;
-    z-index: 5;
-    position: relative;
-    height: 10vh;
-    width: 10vh;
-    margin-right: 2.5%;
-    margin-left: auto;
+    position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    overflow: hidden;
-    transition: 500ms ease-out;
-
-    & .animateFrame {
-      transform-origin: center;
-
-      &.normal {
-        transition: 500ms ease-out;
-        transform-origin: center;
-
-        position: relative;
-        transition: 500ms ease-out;
-
-        display: flex;
-        transform-origin: center;
-
-        margin-left: auto;
-        margin-right: auto;
-        flex-flow: column nowrap;
-        height: 50%;
-        top: 50%;
-        transform: translate(0, -50%);
-        width: 50%;
-        & .line1 {
-          position: relative;
-          transform-origin: right;
-          background: white;
-          width: 100%;
-          height: 2px;
-          margin-top: auto;
-          margin-bottom: auto;
-          margin-left: auto;
-          margin-right: 0;
-        }
-
-        & .line2 {
-          position: relative;
-          margin-top: auto;
-          margin-bottom: auto;
-          margin-left: auto;
-          margin-right: 0;
-          background: white;
-          width: 75%;
-          height: 2px;
-        }
-
-        & .line3 {
-          position: relative;
-          margin-top: auto;
-          margin-bottom: auto;
-          margin-left: auto;
-          margin-right: 0;
-          background: white;
-          width: 50%;
-          height: 2px;
-        }
+    right: 5%;
+    float: right;
+    height: 6vh;
+    width: 6vh;
+    z-index: 5;
+    transition: 250ms ease-out;
+    &.normal {
+      & .path1 {
+        stroke-dasharray: 326px;
+        stroke-dashoffset: -192px;
+        transition: 250ms ease-out;
       }
-      &.switched {
-        transition: 500ms ease-out;
-        transform-origin: center;
-        position: relative;
-        transition: 500ms ease-out;
-        display: flex;
-        transform-origin: center;
-        margin-left: auto;
-        margin-right: 10%;
-        flex-flow: column nowrap;
-        height: 50%;
-        top: 50%;
-        transform: rotate(180deg) translate(0, 50%);
-        width: 50%;
-        & .line1 {
-          position: relative;
-          transform: rotate(-45deg);
-          transform-origin: right;
-          background: white;
-          width: 100%;
-          height: 2px;
-          margin-top: auto;
-          margin-bottom: auto;
-          margin-left: auto;
-          margin-right: 0;
-        }
-
-        & .line2 {
-          position: relative;
-          margin-top: auto;
-          margin-bottom: auto;
-          margin-left: auto;
-          margin-right: 0;
-          background: white;
-          width: 0%;
-          height: 2px;
-        }
-
-        & .line3 {
-          position: relative;
-          transform-origin: right;
-          margin-top: auto;
-          margin-bottom: auto;
-          margin-left: auto;
-          margin-right: 0;
-          transform: rotate(45deg);
-          background: white;
-          width: 100%;
-          height: 2px;
-        }
+      & .path2 {
+        stroke-dashoffset: -192px;
+        stroke-dasharray: 202px;
+        transition: 250ms ease-out;
       }
+    }
+  }
+  &.switched {
+    & .path1 {
+      stroke-dasharray: 179px;
+      stroke-dashoffset: 22;
+      transition: 250ms ease-out;
+    }
+    & .path2 {
+      stroke-dasharray: 163px;
+      stroke-dashoffset: 8px;
+      transition: 250ms ease-out;
     }
   }
 }

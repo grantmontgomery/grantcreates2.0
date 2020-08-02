@@ -44,7 +44,7 @@
   color: #3e768e;
   display: block;
   font-weight: 900;
-  font-size: 2.5vh;
+  font-size: 4vw;
   padding: 0;
 }
 
@@ -73,7 +73,7 @@
   width: -moz-fit-content;
   width: fit-content;
   color: white;
-  font-size: 2.5vh;
+  font-size: 4vw;
   top: 50%;
   position: relative;
   -webkit-transform: translate(0, -50%);
