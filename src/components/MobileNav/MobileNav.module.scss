@@ -13,29 +13,28 @@
     height: 6vh;
     width: 6vh;
     z-index: 5;
-    transition: 250ms ease-out;
     &.normal {
       & .path1 {
-        stroke-dasharray: 326px;
-        stroke-dashoffset: -192px;
+        stroke-dasharray: 200px;
+        stroke-dashoffset: -190px;
         transition: 250ms ease-out;
       }
       & .path2 {
         stroke-dashoffset: -192px;
-        stroke-dasharray: 202px;
+        stroke-dasharray: 192px;
         transition: 250ms ease-out;
       }
     }
   }
   &.switched {
     & .path1 {
-      stroke-dasharray: 179px;
-      stroke-dashoffset: 22;
+      stroke-dasharray: 168px;
+      stroke-dashoffset: 11;
       transition: 250ms ease-out;
     }
     & .path2 {
-      stroke-dasharray: 163px;
-      stroke-dashoffset: 8px;
+      stroke-dasharray: 154px;
+      stroke-dashoffset: -2;
       transition: 250ms ease-out;
     }
   }
