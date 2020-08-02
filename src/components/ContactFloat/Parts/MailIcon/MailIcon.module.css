@@ -10,8 +10,8 @@
 }
 
 .iconWrapper svg {
-  height: 4vh;
-  width: auto;
+  height: auto;
+  width: 12vw;
   position: relative;
   margin-left: auto;
   display: block;
