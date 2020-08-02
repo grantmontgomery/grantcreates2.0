@@ -5,5 +5,7 @@
   display: flex;
   flex-flow: column wrap;
   overflow: hidden;
-  justify-content: left;
+
+  justify-content: flex-start;
+  // padding: 5%;
 }

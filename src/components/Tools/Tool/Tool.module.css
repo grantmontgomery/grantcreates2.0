@@ -3,12 +3,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  width: auto;
-  height: 5vh;
+  width: 25vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
@@ -22,8 +25,8 @@
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  width: auto;
-  height: 3vh;
+  width: 10vw;
+  height: auto;
   display: block;
 }
 
@@ -47,5 +50,60 @@
           transform: translate(0, -50%);
   font-size: 3vw;
   color: white;
+}
+
+@media (max-width: 450px) {
+  .toolWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    margin-left: 5%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .toolWrapper svg {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    width: 7.5vw;
+    height: auto;
+    display: block;
+  }
+  .toolWrapper p {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+    margin-left: 2vw;
+    font-family: Objektiv Mk2;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: relative;
+    display: block;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    font-size: 3vw;
+    color: white;
+  }
 }
 /*# sourceMappingURL=Tool.module.css.map */
