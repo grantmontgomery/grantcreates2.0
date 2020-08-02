@@ -28,6 +28,7 @@
   width: 10vw;
   height: auto;
   display: block;
+  fill: white;
 }
 
 .toolWrapper p {
@@ -113,7 +114,6 @@
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    margin-left: 5%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;

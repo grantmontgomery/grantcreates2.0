@@ -13,10 +13,12 @@ export const Tool: React.FC<Props> = ({ name }) => {
       } = require("../../Icons/ReactIcon")
       return react.ReactIcon()
     } else {
+      const filteredName = name.replace(/[\W_]+/g, "")
+
       const svgElem: {
         [key: string]: () => SVGElement
-      } = require(`../../Icons/${name}`)
-      return svgElem[`${name}`]()
+      } = require(`../../Icons/${filteredName}`)
+      return svgElem[`${filteredName}`]()
     }
   }
 

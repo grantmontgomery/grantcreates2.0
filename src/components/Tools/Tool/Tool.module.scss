@@ -49,6 +49,7 @@
     width: 10vw;
     height: auto;
     display: block;
+    fill: white;
   }
   & p {
     height: fit-content;
@@ -110,7 +111,7 @@
   .toolWrapper {
     display: flex;
     position: relative;
-    margin-left: 5%;
+    // margin-left: 5%;
     flex-flow: row nowrap;
     width: fit-content;
     height: fit-content;

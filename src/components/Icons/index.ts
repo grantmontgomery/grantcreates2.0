@@ -1,5 +1,5 @@
-export { AdobeIllustrator } from "./AdobeIllustrator"
-export { AdobeXd } from "./AdobeXd"
+export { Illustrator } from "./Illustrator"
+export { Xd } from "./Xd"
 export { CSS } from "./CSS"
 export { Express } from "./Express"
 export { Gatsby } from "./Gatsby"
