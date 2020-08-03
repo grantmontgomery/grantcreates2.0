@@ -10,6 +10,7 @@ import { useModalDispatch, useModalState } from "../../state/ModalGlobal"
 import { modalActions } from "../../state/actions"
 
 import css from "./ContactFloat.module.css"
+import { displayCreations } from "../Creations"
 
 export const ContactFloat: React.FC = () => {
   const [fields, setFields] = React.useState<FormFields>({
@@ -37,7 +38,7 @@ export const ContactFloat: React.FC = () => {
 
   const modalDispatch = useModalDispatch()
   const {
-    windows: { contactFloat },
+    windows: { contactFloat, navLinks },
   } = useModalState()
 
   const checkFields = () => {
@@ -164,7 +165,7 @@ export const ContactFloat: React.FC = () => {
       {contactFloat ? (
         <React.Fragment>
           <div className={css.headerWrapper}>
-            <div className={css.titleWrapper}>Write Me</div>
+            <div className={css.titleWrapper}>Hire Me</div>
             <Pointer
               mailStatus={state.mailStatus}
               formSide={state.formSide}

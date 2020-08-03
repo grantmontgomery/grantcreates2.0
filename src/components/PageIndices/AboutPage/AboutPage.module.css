@@ -64,9 +64,10 @@
     margin-top: 0;
     margin-bottom: auto;
     width: 80%;
-    text-indent: 5vh;
+    text-indent: 4vh;
     font-family: Objektiv Mk2;
     color: white;
+    text-align: left;
     font-size: 2vh;
   }
   .about .toolsHeader {
