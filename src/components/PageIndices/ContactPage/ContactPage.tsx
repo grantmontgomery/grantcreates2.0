@@ -22,7 +22,7 @@ export const ContactPage: React.FC<Props> = ({ contactRef }) => {
     <section id="contact" ref={contactRef} className={css.contact}>
       <span className={css.header}>Contact</span>
       <div className={css.contact}>
-        <svg
+        {/* <svg
           version="1.1"
           x="0px"
           y="0px"
@@ -55,7 +55,7 @@ export const ContactPage: React.FC<Props> = ({ contactRef }) => {
             fill="none"
             points="902.49,2.49 577.69,277.69 452.5,383.76 327.3,277.68 2.49,2.49 	"
           />
-        </svg>
+        </svg> */}
         <span>grant@grantcreates.com</span>
       </div>
       <button className={css.hireMe} onClick={handleTap}>

@@ -47,34 +47,33 @@
       flex-flow: column nowrap;
       width: 75vw;
       height: 100vh;
-      background: #2c5364;
+      background: #203a43;
       z-index: 4;
       justify-content: space-between;
       overflow: hidden;
-      & .link {
-        height: fit-content;
+      & .innerLinks {
         position: relative;
-        margin: auto;
-        width: fit-content;
+        height: 30%;
+        margin-top: 50%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        & .link {
+          height: fit-content;
+          position: relative;
+          width: fit-content;
+          margin: auto;
 
-        &:nth-child(1) {
-          margin-top: 60%;
-          margin-bottom: auto;
-        }
-        &:nth-last-child() {
-          margin-bottom: 75%;
-          margin-top: auto;
-        }
-
-        & a {
-          text-decoration: none;
-          & .text {
-            height: fit-content;
-            width: fit-content;
-            font-family: Objektiv Mk2;
-            color: white;
-            font-weight: medium;
-            font-size: 4vh;
+          & a {
+            text-decoration: none;
+            & .text {
+              height: fit-content;
+              width: fit-content;
+              font-family: Objektiv Mk2;
+              color: white;
+              font-weight: medium;
+              font-size: 3vh;
+            }
           }
         }
       }
