@@ -22,41 +22,24 @@
   }
 
   & .contact {
-    display: flex;
-    flex-flow: row nowrap;
-    width: 80%;
+    display: block;
+    width: fit-content;
     grid-area: contact;
     height: fit-content;
-    justify-content: space-evenly;
     margin-left: auto;
     position: relative;
     top: 50%;
+    color: white;
     transform: translate(0, -50%);
+    font-family: Objektiv Mk2;
     margin-right: auto;
-    & span {
-      display: block;
-      height: fit-content;
-      width: fit-content;
-      position: relative;
-      margin: auto;
-      color: white;
-      margin: auto;
-      grid-area: contact;
-      font-family: Objektiv Mk2;
-      font-size: 4.5vw;
-    }
-
-    & svg {
-      width: 10vw;
-      height: auto;
-      margin: auto;
-    }
+    font-size: 4.5vw;
   }
 
   & .hireMe {
     grid-area: hireMe;
     position: relative;
-    height: 50%;
+    height: 10vh;
     top: 50%;
     transform: translate(0, -50%);
     font-family: Objektiv Mk2 Bold;

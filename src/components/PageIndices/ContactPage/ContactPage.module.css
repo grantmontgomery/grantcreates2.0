@@ -33,54 +33,25 @@
 }
 
 .contact .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  width: 80%;
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: contact;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin-left: auto;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  margin-right: auto;
-}
-
-.contact .contact span {
   display: block;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  position: relative;
-  margin: auto;
-  color: white;
-  margin: auto;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: contact;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: auto;
+  position: relative;
+  top: 50%;
+  color: white;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   font-family: Objektiv Mk2;
+  margin-right: auto;
   font-size: 4.5vw;
-}
-
-.contact .contact svg {
-  width: 10vw;
-  height: auto;
-  margin: auto;
 }
 
 .contact .hireMe {
@@ -88,7 +59,7 @@
   -ms-grid-column: 1;
   grid-area: hireMe;
   position: relative;
-  height: 50%;
+  height: 10vh;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);

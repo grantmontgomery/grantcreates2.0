@@ -17,7 +17,7 @@
   }
   .mobileNav.normal .path1 {
     stroke-dasharray: 200px;
-    stroke-dashoffset: -190px;
+    stroke-dashoffset: -191px;
     -webkit-transition: 250ms ease-out;
     transition: 250ms ease-out;
   }
