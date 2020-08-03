@@ -1,0 +1,32 @@
+.toolsPage {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20vh 8vh 20vh 40vh;
+      grid-template-rows: 20vh 8vh 20vh 40vh;
+      grid-template-areas: "." "header" "hammer" "tools";
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  background: #0b171d;
+}
+
+.toolsPage .toolsHeader {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: header;
+  font-size: 2.5vh;
+  display: block;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin-left: 5%;
+  font-family: Objektiv Mk2 Bold;
+  color: white;
+}
+/*# sourceMappingURL=ToolsPage.module.css.map */

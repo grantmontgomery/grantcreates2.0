@@ -5,6 +5,7 @@ import {
   AboutPage,
   CreationsPage,
   ContactFloat,
+  ToolsPage,
   PagesLogic,
   Scene,
   Headline,
@@ -19,6 +20,7 @@ const IndexPage = () => {
       <HomePage></HomePage>
       <CreationsPage></CreationsPage>
       <AboutPage></AboutPage>
+      <ToolsPage></ToolsPage>
       <ContactPage></ContactPage>
     </Layout>
   )

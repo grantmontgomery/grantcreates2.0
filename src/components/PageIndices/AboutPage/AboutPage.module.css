@@ -14,12 +14,12 @@
 @media (max-width: 1024px) {
   .about {
     width: 100vw;
-    height: 175vh;
-        grid-template-areas: "." "header" "picture" "about" "toolsHeader" "hammer" "tools";
+    height: 100vh;
+        grid-template-areas: "." "header" "picture" "about";
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 20vh 8vh 30vh 45vh 8vh 20vh auto;
-        grid-template-rows: 20vh 8vh 30vh 45vh 8vh 20vh auto;
+    -ms-grid-rows: 20vh 8vh 30vh 42vh;
+        grid-template-rows: 20vh 8vh 30vh 42vh;
   }
   .about .header {
     margin-right: auto;
@@ -70,8 +70,6 @@
     font-size: 2vh;
   }
   .about .toolsHeader {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
     grid-area: toolsHeader;
     font-size: 2.5vh;
     display: block;

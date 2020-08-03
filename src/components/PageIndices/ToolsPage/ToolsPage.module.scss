@@ -1,0 +1,20 @@
+.toolsPage {
+  display: grid;
+  grid-template-rows: 20vh 8vh 20vh 40vh;
+  grid-template-areas: "." "header" "hammer" "tools";
+  grid-template-columns: 100%;
+  background: #0b171d;
+  & .toolsHeader {
+    grid-area: header;
+    font-size: 2.5vh;
+    display: block;
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 5%;
+    font-family: Objektiv Mk2 Bold;
+    color: white;
+  }
+}

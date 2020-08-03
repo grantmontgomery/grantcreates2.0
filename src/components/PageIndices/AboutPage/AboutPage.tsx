@@ -23,27 +23,6 @@ export const AboutPage: React.FC = () => {
 
   const aboutRef = React.useRef<HTMLElement | null>(null)
 
-  // const observer = new IntersectionObserver(
-  //   entries => {
-  //     const opacityBar2: HTMLElement | null = document.getElementById(
-  //       "opacityBar2"
-  //     )
-
-  //     if (entries.length === 1) {
-  //       return entries[0].intersectionRatio > 0.05
-  //     }
-  //   },
-  //   { threshold: [0, 0.05, 0.1, 0.15] }
-  // )
-
-  // React.useLayoutEffect(() => aboutRef.current?.focus())
-
-  // React.useEffect(() => {
-  //   if (aboutRef.current) {
-  //     observer.observe(aboutRef.current)
-  //   }
-  // }, [])
-
   return (
     <section id="about" ref={aboutRef} className={css.about}>
       <div className={css.header}>About</div>
@@ -56,10 +35,10 @@ export const AboutPage: React.FC = () => {
           Quisquam, laboriosam.
         </p>
       </div>
-      <div className={css.toolsHeader}>Tools</div>
+      {/* <div className={css.toolsHeader}>Tools</div>
       <div className={css.hammer}></div>
       <Scene></Scene>
-      <Tools></Tools>
+      <Tools></Tools> */}
     </section>
   )
 }

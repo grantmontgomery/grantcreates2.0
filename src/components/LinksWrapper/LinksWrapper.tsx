@@ -23,6 +23,11 @@ export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
             <div className={css.text}>About</div>
           </a>
         </div>
+        <div className={css.link}>
+          <a href="/#toolsPage" onClick={handleTap}>
+            <div className={css.text}>Tools</div>
+          </a>
+        </div>
 
         <div className={css.link}>
           <a href="/#contact" onClick={handleTap}>

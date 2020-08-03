@@ -22,10 +22,10 @@
 @media (max-width: 1024px) {
   .about {
     width: 100vw;
-    height: 175vh;
-    grid-template-areas: "." "header" "picture" "about" "toolsHeader" "hammer" "tools";
+    height: 100vh;
+    grid-template-areas: "." "header" "picture" "about";
     grid-template-columns: 100%;
-    grid-template-rows: 20vh 8vh 30vh 45vh 8vh 20vh auto;
+    grid-template-rows: 20vh 8vh 30vh 42vh;
 
     & .header {
       margin-right: auto;
