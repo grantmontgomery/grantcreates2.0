@@ -54,10 +54,10 @@ const Hammer: () => void = () => {
   controls.autoRotate = false
   controls.enablePan = false
   // controls.rotateSpeed = 0.1
-  // controls.maxPolarAngle = 1
-  // controls.minPolarAngle = 0
-  // controls.maxAzimuthAngle = 0
-  // controls.minAzimuthAngle = Math.PI
+  controls.maxPolarAngle = Math.PI
+  controls.minPolarAngle = 0
+  controls.maxAzimuthAngle = Math.PI / 16
+  controls.minAzimuthAngle = -Math.PI / 16
 
   const plane = new THREE.PlaneBufferGeometry(20, 20)
   const planeMaterial = new THREE.ShadowMaterial()
