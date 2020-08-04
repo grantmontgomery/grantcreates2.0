@@ -116,6 +116,22 @@
     width: 90vh;
     border-radius: 5vw;
   }
+  .creationWrapper .exit {
+    height: 5vw;
+    width: 5vw;
+  }
+  .creationWrapper .exit .xWrapper {
+    font-size: 2vw;
+  }
+  .selectorTitleWrapper {
+    z-index: -1;
+  }
+  .selectorTitleWrapper .selctorTitle {
+    font-size: 2vw;
+  }
+  .selectorTitleWrapper .subTitle {
+    font-size: 1.8vw;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -130,6 +146,13 @@
     height: 90vh;
     z-index: 4;
     width: 90vh;
+  }
+  .creationWrapper .exit {
+    height: 5vw;
+    width: 5vw;
+  }
+  .creationWrapper .exit .xWrapper {
+    font-size: 2vw;
   }
 }
 /*# sourceMappingURL=Creation.module.css.map */

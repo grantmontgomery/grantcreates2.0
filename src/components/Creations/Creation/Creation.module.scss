@@ -89,6 +89,22 @@
       width: 90vh;
       border-radius: 5vw;
     }
+    & .exit {
+      height: 5vw;
+      width: 5vw;
+      & .xWrapper {
+        font-size: 2vw;
+      }
+    }
+  }
+  .selectorTitleWrapper {
+    z-index: -1;
+    & .selctorTitle {
+      font-size: 2vw;
+    }
+    & .subTitle {
+      font-size: 1.8vw;
+    }
   }
 }
 
@@ -99,12 +115,17 @@
     border-radius: 5vh;
     &.tapped {
       margin-top: 0%;
-
       position: fixed;
-
       height: 90vh;
       z-index: 4;
       width: 90vh;
+    }
+    & .exit {
+      height: 5vw;
+      width: 5vw;
+      & .xWrapper {
+        font-size: 2vw;
+      }
     }
   }
 }

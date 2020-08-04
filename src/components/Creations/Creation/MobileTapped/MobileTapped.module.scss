@@ -28,14 +28,11 @@
     & .description {
       display: block;
       height: fit-content;
-      text-indent: 5vh;
-
       margin: 0;
       width: 90%;
       padding: 0;
       position: relative;
       font-family: Objektiv Mk2;
-      font-size: 2vh;
       color: white;
     }
   }
@@ -53,7 +50,6 @@
       font-family: Objektiv Mk2;
       color: #61dbfb;
       height: fit-content;
-      font-size: 2vh;
       width: fit-content;
     }
   }
@@ -67,7 +63,6 @@
     & .titleWrapper {
       color: white;
       font-family: Objektiv Mk2 Bold;
-      font-size: 2vh;
       position: relative;
       margin-left: 5%;
       margin-right: auto;
@@ -121,6 +116,196 @@
             fill: white;
             height: 4.5vh;
             width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) and (orientation: landscape) {
+  .tappedWrapper {
+    & .detailsWrapper {
+      & .description {
+        display: block;
+        height: fit-content;
+        text-indent: 5vw;
+
+        margin: 0;
+        width: 90%;
+        padding: 0;
+        position: relative;
+        font-family: Objektiv Mk2;
+        font-size: 2vw;
+        color: white;
+      }
+    }
+
+    & .technologiesWrapper {
+      grid-area: technologies;
+      height: 100%;
+      width: 100%;
+      & .technologies {
+        font-weight: 200;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        margin-left: 5%;
+        font-family: Objektiv Mk2;
+        color: #61dbfb;
+        height: fit-content;
+        font-size: 2vh;
+        width: fit-content;
+      }
+    }
+
+    & .headerWrapper {
+      grid-area: header;
+      height: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      width: 100%;
+      & .titleWrapper {
+        color: white;
+        font-family: Objektiv Mk2 Bold;
+        font-size: 2vh;
+        position: relative;
+        margin-left: 5%;
+        margin-right: auto;
+        height: fit-content;
+        width: fit-content;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      & .linksWrapper {
+        margin-right: 5%;
+        position: relative;
+        margin-left: auto;
+        height: 100%;
+        width: 30%;
+        display: flex;
+        flex-flow: row nowrap;
+        top: 50%;
+        transform: translate(0, -50%);
+        & a {
+          display: block;
+          position: relative;
+          margin: auto;
+          display: block;
+          height: 100%;
+          width: fit-content;
+          & .linkWrapper {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: fit-content;
+            height: 100%;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            &.linkWrapper:last-child {
+              margin-right: 0;
+              margin-left: auto;
+            }
+            &.linkWrapper:first-child {
+              margin-right: auto;
+              margin-left: auto;
+            }
+
+            & svg {
+              position: relative;
+              margin-left: auto;
+              margin-right: auto;
+              top: 50%;
+              transform: translate(0, -50%);
+              fill: white;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .tappedWrapper {
+    & .detailsWrapper {
+      & .description {
+        text-indent: 5vw;
+        font-size: 1.75vw;
+      }
+    }
+
+    & .technologiesWrapper {
+      & .technologies {
+        font-weight: 200;
+        font-size: 2vw;
+      }
+    }
+
+    & .headerWrapper {
+      & .titleWrapper {
+        font-size: 2vw;
+      }
+      & .linksWrapper {
+        margin-right: 5%;
+        position: relative;
+        margin-left: auto;
+        height: 100%;
+        width: 30%;
+        display: flex;
+        flex-flow: row nowrap;
+        top: 50%;
+        transform: translate(0, -50%);
+        & a {
+          & .linkWrapper {
+            & svg {
+              height: 4.5vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .tappedWrapper {
+    & .detailsWrapper {
+      & .description {
+        text-indent: 5vh;
+        font-size: 2vh;
+      }
+    }
+
+    & .technologiesWrapper {
+      & .technologies {
+        font-weight: 200;
+        font-size: 2vh;
+      }
+    }
+
+    & .headerWrapper {
+      & .titleWrapper {
+        font-size: 2vh;
+      }
+      & .linksWrapper {
+        margin-right: 5%;
+        position: relative;
+        margin-left: auto;
+        height: 100%;
+        width: 30%;
+        display: flex;
+        flex-flow: row nowrap;
+        top: 50%;
+        transform: translate(0, -50%);
+        & a {
+          & .linkWrapper {
+            & svg {
+              height: 4.5vh;
+            }
           }
         }
       }
