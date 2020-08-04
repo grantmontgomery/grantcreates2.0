@@ -26,7 +26,7 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: calc(1 / 7) calc(6 / 7);
+    grid-template-rows: calc(100% / 7) calc(100% / 7 * 6);
     grid-template-areas: "header" "form";
     & .headerWrapper {
       grid-area: header;
@@ -93,8 +93,8 @@
   }
 }
 
-@media (max-width: 1025px) and (orientation: portrait) {
-}
+// @media (max-width: 1025px) and (orientation: portrait) {
+// }
 
 @media (max-width: 1024px) and (orientation: landscape) {
   .contactWrapper {
@@ -106,9 +106,9 @@
     bottom: 3vw;
 
     &.extended {
-      width: 70vh;
-      height: 80vh;
-      bottom: 20vh;
+      width: 80vh;
+      height: 100vh;
+      bottom: 0vh;
       border-radius: 4vw;
       grid-template-areas: "header" "form";
       & .headerWrapper {

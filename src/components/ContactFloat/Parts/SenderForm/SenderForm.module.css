@@ -5,8 +5,8 @@
   display: grid;
   -ms-grid-columns: 75% 25%;
       grid-template-columns: 75% 25%;
-  -ms-grid-rows: 13vh 13vh 13vh 21vh;
-      grid-template-rows: 13vh 13vh 13vh 21vh;
+  -ms-grid-rows: calc(5% / 3 * 13) calc(5% / 3 * 13) calc(5% / 3 * 13) 30%;
+      grid-template-rows: calc(5% / 3 * 13) calc(5% / 3 * 13) calc(5% / 3 * 13) 30%;
       grid-template-areas: "name name" "company company" "email email" "phone next";
 }
 
@@ -66,7 +66,7 @@
 
 .senderWrapper .sectionWrapper .labelWrapper {
   margin-left: 5%;
-  height: 4vh;
+  height: calc(100% / 13 * 4);
 }
 
 .senderWrapper .sectionWrapper .labelWrapper label {
@@ -86,7 +86,6 @@
   margin-left: 5%;
   position: relative;
   width: 90%;
-  height: 5vh;
 }
 
 .senderWrapper .sectionWrapper .inputWrapper .phoneFormat {
@@ -96,8 +95,6 @@
   float: right;
   right: 5%;
   position: absolute;
-  height: 3vh;
-  width: 7vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,7 +107,6 @@
 
 .senderWrapper .sectionWrapper .inputWrapper .phoneFormat div {
   font-family: Objektiv Mk2;
-  font-size: 1.75vh;
   position: relative;
   top: 50%;
   -webkit-transform: translate(0, -50%);
@@ -141,31 +137,25 @@
 
 .senderWrapper .sectionWrapper .inputWrapper input {
   position: relative;
-  height: 4vh;
   text-align: left;
   vertical-align: center;
   font-family: Objektiv Mk2;
   text-indent: 2%;
-  border-radius: 4vh;
-  font-size: 2vh;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   background: transparent;
   color: white;
   width: 97%;
-  border: solid 0.25vh white;
   outline: none;
 }
 
 .senderWrapper .sectionWrapper .inputWrapper input.error {
   -webkit-transition: 250ms ease-out;
   transition: 250ms ease-out;
-  border: solid 0.25vh #ed4548;
 }
 
 .senderWrapper .sectionWrapper .inputWrapper input:focus {
-  border: solid 0.25vh #61dbfb;
   color: #61dbfb;
 }
 
@@ -203,7 +193,6 @@
 
 .senderWrapper .sectionWrapper .errorWrapper {
   margin-left: 5%;
-  height: 4vh;
 }
 
 .senderWrapper .sectionWrapper .errorWrapper .error {
@@ -216,7 +205,6 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  font-size: 2vh;
   color: #ed4548;
 }
 
@@ -228,16 +216,12 @@
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  height: 9vh;
-  border-radius: 9vh;
-  width: 9vh;
   margin-left: auto;
   margin-right: 20%;
   background: #2c5363;
 }
 
 .senderWrapper .nextButton svg {
-  height: 5vh;
   width: auto;
   position: relative;
   display: block;
@@ -246,5 +230,111 @@
           transform: translate(0, -50%);
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .senderWrapper {
+    -ms-grid-columns: 75% 25%;
+        grid-template-columns: 75% 25%;
+    -ms-grid-rows: calc(5% / 3 * 13) calc(5% / 3 * 13) calc(5% / 3 * 13) 30%;
+        grid-template-rows: calc(5% / 3 * 13) calc(5% / 3 * 13) calc(5% / 3 * 13) 30%;
+  }
+  .senderWrapper .sectionWrapper .labelWrapper {
+    margin-left: 5%;
+    height: calc(100% / 13 * 4);
+  }
+  .senderWrapper .sectionWrapper .labelWrapper label {
+    font-size: 2vh;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper {
+    height: 5vh;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper .phoneFormat {
+    height: 3vh;
+    width: 7vh;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper .phoneFormat div {
+    font-size: 1.75vh;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper input {
+    height: 4vh;
+    border-radius: 4vh;
+    font-size: 2vh;
+    width: 97%;
+    border: solid 0.25vh white;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper input.error {
+    border: solid 0.25vh #ed4548;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper input:focus {
+    border: solid 0.25vh #61dbfb;
+  }
+  .senderWrapper .sectionWrapper .errorWrapper {
+    height: 4vh;
+  }
+  .senderWrapper .sectionWrapper .errorWrapper .error {
+    font-size: 2vh;
+  }
+  .senderWrapper .nextButton {
+    height: 9vh;
+    border-radius: 9vh;
+    width: 9vh;
+  }
+  .senderWrapper .nextButton svg {
+    height: 5vh;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .senderWrapper {
+    -ms-grid-columns: 75% 25%;
+        grid-template-columns: 75% 25%;
+    -ms-grid-rows: calc(5% / 3 * 13) calc(5% / 3 * 13) calc(5% / 3 * 13) 30%;
+        grid-template-rows: calc(5% / 3 * 13) calc(5% / 3 * 13) calc(5% / 3 * 13) 30%;
+  }
+  .senderWrapper .sectionWrapper .labelWrapper {
+    margin-left: 5%;
+    height: calc(100% / 13 * 4);
+  }
+  .senderWrapper .sectionWrapper .labelWrapper label {
+    font-size: calc(3vh / 80vh);
+  }
+  .senderWrapper .sectionWrapper .inputWrapper {
+    height: 5.75vh;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper .phoneFormat {
+    height: calc(3vh / 70vh / 80vh);
+    width: calc(7vh / 70vh / 80vh);
+  }
+  .senderWrapper .sectionWrapper .inputWrapper .phoneFormat div {
+    font-size: calc(1.75vh / 70vh / 80vh);
+  }
+  .senderWrapper .sectionWrapper .inputWrapper input {
+    height: 100%;
+    border-radius: 4vh;
+    font-size: 3vh;
+    width: 97%;
+    border: solid 0.25vh white;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper input.error {
+    border: solid 0.25vh #ed4548;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper input:focus {
+    border: solid 0.25vh #61dbfb;
+  }
+  .senderWrapper .sectionWrapper .errorWrapper {
+    height: 4vh;
+  }
+  .senderWrapper .sectionWrapper .errorWrapper .error {
+    font-size: 2vh;
+  }
+  .senderWrapper .nextButton {
+    height: 9vh;
+    border-radius: 9vh;
+    width: 9vh;
+  }
+  .senderWrapper .nextButton svg {
+    height: 5vh;
+  }
 }
 /*# sourceMappingURL=SenderForm.module.css.map */

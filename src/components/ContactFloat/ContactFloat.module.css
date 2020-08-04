@@ -34,8 +34,8 @@
   display: grid;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
-  -ms-grid-rows: calc(1 / 7) calc(6 / 7);
-      grid-template-rows: calc(1 / 7) calc(6 / 7);
+  -ms-grid-rows: calc(100% / 7) calc(100% / 7 * 6);
+      grid-template-rows: calc(100% / 7) calc(100% / 7 * 6);
       grid-template-areas: "header" "form";
 }
 
@@ -141,9 +141,9 @@
     bottom: 3vw;
   }
   .contactWrapper.extended {
-    width: 70vh;
-    height: 80vh;
-    bottom: 20vh;
+    width: 80vh;
+    height: 100vh;
+    bottom: 0vh;
     border-radius: 4vw;
         grid-template-areas: "header" "form";
   }
