@@ -35,7 +35,42 @@
     }
   }
   &.mobileNav {
-    display: none;
+    float: right;
+    top: 0;
+    right: 0;
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    background: #203a43;
+    z-index: 4;
+    justify-content: space-between;
+    overflow: hidden;
+    & .innerLinks {
+      position: relative;
+      height: 30%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      & .link {
+        height: fit-content;
+        position: relative;
+        width: fit-content;
+        margin: auto;
+
+        & a {
+          text-decoration: none;
+          & .text {
+            height: fit-content;
+            width: fit-content;
+            font-family: Objektiv Mk2;
+            color: white;
+            font-weight: medium;
+            font-size: 3vh;
+          }
+        }
+      }
+    }
   }
 }
 @media (min-width: 1025px) and (orientation: landscape) {
@@ -49,46 +84,34 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (orientation: landscape) {
   .linksWrapper {
     &.mobileNav {
-      float: right;
-      top: 0;
-      right: 0;
-      position: fixed;
-      display: flex;
-      flex-flow: column nowrap;
-      width: 75vw;
-      height: 100vh;
-      background: #203a43;
-      z-index: 4;
-      justify-content: space-between;
-      overflow: hidden;
+      width: 50vw;
       & .innerLinks {
-        position: relative;
-        height: 30%;
-        margin-top: 50%;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-start;
+        height: 40%;
+        margin-top: 30%;
         & .link {
-          height: fit-content;
-          position: relative;
-          width: fit-content;
-          margin: auto;
-
           & a {
-            text-decoration: none;
             & .text {
-              height: fit-content;
-              width: fit-content;
-              font-family: Objektiv Mk2;
-              color: white;
-              font-weight: medium;
-              font-size: 3vh;
+              font-size: 2.5vw;
             }
           }
         }
+      }
+    }
+    &.navBar {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .linksWrapper {
+    &.mobileNav {
+      width: 75vw;
+      & .innerLinks {
+        margin-top: 50%;
       }
     }
     &.navBar {

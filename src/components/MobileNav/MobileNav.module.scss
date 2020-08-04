@@ -11,10 +11,11 @@
 }
 
 .mobileNav {
-  position: relative;
+  position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  margin-right: 5%;
+  float: right;
+  right: 5%;
   height: 55%;
   width: auto;
   z-index: 5;

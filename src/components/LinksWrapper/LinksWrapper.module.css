@@ -54,7 +54,67 @@
 }
 
 .linksWrapper.mobileNav {
-  display: none;
+  float: right;
+  top: 0;
+  right: 0;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 100vh;
+  background: #203a43;
+  z-index: 4;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.linksWrapper.mobileNav .innerLinks {
+  position: relative;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.linksWrapper.mobileNav .innerLinks .link {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.linksWrapper.mobileNav .innerLinks .link a {
+  text-decoration: none;
+}
+
+.linksWrapper.mobileNav .innerLinks .link a .text {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: Objektiv Mk2;
+  color: white;
+  font-weight: medium;
+  font-size: 3vh;
 }
 
 @media (min-width: 1025px) and (orientation: landscape) {
@@ -66,67 +126,28 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (orientation: landscape) {
   .linksWrapper.mobileNav {
-    float: right;
-    top: 0;
-    right: 0;
-    position: fixed;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    width: 75vw;
-    height: 100vh;
-    background: #203a43;
-    z-index: 4;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    overflow: hidden;
+    width: 50vw;
   }
   .linksWrapper.mobileNav .innerLinks {
-    position: relative;
-    height: 30%;
-    margin-top: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .linksWrapper.mobileNav .innerLinks .link {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    position: relative;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: auto;
-  }
-  .linksWrapper.mobileNav .innerLinks .link a {
-    text-decoration: none;
+    height: 40%;
+    margin-top: 30%;
   }
   .linksWrapper.mobileNav .innerLinks .link a .text {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    font-family: Objektiv Mk2;
-    color: white;
-    font-weight: medium;
-    font-size: 3vh;
+    font-size: 2.5vw;
+  }
+  .linksWrapper.navBar {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .linksWrapper.mobileNav {
+    width: 75vw;
+  }
+  .linksWrapper.mobileNav .innerLinks {
+    margin-top: 50%;
   }
   .linksWrapper.navBar {
     display: none;
