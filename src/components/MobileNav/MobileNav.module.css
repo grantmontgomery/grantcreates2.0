@@ -1,43 +1,59 @@
 .mobileNav {
   display: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  right: 5%;
+  float: right;
+  height: 6vh;
+  width: 6vh;
+  z-index: 5;
 }
 
-@media (max-width: 1024px) {
+.mobileNav.normal .path1 {
+  stroke-dasharray: 200px;
+  stroke-dashoffset: -193px;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.mobileNav.normal .path2 {
+  stroke-dashoffset: -195px;
+  stroke-dasharray: 195px;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.mobileNav.switched .path1 {
+  stroke-dasharray: 168px;
+  stroke-dashoffset: 11;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.mobileNav.switched .path2 {
+  stroke-dasharray: 154px;
+  stroke-dashoffset: -2;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+@media (min-width: 750px), (max-width: 1024px) {
   .mobileNav {
     display: block;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    right: 5%;
-    float: right;
-    height: 6vh;
-    width: 6vh;
-    z-index: 5;
   }
-  .mobileNav.normal .path1 {
-    stroke-dasharray: 200px;
-    stroke-dashoffset: -191px;
-    -webkit-transition: 250ms ease-out;
-    transition: 250ms ease-out;
+  .mobileNav path {
+    stroke-width: 0.5vh;
   }
-  .mobileNav.normal .path2 {
-    stroke-dashoffset: -192px;
-    stroke-dasharray: 192px;
-    -webkit-transition: 250ms ease-out;
-    transition: 250ms ease-out;
+}
+
+@media (min-width: 750px) and (max-width: 749px), (max-width: 1024px) and (max-width: 749px) {
+  .mobileNav {
+    display: block;
   }
-  .switched .path1 {
-    stroke-dasharray: 168px;
-    stroke-dashoffset: 11;
-    -webkit-transition: 250ms ease-out;
-    transition: 250ms ease-out;
-  }
-  .switched .path2 {
-    stroke-dasharray: 154px;
-    stroke-dashoffset: -2;
-    -webkit-transition: 250ms ease-out;
-    transition: 250ms ease-out;
+  .mobileNav path {
+    stroke-width: 1vh;
   }
 }
 /*# sourceMappingURL=MobileNav.module.css.map */

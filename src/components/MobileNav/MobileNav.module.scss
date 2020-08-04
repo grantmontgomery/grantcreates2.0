@@ -1,31 +1,26 @@
 .mobileNav {
   display: none;
-}
-
-@media (max-width: 1024px) {
-  .mobileNav {
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 5%;
-    float: right;
-    height: 6vh;
-    width: 6vh;
-    z-index: 5;
-    &.normal {
-      & .path1 {
-        stroke-dasharray: 200px;
-        stroke-dashoffset: -191px;
-        transition: 250ms ease-out;
-      }
-      & .path2 {
-        stroke-dashoffset: -192px;
-        stroke-dasharray: 192px;
-        transition: 250ms ease-out;
-      }
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 5%;
+  float: right;
+  height: 6vh;
+  width: 6vh;
+  z-index: 5;
+  &.normal {
+    & .path1 {
+      stroke-dasharray: 200px;
+      stroke-dashoffset: -193px;
+      transition: 250ms ease-out;
+    }
+    & .path2 {
+      stroke-dashoffset: -195px;
+      stroke-dasharray: 195px;
+      transition: 250ms ease-out;
     }
   }
+
   &.switched {
     & .path1 {
       stroke-dasharray: 168px;
@@ -36,6 +31,24 @@
       stroke-dasharray: 154px;
       stroke-dashoffset: -2;
       transition: 250ms ease-out;
+    }
+  }
+}
+
+@media (min-width: 750px), (max-width: 1024px) {
+  .mobileNav {
+    display: block;
+    & path {
+      stroke-width: 0.5vh;
+    }
+  }
+
+  @media (max-width: 749px) {
+    .mobileNav {
+      display: block;
+      & path {
+        stroke-width: 1vh;
+      }
     }
   }
 }

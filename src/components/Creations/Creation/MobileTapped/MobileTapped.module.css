@@ -35,12 +35,21 @@
   -ms-grid-column: 1;
   grid-area: details;
   width: 100%;
+  overflow-y: scroll;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-.tappedWrapper .detailsWrapper .descriptionWrapper {
+.tappedWrapper .detailsWrapper .description {
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-indent: 5vh;
+  margin: 0;
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0;
+  position: relative;
   font-family: Objektiv Mk2;
   font-size: 2vh;
   color: white;

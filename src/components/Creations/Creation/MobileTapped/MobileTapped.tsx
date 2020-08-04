@@ -44,8 +44,8 @@ export const MobileTapped: React.FunctionComponent<CreationDataInterface> = ({
           </a>
         </div>
       </div>
-      <div className={`${css.detailsWrapper}`}>
-        <div className={`${css.descriptionWrapper}`}>{details}</div>
+      <div className={css.detailsWrapper}>
+        <p className={css.description}>{details}</p>
       </div>
       <div className={`${css.technologiesWrapper}`}>
         <div className={`${css.technologies}`}>{technologies}</div>

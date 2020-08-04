@@ -88,3 +88,15 @@
     transform: translate(100%, 0);
   }
 }
+
+@media (max-width: 600px), (orientation: landscape) {
+  .navWrapper {
+    height: 11vw;
+  }
+}
+
+@media (max-width: 450px), (orientation: portrait) {
+  .navWrapper {
+    height: 11vh;
+  }
+}

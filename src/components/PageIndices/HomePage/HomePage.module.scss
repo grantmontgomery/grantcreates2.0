@@ -6,9 +6,19 @@
   grid-template-areas: ". headline anvil .";
 }
 
-@media (max-width: 1024px) {
+@media (orientation: portrait) {
   .homePage {
     height: 44.5vh;
+    display: grid;
+    grid-template-areas: "headline headline headline" "anvil anvil anvil";
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 40% 60%;
+  }
+}
+
+@media (orientation: landscape) {
+  .homePage {
+    height: 44.5vw;
     display: grid;
     grid-template-areas: "headline headline headline" "anvil anvil anvil";
     grid-template-columns: 20% 60% 20%;

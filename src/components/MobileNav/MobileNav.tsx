@@ -19,7 +19,6 @@ export const MobileNav: React.FC<Props> = ({ navLinks, handleTap }) => {
     >
       <path
         className={css.path1}
-        strokeWidth="1vh"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
@@ -28,7 +27,6 @@ export const MobileNav: React.FC<Props> = ({ navLinks, handleTap }) => {
       />
       <path
         className={css.path2}
-        strokeWidth="1vh"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"

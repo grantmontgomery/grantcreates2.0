@@ -22,10 +22,18 @@
     height: 100%;
     grid-area: details;
     width: 100%;
-    & .descriptionWrapper {
+    overflow-y: scroll;
+    padding-left: 5%;
+    padding-right: 5%;
+    & .description {
+      display: block;
+      height: fit-content;
+      text-indent: 5vh;
+
+      margin: 0;
       width: 90%;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 0;
+      position: relative;
       font-family: Objektiv Mk2;
       font-size: 2vh;
       color: white;
