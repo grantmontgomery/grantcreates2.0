@@ -4,14 +4,10 @@ import { homePageContext } from "../PagesLogic/Context"
 import { useModalState } from "../../../state/ModalGlobal"
 import css from "./CreationsPage.module.css"
 
-interface Props {
-  location: string
-}
-
 interface State {
   type: string
 }
-export const CreationsPage: React.FC<Props> = ({ location }) => {
+export const CreationsPage: React.FC = () => {
   const [state, setState] = React.useState<State>({ type: "apps" })
   const { creationsRef } = React.useContext(homePageContext)
 
@@ -26,7 +22,7 @@ export const CreationsPage: React.FC<Props> = ({ location }) => {
       // style={{ zIndex: creation ? 4 : 2 }}
     >
       <div className={`${css.headerWrapper}`}>
-        <div>Creations</div>
+        <span>Creations</span>
       </div>
       <ul className={`${css.creationTypes}`}>
         <li

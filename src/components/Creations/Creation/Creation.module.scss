@@ -19,7 +19,7 @@
     transition: 250ms ease-out;
     left: 50%;
     transform: translate(-50%, 0%);
-    border-radius: 25px;
+    border-radius: 5vh;
   }
   & .exit {
     background: transparent;
@@ -74,6 +74,37 @@
       height: fit-content;
       color: lightgrey;
       font-family: Objektiv Mk2 Bold;
+    }
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .creationWrapper {
+    height: 20vw;
+    width: 20vw;
+    border-radius: 5vh;
+    &.tapped {
+      margin-top: 10%;
+      height: 90vh;
+      width: 90vh;
+      border-radius: 5vw;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .creationWrapper {
+    height: 20vw;
+    width: 20vw;
+    border-radius: 5vh;
+    &.tapped {
+      margin-top: 0%;
+
+      position: fixed;
+
+      height: 90vh;
+      z-index: 4;
+      width: 90vh;
     }
   }
 }

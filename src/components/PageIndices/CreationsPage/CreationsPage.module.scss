@@ -1,89 +1,127 @@
+// .creations {
+//   width: 100vw;
+//   height: 100vh;
+//   // background: #060c0f;
+//   background: #0b171d;
+//   &.mobileHome {
+//     display: none;
+//   }
+//   &.desktop {
+//     display: block;
+//   }
+// }
+
 .creations {
   width: 100vw;
-  height: 100vh;
-  // background: #060c0f;
+  display: grid;
+  grid-template-columns: 100%;
   background: #0b171d;
-  &.mobileHome {
-    display: none;
+  grid-template-rows: 10% 12.5% auto;
+  grid-template-areas: "header" "types" "creationtype";
+  & .headerWrapper {
+    grid-area: header;
+    height: 100%;
+    width: 100%;
+    & span {
+      margin-right: auto;
+      margin-left: 5%;
+      display: block;
+      position: relative;
+      font-size: 2.5vh;
+      top: 50%;
+      transform: translate(0, -50%);
+      font-family: Objektiv Mk2 Bold;
+      height: fit-content;
+      width: fit-content;
+      white-space: none;
+      color: white;
+    }
   }
-  &.desktop {
-    display: block;
+  & .creationTypes {
+    grid-area: types;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0;
+    flex-flow: row nowrap;
+    list-style-type: none;
+    justify-content: left;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+
+    & .type {
+      position: relative;
+      display: block;
+      top: 50%;
+      transform: translate(0, -50%);
+      border-radius: 50px;
+      height: 5vh;
+      width: fit-content;
+
+      background: #0f2027;
+      color: #3e768e;
+      padding-left: 3.5%;
+      padding-right: 3.5%;
+      transition: 250ms ease-out;
+
+      &.type:nth-child(1) {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      &.type:last-child {
+        margin-left: 0;
+        margin-right: auto;
+      }
+      &.active {
+        background: #203a43;
+        color: white;
+        transition: 250ms ease-out;
+      }
+      & span {
+        font-family: Objektiv Mk2 Bold;
+        position: relative;
+        object-fit: contain;
+        font-size: 3vw;
+        height: fit-content;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+  & .typeSection {
+    color: white;
+    width: 100%;
+    height: fit-content;
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1025px) and (orientation: landscape) {
   .creations {
     height: 44.5vh;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 12.5% auto;
-    grid-template-areas: "header" "types" "creationtype";
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .creations {
+    height: 44.5vw;
     & .headerWrapper {
-      grid-area: header;
-      height: 100%;
-      width: 100%;
-      & div {
-        margin-right: auto;
-        margin-left: 5%;
-        display: block;
-        position: relative;
-        font-size: 2.5vh;
-        top: 50%;
-        transform: translate(0, -50%);
-        font-family: Objektiv Mk2 Bold;
-        height: fit-content;
-        width: fit-content;
-        white-space: none;
-        color: white;
+      & span {
+        font-size: 2.5vw;
       }
     }
     & .creationTypes {
-      grid-area: types;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      margin: 0;
-      flex-flow: row nowrap;
-      list-style-type: none;
-      justify-content: left;
-      overflow: hidden;
-      padding-left: 0;
-      padding-right: 0;
-
       & .type {
-        position: relative;
-        display: block;
-        top: 50%;
-        transform: translate(0, -50%);
-        border-radius: 50px;
-        height: 5vh;
-        width: fit-content;
-
-        background: #0f2027;
-        color: #3e768e;
-        padding-left: 3.5%;
-        padding-right: 3.5%;
-        transition: 250ms ease-out;
-
-        &.type:nth-child(1) {
-          margin-left: 5%;
-          margin-right: 5%;
-        }
-        &.type:last-child {
-          margin-left: 0;
-          margin-right: auto;
-        }
-        &.active {
-          background: #203a43;
-          color: white;
-          transition: 250ms ease-out;
-        }
+        height: 5vw;
         & span {
           font-family: Objektiv Mk2 Bold;
           position: relative;
           object-fit: contain;
-          font-size: 3vw;
+          font-size: 2vw;
           height: fit-content;
           display: block;
           width: fit-content;
@@ -94,13 +132,11 @@
         }
       }
     }
-    & .typeSection {
-      color: white;
-      width: 100%;
-      height: fit-content;
-    }
   }
-  &.desktop {
-    display: none;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .creations {
+    height: 44.5vh;
   }
 }
