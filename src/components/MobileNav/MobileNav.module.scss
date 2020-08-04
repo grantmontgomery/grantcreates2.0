@@ -1,12 +1,22 @@
+@mixin mobileNone {
+  .mobileNav {
+    display: none;
+  }
+}
+
+@mixin mobileBlock {
+  .mobileNav {
+    display: block;
+  }
+}
+
 .mobileNav {
-  display: none;
-  position: absolute;
+  position: relative;
   top: 50%;
   transform: translate(0, -50%);
-  right: 5%;
-  float: right;
-  height: 6vh;
-  width: 6vh;
+  margin-right: 5%;
+  height: 55%;
+  width: auto;
   z-index: 5;
   &.normal {
     & .path1 {
@@ -35,20 +45,22 @@
   }
 }
 
-@media (min-width: 750px), (max-width: 1024px) {
+@media (min-width: 750px) and (max-width: 1024px) {
   .mobileNav {
-    display: block;
     & path {
       stroke-width: 0.5vh;
     }
   }
+}
 
-  @media (max-width: 749px) {
-    .mobileNav {
-      display: block;
-      & path {
-        stroke-width: 1vh;
-      }
+@media (max-width: 749px) {
+  .mobileNav {
+    & path {
+      stroke-width: 1vh;
     }
   }
+}
+
+@media (min-width: 1025px) and (orientation: landscape) {
+  @include mobileNone();
 }

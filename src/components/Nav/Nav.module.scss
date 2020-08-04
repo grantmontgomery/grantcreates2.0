@@ -1,3 +1,15 @@
+@mixin mobilePortait {
+  .navWrapper {
+    height: 11vh;
+  }
+}
+
+@mixin mobileLandscape {
+  .navWrapper {
+    height: 11vw;
+  }
+}
+
 .navWrapper {
   top: 0;
   width: 100vw;
@@ -89,14 +101,14 @@
   }
 }
 
-@media (max-width: 600px), (orientation: landscape) {
-  .navWrapper {
-    height: 11vw;
-  }
+@media (min-width: 1025px) and (orientation: landscape) {
+  @include mobilePortait();
 }
 
-@media (max-width: 450px), (orientation: portrait) {
-  .navWrapper {
-    height: 11vh;
-  }
+@media (max-width: 1024px) and (orientation: landscape) {
+  @include mobileLandscape();
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  @include mobilePortait();
 }

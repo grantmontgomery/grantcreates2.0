@@ -1,37 +1,29 @@
 .homePage {
-  width: 100vw;
+  height: 44.5vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 5% 35% 55% 5%;
-      grid-template-columns: 5% 35% 55% 5%;
-  -ms-grid-rows: 100%;
-      grid-template-rows: 100%;
-      grid-template-areas: ". headline anvil .";
+      grid-template-areas: "headline headline headline" "anvil anvil anvil";
+  -ms-grid-columns: 20% 60% 20%;
+      grid-template-columns: 20% 60% 20%;
+  -ms-grid-rows: 40% 60%;
+      grid-template-rows: 40% 60%;
 }
 
-@media (orientation: portrait) {
+@media (min-width: 1025px) and (orientation: landscape) {
   .homePage {
     height: 44.5vh;
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: "headline headline headline" "anvil anvil anvil";
-    -ms-grid-columns: 20% 60% 20%;
-        grid-template-columns: 20% 60% 20%;
-    -ms-grid-rows: 40% 60%;
-        grid-template-rows: 40% 60%;
   }
 }
 
-@media (orientation: landscape) {
+@media (max-width: 1024px) and (orientation: landscape) {
   .homePage {
     height: 44.5vw;
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: "headline headline headline" "anvil anvil anvil";
-    -ms-grid-columns: 20% 60% 20%;
-        grid-template-columns: 20% 60% 20%;
-    -ms-grid-rows: 40% 60%;
-        grid-template-rows: 40% 60%;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .homePage {
+    height: 44.5vh;
   }
 }
 /*# sourceMappingURL=HomePage.module.css.map */

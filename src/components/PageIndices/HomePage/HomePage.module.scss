@@ -1,27 +1,41 @@
-.homePage {
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 5% 35% 55% 5%;
-  grid-template-rows: 100%;
-  grid-template-areas: ". headline anvil .";
+// .homePage {
+//   width: 100vw;
+//   display: grid;
+//   grid-template-columns: 5% 35% 55% 5%;
+//   grid-template-rows: 100%;
+//   grid-template-areas: ". headline anvil .";
+// }
+
+@mixin mobilePortrait {
+  height: 44.5vh;
 }
 
-@media (orientation: portrait) {
+@mixin mobileLandscape {
+  height: 44.5vw;
+}
+
+.homePage {
+  height: 44.5vh;
+  display: grid;
+  grid-template-areas: "headline headline headline" "anvil anvil anvil";
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 40% 60%;
+}
+
+@media (min-width: 1025px) and (orientation: landscape) {
   .homePage {
-    height: 44.5vh;
-    display: grid;
-    grid-template-areas: "headline headline headline" "anvil anvil anvil";
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 40% 60%;
+    @include mobilePortrait();
   }
 }
 
-@media (orientation: landscape) {
+@media (max-width: 1024px) and (orientation: landscape) {
   .homePage {
-    height: 44.5vw;
-    display: grid;
-    grid-template-areas: "headline headline headline" "anvil anvil anvil";
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 40% 60%;
+    @include mobileLandscape();
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .homePage {
+    @include mobilePortrait();
   }
 }

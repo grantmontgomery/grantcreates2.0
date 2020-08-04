@@ -1,25 +1,30 @@
 .linksWrapper.navBar {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
   margin-left: auto;
   margin-right: 5%;
   top: 50%;
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  width: 56%;
+  width: 45vw;
   height: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }
 
-.linksWrapper.navBar .link {
+.linksWrapper.navBar .innerLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.linksWrapper.navBar .innerLinks .link {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -31,25 +36,34 @@
   position: relative;
 }
 
-.linksWrapper.navBar .link a {
+.linksWrapper.navBar .innerLinks .link a {
   text-decoration: none;
 }
 
-.linksWrapper.navBar .link a .text {
+.linksWrapper.navBar .innerLinks .link a .text {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: "Objektiv-mk1";
+  font-family: Objektiv Mk2;
   color: white;
   font-weight: medium;
-  font-size: 150%;
+  font-size: 1.25vw;
 }
 
 .linksWrapper.mobileNav {
   display: none;
+}
+
+@media (min-width: 1025px) and (orientation: landscape) {
+  .linksWrapper.mobileNav {
+    display: none;
+  }
+  .linksWrapper.navBar {
+    display: block;
+  }
 }
 
 @media (max-width: 1024px) {
