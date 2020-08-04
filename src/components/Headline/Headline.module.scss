@@ -15,18 +15,12 @@
     margin-top: 2.5%;
     margin-bottom: 0;
     width: 100%;
-    flex-flow: row nowrap;
-    justify-content: space-between;
     position: relative;
-
-    & h1 {
-      height: fit-content;
-      color: #3e768e;
-      display: block;
-      font-weight: 900;
-      font-size: 4vw;
-      padding: 0;
-    }
+    height: fit-content;
+    color: #3e768e;
+    display: block;
+    font-weight: 900;
+    padding: 0;
   }
   & .secondHeadline {
     margin-bottom: 0;
@@ -40,7 +34,6 @@
       height: fit-content;
       width: fit-content;
       color: white;
-      font-size: 4vw;
       top: 50%;
       position: relative;
       transform: translate(0, -50%);
@@ -56,13 +49,9 @@
     margin-bottom: 5%;
     height: fit-content;
     width: fit-content;
-    & h1 {
-      height: fit-content;
-      width: fit-content;
-      color: #3e768e;
-      font-size: 100%;
-      font-size: 4vw;
-    }
+
+    color: #3e768e;
+    font-size: 100%;
   }
 }
 
@@ -83,5 +72,62 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (min-width: 1025px) and (orientation: landscape) {
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .headlineWrapper {
+    & .firstHeadline {
+      font-size: 4vh;
+    }
+    & .secondHeadline {
+      & span {
+        height: fit-content;
+        width: fit-content;
+        color: white;
+        font-size: 4vh;
+        top: 50%;
+        position: relative;
+        transform: translate(0, -50%);
+      }
+      & .staticText {
+      }
+      & .dynamicText {
+        margin-left: 2vh;
+      }
+    }
+    & .thirdHeadline {
+      font-size: 4vh;
+    }
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .headlineWrapper {
+    & .firstHeadline {
+      font-size: 4vw;
+    }
+    & .secondHeadline {
+      & span {
+        height: fit-content;
+        width: fit-content;
+        color: white;
+        font-size: 4vw;
+        top: 50%;
+        position: relative;
+        transform: translate(0, -50%);
+      }
+      & .staticText {
+      }
+      & .dynamicText {
+        margin-left: 2vw;
+      }
+    }
+    & .thirdHeadline {
+      font-size: 4vw;
+    }
   }
 }

@@ -27,24 +27,11 @@
   margin-top: 2.5%;
   margin-bottom: 0;
   width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   position: relative;
-}
-
-.headlineWrapper .firstHeadline h1 {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   color: #3e768e;
   display: block;
   font-weight: 900;
-  font-size: 4vw;
   padding: 0;
 }
 
@@ -73,7 +60,6 @@
   width: -moz-fit-content;
   width: fit-content;
   color: white;
-  font-size: 4vw;
   top: 50%;
   position: relative;
   -webkit-transform: translate(0, -50%);
@@ -93,18 +79,8 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.headlineWrapper .thirdHeadline h1 {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   color: #3e768e;
   font-size: 100%;
-  font-size: 4vw;
 }
 
 @media (max-width: 1024px) {
@@ -133,6 +109,58 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .headlineWrapper .firstHeadline {
+    font-size: 4vh;
+  }
+  .headlineWrapper .secondHeadline span {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: white;
+    font-size: 4vh;
+    top: 50%;
+    position: relative;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .headlineWrapper .secondHeadline .dynamicText {
+    margin-left: 2vh;
+  }
+  .headlineWrapper .thirdHeadline {
+    font-size: 4vh;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .headlineWrapper .firstHeadline {
+    font-size: 4vw;
+  }
+  .headlineWrapper .secondHeadline span {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: white;
+    font-size: 4vw;
+    top: 50%;
+    position: relative;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .headlineWrapper .secondHeadline .dynamicText {
+    margin-left: 2vw;
+  }
+  .headlineWrapper .thirdHeadline {
+    font-size: 4vw;
   }
 }
 /*# sourceMappingURL=Headline.module.css.map */

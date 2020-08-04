@@ -21,19 +21,13 @@ export const Headline: React.FC = () => {
   }, [])
 
   return (
-    <div className={`${css.headlineWrapper}`}>
-      <div className={`${css.firstHeadline}`}>
-        <h1 className={`${css.staticText}`}>Hi, I'm Grant,</h1>
-      </div>
-      <div className={`${css.secondHeadline}`}>
+    <div className={css.headlineWrapper}>
+      <h1 className={css.firstHeadline}>Hi, I'm Grant,</h1>
+      <div className={css.secondHeadline}>
         <span className={css.staticText}>I CREATE</span>
-        <span
-          className={`${css.dynamicText}`}
-        >{` ${creations[creation]}`}</span>
+        <span className={css.dynamicText}>{` ${creations[creation]}`}</span>
       </div>
-      <div className={`${css.thirdHeadline}`}>
-        <h1>Web Developer from Los Angeles, CA</h1>
-      </div>
+      <h1 className={css.thirdHeadline}>Web Developer from Los Angeles, CA</h1>
     </div>
   )
 }
