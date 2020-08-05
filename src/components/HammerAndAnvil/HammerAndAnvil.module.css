@@ -32,4 +32,46 @@
   width: 100%;
   outline: none;
 }
+
+@media (min-width: 1025px) and (orientation: landscape) {
+  .hammerAnvil {
+    height: 80%;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .hammerAnvil .dragBar {
+    display: none;
+  }
+  .hammerAnvil canvas {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .hammerAnvil {
+    height: 80%;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .hammerAnvil .dragBar {
+    display: none;
+  }
+  .hammerAnvil canvas {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .hammerAnvil canvas {
+    height: 100%;
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=HammerAndAnvil.module.css.map */

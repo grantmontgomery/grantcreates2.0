@@ -133,7 +133,7 @@
 
 @media (max-width: 1024px) and (orientation: landscape) {
   .creations {
-    height: 44.5vw;
+    height: 100vh;
   }
   .creations .headerWrapper span {
     font-size: 2.5vw;
