@@ -1,49 +1,15 @@
 .iconWrapper {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  width: 65%;
   position: relative;
+  display: block;
+
   margin-left: auto;
   margin-right: auto;
   top: 50%;
   transform: translate(0, -50%);
 
-  & svg {
-    height: auto;
-    width: 12vw;
-    position: relative;
-    margin-left: auto;
-    display: block;
-    margin-right: auto;
-    top: 50%;
-    transform: translate(0, -50%);
-    fill: white;
-  }
-
-  // & .bottomFold {
-  //   display: block;
-  //   position: absolute;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   height: 4vh;
-  //   width: auto;
-  // }
-
-  // & .leftFold {
-  //   z-index: 2;
-  //   display: block;
-  //   position: absolute;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   height: 4vh;
-  //   width: auto;
-  //   filter: drop-shadow(10px 0px 10px rgba(100, 100, 100, 0.25));
-  // }
+  fill: white;
 }
 .st0 {
   fill: none;
