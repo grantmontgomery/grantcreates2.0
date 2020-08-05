@@ -112,9 +112,9 @@
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 1025px) and (orientation: landscape) {
   .headlineWrapper .firstHeadline {
-    font-size: 4vh;
+    font-size: 2.5vw;
   }
   .headlineWrapper .secondHeadline span {
     height: -webkit-fit-content;
@@ -124,7 +124,7 @@
     width: -moz-fit-content;
     width: fit-content;
     color: white;
-    font-size: 4vh;
+    font-size: 4vw;
     top: 50%;
     position: relative;
     -webkit-transform: translate(0, -50%);
@@ -134,7 +134,33 @@
     margin-left: 2vh;
   }
   .headlineWrapper .thirdHeadline {
-    font-size: 4vh;
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .headlineWrapper .firstHeadline {
+    font-size: 2.5vw;
+  }
+  .headlineWrapper .secondHeadline span {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: white;
+    font-size: 4vw;
+    top: 50%;
+    position: relative;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .headlineWrapper .secondHeadline .dynamicText {
+    margin-left: 2vh;
+  }
+  .headlineWrapper .thirdHeadline {
+    font-size: 2.5vw;
   }
 }
 

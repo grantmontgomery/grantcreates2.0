@@ -76,19 +76,16 @@
 }
 
 @media (min-width: 1025px) and (orientation: landscape) {
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
   .headlineWrapper {
     & .firstHeadline {
-      font-size: 4vh;
+      font-size: 2.5vw;
     }
     & .secondHeadline {
       & span {
         height: fit-content;
         width: fit-content;
         color: white;
-        font-size: 4vh;
+        font-size: 4vw;
         top: 50%;
         position: relative;
         transform: translate(0, -50%);
@@ -100,7 +97,34 @@
       }
     }
     & .thirdHeadline {
-      font-size: 4vh;
+      font-size: 2.5vw;
+    }
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .headlineWrapper {
+    & .firstHeadline {
+      font-size: 2.5vw;
+    }
+    & .secondHeadline {
+      & span {
+        height: fit-content;
+        width: fit-content;
+        color: white;
+        font-size: 4vw;
+        top: 50%;
+        position: relative;
+        transform: translate(0, -50%);
+      }
+      & .staticText {
+      }
+      & .dynamicText {
+        margin-left: 2vh;
+      }
+    }
+    & .thirdHeadline {
+      font-size: 2.5vw;
     }
   }
 }

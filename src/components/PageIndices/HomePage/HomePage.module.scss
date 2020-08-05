@@ -6,12 +6,29 @@
 //   grid-template-areas: ". headline anvil .";
 // }
 
-@mixin mobilePortrait {
+@mixin Portrait {
   height: 44.5vh;
+  height: 44.5vh;
+  display: grid;
+  grid-template-areas: "headline headline headline" "anvil anvil anvil";
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 40% 60%;
+}
+
+@mixin deskTopLandscape {
+  height: 89vh;
+  display: grid;
+  grid-template-areas: "headline anvil";
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 100%;
 }
 
 @mixin mobileLandscape {
-  height: 44.5vw;
+  height: 84vh;
+  display: grid;
+  grid-template-areas: "headline anvil";
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 100%;
 }
 
 .homePage {
@@ -24,7 +41,7 @@
 
 @media (min-width: 1025px) and (orientation: landscape) {
   .homePage {
-    @include mobilePortrait();
+    @include deskTopLandscape();
   }
 }
 
@@ -36,6 +53,6 @@
 
 @media (max-width: 1024px) and (orientation: portrait) {
   .homePage {
-    @include mobilePortrait();
+    @include Portrait();
   }
 }

@@ -139,7 +139,7 @@
 
 @media (max-width: 1024px) and (orientation: landscape) {
   .navWrapper {
-    height: 11vw;
+    height: 16vh;
   }
 }
 
