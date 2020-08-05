@@ -1,31 +1,64 @@
 .about {
   width: 100vw;
-  height: 100vh;
   display: grid;
-  grid-template-areas: ". picture about ." ". hammer tools .";
-  grid-template-columns: 5% 55% 35% 5%;
-  grid-template-rows: 50% 50%;
-  // background: #060c0f;
   background: #0b171d;
 
-  // & svg {
-  //   height: 100%;
-  //   width: auto;
-  //   // animation-name: rotate;
-  //   // transition: linear;
-  //   animation-duration: 5s;
-  //   animation-iteration-count: infinite;
-  //   animation-timing-function: linear;
-  // }
+  height: 100vh;
+  grid-template-areas: "." "header" "picture" "about";
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 8% 30% 42%;
+
+  & .header {
+    margin-right: auto;
+    grid-area: header;
+    margin-left: 5%;
+    display: block;
+    position: relative;
+    font-size: 2.5vh;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-family: Objektiv Mk2 Bold;
+    height: fit-content;
+    width: fit-content;
+    white-space: none;
+    color: white;
+  }
+
+  & .imageWrapper {
+    grid-area: picture;
+  }
+  & .descriptionWrapper {
+    grid-area: about;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    & p {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 10%;
+      padding-right: 10%;
+      margin-top: 0;
+      margin-bottom: auto;
+      height: fit-content;
+      width: fit-content;
+      text-indent: 4vh;
+      font-family: Objektiv Mk2;
+      color: white;
+      text-align: left;
+      font-size: 2vh;
+    }
+  }
 }
 
-@media (max-width: 1024px) {
+@media (orientation: portait) {
   .about {
     width: 100vw;
+    display: grid;
+    background: #0b171d;
     height: 100vh;
     grid-template-areas: "." "header" "picture" "about";
     grid-template-columns: 100%;
-    grid-template-rows: 20vh 8vh 30vh 42vh;
 
     & .header {
       margin-right: auto;
@@ -66,18 +99,59 @@
         font-size: 2vh;
       }
     }
-    & .toolsHeader {
-      grid-area: toolsHeader;
-      font-size: 2.5vh;
+  }
+}
+
+@media (orientation: landscape) {
+  .about {
+    width: 100vw;
+    display: grid;
+    background: #0b171d;
+    height: 150vh;
+    grid-template-areas: "." "header" "picture" "about";
+    grid-template-columns: 100%;
+    // grid-template-rows: 20% 8% 30% 42%;
+
+    grid-template-rows: calc(100% / 7.5) calc(100% / 12) 25% 23%;
+
+    & .header {
+      margin-right: auto;
+      grid-area: header;
+      margin-left: 5%;
       display: block;
       position: relative;
-      height: fit-content;
-      width: fit-content;
+      font-size: 2.5vh;
       top: 50%;
       transform: translate(0, -50%);
-      margin-left: 5%;
       font-family: Objektiv Mk2 Bold;
+      height: fit-content;
+      width: fit-content;
+      white-space: none;
       color: white;
+    }
+
+    & .imageWrapper {
+      grid-area: picture;
+    }
+    & .descriptionWrapper {
+      grid-area: about;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      & p {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: auto;
+        width: 75%;
+        text-indent: 4vh;
+        font-family: Objektiv Mk2;
+        color: white;
+        text-align: left;
+        font-size: 1.5vw;
+      }
     }
   }
 }

@@ -6,6 +6,7 @@
   right: 3vh;
   transition: 250ms ease-out;
   font-family: Objektiv Mk2 Bold;
+  cursor: pointer;
   & .iconWrapper {
     height: 100%;
     width: 100%;
@@ -19,7 +20,7 @@
     transition: 250ms ease-out;
     float: none;
     right: 0;
-
+    cursor: default;
     z-index: 3;
     transform: translate(50%);
     right: 50%;
@@ -102,7 +103,7 @@
     width: 10vw;
     border-radius: 10vw;
 
-    right: 5vw;
+    right: 3vw;
     bottom: 3vw;
 
     &.extended {

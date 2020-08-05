@@ -7,6 +7,7 @@
   -webkit-transition: 250ms ease-out;
   transition: 250ms ease-out;
   font-family: Objektiv Mk2 Bold;
+  cursor: pointer;
 }
 
 .contactWrapper .iconWrapper {
@@ -25,6 +26,7 @@
   transition: 250ms ease-out;
   float: none;
   right: 0;
+  cursor: default;
   z-index: 3;
   -webkit-transform: translate(50%);
           transform: translate(50%);
@@ -137,7 +139,7 @@
     height: 10vw;
     width: 10vw;
     border-radius: 10vw;
-    right: 5vw;
+    right: 3vw;
     bottom: 3vw;
   }
   .contactWrapper.extended {

@@ -1,25 +1,85 @@
 .about {
   width: 100vw;
-  height: 100vh;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". picture about ." ". hammer tools .";
-  -ms-grid-columns: 5% 55% 35% 5%;
-      grid-template-columns: 5% 55% 35% 5%;
-  -ms-grid-rows: 50% 50%;
-      grid-template-rows: 50% 50%;
   background: #0b171d;
+  height: 100vh;
+      grid-template-areas: "." "header" "picture" "about";
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 20% 8% 30% 42%;
+      grid-template-rows: 20% 8% 30% 42%;
 }
 
-@media (max-width: 1024px) {
+.about .header {
+  margin-right: auto;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: header;
+  margin-left: 5%;
+  display: block;
+  position: relative;
+  font-size: 2.5vh;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-family: Objektiv Mk2 Bold;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: none;
+  color: white;
+}
+
+.about .imageWrapper {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: picture;
+}
+
+.about .descriptionWrapper {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: about;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about .descriptionWrapper p {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 0;
+  margin-bottom: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-indent: 4vh;
+  font-family: Objektiv Mk2;
+  color: white;
+  text-align: left;
+  font-size: 2vh;
+}
+
+@media (orientation: portait) {
   .about {
     width: 100vw;
+    display: -ms-grid;
+    display: grid;
+    background: #0b171d;
     height: 100vh;
         grid-template-areas: "." "header" "picture" "about";
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 20vh 8vh 30vh 42vh;
-        grid-template-rows: 20vh 8vh 30vh 42vh;
   }
   .about .header {
     margin-right: auto;
@@ -70,23 +130,69 @@
     text-align: left;
     font-size: 2vh;
   }
-  .about .toolsHeader {
-    grid-area: toolsHeader;
-    font-size: 2.5vh;
+}
+
+@media (orientation: landscape) {
+  .about {
+    width: 100vw;
+    display: -ms-grid;
+    display: grid;
+    background: #0b171d;
+    height: 150vh;
+        grid-template-areas: "." "header" "picture" "about";
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: calc(100% / 7.5) calc(100% / 12) 25% 23%;
+        grid-template-rows: calc(100% / 7.5) calc(100% / 12) 25% 23%;
+  }
+  .about .header {
+    margin-right: auto;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: header;
+    margin-left: 5%;
     display: block;
     position: relative;
+    font-size: 2.5vh;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    font-family: Objektiv Mk2 Bold;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    margin-left: 5%;
-    font-family: Objektiv Mk2 Bold;
+    white-space: none;
     color: white;
+  }
+  .about .imageWrapper {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: picture;
+  }
+  .about .descriptionWrapper {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: about;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .about .descriptionWrapper p {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: auto;
+    width: 75%;
+    text-indent: 4vh;
+    font-family: Objektiv Mk2;
+    color: white;
+    text-align: left;
+    font-size: 1.5vw;
   }
 }
 /*# sourceMappingURL=AboutPage.module.css.map */
