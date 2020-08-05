@@ -28,7 +28,7 @@
             font-family: Objektiv Mk2;
             color: white;
             font-weight: medium;
-            font-size: 1.25vw;
+            font-size: 4vh;
           }
         }
       }
@@ -73,7 +73,7 @@
     }
   }
 }
-@media (min-width: 1025px) and (orientation: landscape) {
+@media (orientation: landscape) {
   .linksWrapper {
     &.mobileNav {
       display: none;
@@ -84,29 +84,7 @@
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
-  .linksWrapper {
-    &.mobileNav {
-      width: 50vw;
-      & .innerLinks {
-        height: 40%;
-        margin-top: 30%;
-        & .link {
-          & a {
-            & .text {
-              font-size: 2.5vw;
-            }
-          }
-        }
-      }
-    }
-    &.navBar {
-      display: none;
-    }
-  }
-}
-
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (orientation: portrait) {
   .linksWrapper {
     &.mobileNav {
       width: 75vw;
@@ -116,6 +94,40 @@
     }
     &.navBar {
       display: none;
+    }
+  }
+}
+
+@media (min-width: 1025px) and (orientation: landscape) {
+  .linksWrapper {
+    &.navBar {
+      & .innerLinks {
+        & .link {
+          & a {
+            text-decoration: none;
+            & .text {
+              font-size: 3vh;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .linksWrapper {
+    &.navBar {
+      & .innerLinks {
+        & .link {
+          & a {
+            text-decoration: none;
+            & .text {
+              font-size: 4vh;
+            }
+          }
+        }
+      }
     }
   }
 }

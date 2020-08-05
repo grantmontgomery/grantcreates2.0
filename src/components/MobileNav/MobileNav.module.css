@@ -50,7 +50,7 @@
   }
 }
 
-@media (min-width: 1025px) and (orientation: landscape) {
+@media (orientation: landscape) {
   .mobileNav {
     display: none;
   }
