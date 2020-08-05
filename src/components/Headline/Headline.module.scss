@@ -24,9 +24,10 @@
   }
   & .secondHeadline {
     margin-bottom: 0;
+
     margin-top: auto;
     position: relative;
-    width: 100%;
+    width: fit-content;
     height: fit-content;
     display: flex;
     flex-flow: row nowrap;
@@ -79,11 +80,20 @@
   .headlineWrapper {
     & .firstHeadline {
       font-size: 2.5vw;
+      margin-top: 20%;
+      margin-bottom: auto;
     }
     & .secondHeadline {
+      top: 50%;
+      transform: translate(0, -50%);
+      position: absolute;
+      margin-top: auto;
+      margin-bottom: 20%;
+      height: fit-content;
       & span {
         height: fit-content;
         width: fit-content;
+        white-space: nowrap;
         color: white;
         font-size: 4vw;
         top: 50%;
@@ -97,6 +107,8 @@
       }
     }
     & .thirdHeadline {
+      margin-bottom: 30%;
+      margin-top: auto;
       font-size: 2.5vw;
     }
   }
@@ -108,6 +120,9 @@
       font-size: 2.5vw;
     }
     & .secondHeadline {
+      top: 50%;
+      transform: translate(0, -50%);
+      position: absolute;
       & span {
         height: fit-content;
         width: fit-content;
@@ -125,6 +140,8 @@
     }
     & .thirdHeadline {
       font-size: 2.5vw;
+      margin-top: auto;
+      margin-bottom: 30%;
     }
   }
 }
