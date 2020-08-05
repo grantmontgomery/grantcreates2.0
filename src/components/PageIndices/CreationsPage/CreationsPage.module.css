@@ -67,11 +67,11 @@
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  border-radius: 50px;
   height: 5vh;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  border-radius: 5vh;
   background: #0f2027;
   color: #3e768e;
   padding-left: 3.5%;
@@ -125,28 +125,37 @@
   height: fit-content;
 }
 
-@media (min-width: 1025px) and (orientation: landscape) {
+@media (orientation: portrait) {
   .creations {
     height: 44.5vh;
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (orientation: landscape) {
   .creations {
     height: 100vh;
+    -ms-grid-rows: 20% 10% 12.5% auto;
+        grid-template-rows: 20% 10% 12.5% auto;
+        grid-template-areas: "." "header" "types" "creationtype";
   }
+}
+
+@media (min-width: 1025px) and (orientation: landscape) {
   .creations .headerWrapper span {
     font-size: 2.5vw;
   }
   .creations .creationTypes .type {
-    height: 5vw;
+    cursor: pointer;
+    height: 7vh;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 8vh;
   }
   .creations .creationTypes .type span {
     font-family: Objektiv Mk2 Bold;
     position: relative;
-    -o-object-fit: contain;
-       object-fit: contain;
-    font-size: 2vw;
+    font-size: 1.5vw;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -154,17 +163,42 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
-  .creations {
-    height: 44.5vh;
+@media (max-width: 1024px) and (orientation: landscape) {
+  .creations .headerWrapper span {
+    font-size: 2.5vw;
+  }
+  .creations .creationTypes .type {
+    cursor: pointer;
+    height: 8vh;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 8vh;
+  }
+  .creations .creationTypes .type span {
+    font-family: Objektiv Mk2 Bold;
+    position: relative;
+    font-size: 2vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: block;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
 }
 /*# sourceMappingURL=CreationsPage.module.css.map */

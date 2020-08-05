@@ -12,8 +12,6 @@
   justify-content: space-between;
   & .firstHeadline {
     height: fit-content;
-    margin-top: 2.5%;
-    margin-bottom: 0;
     width: 100%;
     position: relative;
     height: fit-content;
@@ -23,15 +21,17 @@
     padding: 0;
   }
   & .secondHeadline {
-    margin-bottom: 0;
-
-    margin-top: auto;
+    margin-bottom: auto;
     position: relative;
     width: fit-content;
     height: fit-content;
+    white-space: nowrap;
+    justify-content: center;
     display: flex;
+    align-items: center;
     flex-flow: row nowrap;
     & span {
+      display: block;
       height: fit-content;
       width: fit-content;
       color: white;
@@ -80,22 +80,19 @@
   .headlineWrapper {
     & .firstHeadline {
       font-size: 2.5vw;
-      margin-top: 20%;
-      margin-bottom: auto;
+      margin-top: 30%;
+      margin-bottom: 10%;
     }
     & .secondHeadline {
-      top: 50%;
-      transform: translate(0, -50%);
-      position: absolute;
-      margin-top: auto;
-      margin-bottom: 20%;
+      margin-bottom: 10%;
+      margin-top: 0;
       height: fit-content;
       & span {
         height: fit-content;
         width: fit-content;
         white-space: nowrap;
         color: white;
-        font-size: 4vw;
+        font-size: 3.5vw;
         top: 50%;
         position: relative;
         transform: translate(0, -50%);
@@ -107,8 +104,9 @@
       }
     }
     & .thirdHeadline {
-      margin-bottom: 30%;
-      margin-top: auto;
+      margin-bottom: auto;
+      white-space: nowrap;
+      margin-top: 10%;
       font-size: 2.5vw;
     }
   }
@@ -118,16 +116,16 @@
   .headlineWrapper {
     & .firstHeadline {
       font-size: 2.5vw;
+      margin-top: 30%;
+      margin-bottom: auto;
     }
     & .secondHeadline {
-      top: 50%;
-      transform: translate(0, -50%);
-      position: absolute;
       & span {
         height: fit-content;
         width: fit-content;
+        display: block;
         color: white;
-        font-size: 4vw;
+        font-size: 3.5vw;
         top: 50%;
         position: relative;
         transform: translate(0, -50%);
@@ -139,9 +137,10 @@
       }
     }
     & .thirdHeadline {
+      white-space: nowrap;
       font-size: 2.5vw;
       margin-top: auto;
-      margin-bottom: 30%;
+      margin-bottom: 60%;
     }
   }
 }
@@ -168,6 +167,8 @@
       }
     }
     & .thirdHeadline {
+      margin-top: auto;
+      margin-bottom: 5%;
       font-size: 4vw;
     }
   }

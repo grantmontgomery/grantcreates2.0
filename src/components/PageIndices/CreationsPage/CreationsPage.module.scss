@@ -42,10 +42,9 @@
       display: block;
       top: 50%;
       transform: translate(0, -50%);
-      border-radius: 50px;
       height: 5vh;
       width: fit-content;
-
+      border-radius: 5vh;
       background: #0f2027;
       color: #3e768e;
       padding-left: 3.5%;
@@ -87,15 +86,22 @@
   }
 }
 
-@media (min-width: 1025px) and (orientation: landscape) {
+@media (orientation: portrait) {
   .creations {
     height: 44.5vh;
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (orientation: landscape) {
   .creations {
     height: 100vh;
+    grid-template-rows: 20% 10% 12.5% auto;
+    grid-template-areas: "." "header" "types" "creationtype";
+  }
+}
+
+@media (min-width: 1025px) and (orientation: landscape) {
+  .creations {
     & .headerWrapper {
       & span {
         font-size: 2.5vw;
@@ -103,17 +109,20 @@
     }
     & .creationTypes {
       & .type {
-        height: 5vw;
+        cursor: pointer;
+        height: 7vh;
+        width: fit-content;
+        border-radius: 8vh;
+
         & span {
           font-family: Objektiv Mk2 Bold;
           position: relative;
-          object-fit: contain;
-          font-size: 2vw;
+          font-size: 1.5vw;
           height: fit-content;
           display: block;
           width: fit-content;
-          margin-left: auto;
-          margin-right: auto;
+          margin-left: 0.5vw;
+          margin-right: 0.5vw;
           top: 50%;
           transform: translate(0, -50%);
         }
@@ -122,8 +131,73 @@
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1024px) and (orientation: landscape) {
   .creations {
-    height: 44.5vh;
+    & .headerWrapper {
+      & span {
+        font-size: 2.5vw;
+      }
+    }
+    & .creationTypes {
+      & .type {
+        cursor: pointer;
+        height: 8vh;
+        width: fit-content;
+        border-radius: 8vh;
+        & span {
+          font-family: Objektiv Mk2 Bold;
+          position: relative;
+          font-size: 2vw;
+          height: fit-content;
+          display: block;
+          padding-left: 2%;
+          padding-right: 2%;
+          width: fit-content;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+      }
+    }
   }
 }
+
+// @media (min-width: 1025px) and (orientation: landscape) {
+//   .creations {
+//     height: 44.5vh;
+//   }
+// }
+
+// @media (max-width: 1024px) and (orientation: landscape) {
+//   .creations {
+//     height: 100vh;
+//     & .headerWrapper {
+//       & span {
+//         font-size: 2.5vw;
+//       }
+//     }
+//     & .creationTypes {
+//       & .type {
+//         height: 5vw;
+//         & span {
+//           font-family: Objektiv Mk2 Bold;
+//           position: relative;
+//           object-fit: contain;
+//           font-size: 2vw;
+//           height: fit-content;
+//           display: block;
+//           width: fit-content;
+//           margin-left: auto;
+//           margin-right: auto;
+//           top: 50%;
+//           transform: translate(0, -50%);
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media (max-width: 1024px) and (orientation: portrait) {
+//   .creations {
+//     height: 44.5vh;
+//   }
+// }

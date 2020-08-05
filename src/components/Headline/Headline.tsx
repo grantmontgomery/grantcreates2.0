@@ -22,12 +22,14 @@ export const Headline: React.FC = () => {
 
   return (
     <div className={css.headlineWrapper}>
-      <h1 className={css.firstHeadline}>Hi, I'm Grant,</h1>
+      <span className={css.firstHeadline}>Hi, I'm Grant</span>
       <div className={css.secondHeadline}>
         <span className={css.staticText}>I CREATE</span>
         <span className={css.dynamicText}>{` ${creations[creation]}`}</span>
       </div>
-      <h1 className={css.thirdHeadline}>Web Developer from Los Angeles, CA</h1>
+      <span className={css.thirdHeadline}>
+        Web Developer from Los Angeles, CA
+      </span>
     </div>
   )
 }
