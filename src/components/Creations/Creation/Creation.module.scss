@@ -7,9 +7,11 @@
   width: 20vh;
   transition: 250ms ease-out;
   left: 50%;
+  cursor: pointer;
   &.tapped {
     overflow: hidden;
     margin-left: auto;
+    cursor: default;
     margin-right: auto;
     position: fixed;
     border-radius: 0;
@@ -40,17 +42,36 @@
       left: 50%;
       transform: translate(-50%, -50%);
       font-family: Objektiv Mk2 Bold;
-
       font-size: 2.5vh;
     }
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1367px) and (orientation: landscape) {
+  .creationWrapper {
+    height: 15vw;
+    width: 15vw;
+    border-radius: 5vh;
+    &.tapped {
+      margin-top: 15%;
+      position: fixed;
+      height: 80vh;
+      z-index: 4;
+      width: 80vh;
+    }
+    & .exit {
+      height: 5vw;
+      width: 5vw;
+      & .xWrapper {
+        font-size: 2vw;
+      }
+    }
+  }
   .selectorTitleWrapper {
     display: flex;
     width: fit-content;
-    position: absolute;
+    position: relative;
+    height: fit-content;
     left: 50%;
     transform: translate(-50%, 0);
     transition: 250ms ease-out;
@@ -78,16 +99,17 @@
   }
 }
 
-@media (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 1366px) and (orientation: landscape) {
   .creationWrapper {
     height: 20vw;
     width: 20vw;
-    border-radius: 5vh;
+    border-radius: 4vw;
     &.tapped {
-      margin-top: 10%;
-      height: 90vh;
-      width: 90vh;
-      border-radius: 5vw;
+      margin-top: 15%;
+      position: fixed;
+      height: 80vh;
+      z-index: 4;
+      width: 80vh;
     }
     & .exit {
       height: 5vw;
@@ -98,27 +120,46 @@
     }
   }
   .selectorTitleWrapper {
+    display: flex;
+    width: fit-content;
+    position: absolute;
+    height: fit-content;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 250ms ease-out;
+    flex-flow: column nowrap;
+    bottom: 2.5%;
     z-index: -1;
     & .selctorTitle {
-      font-size: 2vw;
+      font-size: 3vh;
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+      height: fit-content;
+      color: white;
+      font-family: Objektiv Mk2 Bold;
     }
     & .subTitle {
-      font-size: 1.8vw;
+      font-size: 2.5vh;
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+      height: fit-content;
+      color: lightgrey;
+      font-family: Objektiv Mk2 Bold;
     }
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media (orientation: portrait) {
   .creationWrapper {
-    height: 20vw;
-    width: 20vw;
     border-radius: 5vh;
     &.tapped {
       margin-top: 0%;
       position: fixed;
-      height: 90vh;
+      height: 60vh;
       z-index: 4;
-      width: 90vh;
+      width: 90vw;
     }
     & .exit {
       height: 5vw;
@@ -128,4 +169,119 @@
       }
     }
   }
+  .selectorTitleWrapper {
+    display: flex;
+    width: fit-content;
+    position: absolute;
+    height: fit-content;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 250ms ease-out;
+    flex-flow: column nowrap;
+    bottom: 2.5%;
+    z-index: -1;
+    & .selctorTitle {
+      font-size: 2vh;
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+      height: fit-content;
+      color: white;
+      font-family: Objektiv Mk2 Bold;
+    }
+    & .subTitle {
+      font-size: 1.8vh;
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+      height: fit-content;
+      color: lightgrey;
+      font-family: Objektiv Mk2 Bold;
+    }
+  }
 }
+
+// @media (max-width: 1024px) {
+//   .selectorTitleWrapper {
+//     display: flex;
+//     width: fit-content;
+//     position: absolute;
+//     height: fit-content;
+//     left: 50%;
+//     transform: translate(-50%, 0);
+//     transition: 250ms ease-out;
+//     flex-flow: column nowrap;
+//     bottom: 2.5%;
+//     z-index: -1;
+//     & .selctorTitle {
+//       font-size: 2vh;
+//       margin-left: auto;
+//       margin-right: auto;
+//       width: fit-content;
+//       height: fit-content;
+//       color: white;
+//       font-family: Objektiv Mk2 Bold;
+//     }
+//     & .subTitle {
+//       font-size: 1.8vh;
+//       margin-left: auto;
+//       margin-right: auto;
+//       width: fit-content;
+//       height: fit-content;
+//       color: lightgrey;
+//       font-family: Objektiv Mk2 Bold;
+//     }
+//   }
+// }
+
+// @media (max-width: 767px) and (orientation: landscape) {
+//   .creationWrapper {
+//     height: 20vw;
+//     width: 20vw;
+//     border-radius: 5vh;
+//     &.tapped {
+//       margin-top: 10%;
+//       height: 90vh;
+//       width: 90vh;
+//       border-radius: 5vw;
+//     }
+//     & .exit {
+//       height: 5vw;
+//       width: 5vw;
+//       & .xWrapper {
+//         font-size: 2vw;
+//       }
+//     }
+//   }
+//   .selectorTitleWrapper {
+//     z-index: -1;
+//     & .selctorTitle {
+//       font-size: 2vw;
+//     }
+//     & .subTitle {
+//       font-size: 1.8vw;
+//     }
+//   }
+// }
+
+// @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+//   .creationWrapper {
+//     height: 20vw;
+//     width: 20vw;
+//     border-radius: 5vh;
+//     &.tapped {
+//       margin-top: 0%;
+//       position: fixed;
+//       height: 90vh;
+//       z-index: 4;
+//       width: 90vh;
+//     }
+//     & .exit {
+//       height: 5vw;
+//       width: 5vw;
+//       & .xWrapper {
+//         font-size: 2vw;
+//       }
+//     }
+//   }
+// }
