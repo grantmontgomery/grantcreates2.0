@@ -98,11 +98,11 @@
 
 @media (max-width: 1024px) and (orientation: landscape) {
   .contactWrapper {
-    height: 18vh;
-    width: 18vh;
-    border-radius: 18vh;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 10vw;
 
-    right: 3vw;
+    right: 5vw;
     bottom: 3vw;
 
     &.extended {
@@ -136,11 +136,50 @@
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (min-width: 1025px) and (orientation: landscape) {
   .contactWrapper {
-    height: 18vw;
-    width: 18vw;
-    border-radius: 18vw;
+    height: 11vh;
+    width: 11vh;
+    border-radius: 11vh;
+    right: 5vw;
+    bottom: 5vh;
+
+    &.extended {
+      width: 80vh;
+      height: 100vh;
+      bottom: 0vh;
+      border-radius: 4vw;
+      grid-template-areas: "header" "form";
+      & .headerWrapper {
+        & .titleWrapper {
+          font-size: 2vw;
+        }
+
+        & .xWrapper {
+          border-radius: 4vw;
+          height: 4vw;
+          width: 4vw;
+
+          & .x {
+            font-size: 2vw;
+          }
+        }
+      }
+      & .formWrapper {
+        & .innerForm {
+          &.statusSide {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  .contactWrapper {
+    height: 15vw;
+    width: 15vw;
+    border-radius: 15vw;
     right: 3vh;
     bottom: 3vh;
 
