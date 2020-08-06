@@ -107,12 +107,11 @@
     width: 100vw;
     display: grid;
     background: #0b171d;
-    height: 150vh;
-    grid-template-areas: "." "header" "picture" "about";
-    grid-template-columns: 100%;
-    // grid-template-rows: 20% 8% 30% 42%;
+    height: 100vh;
 
-    grid-template-rows: calc(100% / 7.5) calc(100% / 12) 25% 23%;
+    grid-template-areas: ". ." "header header" "picture about";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 8% auto;
 
     & .header {
       margin-right: auto;
@@ -120,7 +119,7 @@
       margin-left: 5%;
       display: block;
       position: relative;
-      font-size: 2.5vh;
+      font-size: 2.5vw;
       top: 50%;
       transform: translate(0, -50%);
       font-family: Objektiv Mk2 Bold;
@@ -142,8 +141,7 @@
         position: relative;
         margin-left: auto;
         margin-right: auto;
-        padding: 0;
-        margin-top: 0;
+        margin-top: 10%;
         margin-bottom: auto;
         width: 75%;
         text-indent: 4vh;

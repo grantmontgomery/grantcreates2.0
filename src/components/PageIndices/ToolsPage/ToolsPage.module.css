@@ -29,4 +29,26 @@
   font-family: Objektiv Mk2 Bold;
   color: white;
 }
+
+@media (orientation: portrait) {
+  .toolsPage {
+    height: 88vh;
+    -ms-grid-rows: 20vh 8vh 20vh 40vh;
+        grid-template-rows: 20vh 8vh 20vh 40vh;
+  }
+}
+
+@media (orientation: landscape) {
+  .toolsPage {
+    height: 100vh;
+    -ms-grid-rows: 20vh 8vh auto;
+        grid-template-rows: 20vh 8vh auto;
+        grid-template-areas: ". ." "header header" "tools hammer";
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    background: #0b171d;
+    -ms-grid-rows: 20% 8% 30% auto;
+        grid-template-rows: 20% 8% 30% auto;
+  }
+}
 /*# sourceMappingURL=ToolsPage.module.css.map */

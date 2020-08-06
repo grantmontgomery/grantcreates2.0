@@ -18,3 +18,21 @@
     color: white;
   }
 }
+
+@media (orientation: portrait) {
+  .toolsPage {
+    height: 88vh;
+    grid-template-rows: 20vh 8vh 20vh 40vh;
+  }
+}
+
+@media (orientation: landscape) {
+  .toolsPage {
+    height: 100vh;
+    grid-template-rows: 20vh 8vh auto;
+    grid-template-areas: ". ." "header header" "tools hammer";
+    grid-template-columns: 50% 50%;
+    background: #0b171d;
+    grid-template-rows: 20% 8% 30% auto;
+  }
+}

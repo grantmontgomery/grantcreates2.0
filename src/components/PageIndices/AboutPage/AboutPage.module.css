@@ -138,22 +138,23 @@
     display: -ms-grid;
     display: grid;
     background: #0b171d;
-    height: 150vh;
-        grid-template-areas: "." "header" "picture" "about";
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-    -ms-grid-rows: calc(100% / 7.5) calc(100% / 12) 25% 23%;
-        grid-template-rows: calc(100% / 7.5) calc(100% / 12) 25% 23%;
+    height: 100vh;
+        grid-template-areas: ". ." "header header" "picture about";
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: 20% 8% auto;
+        grid-template-rows: 20% 8% auto;
   }
   .about .header {
     margin-right: auto;
     -ms-grid-row: 2;
     -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: header;
     margin-left: 5%;
     display: block;
     position: relative;
-    font-size: 2.5vh;
+    font-size: 2.5vw;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
@@ -173,8 +174,8 @@
     grid-area: picture;
   }
   .about .descriptionWrapper {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
     grid-area: about;
     height: 100%;
     width: 100%;
@@ -184,8 +185,7 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
-    margin-top: 0;
+    margin-top: 10%;
     margin-bottom: auto;
     width: 75%;
     text-indent: 4vh;
