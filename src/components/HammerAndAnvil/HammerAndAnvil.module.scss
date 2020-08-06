@@ -26,7 +26,11 @@
     height: 100%;
     position: relative;
     width: 100%;
+    cursor: grab;
     outline: none;
+    &:active {
+      cursor: grabbing;
+    }
   }
 }
 

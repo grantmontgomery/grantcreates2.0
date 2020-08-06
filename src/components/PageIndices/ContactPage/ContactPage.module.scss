@@ -40,6 +40,7 @@
     grid-area: hireMe;
     position: relative;
     height: 10vh;
+    cursor: pointer;
     top: 50%;
     transform: translate(0, -50%);
     font-family: Objektiv Mk2 Bold;
@@ -85,6 +86,83 @@
         height: 10vw;
         width: auto;
         fill: #e3eef2;
+      }
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .contact {
+    grid-template-areas: ". ." "header header" "hireMe contact" ". .";
+    grid-template-rows: 20vh 8vh 52vh 20vh;
+    grid-template-columns: 50% 50%;
+
+    & .header {
+      font-size: 2.5vw;
+    }
+
+    & .contact {
+      top: 0;
+      transform: translate(0, 0);
+      margin-top: 12.5%;
+      margin-bottom: auto;
+      grid-area: contact;
+
+      font-size: 2.5vw;
+    }
+
+    & .hireMe {
+      grid-area: hireMe;
+      position: relative;
+      height: 10vw;
+      top: 50%;
+      transform: translate(0, -50%);
+      font-family: Objektiv Mk2 Bold;
+      margin-right: auto;
+      margin-left: auto;
+      color: white;
+      background: #2c5363;
+      border: solid 0.5vh #2c5363;
+      outline: none;
+      border-style: none;
+      border-radius: 5vw;
+      font-size: 2vw;
+      width: 50%;
+      transition: 100ms ease-out;
+      user-select: none;
+      &:active {
+        background: none;
+        transition: 100ms ease-out;
+        user-select: none;
+        color: #61dbfb;
+
+        border: solid 0.5vh #61dbfb;
+      }
+    }
+    & .socialLinks {
+      grid-area: contact;
+      top: 0;
+      transform: translate(0, 0);
+      margin-bottom: 12.5%;
+      margin-top: auto;
+      width: fit-content;
+      & a {
+        user-select: none;
+        margin: auto;
+        & svg {
+          display: block;
+          user-select: none;
+          outline: none;
+          height: 7vw;
+          width: auto;
+          fill: #e3eef2;
+          &:first-child {
+            margin-right: 2vw;
+          }
+          &:last-child {
+            margin-left: 2vw;
+          }
+        }
       }
     }
   }

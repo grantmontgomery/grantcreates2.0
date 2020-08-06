@@ -60,6 +60,7 @@
   grid-area: hireMe;
   position: relative;
   height: 10vh;
+  cursor: pointer;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -135,5 +136,104 @@
   height: 10vw;
   width: auto;
   fill: #e3eef2;
+}
+
+@media (orientation: landscape) {
+  .contact {
+        grid-template-areas: ". ." "header header" "hireMe contact" ". .";
+    -ms-grid-rows: 20vh 8vh 52vh 20vh;
+        grid-template-rows: 20vh 8vh 52vh 20vh;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  .contact .header {
+    font-size: 2.5vw;
+  }
+  .contact .contact {
+    top: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    margin-top: 12.5%;
+    margin-bottom: auto;
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: contact;
+    font-size: 2.5vw;
+  }
+  .contact .hireMe {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: hireMe;
+    position: relative;
+    height: 10vw;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    font-family: Objektiv Mk2 Bold;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    background: #2c5363;
+    border: solid 0.5vh #2c5363;
+    outline: none;
+    border-style: none;
+    border-radius: 5vw;
+    font-size: 2vw;
+    width: 50%;
+    -webkit-transition: 100ms ease-out;
+    transition: 100ms ease-out;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .contact .hireMe:active {
+    background: none;
+    -webkit-transition: 100ms ease-out;
+    transition: 100ms ease-out;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    color: #61dbfb;
+    border: solid 0.5vh #61dbfb;
+  }
+  .contact .socialLinks {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: contact;
+    top: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    margin-bottom: 12.5%;
+    margin-top: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .contact .socialLinks a {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    margin: auto;
+  }
+  .contact .socialLinks a svg {
+    display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    outline: none;
+    height: 7vw;
+    width: auto;
+    fill: #e3eef2;
+  }
+  .contact .socialLinks a svg:first-child {
+    margin-right: 2vw;
+  }
+  .contact .socialLinks a svg:last-child {
+    margin-left: 2vw;
+  }
 }
 /*# sourceMappingURL=ContactPage.module.css.map */

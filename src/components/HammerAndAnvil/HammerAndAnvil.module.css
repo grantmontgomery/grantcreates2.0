@@ -30,7 +30,14 @@
   height: 100%;
   position: relative;
   width: 100%;
+  cursor: -webkit-grab;
+  cursor: grab;
   outline: none;
+}
+
+.hammerAnvil canvas:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 @media (min-width: 1025px) and (orientation: landscape) {
