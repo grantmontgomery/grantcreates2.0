@@ -1,175 +1,65 @@
 .headlineWrapper {
   grid-area: headline;
-  width: 80%;
-  height: 100%;
+  flex-flow: column nowrap;
   display: flex;
+  width: 80%;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: flex-start;
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
-  margin: auto;
-  flex-flow: column nowrap;
-  font-family: Objektiv Mk2 Bold;
-  justify-content: space-between;
-  & .firstHeadline {
+  & span {
+    font-family: Objektiv Mk2 Bold;
     height: fit-content;
-    width: 100%;
-    position: relative;
-    height: fit-content;
-    color: #3e768e;
+    width: fit-content;
     display: block;
-    font-weight: 900;
-    padding: 0;
+    white-space: nowrap;
+  }
+  & .firstHeadline {
+    color: #3e768e;
+    font-size: 3.5vw;
   }
   & .secondHeadline {
-    margin-bottom: auto;
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    white-space: nowrap;
-    justify-content: center;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
     display: flex;
-    align-items: center;
     flex-flow: row nowrap;
     & span {
-      display: block;
-      height: fit-content;
-      width: fit-content;
+      font-size: 5vw;
       color: white;
-      top: 50%;
-      position: relative;
-      transform: translate(0, -50%);
     }
-    & .staticText {
-    }
-    & .dynamicText {
+    & span:last-child {
       margin-left: 2vw;
     }
   }
   & .thirdHeadline {
-    margin-top: 0;
-    margin-bottom: 5%;
-    height: fit-content;
-    width: fit-content;
-
     color: #3e768e;
-    font-size: 100%;
+    font-size: 3.5vw;
   }
 }
 
-@media (max-width: 1024px) {
+@media (orientation: landscape) {
   .headlineWrapper {
-    pointer-events: none;
-    position: relative;
     grid-area: headline;
-    height: 100%;
-    width: 80%;
-    margin-right: auto;
-  }
-}
+    margin-left: 7vw;
 
-@keyframes type {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+    transform: translate(0, -85%);
 
-@media (min-width: 1025px) and (orientation: landscape) {
-  .headlineWrapper {
     & .firstHeadline {
       font-size: 2.5vw;
-      margin-top: 30%;
-      margin-bottom: 10%;
     }
     & .secondHeadline {
-      margin-bottom: 10%;
-      margin-top: 0;
-      height: fit-content;
       & span {
-        height: fit-content;
-        width: fit-content;
-        white-space: nowrap;
-        color: white;
         font-size: 3.5vw;
-        top: 50%;
-        position: relative;
-        transform: translate(0, -50%);
       }
-      & .staticText {
-      }
-      & .dynamicText {
-        margin-left: 2vh;
+      & span:last-child {
+        margin-left: 1vw;
       }
     }
     & .thirdHeadline {
-      margin-bottom: auto;
-      white-space: nowrap;
-      margin-top: 10%;
       font-size: 2.5vw;
-    }
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  .headlineWrapper {
-    & .firstHeadline {
-      font-size: 2.5vw;
-      margin-top: 30%;
-      margin-bottom: auto;
-    }
-    & .secondHeadline {
-      & span {
-        height: fit-content;
-        width: fit-content;
-        display: block;
-        color: white;
-        font-size: 3.5vw;
-        top: 50%;
-        position: relative;
-        transform: translate(0, -50%);
-      }
-      & .staticText {
-      }
-      & .dynamicText {
-        margin-left: 2vh;
-      }
-    }
-    & .thirdHeadline {
-      white-space: nowrap;
-      font-size: 2.5vw;
-      margin-top: auto;
-      margin-bottom: 60%;
-    }
-  }
-}
-
-@media (max-width: 1024px) and (orientation: portrait) {
-  .headlineWrapper {
-    & .firstHeadline {
-      font-size: 4vw;
-    }
-    & .secondHeadline {
-      & span {
-        height: fit-content;
-        width: fit-content;
-        color: white;
-        font-size: 4vw;
-        top: 50%;
-        position: relative;
-        transform: translate(0, -50%);
-      }
-      & .staticText {
-      }
-      & .dynamicText {
-        margin-left: 2vw;
-      }
-    }
-    & .thirdHeadline {
-      margin-top: auto;
-      margin-bottom: 5%;
-      font-size: 4vw;
     }
   }
 }

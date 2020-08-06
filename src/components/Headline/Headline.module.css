@@ -1,57 +1,50 @@
 .headlineWrapper {
   grid-area: headline;
-  width: 80%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  margin: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  font-family: Objektiv Mk2 Bold;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.headlineWrapper .firstHeadline {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 100%;
-  position: relative;
-  height: fit-content;
-  color: #3e768e;
-  display: block;
-  font-weight: 900;
-  padding: 0;
-}
-
-.headlineWrapper .secondHeadline {
-  margin-bottom: auto;
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 80%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.headlineWrapper span {
+  font-family: Objektiv Mk2 Bold;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  white-space: nowrap;
+}
+
+.headlineWrapper .firstHeadline {
+  color: #3e768e;
+  font-size: 3.5vw;
+}
+
+.headlineWrapper .secondHeadline {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -59,162 +52,37 @@
 }
 
 .headlineWrapper .secondHeadline span {
-  display: block;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  font-size: 5vw;
   color: white;
-  top: 50%;
-  position: relative;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
 }
 
-.headlineWrapper .secondHeadline .dynamicText {
+.headlineWrapper .secondHeadline span:last-child {
   margin-left: 2vw;
 }
 
 .headlineWrapper .thirdHeadline {
-  margin-top: 0;
-  margin-bottom: 5%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   color: #3e768e;
-  font-size: 100%;
+  font-size: 3.5vw;
 }
 
-@media (max-width: 1024px) {
+@media (orientation: landscape) {
   .headlineWrapper {
-    pointer-events: none;
-    position: relative;
     grid-area: headline;
-    height: 100%;
-    width: 80%;
-    margin-right: auto;
+    margin-left: 7vw;
+    -webkit-transform: translate(0, -85%);
+            transform: translate(0, -85%);
   }
-}
-
-@-webkit-keyframes type {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes type {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@media (min-width: 1025px) and (orientation: landscape) {
   .headlineWrapper .firstHeadline {
     font-size: 2.5vw;
-    margin-top: 30%;
-    margin-bottom: 10%;
-  }
-  .headlineWrapper .secondHeadline {
-    margin-bottom: 10%;
-    margin-top: 0;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
   }
   .headlineWrapper .secondHeadline span {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    white-space: nowrap;
-    color: white;
     font-size: 3.5vw;
-    top: 50%;
-    position: relative;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
   }
-  .headlineWrapper .secondHeadline .dynamicText {
-    margin-left: 2vh;
+  .headlineWrapper .secondHeadline span:last-child {
+    margin-left: 1vw;
   }
   .headlineWrapper .thirdHeadline {
-    margin-bottom: auto;
-    white-space: nowrap;
-    margin-top: 10%;
     font-size: 2.5vw;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  .headlineWrapper .firstHeadline {
-    font-size: 2.5vw;
-    margin-top: 30%;
-    margin-bottom: auto;
-  }
-  .headlineWrapper .secondHeadline span {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    display: block;
-    color: white;
-    font-size: 3.5vw;
-    top: 50%;
-    position: relative;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-  }
-  .headlineWrapper .secondHeadline .dynamicText {
-    margin-left: 2vh;
-  }
-  .headlineWrapper .thirdHeadline {
-    white-space: nowrap;
-    font-size: 2.5vw;
-    margin-top: auto;
-    margin-bottom: 60%;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: portrait) {
-  .headlineWrapper .firstHeadline {
-    font-size: 4vw;
-  }
-  .headlineWrapper .secondHeadline span {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    color: white;
-    font-size: 4vw;
-    top: 50%;
-    position: relative;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-  }
-  .headlineWrapper .secondHeadline .dynamicText {
-    margin-left: 2vw;
-  }
-  .headlineWrapper .thirdHeadline {
-    margin-top: auto;
-    margin-bottom: 5%;
-    font-size: 4vw;
   }
 }
 /*# sourceMappingURL=Headline.module.css.map */

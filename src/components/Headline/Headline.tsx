@@ -14,7 +14,7 @@ export const Headline: React.FC = () => {
   React.useEffect(() => {
     const interval = setInterval(() => {
       return setCreation(state => {
-        return state < creations.length ? (state += 1) : 0
+        return state <= creations.length ? (state += 1) : 0
       })
     }, 2000)
     return () => clearInterval(interval)
@@ -25,7 +25,7 @@ export const Headline: React.FC = () => {
       <span className={css.firstHeadline}>Hi, I'm Grant</span>
       <div className={css.secondHeadline}>
         <span className={css.staticText}>I CREATE</span>
-        <span className={css.dynamicText}>{` ${creations[creation]}`}</span>
+        <span className={css.dynamicText}>{`${creations[creation]}`}</span>
       </div>
       <span className={css.thirdHeadline}>
         Web Developer from Los Angeles, CA
