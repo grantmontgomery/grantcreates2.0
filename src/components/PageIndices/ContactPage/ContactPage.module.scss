@@ -104,16 +104,13 @@
     & .contact {
       top: 0;
       transform: translate(0, 0);
-      margin-top: 12.5%;
+      margin-top: 15vh;
       margin-bottom: auto;
-      grid-area: contact;
 
       font-size: 2.5vw;
     }
 
     & .hireMe {
-      grid-area: hireMe;
-      position: relative;
       height: 10vw;
       top: 50%;
       transform: translate(0, -50%);
@@ -143,7 +140,7 @@
       grid-area: contact;
       top: 0;
       transform: translate(0, 0);
-      margin-bottom: 12.5%;
+      margin-bottom: 10vh;
       margin-top: auto;
       width: fit-content;
       & a {

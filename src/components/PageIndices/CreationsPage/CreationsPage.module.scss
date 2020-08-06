@@ -31,8 +31,7 @@
     display: flex;
     margin: 0;
     flex-flow: row nowrap;
-    list-style-type: none;
-    justify-content: left;
+    justify-content: flex-start;
     overflow: hidden;
     padding-left: 0;
     padding-right: 0;
@@ -43,12 +42,18 @@
       top: 50%;
       transform: translate(0, -50%);
       height: 5vh;
+      outline: none;
+      border-style: none;
+      user-select: none;
       width: fit-content;
       border-radius: 5vh;
       background: #0f2027;
       color: #3e768e;
       padding-left: 3.5%;
       padding-right: 3.5%;
+      font-family: Objektiv Mk2 Bold;
+      font-size: 3vw;
+
       transition: 250ms ease-out;
 
       &.type:nth-child(1) {
@@ -63,19 +68,6 @@
         background: #203a43;
         color: white;
         transition: 250ms ease-out;
-      }
-      & span {
-        font-family: Objektiv Mk2 Bold;
-        position: relative;
-        object-fit: contain;
-        font-size: 3vw;
-        height: fit-content;
-        display: block;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        top: 50%;
-        transform: translate(0, -50%);
       }
     }
   }
@@ -97,6 +89,22 @@
     height: 100vh;
     grid-template-rows: 20% 10% 12.5% auto;
     grid-template-areas: "." "header" "types" "creationtype";
+    & .headerWrapper {
+      & span {
+        font-size: 2.5vw;
+      }
+    }
+    & .creationTypes {
+      width: auto;
+      margin-left: 5vw;
+      & .type {
+        cursor: pointer;
+        height: 5vw;
+        width: fit-content;
+        border-radius: 5vw;
+        font-size: 2vw;
+      }
+    }
   }
 }
 
@@ -110,94 +118,11 @@
     & .creationTypes {
       & .type {
         cursor: pointer;
-        height: 7vh;
+        height: 4vw;
         width: fit-content;
-        border-radius: 8vh;
-
-        & span {
-          font-family: Objektiv Mk2 Bold;
-          position: relative;
-          font-size: 1.5vw;
-          height: fit-content;
-          display: block;
-          width: fit-content;
-          margin-left: 0.5vw;
-          margin-right: 0.5vw;
-          top: 50%;
-          transform: translate(0, -50%);
-        }
+        border-radius: 5vw;
+        font-size: 1vw;
       }
     }
   }
 }
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  .creations {
-    & .headerWrapper {
-      & span {
-        font-size: 2.5vw;
-      }
-    }
-    & .creationTypes {
-      & .type {
-        cursor: pointer;
-        height: 8vh;
-        width: fit-content;
-        border-radius: 8vh;
-        & span {
-          font-family: Objektiv Mk2 Bold;
-          position: relative;
-          font-size: 2vw;
-          height: fit-content;
-          display: block;
-          padding-left: 2%;
-          padding-right: 2%;
-          width: fit-content;
-          top: 50%;
-          transform: translate(0, -50%);
-        }
-      }
-    }
-  }
-}
-
-// @media (min-width: 1025px) and (orientation: landscape) {
-//   .creations {
-//     height: 44.5vh;
-//   }
-// }
-
-// @media (max-width: 1024px) and (orientation: landscape) {
-//   .creations {
-//     height: 100vh;
-//     & .headerWrapper {
-//       & span {
-//         font-size: 2.5vw;
-//       }
-//     }
-//     & .creationTypes {
-//       & .type {
-//         height: 5vw;
-//         & span {
-//           font-family: Objektiv Mk2 Bold;
-//           position: relative;
-//           object-fit: contain;
-//           font-size: 2vw;
-//           height: fit-content;
-//           display: block;
-//           width: fit-content;
-//           margin-left: auto;
-//           margin-right: auto;
-//           top: 50%;
-//           transform: translate(0, -50%);
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: 1024px) and (orientation: portrait) {
-//   .creations {
-//     height: 44.5vh;
-//   }
-// }

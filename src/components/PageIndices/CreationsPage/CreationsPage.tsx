@@ -24,22 +24,22 @@ export const CreationsPage: React.FC = () => {
       <div className={`${css.headerWrapper}`}>
         <span>Creations</span>
       </div>
-      <ul className={`${css.creationTypes}`}>
-        <li
+      <div className={`${css.creationTypes}`}>
+        <button
           className={`${css.type} ${state.type === "apps" ? css.active : null}`}
           onClick={() => setState({ type: "apps" })}
         >
-          <span>Apps</span>
-        </li>
-        <li
+          Apps
+        </button>
+        <button
           className={`${css.type} ${
             state.type === "websites" ? css.active : null
           }`}
           onClick={() => setState({ type: "websites" })}
         >
-          <span>Websites</span>
-        </li>
-      </ul>
+          Websites
+        </button>
+      </div>
       <CreationType type={state.type}></CreationType>
     </section>
   )

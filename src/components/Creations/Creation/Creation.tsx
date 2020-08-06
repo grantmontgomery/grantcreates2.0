@@ -49,15 +49,17 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
 
         const creationElement = creationRef.current
         const elementWidth = creationElement.offsetWidth
-
         const windowTopCenter = window.innerHeight / 2
 
-        return (
-          setState({
-            top: windowTopCenter - elemTopPosition - elementWidth * 1.75,
-          }),
-          modalDispatch(modalActions("CREATION"))
-        )
+        return window.innerHeight >= window.innerWidth
+          ? (setState({
+              top: windowTopCenter - elemTopPosition - elementWidth * 1.75,
+            }),
+            modalDispatch(modalActions("CREATION")))
+          : (setState({
+              top: windowTopCenter - elemTopPosition,
+            }),
+            modalDispatch(modalActions("CREATION")))
       }
     }
 

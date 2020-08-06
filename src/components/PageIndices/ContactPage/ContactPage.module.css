@@ -153,18 +153,11 @@
     top: 0;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    margin-top: 12.5%;
+    margin-top: 15vh;
     margin-bottom: auto;
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    grid-area: contact;
     font-size: 2.5vw;
   }
   .contact .hireMe {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: hireMe;
-    position: relative;
     height: 10vw;
     top: 50%;
     -webkit-transform: translate(0, -50%);
@@ -205,7 +198,7 @@
     top: 0;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    margin-bottom: 12.5%;
+    margin-bottom: 10vh;
     margin-top: auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
