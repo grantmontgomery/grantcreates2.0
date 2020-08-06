@@ -1,7 +1,6 @@
 .toolsWrapper {
   grid-area: tools;
   width: 100%;
-  // margin-left: 2.5vw;
   height: 80%;
   display: flex;
   flex-flow: column wrap;
@@ -23,7 +22,6 @@
   .toolsWrapper {
     overflow: hidden;
     align-content: center;
-
     height: 100%;
   }
 }

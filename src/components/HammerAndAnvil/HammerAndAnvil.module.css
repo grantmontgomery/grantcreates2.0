@@ -35,6 +35,24 @@
 
 @media (min-width: 1025px) and (orientation: landscape) {
   .hammerAnvil {
+    height: 75%;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .hammerAnvil .dragBar {
+    display: none;
+  }
+  .hammerAnvil canvas {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+  }
+}
+
+@media (width: 1024px) and (height: 768px) {
+  .hammerAnvil {
     height: 80%;
     width: 100%;
     top: 50%;
@@ -47,7 +65,7 @@
   .hammerAnvil canvas {
     margin-left: auto;
     margin-right: auto;
-    height: 75%;
+    height: 100%;
   }
 }
 
