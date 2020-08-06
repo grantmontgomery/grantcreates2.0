@@ -32,4 +32,51 @@
   position: relative;
   outline: none;
 }
+
+@media (orientation: portrait) {
+  .hammer {
+    grid-area: hammer;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hammer .dragBar {
+    display: block;
+  }
+  .hammer canvas {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    outline: none;
+  }
+}
+
+@media (max-width: 599px) and (orientation: landscape) {
+  .hammer .dragBar {
+    display: none;
+  }
+  .hammer canvas {
+    height: 60%;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    position: relative;
+    outline: none;
+  }
+}
+
+@media (min-width: 600px) and (orientation: landscape) {
+  .hammer .dragBar {
+    display: none;
+  }
+  .hammer canvas {
+    height: 60%;
+    width: 100%;
+    position: relative;
+    outline: none;
+  }
+}
 /*# sourceMappingURL=Hammer.module.css.map */

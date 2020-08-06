@@ -104,4 +104,10 @@
 .st94 {
   fill: url(#gradient85);
 }
+
+@media (min-height: 450px) and (max-width: 1366px) and (orientation: landscape) {
+  .navBar {
+    height: 50%;
+  }
+}
 /*# sourceMappingURL=FullLogo.module.css.map */
