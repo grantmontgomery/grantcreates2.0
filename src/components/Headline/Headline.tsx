@@ -14,7 +14,7 @@ export const Headline: React.FC = () => {
   React.useEffect(() => {
     const interval = setInterval(() => {
       return setCreation(state => {
-        return state <= creations.length ? (state += 1) : 0
+        return state < creations.length ? (state += 1) : 0
       })
     }, 2000)
     return () => clearInterval(interval)
