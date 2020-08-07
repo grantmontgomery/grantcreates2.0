@@ -11,7 +11,7 @@ export const CreationDetails: React.FunctionComponent<CreationDataInterface> = (
 }) => {
   return (
     <div className={`${css.detailsWrapper}`}>
-      <div className={`${css.imageWrapper}`}>
+      <div className={css.imageWrapper}>
         <img src="" alt="" />
       </div>
       <div className={`${css.headerWrapper}`}>

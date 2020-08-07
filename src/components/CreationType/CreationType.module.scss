@@ -1,11 +1,19 @@
 .typeWrapper {
   grid-area: creationtype;
+  height: 100%;
+  width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (orientation: landscape) {
   .typeWrapper {
-    height: 100%;
-    width: 100%;
+    & .innerTypes {
+      height: 65vh;
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  .typeWrapper {
     // border: solid 1px white;
     & .innerTypes {
       // margin-top: 5%;

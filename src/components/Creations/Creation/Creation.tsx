@@ -99,6 +99,15 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
 
     return (
       <React.Fragment>
+        <div className={css.landscapeWrapper}>
+          <CreationDetails
+            detailsName={data.detailsName}
+            details={data.details}
+            technologies={data.technologies}
+            githublink={data.githublink}
+            link={data.link}
+          ></CreationDetails>
+        </div>
         <div
           className={`${css.creationWrapper} ${creation ? css.tapped : null}`}
           style={{ top: `${state.top}px` }}

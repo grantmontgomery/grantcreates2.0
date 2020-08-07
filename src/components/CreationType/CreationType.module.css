@@ -1,12 +1,16 @@
 .typeWrapper {
   grid-area: creationtype;
+  height: 100%;
+  width: 100%;
 }
 
-@media (max-width: 1024px) {
-  .typeWrapper {
-    height: 100%;
-    width: 100%;
+@media (orientation: landscape) {
+  .typeWrapper .innerTypes {
+    height: 65vh;
   }
+}
+
+@media (orientation: portrait) {
   .typeWrapper .innerTypes {
     -webkit-transform: translate(0, 10%);
             transform: translate(0, 10%);

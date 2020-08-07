@@ -57,6 +57,16 @@
   font-size: 2.5vh;
 }
 
+.landscapeWrapper {
+  height: 60vh;
+  border-radius: 4vh;
+  width: 80vh;
+  margin-left: auto;
+  background: #11242d;
+  margin-right: auto;
+  position: relative;
+}
+
 @media (orientation: landscape) {
   .creationWrapper {
     display: none;
@@ -64,9 +74,15 @@
   .selectorTitleWrapper {
     display: none;
   }
+  .landscapeWrapper {
+    display: block;
+  }
 }
 
 @media (orientation: portrait) {
+  .landscapeWrapper {
+    display: none;
+  }
   .creationWrapper {
     border-radius: 4vh;
     display: block;
