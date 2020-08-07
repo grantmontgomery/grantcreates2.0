@@ -4,7 +4,7 @@ import { CreationDataInterface } from "../types"
 import { modalActions } from "../../../state/actions"
 import { useModalDispatch, useModalState } from "../../../state/ModalGlobal"
 import css from "./Creation.module.css"
-import { MobileTapped } from "./MobileTapped"
+import { CreationDetails } from "./CreationDetails"
 
 interface Props {
   data: CreationDataInterface
@@ -81,13 +81,13 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
 
     const changeDisplay = () => {
       return creation ? (
-        <MobileTapped
+        <CreationDetails
           detailsName={data.detailsName}
           details={data.details}
           technologies={data.technologies}
           githublink={data.githublink}
           link={data.link}
-        ></MobileTapped>
+        ></CreationDetails>
       ) : (
         <MobileSelector
           name={data.name}

@@ -1,8 +1,8 @@
 import * as React from "react"
 import { CreationDataInterface } from "../../types"
-import css from "./MobileTapped.module.css"
+import css from "./CreationDetails.module.css"
 
-export const MobileTapped: React.FunctionComponent<CreationDataInterface> = ({
+export const CreationDetails: React.FunctionComponent<CreationDataInterface> = ({
   detailsName,
   details,
   technologies,
@@ -10,7 +10,7 @@ export const MobileTapped: React.FunctionComponent<CreationDataInterface> = ({
   link,
 }) => {
   return (
-    <div className={`${css.tappedWrapper}`}>
+    <div className={`${css.detailsWrapper}`}>
       <div className={`${css.imageWrapper}`}>
         <img src="" alt="" />
       </div>
@@ -44,7 +44,7 @@ export const MobileTapped: React.FunctionComponent<CreationDataInterface> = ({
           </a>
         </div>
       </div>
-      <div className={css.detailsWrapper}>
+      <div className={css.descriptionWrapper}>
         <p className={css.description}>{details}</p>
       </div>
       <div className={`${css.technologiesWrapper}`}>
