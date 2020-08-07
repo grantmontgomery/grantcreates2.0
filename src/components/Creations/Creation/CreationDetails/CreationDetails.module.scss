@@ -51,6 +51,55 @@
       width: fit-content;
     }
   }
+  & .linksWrapper {
+    margin-right: 5%;
+    position: relative;
+    margin-left: auto;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-flow: row nowrap;
+    top: 50%;
+    transform: translate(0, -50%);
+    & a {
+      display: block;
+      position: relative;
+      margin: auto;
+      display: block;
+      height: 100%;
+      width: fit-content;
+      & .linkWrapper {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: fit-content;
+        height: 100%;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        &.linkWrapper:last-child {
+          margin-right: 0;
+          margin-left: auto;
+        }
+        &.linkWrapper:first-child {
+          margin-right: auto;
+          margin-left: auto;
+        }
+
+        & svg {
+          position: relative;
+          margin-left: auto;
+          margin-right: auto;
+          top: 50%;
+          transform: translate(0, -50%);
+          fill: white;
+          height: 4.5vh;
+          width: auto;
+        }
+      }
+    }
+  }
 
   & .headerWrapper {
     grid-area: header;
@@ -58,66 +107,15 @@
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
-    & .titleWrapper {
-      color: white;
-      font-family: Objektiv Mk2 Bold;
-      position: relative;
-      margin-left: 5%;
-      margin-right: auto;
-      height: fit-content;
-      width: fit-content;
-      top: 50%;
-      transform: translate(0, -50%);
-    }
-    & .linksWrapper {
-      margin-right: 5%;
-      position: relative;
-      margin-left: auto;
-      height: 100%;
-      width: 30%;
-      display: flex;
-      flex-flow: row nowrap;
-      top: 50%;
-      transform: translate(0, -50%);
-      & a {
-        display: block;
-        position: relative;
-        margin: auto;
-        display: block;
-        height: 100%;
-        width: fit-content;
-        & .linkWrapper {
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          width: fit-content;
-          height: 100%;
-          position: relative;
-          margin-left: auto;
-          margin-right: auto;
-          display: block;
-          &.linkWrapper:last-child {
-            margin-right: 0;
-            margin-left: auto;
-          }
-          &.linkWrapper:first-child {
-            margin-right: auto;
-            margin-left: auto;
-          }
-
-          & svg {
-            position: relative;
-            margin-left: auto;
-            margin-right: auto;
-            top: 50%;
-            transform: translate(0, -50%);
-            fill: white;
-            height: 4.5vh;
-            width: auto;
-          }
-        }
-      }
-    }
+    color: white;
+    font-family: Objektiv Mk2 Bold;
+    position: relative;
+    margin-left: 5%;
+    margin-right: auto;
+    height: fit-content;
+    width: fit-content;
+    top: 50%;
+    transform: translate(0, -50%);
   }
 }
 
