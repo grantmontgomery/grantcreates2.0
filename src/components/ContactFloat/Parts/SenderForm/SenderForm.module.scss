@@ -55,10 +55,13 @@
         float: right;
         right: 5%;
         position: absolute;
-
+        background: #2c5363;
+        height: fit-content;
         display: flex;
         z-index: 2;
         flex-flow: row nowrap;
+        padding-left: 2vw;
+        padding-right: 2vw;
         & div {
           font-family: Objektiv Mk2;
           position: relative;
@@ -125,7 +128,7 @@
     grid-area: next;
     top: 50%;
     transform: translate(0, -50%);
-
+    cursor: pointer;
     margin-left: auto;
     margin-right: 20%;
     background: #2c5363;
@@ -159,6 +162,7 @@
         & .phoneFormat {
           height: 3vh;
           width: 7vh;
+          border-radius: 3vh;
 
           & div {
             font-size: 1.75vh;
@@ -199,7 +203,7 @@
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (orientation: landscape) {
   .senderWrapper {
     grid-template-columns: 75% 25%;
     grid-template-rows: calc(5% / 3 * 13) calc(5% / 3 * 13) calc(5% / 3 * 13) 30%;
@@ -213,20 +217,22 @@
       }
 
       & .inputWrapper {
-        height: 5.75vh;
+        height: 4vh;
         & .phoneFormat {
           height: calc(3vh / 70vh / 80vh);
           width: calc(7vh / 70vh / 80vh);
-
+          border-radius: 1vh;
           & div {
-            font-size: calc(1.75vh / 70vh / 80vh);
+            top: 0;
+            transform: translate(0, 0);
+            font-size: 2vh;
           }
         }
         & input {
           height: 100%;
 
           border-radius: 4vh;
-          font-size: 3vh;
+          font-size: 2vh;
 
           width: 97%;
           border: solid 0.25vh white;

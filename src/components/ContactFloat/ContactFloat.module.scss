@@ -23,6 +23,7 @@
     cursor: default;
     z-index: 3;
     transform: translate(50%);
+
     right: 50%;
     overflow: hidden;
     display: grid;
@@ -56,14 +57,17 @@
         transform: translate(0, -50%);
         width: fit-content;
         position: relative;
-        border: 1vh solid white;
+        border: 1px solid white;
         text-align: center;
+        cursor: pointer;
         background: none;
-        border-style: none;
         margin-left: auto;
         margin-right: 5%;
         font-family: Objektiv Mk2 Bold;
         color: white;
+        :focus {
+          outline: none;
+        }
       }
     }
     & .formWrapper {
@@ -88,8 +92,31 @@
   }
 }
 
-// @media (max-width: 1025px) and (orientation: portrait) {
-// }
+@media (orientation: landscape) {
+  .contactWrapper {
+    &.extended {
+      width: 60vh;
+      height: 80vh;
+      top: 50%;
+      transform: translate(50%, -50%);
+      bottom: 0vh;
+      border-radius: 5vh;
+      grid-template-areas: "header" "form";
+      & .headerWrapper {
+        & .titleWrapper {
+          font-size: 2vw;
+        }
+
+        & .x {
+          border-radius: 4vw;
+          height: 4vw;
+          width: 4vw;
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 1024px) and (orientation: landscape) {
   .contactWrapper {
@@ -99,35 +126,6 @@
 
     right: 3vw;
     bottom: 3vw;
-
-    &.extended {
-      width: 80vh;
-      height: 100vh;
-      bottom: 0vh;
-      border-radius: 4vw;
-      grid-template-areas: "header" "form";
-      & .headerWrapper {
-        & .titleWrapper {
-          font-size: 2vw;
-        }
-
-        & .xWrapper {
-          border-radius: 4vw;
-          height: 4vw;
-          width: 4vw;
-
-          & .x {
-            font-size: 2vw;
-          }
-        }
-      }
-      & .formWrapper {
-        & .innerForm {
-          &.statusSide {
-          }
-        }
-      }
-    }
   }
 }
 
@@ -138,26 +136,17 @@
     border-radius: 11vh;
     right: 5vw;
     bottom: 5vh;
-
     &.extended {
-      width: 80vh;
-      height: 100vh;
-      bottom: 0vh;
-      border-radius: 4vw;
-      grid-template-areas: "header" "form";
       & .headerWrapper {
         & .titleWrapper {
           font-size: 2vw;
         }
 
         & .x {
-          font-size: 2vw;
-        }
-      }
-      & .formWrapper {
-        & .innerForm {
-          &.statusSide {
-          }
+          border-radius: 2vw;
+          height: 2vw;
+          width: 2vw;
+          font-size: 0.75vw;
         }
       }
     }
@@ -192,12 +181,6 @@
           cursor: pointer;
           width: 5vh;
           border: 1px solid white;
-        }
-      }
-      & .formWrapper {
-        & .innerForm {
-          &.statusSide {
-          }
         }
       }
     }

@@ -88,14 +88,18 @@
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
-  border: 1vh solid white;
+  border: 1px solid white;
   text-align: center;
+  cursor: pointer;
   background: none;
-  border-style: none;
   margin-left: auto;
   margin-right: 5%;
   font-family: Objektiv Mk2 Bold;
   color: white;
+}
+
+.contactWrapper.extended .headerWrapper .x :focus {
+  outline: none;
 }
 
 .contactWrapper.extended .formWrapper {
@@ -127,6 +131,28 @@
   display: block;
 }
 
+@media (orientation: landscape) {
+  .contactWrapper.extended {
+    width: 60vh;
+    height: 80vh;
+    top: 50%;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+    bottom: 0vh;
+    border-radius: 5vh;
+        grid-template-areas: "header" "form";
+  }
+  .contactWrapper.extended .headerWrapper .titleWrapper {
+    font-size: 2vw;
+  }
+  .contactWrapper.extended .headerWrapper .x {
+    border-radius: 4vw;
+    height: 4vw;
+    width: 4vw;
+    font-size: 2vw;
+  }
+}
+
 @media (max-width: 1024px) and (orientation: landscape) {
   .contactWrapper {
     height: 10vw;
@@ -134,24 +160,6 @@
     border-radius: 10vw;
     right: 3vw;
     bottom: 3vw;
-  }
-  .contactWrapper.extended {
-    width: 80vh;
-    height: 100vh;
-    bottom: 0vh;
-    border-radius: 4vw;
-        grid-template-areas: "header" "form";
-  }
-  .contactWrapper.extended .headerWrapper .titleWrapper {
-    font-size: 2vw;
-  }
-  .contactWrapper.extended .headerWrapper .xWrapper {
-    border-radius: 4vw;
-    height: 4vw;
-    width: 4vw;
-  }
-  .contactWrapper.extended .headerWrapper .xWrapper .x {
-    font-size: 2vw;
   }
 }
 
@@ -163,18 +171,14 @@
     right: 5vw;
     bottom: 5vh;
   }
-  .contactWrapper.extended {
-    width: 80vh;
-    height: 100vh;
-    bottom: 0vh;
-    border-radius: 4vw;
-        grid-template-areas: "header" "form";
-  }
   .contactWrapper.extended .headerWrapper .titleWrapper {
     font-size: 2vw;
   }
   .contactWrapper.extended .headerWrapper .x {
-    font-size: 2vw;
+    border-radius: 2vw;
+    height: 2vw;
+    width: 2vw;
+    font-size: 0.75vw;
   }
 }
 

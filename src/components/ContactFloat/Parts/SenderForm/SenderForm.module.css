@@ -95,6 +95,10 @@
   float: right;
   right: 5%;
   position: absolute;
+  background: #2c5363;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,6 +107,8 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 .senderWrapper .sectionWrapper .inputWrapper .phoneFormat div {
@@ -216,6 +222,7 @@
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+  cursor: pointer;
   margin-left: auto;
   margin-right: 20%;
   background: #2c5363;
@@ -252,6 +259,7 @@
   .senderWrapper .sectionWrapper .inputWrapper .phoneFormat {
     height: 3vh;
     width: 7vh;
+    border-radius: 3vh;
   }
   .senderWrapper .sectionWrapper .inputWrapper .phoneFormat div {
     font-size: 1.75vh;
@@ -285,7 +293,7 @@
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (orientation: landscape) {
   .senderWrapper {
     -ms-grid-columns: 75% 25%;
         grid-template-columns: 75% 25%;
@@ -300,19 +308,23 @@
     font-size: calc(3vh / 80vh);
   }
   .senderWrapper .sectionWrapper .inputWrapper {
-    height: 5.75vh;
+    height: 4vh;
   }
   .senderWrapper .sectionWrapper .inputWrapper .phoneFormat {
     height: calc(3vh / 70vh / 80vh);
     width: calc(7vh / 70vh / 80vh);
+    border-radius: 1vh;
   }
   .senderWrapper .sectionWrapper .inputWrapper .phoneFormat div {
-    font-size: calc(1.75vh / 70vh / 80vh);
+    top: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    font-size: 2vh;
   }
   .senderWrapper .sectionWrapper .inputWrapper input {
     height: 100%;
     border-radius: 4vh;
-    font-size: 3vh;
+    font-size: 2vh;
     width: 97%;
     border: solid 0.25vh white;
   }

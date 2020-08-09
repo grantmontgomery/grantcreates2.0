@@ -127,6 +127,7 @@
     height: 9vh;
     width: 80%;
     border-radius: 4.5vh;
+    cursor: pointer;
     margin-left: auto;
     margin-right: 10%;
     display: flex;
@@ -182,7 +183,7 @@
     margin-right: auto;
     background: #2c5363;
     transition: 250ms ease-out;
-
+    cursor: pointer;
     &.senderErrors {
       transition: 250ms ease-out;
       background: #ed4548;
