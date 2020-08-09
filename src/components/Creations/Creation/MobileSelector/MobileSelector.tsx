@@ -6,7 +6,7 @@ import css from "./MobileSelector.module.css"
 type Props = {
   handleTap: any
   type: string
-  name: string
+  name: string | undefined
 }
 
 export const MobileSelector: React.FunctionComponent<Props> = ({

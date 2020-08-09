@@ -20,7 +20,6 @@ const HammerAndAnvil = () => {
   camera.position.y = 4
   camera.position.x = 0
 
-  console.log(camera.position)
   ///Renderer
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })

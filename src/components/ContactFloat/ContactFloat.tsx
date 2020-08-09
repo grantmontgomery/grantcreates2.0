@@ -170,11 +170,9 @@ export const ContactFloat: React.FC = () => {
               mailStatus={state.mailStatus}
               formSide={state.formSide}
             ></Pointer>
-            <div className={css.xWrapper}>
-              <div className={css.x} onClick={handleExit}>
-                X
-              </div>
-            </div>
+            <button className={css.x} onClick={handleExit}>
+              X
+            </button>
           </div>
 
           <div className={css.formWrapper}>

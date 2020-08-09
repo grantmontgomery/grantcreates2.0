@@ -18,7 +18,6 @@ const Hammer: () => void = () => {
   camera.position.y = 0
   camera.position.x = 0
 
-  console.log(camera)
   ///Renderer
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
@@ -94,7 +93,6 @@ const Hammer: () => void = () => {
     "static/OnlyHammer.glb",
     function (gltf) {
       scene.add(gltf.scene)
-      console.log(gltf.scene)
 
       // gltf.scene.children[0].scale.x = 0.04
       // gltf.scene.children[0].scale.y = 0.04

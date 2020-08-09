@@ -49,27 +49,21 @@
         transform: translate(0, -50%);
       }
 
-      & .xWrapper {
-        position: relative;
-
-        display: block;
+      & .x {
         top: 50%;
+        display: block;
+        text-align: center;
         transform: translate(0, -50%);
+        width: fit-content;
+        position: relative;
+        border: 1vh solid white;
+        text-align: center;
+        background: none;
+        border-style: none;
         margin-left: auto;
         margin-right: 5%;
-        border: solid 1px white;
-        & .x {
-          top: 55%;
-          display: block;
-          text-align: center;
-          transform: translate(0, -50%);
-          width: fit-content;
-          position: relative;
-          margin-left: auto;
-          margin-right: auto;
-          font-family: Objektiv Mk2 Bold;
-          color: white;
-        }
+        font-family: Objektiv Mk2 Bold;
+        color: white;
       }
     }
     & .formWrapper {
@@ -156,14 +150,8 @@
           font-size: 2vw;
         }
 
-        & .xWrapper {
-          border-radius: 4vw;
-          height: 4vw;
-          width: 4vw;
-
-          & .x {
-            font-size: 2vw;
-          }
+        & .x {
+          font-size: 2vw;
         }
       }
       & .formWrapper {
@@ -196,14 +184,14 @@
           font-size: 2.5vh;
         }
 
-        & .xWrapper {
+        & .x {
+          font-size: 2.5vh;
           border-radius: 5vh;
+          text-align: center;
           height: 5vh;
+          cursor: pointer;
           width: 5vh;
-
-          & .x {
-            font-size: 2.5vh;
-          }
+          border: 1px solid white;
         }
       }
       & .formWrapper {

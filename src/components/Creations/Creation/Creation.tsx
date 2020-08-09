@@ -33,7 +33,7 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
       }
     }, [modal])
 
-    const [state, setState] = React.useState<State>({ top: 0 })
+    const [state, setState] = React.useState<State>({ top: "0%" })
     const creationRef = React.useRef<HTMLDivElement | null>(null)
 
     const handleTap = () => {
@@ -48,11 +48,6 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
         const creationElement = creationRef.current
         const elementWidth = creationElement.offsetWidth
         const windowTopCenter = window.innerHeight / 2
-
-        const landscapeElementWidth = window.innerWidth * 0.175
-        const landscapeElementHeight = window.innerHeight * 0.8
-
-        console.log(landscapeElementHeight, landscapeElementWidth)
 
         return window.innerHeight >= window.innerWidth
           ? (setState({
@@ -75,8 +70,6 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
       }
       return setState({ top: "0%" }), modalDispatch(modalActions("CLOSE"))
     }
-
-    console.log(state.top)
 
     const changeDisplay = () => {
       return creation ? (
