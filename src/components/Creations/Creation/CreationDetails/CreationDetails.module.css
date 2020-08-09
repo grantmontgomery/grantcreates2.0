@@ -78,6 +78,9 @@
   margin-right: 5%;
   position: relative;
   margin-left: auto;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: header;
   height: 100%;
   width: 30%;
   display: -webkit-box;
