@@ -18,15 +18,11 @@
   cursor: default;
   margin-right: auto;
   position: fixed;
-  border-radius: 0;
   height: 105vw;
   z-index: 4;
   width: 90vw;
   -webkit-transition: 250ms ease-out;
   transition: 250ms ease-out;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
   border-radius: 5vh;
 }
 
@@ -57,32 +53,36 @@
   font-size: 2.5vh;
 }
 
-.landscapeWrapper {
-  height: 60vh;
-  border-radius: 4vh;
-  width: 80vh;
-  margin-left: auto;
-  background: #11242d;
-  margin-right: auto;
-  position: relative;
-}
-
 @media (orientation: landscape) {
   .creationWrapper {
-    display: none;
+    height: 20vw;
+    border-radius: 4vw;
+    width: 20vw;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    left: 50%;
+    top: 0%;
   }
-  .selectorTitleWrapper {
-    display: none;
-  }
-  .landscapeWrapper {
-    display: block;
+  .creationWrapper.tapped {
+    overflow: hidden;
+    margin-left: auto;
+    cursor: default;
+    margin-right: auto;
+    position: fixed;
+    border-radius: 0;
+    height: 60vw;
+    top: 50%;
+    z-index: 4;
+    width: 60vw;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border-radius: 5vh;
   }
 }
 
 @media (orientation: portrait) {
-  .landscapeWrapper {
-    display: none;
-  }
   .creationWrapper {
     border-radius: 4vh;
     display: block;
@@ -93,6 +93,9 @@
     height: 60vh;
     z-index: 4;
     width: 90vw;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
   }
   .creationWrapper .exit {
     height: 5vh;

@@ -62,10 +62,7 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
               top: windowTopCenter - elemTopPosition - elementWidth * 1.75,
             }),
             modalDispatch(modalActions("CREATION")))
-          : (setState({
-              top: windowTopCenter - elemTopPosition - elementHeight * 2,
-            }),
-            modalDispatch(modalActions("CREATION")))
+          : modalDispatch(modalActions("CREATION"))
       }
     }
 
@@ -99,7 +96,7 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
 
     return (
       <React.Fragment>
-        <div className={css.landscapeWrapper}>
+        {/* <div className={css.landscapeWrapper}>
           <CreationDetails
             detailsName={data.detailsName}
             details={data.details}
@@ -107,10 +104,10 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
             githublink={data.githublink}
             link={data.link}
           ></CreationDetails>
-        </div>
+        </div> */}
         <div
           className={`${css.creationWrapper} ${creation ? css.tapped : null}`}
-          style={{ top: `${state.top}px` }}
+          // style={{ top: `${state.top}px` }}
           ref={creationRef}
         >
           {changeDisplay()}
