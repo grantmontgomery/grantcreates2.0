@@ -1,15 +1,20 @@
 .iconWrapper {
-  height: auto;
-  width: 65%;
-  position: relative;
-  display: block;
+  height: 100%;
+  width: 100%;
+  & .icon {
+    height: auto;
+    width: 65%;
+    position: relative;
+    display: block;
+    box-shadow: 0 0.5vh 1vh #0b171d;
 
-  margin-left: auto;
-  margin-right: auto;
-  top: 50%;
-  transform: translate(0, -50%);
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    transform: translate(0, -50%);
 
-  fill: white;
+    fill: white;
+  }
 }
 .st0 {
   fill: none;
