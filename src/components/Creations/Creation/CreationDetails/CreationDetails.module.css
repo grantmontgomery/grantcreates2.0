@@ -82,7 +82,9 @@
   -ms-grid-column: 1;
   grid-area: header;
   height: 100%;
-  width: 30%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,18 +97,26 @@
           transform: translate(0, -50%);
 }
 
+.detailsWrapper .linksWrapper:first-child {
+  margin-left: 0;
+  margin-right: 1vh;
+}
+
+.detailsWrapper .linksWrapper:last-child {
+  margin-left: 1vh;
+  margin-right: 0;
+}
+
 .detailsWrapper .linksWrapper a {
   display: block;
   position: relative;
-  margin: auto;
-  display: block;
   height: 100%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.detailsWrapper .linksWrapper a .linkWrapper {
+.detailsWrapper .linksWrapper a .link {
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -115,32 +125,11 @@
   width: -moz-fit-content;
   width: fit-content;
   height: 100%;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.detailsWrapper .linksWrapper a .linkWrapper.linkWrapper:last-child {
-  margin-right: 0;
-  margin-left: auto;
-}
-
-.detailsWrapper .linksWrapper a .linkWrapper.linkWrapper:first-child {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.detailsWrapper .linksWrapper a .linkWrapper svg {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
   fill: white;
   height: 4.5vh;
   width: auto;
+  position: relative;
+  display: block;
 }
 
 .detailsWrapper .exit {
@@ -201,29 +190,21 @@
   .detailsWrapper .headerWrapper {
     font-size: 3vh;
   }
-  .detailsWrapper .linksWrapper {
-    margin-right: 5%;
-    position: relative;
-    margin-left: auto;
-    height: 100%;
-    width: 30%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
+  .detailsWrapper .linksWrapper a {
+    margin-left: 2vh;
   }
-  .detailsWrapper .linksWrapper a .linkWrapper svg {
+  .detailsWrapper .linksWrapper a .link {
     height: 5vh;
+  }
+  .detailsWrapper .exit {
+    border-radius: 6vh;
+    height: 6vh;
+    width: 6vh;
+    font-size: 2vh;
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (orientation: portrait) {
   .detailsWrapper {
     display: -ms-grid;
     display: grid;
@@ -239,24 +220,13 @@
   .detailsWrapper .headerWrapper .titleWrapper {
     font-size: 2vh;
   }
-  .detailsWrapper .headerWrapper .linksWrapper {
+  .detailsWrapper .linksWrapper {
     margin-right: 5%;
-    position: relative;
-    margin-left: auto;
-    height: 100%;
-    width: 30%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
   }
-  .detailsWrapper .headerWrapper .linksWrapper a .linkWrapper svg {
+  .detailsWrapper .linksWrapper a {
+    margin-left: 2vh;
+  }
+  .detailsWrapper .linksWrapper a .link {
     height: 4.5vh;
   }
 }
