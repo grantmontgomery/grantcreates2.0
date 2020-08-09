@@ -5,6 +5,8 @@
       grid-template-rows: 40% 15% 30% 15%;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
+  display: -ms-grid;
+  display: grid;
       grid-template-areas: "image" "header" "details" "technologies";
   overflow: hidden;
 }
@@ -165,32 +167,6 @@
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-}
-
-@media (orientation: landscape) {
-  .detailsWrapper {
-    display: -ms-grid;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    -ms-grid-rows: 15% 30% 40% 15%;
-        grid-template-rows: 15% 30% 40% 15%;
-    -ms-grid-columns: 40% 60%;
-        grid-template-columns: 40% 60%;
-        grid-template-areas: "header image" "details image" "technologies technologies" "link link";
-    overflow: hidden;
-  }
-  .detailsWrapper .imageWrapper {
-    background: white;
-    z-index: 1;
-    border-radius: 4vh;
-    height: 100%;
-    -webkit-box-shadow: 1vh #0b171d;
-            box-shadow: 1vh #0b171d;
-    -webkit-filter: drop-shadow(0 2.5vh 1vh #0b171d);
-            filter: drop-shadow(0 2.5vh 1vh #0b171d);
-    width: 100%;
-  }
 }
 
 @media (max-width: 1024px) and (orientation: portrait) {

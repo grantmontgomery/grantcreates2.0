@@ -71,19 +71,45 @@
       margin-right: auto;
       position: fixed;
       border-radius: 0;
-      height: 60vw;
-      // left: 50;
+      height: 80vh;
       top: 50%;
       z-index: 4;
-      width: 60vw;
+      width: 80vh;
       transition: 250ms ease-out;
       transform: translate(-50%, -50%);
       border-radius: 5vh;
     }
   }
-  // .selectorTitleWrapper {
-  //   display: none;
-  // }
+  .selectorTitleWrapper {
+    display: flex;
+    width: fit-content;
+    position: absolute;
+    height: fit-content;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 250ms ease-out;
+    flex-flow: column nowrap;
+    bottom: 2.5%;
+    z-index: -1;
+    & .selctorTitle {
+      font-size: 2vh;
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+      height: fit-content;
+      color: white;
+      font-family: Objektiv Mk2 Bold;
+    }
+    & .subTitle {
+      font-size: 1.8vh;
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+      height: fit-content;
+      color: lightgrey;
+      font-family: Objektiv Mk2 Bold;
+    }
+  }
   // .landscapeWrapper {
   //   display: block;
   // }

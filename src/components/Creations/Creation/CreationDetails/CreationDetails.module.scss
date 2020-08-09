@@ -3,6 +3,7 @@
   height: 100%;
   grid-template-rows: 40% 15% 30% 15%;
   grid-template-columns: 100%;
+  display: grid;
   grid-template-areas: "image" "header" "details" "technologies";
   overflow: hidden;
   & .imageWrapper {
@@ -119,26 +120,26 @@
   }
 }
 
-@media (orientation: landscape) {
-  .detailsWrapper {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-rows: 15% 30% 40% 15%;
-    grid-template-columns: 40% 60%;
-    grid-template-areas: "header image" "details image" "technologies technologies" "link link";
-    overflow: hidden;
-    & .imageWrapper {
-      background: white;
-      z-index: 1;
-      border-radius: 4vh;
-      height: 100%;
-      box-shadow: 1vh #0b171d;
-      filter: drop-shadow(0 2.5vh 1vh #0b171d);
-      width: 100%;
-    }
-  }
-}
+// @media (orientation: landscape) {
+//   .detailsWrapper {
+//     display: grid;
+//     width: 100%;
+//     height: 100%;
+//     grid-template-rows: 15% 30% 40% 15%;
+//     grid-template-columns: 40% 60%;
+//     grid-template-areas: "header image" "details image" "technologies technologies" "link link";
+//     overflow: hidden;
+//     & .imageWrapper {
+//       background: white;
+//       z-index: 1;
+//       border-radius: 4vh;
+//       height: 100%;
+//       box-shadow: 1vh #0b171d;
+//       filter: drop-shadow(0 2.5vh 1vh #0b171d);
+//       width: 100%;
+//     }
+//   }
+// }
 
 @media (max-width: 1024px) and (orientation: portrait) {
   .detailsWrapper {
