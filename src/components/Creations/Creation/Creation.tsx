@@ -86,6 +86,7 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
           technologies={data.technologies}
           githublink={data.githublink}
           link={data.link}
+          handleExit={handleExit}
         ></CreationDetails>
       ) : (
         <MobileSelector
@@ -104,22 +105,11 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
           ref={creationRef}
         >
           {changeDisplay()}
-
-          <div
-            className={`${css.exit}`}
-            style={{
-              display: creation ? "block" : "none",
-              transition: "250ms ease-out",
-            }}
-            onClick={handleExit}
-          >
-            <div className={`${css.xWrapper}`}>X</div>
-          </div>
         </div>
         {creation ? null : (
-          <div className={`${css.selectorTitleWrapper}`}>
-            <div className={`${css.selctorTitle}`}>{data.name}</div>
-            <div className={`${css.subTitle}`}>{data.subTitle}</div>
+          <div className={css.selectorTitleWrapper}>
+            <div className={css.selctorTitle}>{data.name}</div>
+            <div className={css.subTitle}>{data.subTitle}</div>
           </div>
         )}
       </React.Fragment>

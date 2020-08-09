@@ -140,6 +140,23 @@
   width: auto;
 }
 
+.detailsWrapper .exit {
+  background: transparent;
+  border-radius: 5vh;
+  cursor: pointer;
+  position: absolute;
+  float: right;
+  right: 5%;
+  top: 5%;
+  outline: none;
+  color: white;
+  height: 5vh;
+  width: 5vh;
+  border: solid 1px white;
+  font-family: Objektiv Mk2 Bold;
+  font-size: 2.5vh;
+}
+
 .detailsWrapper .headerWrapper {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -167,6 +184,40 @@
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+}
+
+@media (orientation: landscape) {
+  .detailsWrapper .descriptionWrapper .description {
+    text-indent: 5vh;
+    font-size: 2vh;
+  }
+  .detailsWrapper .technologiesWrapper .technologies {
+    font-weight: 200;
+    font-size: 2vh;
+  }
+  .detailsWrapper .headerWrapper {
+    font-size: 3vh;
+  }
+  .detailsWrapper .linksWrapper {
+    margin-right: 5%;
+    position: relative;
+    margin-left: auto;
+    height: 100%;
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .detailsWrapper .linksWrapper a .linkWrapper svg {
+    height: 5vh;
+  }
 }
 
 @media (max-width: 1024px) and (orientation: portrait) {

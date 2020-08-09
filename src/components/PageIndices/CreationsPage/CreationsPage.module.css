@@ -120,9 +120,9 @@
 
 @media (orientation: landscape) {
   .creations {
-    height: 120vh;
-    -ms-grid-rows: 20vh 10vh 12.5vh auto;
-        grid-template-rows: 20vh 10vh 12.5vh auto;
+    height: 100vh;
+    -ms-grid-rows: 20% 10% 12.5% auto;
+        grid-template-rows: 20% 10% 12.5% auto;
         grid-template-areas: "." "header" "types" "creationtype";
   }
   .creations .headerWrapper span {

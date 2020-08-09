@@ -101,6 +101,22 @@
       }
     }
   }
+  & .exit {
+    background: transparent;
+    border-radius: 5vh;
+    cursor: pointer;
+    position: absolute;
+    float: right;
+    right: 5%;
+    top: 5%;
+    outline: none;
+    color: white;
+    height: 5vh;
+    width: 5vh;
+    border: solid 1px white;
+    font-family: Objektiv Mk2 Bold;
+    font-size: 2.5vh;
+  }
 
   & .headerWrapper {
     grid-area: header;
@@ -120,26 +136,45 @@
   }
 }
 
-// @media (orientation: landscape) {
-//   .detailsWrapper {
-//     display: grid;
-//     width: 100%;
-//     height: 100%;
-//     grid-template-rows: 15% 30% 40% 15%;
-//     grid-template-columns: 40% 60%;
-//     grid-template-areas: "header image" "details image" "technologies technologies" "link link";
-//     overflow: hidden;
-//     & .imageWrapper {
-//       background: white;
-//       z-index: 1;
-//       border-radius: 4vh;
-//       height: 100%;
-//       box-shadow: 1vh #0b171d;
-//       filter: drop-shadow(0 2.5vh 1vh #0b171d);
-//       width: 100%;
-//     }
-//   }
-// }
+@media (orientation: landscape) {
+  .detailsWrapper {
+    & .descriptionWrapper {
+      & .description {
+        text-indent: 5vh;
+        font-size: 2vh;
+      }
+    }
+
+    & .technologiesWrapper {
+      & .technologies {
+        font-weight: 200;
+        font-size: 2vh;
+      }
+    }
+
+    & .headerWrapper {
+      font-size: 3vh;
+    }
+    & .linksWrapper {
+      margin-right: 5%;
+      position: relative;
+      margin-left: auto;
+      height: 100%;
+      width: 30%;
+      display: flex;
+      flex-flow: row nowrap;
+      top: 50%;
+      transform: translate(0, -50%);
+      & a {
+        & .linkWrapper {
+          & svg {
+            height: 5vh;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 1024px) and (orientation: portrait) {
   .detailsWrapper {

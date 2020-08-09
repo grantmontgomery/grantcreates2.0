@@ -2,12 +2,17 @@ import * as React from "react"
 import { CreationDataInterface } from "../../types"
 import css from "./CreationDetails.module.css"
 
-export const CreationDetails: React.FunctionComponent<CreationDataInterface> = ({
+interface Props extends CreationDataInterface {
+  handleExit: () => void
+}
+
+export const CreationDetails: React.FunctionComponent<Props> = ({
   detailsName,
   details,
   technologies,
   githublink,
   link,
+  handleExit,
 }) => {
   return (
     <div className={css.detailsWrapper}>
@@ -48,6 +53,9 @@ export const CreationDetails: React.FunctionComponent<CreationDataInterface> = (
       <div className={css.technologiesWrapper}>
         <div className={css.technologies}>{technologies}</div>
       </div>
+      <button className={css.exit} onClick={handleExit}>
+        X
+      </button>
     </div>
   )
 }
