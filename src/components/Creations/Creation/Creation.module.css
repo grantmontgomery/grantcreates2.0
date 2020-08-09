@@ -61,7 +61,6 @@
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     left: 50%;
-    top: 0%;
   }
   .creationWrapper.tapped {
     overflow: hidden;
@@ -71,7 +70,6 @@
     position: fixed;
     border-radius: 0;
     height: 80vh;
-    top: 50%;
     z-index: 4;
     width: 80vh;
     -webkit-transition: 250ms ease-out;

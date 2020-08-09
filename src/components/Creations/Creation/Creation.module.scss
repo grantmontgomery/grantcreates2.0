@@ -63,7 +63,6 @@
     width: 20vw;
     transform: translate(-50%, 0);
     left: 50%;
-    top: 0%;
     &.tapped {
       overflow: hidden;
       margin-left: auto;
@@ -72,7 +71,6 @@
       position: fixed;
       border-radius: 0;
       height: 80vh;
-      top: 50%;
       z-index: 4;
       width: 80vh;
       transition: 250ms ease-out;
