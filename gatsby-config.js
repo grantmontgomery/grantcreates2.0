@@ -29,13 +29,13 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
-    `gatsby-plugin-express`,
-    {
-      resolve: `gatsby-plugin-express`,
-      options: {
-        output: `config/gatsby-express.json`,
-      },
-    },
+    // `gatsby-plugin-express`,
+    // {
+    //   resolve: `gatsby-plugin-express`,
+    //   options: {
+    //     output: `config/gatsby-express.json`,
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
