@@ -14,7 +14,11 @@ const nodemailer = require("nodemailer")
 
 const app = express()
 
-app.use(cors())
+app.use(
+  cors({
+    origin: `https://grantcreates.netlify.app`,
+  })
+)
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
