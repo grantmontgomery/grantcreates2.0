@@ -36,23 +36,29 @@ export const Nav: React.FC = () => {
     ) : null
   }
 
+  let windowElement: Window | null = null
+
   React.useLayoutEffect(() => {
+    windowElement = window
+
     navRef.current?.focus()
   })
 
   React.useEffect(() => {
-    let prevScrollpos = window.pageYOffset
-    window.onscroll = function () {
-      let currentScrollPos = window.pageYOffset
-      if (navRef.current) {
-        const navHeight = navRef.current.offsetHeight
-        navRef.current.style.opacity = "1"
-        if (prevScrollpos > currentScrollPos) {
-          navRef.current.style.top = "0"
-        } else {
-          navRef.current.style.top = `-${navHeight * 1.5}px`
+    if (window) {
+      let prevScrollpos = window.pageYOffset
+      window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset
+        if (navRef.current) {
+          const navHeight = navRef.current.offsetHeight
+          navRef.current.style.opacity = "1"
+          if (prevScrollpos > currentScrollPos) {
+            navRef.current.style.top = "0"
+          } else {
+            navRef.current.style.top = `-${navHeight * 1.5}px`
+          }
+          prevScrollpos = currentScrollPos
         }
-        prevScrollpos = currentScrollPos
       }
     }
   }, [])

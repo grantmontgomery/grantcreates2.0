@@ -10,7 +10,6 @@ import { useModalDispatch, useModalState } from "../../state/ModalGlobal"
 import { modalActions } from "../../state/actions"
 
 import css from "./ContactFloat.module.css"
-import { displayCreations } from "../Creations"
 
 export const ContactFloat: React.FC = () => {
   const [fields, setFields] = React.useState<FormFields>({

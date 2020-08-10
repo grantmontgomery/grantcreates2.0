@@ -303,17 +303,21 @@
   }
   .senderWrapper .sectionWrapper .labelWrapper {
     margin-left: 5%;
-    height: calc(100% / 13 * 4);
+    height: 4vh;
   }
   .senderWrapper .sectionWrapper .labelWrapper label {
-    font-size: calc(3vh / 80vh);
+    font-size: 3vh;
   }
   .senderWrapper .sectionWrapper .inputWrapper {
     height: 4vh;
   }
   .senderWrapper .sectionWrapper .inputWrapper .phoneFormat {
-    height: calc(3vh / 70vh / 80vh);
-    width: calc(7vh / 70vh / 80vh);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     border-radius: 1vh;
   }
   .senderWrapper .sectionWrapper .inputWrapper .phoneFormat div {

@@ -211,17 +211,19 @@
     & .sectionWrapper {
       & .labelWrapper {
         margin-left: 5%;
-        height: calc(100% / 13 * 4);
+        // height: calc(100% / 13 * 4);
+        height: 4vh;
         & label {
-          font-size: calc(3vh / 80vh);
+          // font-size: calc(3vh / 80vh);
+          font-size: 3vh;
         }
       }
 
       & .inputWrapper {
         height: 4vh;
         & .phoneFormat {
-          height: calc(3vh / 70vh / 80vh);
-          width: calc(7vh / 70vh / 80vh);
+          height: fit-content;
+          width: fit-content;
           border-radius: 1vh;
           & div {
             top: 0;

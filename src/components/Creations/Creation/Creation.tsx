@@ -23,6 +23,12 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
       windows: { creation },
     } = useModalState()
 
+    let windowElement: Window | null = null
+
+    React.useLayoutEffect(() => {
+      windowElement = window
+    })
+
     React.useEffect(() => {
       if (!modal) {
         const body: HTMLBodyElement | null = document.querySelector("body")
@@ -41,15 +47,15 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
       if (body) {
         body.style.overflowY = "hidden"
       }
-      if (creationRef.current) {
+      if (creationRef.current && windowElement) {
         const boundingObject = creationRef.current.getBoundingClientRect()
         const elemTopPosition = boundingObject.top
 
         const creationElement = creationRef.current
         const elementWidth = creationElement.offsetWidth
-        const windowTopCenter = window.innerHeight / 2
+        const windowTopCenter = windowElement.innerHeight / 2
 
-        return window.innerHeight >= window.innerWidth
+        return windowElement.innerHeight >= windowElement.innerWidth
           ? (setState({
               top: `${
                 windowTopCenter - elemTopPosition - elementWidth * 1.75
