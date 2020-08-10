@@ -1,4 +1,4 @@
-import { FormFields, Form } from "../types"
+import { FormFields } from "../types"
 import fetch from "node-fetch"
 
 async function postmail(
