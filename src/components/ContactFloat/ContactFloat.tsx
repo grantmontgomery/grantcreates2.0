@@ -165,7 +165,7 @@ export const ContactFloat: React.FC = () => {
     subject: string,
     message: string
   ) {
-    return fetch("http://grantcreates.netlify.app:5000/send", {
+    return fetch("/send", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
