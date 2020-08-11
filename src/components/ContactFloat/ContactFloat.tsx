@@ -165,7 +165,7 @@ export const ContactFloat: React.FC = () => {
     subject: string,
     message: string
   ) {
-    return fetch("/send", {
+    return fetch("/.netlify/functions/server", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -247,7 +247,7 @@ export const ContactFloat: React.FC = () => {
           setFields
         )
       )
-      .catch(() => handleSendFail(setState))
+      .catch(response => (console.log(response), handleSendFail(setState)))
   }
 
   return (
