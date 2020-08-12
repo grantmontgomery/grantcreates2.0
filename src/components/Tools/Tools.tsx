@@ -21,7 +21,7 @@ export const Tools: React.FC = () => {
   return (
     <div className={css.toolsWrapper}>
       {tools.map(tool => (
-        <Tool name={tool}></Tool>
+        <Tool key={`${tool}${Math.random()}`} name={tool}></Tool>
       ))}
     </div>
   )

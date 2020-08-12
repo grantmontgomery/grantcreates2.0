@@ -239,7 +239,8 @@ export const ContactFloat: React.FC = () => {
   ) {
     return (
       postmail(name, phone, company, email, subject, message)
-        .then(response => console.log(response))
+        .then(response => response.json())
+        .then(data => console.log(data))
         // .then(
         //   message => (
         //     console.log(message),

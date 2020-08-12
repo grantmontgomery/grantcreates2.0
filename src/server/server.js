@@ -97,6 +97,8 @@ exports.handler = function (event, context, callback) {
     },
   })
 
+  console.log(transporter)
+
   if (event.httpMethod === "POST") {
     const newJSON = JSON.parse(event.body)
     console.log(newJSON)
@@ -122,10 +124,12 @@ exports.handler = function (event, context, callback) {
       html: output,
     }
 
+    console.log(`the output ${output}`)
+
     transporter.sendMail(mailoptions, (error, info) => {
       console.log("transporter triggered")
       if (error) {
-        return console.log(error), res.send(error)
+        return console.log(error)
       }
 
       console.log(`Message sent`, info.messageId)
@@ -140,15 +144,15 @@ exports.handler = function (event, context, callback) {
         body: info,
       })
     })
-  }
+  } else return
 
-  return callback(null, {
-    statusCode: 200,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-    },
-    body: "Hello World!",
-  })
+  // return callback(null, {
+  //   statusCode: 200,
+  //   headers: {
+  //     "Access-Control-Allow-Origin": "*",
+  //     "Access-Control-Allow-Headers": "Content-Type",
+  //     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+  //   },
+  //   body: "Hello World!",
+  // })
 }
