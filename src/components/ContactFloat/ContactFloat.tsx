@@ -141,7 +141,7 @@ export const ContactFloat: React.FC = () => {
     }
   }
 
-  const handleExit = () => {
+  const handleExit: () => void = () => {
     const body: HTMLBodyElement | null = document.querySelector("body")
     if (body) {
       body.style.overflowY = "scroll"
@@ -149,7 +149,7 @@ export const ContactFloat: React.FC = () => {
     return modalDispatch(modalActions("CLOSE"))
   }
 
-  const handleTap = () => {
+  const handleTap: () => void = () => {
     const body: HTMLBodyElement | null = document.querySelector("body")
     if (body) {
       body.style.overflowY = "hidden"
@@ -237,17 +237,22 @@ export const ContactFloat: React.FC = () => {
     setState: any,
     setFields: any
   ) {
-    return postmail(name, phone, company, email, subject, message)
-      .then(response => response.json())
-      .then(message =>
-        handleSendSuccess(
-          message.accepted.length,
-          setState,
-          handleExit,
-          setFields
-        )
-      )
-      .catch(response => (console.log(response), handleSendFail(setState)))
+    return (
+      postmail(name, phone, company, email, subject, message)
+        .then(response => console.log(response))
+        // .then(
+        //   message => (
+        //     console.log(message),
+        //     handleSendSuccess(
+        //       message.accepted.length,
+        //       setState,
+        //       handleExit,
+        //       setFields
+        //     )
+        //   )
+        // )
+        .catch(response => (console.log(response), handleSendFail(setState)))
+    )
   }
 
   return (

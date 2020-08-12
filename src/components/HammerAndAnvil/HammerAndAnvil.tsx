@@ -96,17 +96,9 @@ const HammerAndAnvil = () => {
     function (gltf) {
       scene.add(gltf.scene)
 
-      // gltf.scene.children[0].scale.x = 0.04
-      // gltf.scene.children[0].scale.y = 0.04
-      // gltf.scene.children[0].scale.z = 0.04
-
       gltf.scene.children[0].scale.x = 0.05
       gltf.scene.children[0].scale.y = 0.05
       gltf.scene.children[0].scale.z = 0.05
-
-      // gltf.scene.children[0].scale.x = 0.03
-      // gltf.scene.children[0].scale.y = 0.03
-      // gltf.scene.children[0].scale.z = 0.03
 
       gltf.scene.children[0].traverse(child => {
         switch (child.type) {

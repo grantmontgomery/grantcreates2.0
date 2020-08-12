@@ -30,18 +30,18 @@
 // app.post(
 //   "/send",
 //   ({ body: { name, phone, email, subject, message, company } }, res) => {
-//     const output = `
-//   <p>A new visitor reached out!</p>
-//   <h3>Message Details</h3>
-//   <ul>
-//   <li>Name: ${name} </li>
-//   <li>Company: ${company} </li>
-//   <li>Phone: ${phone} </li>
-//   <li>Email: ${email} </li>
-//   <li>Subject: ${subject} </li>
-//   <li>Message: ${message} </li>
-//   </ul>
-//   `
+//   const output = `
+// <p>A new visitor reached out!</p>
+// <h3>Message Details</h3>
+// <ul>
+// <li>Name: ${name} </li>
+// <li>Company: ${company} </li>
+// <li>Phone: ${phone} </li>
+// <li>Email: ${email} </li>
+// <li>Subject: ${subject} </li>
+// <li>Message: ${message} </li>
+// </ul>
+// `
 //     // `${process.env.GATSBY_EMAIL_SENDER_PASSWORD}`
 //     // create reusable transporter object using the default SMTP transport
 //     let transporter = nodemailer.createTransport({
@@ -79,16 +79,76 @@
 
 // app.listen(5000, () => console.log("Server started on port 5000"))
 
-exports.handler = function (event, context, callback) {
-  console.log(event.body)
+const nodemailer = require("nodemailer")
+require(`dotenv`).config()
 
-  callback(null, {
+exports.handler = function (event, context, callback) {
+  let transporter = nodemailer.createTransport({
+    service: `gmail`,
+    host: `smtp.gmail.com`,
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: `${process.env.GATSBY_EMAIL_SENDER}`, // generated ethereal user
+      pass: `${process.env.GATSBY_EMAIL_SENDER_PASSWORD}`, // fake password.
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  })
+
+  if (event.httpMethod === "POST") {
+    const newJSON = JSON.parse(event.body)
+    console.log(newJSON)
+
+    const output = `
+    <p>A new visitor reached out!</p>
+    <h3>Message Details</h3>
+    <ul>
+    <li>Name: ${newJSON.name} </li>
+    <li>Company: ${newJSON.company} </li>
+    <li>Phone: ${newJSON.phone} </li>
+    <li>Email: ${newJSON.email} </li>
+    <li>Subject: ${newJSON.subject} </li>
+    <li>Message: ${newJSON.message} </li>
+    </ul>
+    `
+
+    const mailoptions = {
+      from: `"Portfolio Visitor"<nodetest69@gmail.com>`,
+      to: `grant@grantcreates.com`,
+      subject: `Visitor Contact Request`,
+      text: `Hello World?`,
+      html: output,
+    }
+
+    transporter.sendMail(mailoptions, (error, info) => {
+      console.log("transporter triggered")
+      if (error) {
+        return console.log(error), res.send(error)
+      }
+
+      console.log(`Message sent`, info.messageId)
+
+      return callback(null, {
+        statusCode: 200,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+        },
+        body: info,
+      })
+    })
+  }
+
+  return callback(null, {
     statusCode: 200,
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "Content-Type",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
     },
-    body: "Hello, World",
+    body: "Hello World!",
   })
 }
