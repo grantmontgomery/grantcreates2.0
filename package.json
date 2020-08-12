@@ -69,11 +69,10 @@
     "develop": "gatsby develop -o",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "run-p start:**",
-    "start:app": "concurrently \"npm run develop\" \"npm run server\"",
+    "start:app": "npm run develop",
     "start:lambda": "netlify-lambda serve src/server",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "server": "nodemon ./src/server/server.js",
     "test": "node ./src/server/server.js"
   },
   "repository": {

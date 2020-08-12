@@ -168,7 +168,7 @@ export const ContactFloat: React.FC = () => {
     return fetch("http://localhost:9000/.netlify/functions/server", {
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json",
+        "Content-Type": "text/plain",
       },
       method: "POST",
       body: JSON.stringify({
