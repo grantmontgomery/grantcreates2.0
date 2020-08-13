@@ -55,11 +55,11 @@ exports.handler = function (event, context, callback) {
 
   return callback(null, {
     statusCode: 200,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-    },
+    // headers: {
+    //   "Access-Control-Allow-Origin": "*",
+    //   "Access-Control-Allow-Headers": "Content-Type",
+    //   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+    // },
     body: `{"message": "lambda function triggered}`,
   })
 }
