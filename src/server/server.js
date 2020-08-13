@@ -45,27 +45,18 @@ exports.handler = function (event, context, callback) {
 
   transporter.sendMail(mailoptions, function (error, info) {
     if (error) {
-      return callback(null, {
-        statusCode: 200,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Headers": "Content-Type",
-          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-        },
-        body: error,
-      })
     } else {
       console.log(`Message sent`, info.messageId)
-
-      return callback(null, {
-        statusCode: 200,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Headers": "Content-Type",
-          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-        },
-        body: info,
-      })
     }
+  })
+
+  return callback(null, {
+    statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+    },
+    body: `{"message": "lambda function executed"}`,
   })
 }

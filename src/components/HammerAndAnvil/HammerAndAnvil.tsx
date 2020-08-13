@@ -92,7 +92,7 @@ const HammerAndAnvil = () => {
   const loader = new GLTFLoader()
 
   loader.load(
-    "static/GrantCreates3DGLB2.glb",
+    "/GrantCreates3DGLB2.glb",
     function (gltf) {
       scene.add(gltf.scene)
 
