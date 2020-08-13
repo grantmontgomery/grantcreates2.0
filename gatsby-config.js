@@ -41,7 +41,7 @@ module.exports = {
       options: {
         custom: {
           familes: ["Objektiv Mk2, Objektiv Mk2 Bold"],
-          urls: ["/static/fonts/fonts.css"],
+          urls: ["/fonts/fonts.css"],
         },
       },
     },
