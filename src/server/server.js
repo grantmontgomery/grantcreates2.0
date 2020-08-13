@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer")
+const { call } = require("file-loader")
 require(`dotenv`).config()
 
 exports.handler = function (event, context, callback) {
@@ -40,29 +41,25 @@ exports.handler = function (event, context, callback) {
     },
   })
 
+  let response = null
+
   transporter.sendMail(mailoptions, (error, info) => {
-    console.log("transporter triggered")
     if (error) {
-      return callback(null, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Headers": "Content-Type",
-          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-        },
-        body: error,
-      })
+      response = error
     }
 
     console.log(`Message sent`, info.messageId)
 
-    return callback(null, {
-      statusCode: 200,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-      },
-      body: info,
-    })
+    response = info
+  })
+
+  return callback(null, {
+    statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+    },
+    body: `{"message": "lambda function triggered}`,
   })
 }
