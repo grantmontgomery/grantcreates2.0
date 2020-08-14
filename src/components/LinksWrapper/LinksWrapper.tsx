@@ -14,6 +14,10 @@ export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
     windowElement = window
   })
 
+  React.useEffect(() => {
+    windowElement = window
+  })
+
   const determineLink: () => string = () => {
     if (windowElement) {
       return windowElement.innerWidth <= windowElement.innerHeight
