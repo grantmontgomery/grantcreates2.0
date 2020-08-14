@@ -175,10 +175,10 @@
     font-size: 2vw;
   }
   .contactWrapper.extended .headerWrapper .x {
-    border-radius: 2vw;
-    height: 2vw;
-    width: 2vw;
-    font-size: 0.75vw;
+    border-radius: 2.5vw;
+    height: 2.5vw;
+    width: 2.5vw;
+    font-size: 1vw;
   }
 }
 
