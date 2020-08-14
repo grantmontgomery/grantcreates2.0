@@ -9,12 +9,12 @@ export const Headline: React.FC = () => {
     "EXPERIENCES",
   ]
 
-  const [creation, setCreation] = React.useState(0)
+  const [creation, setCreation] = React.useState<number>(0)
 
   React.useEffect(() => {
     const interval = setInterval(() => {
       return setCreation(state => {
-        return state < creations.length ? (state += 1) : 0
+        return state < creations.length - 1 ? (state += 1) : 0
       })
     }, 2000)
     return () => clearInterval(interval)
