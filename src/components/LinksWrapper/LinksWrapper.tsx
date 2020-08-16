@@ -30,7 +30,11 @@ export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
   // }
 
   const determineLink: () => string = () => {
-    return window.innerWidth <= window.innerHeight ? "/" : "/#creations"
+    if (windowElement)
+      return windowElement.innerWidth <= windowElement.innerHeight
+        ? "/"
+        : "/#creations"
+    else return "/"
   }
   return (
     <div className={`${css.linksWrapper} ${css[`${location}`]}`}>
