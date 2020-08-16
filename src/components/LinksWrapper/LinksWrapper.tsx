@@ -7,40 +7,39 @@ interface Props {
   location: string
 }
 
+type State = {
+  link: string
+}
+
 export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
   let windowElement: Window | null = null
+
+  const [state, setState] = React.useState<State>({ link: "/" })
 
   React.useLayoutEffect(() => {
     windowElement = window
   })
 
-  React.useEffect(() => {
-    windowElement = window
-  }, [])
-
-  // const determineLink: () => string = () => {
-  //   console.log(windowElement)
-  //   if (windowElement) {
-  //     return windowElement.innerWidth <= windowElement.innerHeight
-  //       ? "/"
-  //       : "/#creations"
-  //   } else {
-  //     return "/"
-  //   }
-  // }
-
-  const determineLink: () => string = () => {
+  const determineLink: () => void = () => {
+    console.log(windowElement)
     if (windowElement)
-      return windowElement.innerWidth <= windowElement.innerHeight
-        ? "/"
-        : "/#creations"
-    else return "/"
+      return windowElement.innerWidth < windowElement.innerHeight
+        ? setState({ link: "/" })
+        : setState({ link: "/#creations" })
+    else return
   }
+
+  console.log(state.link)
+
+  React.useEffect(() => {
+    determineLink()
+  }, [windowElement])
+
   return (
     <div className={`${css.linksWrapper} ${css[`${location}`]}`}>
       <div className={css.innerLinks}>
         <div className={css.link}>
-          <Link to={determineLink()} onClick={handleTap}>
+          <Link to={state.link} onClick={handleTap}>
             <div className={css.text}>Creations</div>
           </Link>
         </div>
