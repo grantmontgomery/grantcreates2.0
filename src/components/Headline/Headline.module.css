@@ -52,12 +52,13 @@
 }
 
 .headlineWrapper .secondHeadline span {
-  font-size: 5vw;
+  font-size: 4vw;
   color: #e2eef3;
 }
 
 .headlineWrapper .secondHeadline span:last-child {
-  margin-left: 2vw;
+  margin-left: 1vw;
+  color: #61dbfb;
 }
 
 .headlineWrapper .thirdHeadline {

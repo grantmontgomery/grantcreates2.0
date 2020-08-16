@@ -9,26 +9,27 @@ export const Headline: React.FC = () => {
     "EXPERIENCES",
   ]
 
-  const [creation, setCreation] = React.useState<number>(0)
+  // const [creation, setCreation] = React.useState<number>(0)
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      return setCreation(state => {
-        return state < creations.length - 1 ? (state += 1) : 0
-      })
-    }, 2000)
-    return () => clearInterval(interval)
-  }, [])
+  // React.useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     return setCreation(state => {
+  //       return state < creations.length - 1 ? (state += 1) : 0
+  //     })
+  //   }, 2000)
+  //   return () => clearInterval(interval)
+  // }, [])
 
   return (
     <div className={css.headlineWrapper}>
       <span className={css.firstHeadline}>Hi, I'm Grant</span>
       <div className={css.secondHeadline}>
-        <span className={css.staticText}>I CREATE</span>
-        <span className={css.dynamicText}>{`${creations[creation]}`}</span>
+        <span className={css.staticText}>I CREATE THINGS THAT LOOK</span>
+        {/* <span className={css.dynamicText}>{`${creations[creation]}`}</span> */}
+        <span className={css.dynamicText}>RAD</span>
       </div>
       <span className={css.thirdHeadline}>
-        Web Developer from Los Angeles, CA
+        React Developer from Los Angeles, CA
       </span>
     </div>
   )
