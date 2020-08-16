@@ -21,7 +21,7 @@
       height: fit-content;
       width: fit-content;
       white-space: none;
-      color: white;
+      color: #e2eef3;
     }
   }
   & .creationTypes {
@@ -66,7 +66,7 @@
       }
       &.active {
         background: #203a43;
-        color: white;
+        color: #e2eef3;
         transition: 250ms ease-out;
       }
     }

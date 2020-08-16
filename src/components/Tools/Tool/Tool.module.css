@@ -28,7 +28,7 @@
   width: 10vw;
   height: auto;
   display: block;
-  fill: white;
+  fill: #e2eef3;
 }
 
 .toolWrapper p {
@@ -50,7 +50,7 @@
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   font-size: 3vw;
-  color: white;
+  color: #e2eef3;
 }
 
 @media (min-width: 450px), (max-width: 1024px) and (orientation: portrait) {
@@ -104,7 +104,6 @@
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     font-size: 3vw;
-    color: white;
   }
 }
 
@@ -158,7 +157,6 @@
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     font-size: 3vw;
-    color: white;
   }
 }
 
@@ -212,7 +210,6 @@
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     font-size: 1.5vw;
-    color: white;
   }
 }
 /*# sourceMappingURL=Tool.module.css.map */

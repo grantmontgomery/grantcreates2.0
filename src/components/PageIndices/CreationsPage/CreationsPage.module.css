@@ -35,7 +35,7 @@
   width: -moz-fit-content;
   width: fit-content;
   white-space: none;
-  color: white;
+  color: #e2eef3;
 }
 
 .creations .creationTypes {
@@ -99,7 +99,7 @@
 
 .creations .creationTypes .type.active {
   background: #203a43;
-  color: white;
+  color: #e2eef3;
   -webkit-transition: 250ms ease-out;
   transition: 250ms ease-out;
 }

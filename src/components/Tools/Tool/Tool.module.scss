@@ -16,7 +16,7 @@
     width: 10vw;
     height: auto;
     display: block;
-    fill: white;
+    fill: #e2eef3;
   }
   & p {
     height: fit-content;
@@ -32,7 +32,7 @@
     top: 50%;
     transform: translate(0, -50%);
     font-size: 3vw;
-    color: white;
+    color: #e2eef3;
   }
 }
 
@@ -69,7 +69,6 @@
       top: 50%;
       transform: translate(0, -50%);
       font-size: 3vw;
-      color: white;
     }
   }
 }
@@ -107,7 +106,6 @@
       top: 50%;
       transform: translate(0, -50%);
       font-size: 3vw;
-      color: white;
     }
   }
 }
@@ -145,7 +143,6 @@
       top: 50%;
       transform: translate(0, -50%);
       font-size: 1.5vw;
-      color: white;
     }
   }
 }
