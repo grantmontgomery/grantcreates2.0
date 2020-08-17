@@ -6,7 +6,7 @@ import css from "./Anvil.module.css"
 export const Anvil: React.FC<LogoProps> = ({ location }) => {
   return (
     <svg
-      className={`${css.creation}`}
+      className={css.creation}
       version="1.1"
       x="0px"
       y="0px"
@@ -29,7 +29,7 @@ export const Anvil: React.FC<LogoProps> = ({ location }) => {
           height="2.8"
         />
         <path
-          className={`${css.st89}`}
+          className={css.st89}
           d="M154.2,199.8H153c-0.5,0-0.9-0.4-0.9-0.9v-0.3h2.1V199.8z"
         />
         <path
