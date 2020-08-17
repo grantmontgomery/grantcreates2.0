@@ -7,14 +7,10 @@ interface Props {
   location: string
 }
 
-type State = {
-  link: string
-}
-
 export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
   let windowElement: Window | null = null
 
-  const [state, setState] = React.useState<State>({ link: "/" })
+  const [link, setLink] = React.useState<string>("/")
 
   React.useLayoutEffect(() => {
     windowElement = window
@@ -24,12 +20,10 @@ export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
     console.log(windowElement)
     if (windowElement)
       return windowElement.innerWidth < windowElement.innerHeight
-        ? setState({ link: "/" })
-        : setState({ link: "/#creations" })
+        ? setLink("/")
+        : setLink("/#creations")
     else return
   }
-
-  console.log(state.link)
 
   React.useEffect(() => {
     determineLink()
@@ -39,7 +33,7 @@ export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
     <div className={`${css.linksWrapper} ${css[`${location}`]}`}>
       <div className={css.innerLinks}>
         <div className={css.link}>
-          <Link to={state.link} onClick={handleTap}>
+          <Link to={link} onClick={handleTap}>
             <div className={css.text}>Creations</div>
           </Link>
         </div>

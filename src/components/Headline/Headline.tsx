@@ -2,23 +2,18 @@ import * as React from "react"
 import css from "./Headline.module.css"
 
 export const Headline: React.FC = () => {
-  const creations: string[] = [
-    "APPLICATIONS",
-    "SOLUTIONS",
-    "DESIGNS",
-    "EXPERIENCES",
-  ]
+  const creations: string[] = ["RAD", "COOL", "SHARP", "UNIQUE"]
 
-  // const [creation, setCreation] = React.useState<number>(0)
+  const [creation, setCreation] = React.useState<number>(0)
 
-  // React.useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     return setCreation(state => {
-  //       return state < creations.length - 1 ? (state += 1) : 0
-  //     })
-  //   }, 2000)
-  //   return () => clearInterval(interval)
-  // }, [])
+  React.useEffect(() => {
+    setInterval(() => {
+      return creation < creations.length - 1
+        ? setCreation(creation => creation++)
+        : setCreation(0)
+    }, 2000)
+    return clearInterval()
+  }, [])
 
   return (
     <div className={css.headlineWrapper}>
@@ -26,7 +21,7 @@ export const Headline: React.FC = () => {
       <div className={css.secondHeadline}>
         <span className={css.staticText}>I CREATE THINGS THAT LOOK</span>
         {/* <span className={css.dynamicText}>{`${creations[creation]}`}</span> */}
-        <span className={css.dynamicText}>RAD</span>
+        <span className={css.dynamicText}>{`${creations[creation]}`}</span>
       </div>
       <span className={css.thirdHeadline}>
         React Developer from Los Angeles, CA
