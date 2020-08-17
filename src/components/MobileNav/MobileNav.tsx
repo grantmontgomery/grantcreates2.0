@@ -19,6 +19,7 @@ export const MobileNav: React.FC<Props> = ({ navLinks, handleTap }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 150 130"
       role="img"
+      enableBackground="new 0 0 150 130"
     >
       <path
         className={css.path1}
