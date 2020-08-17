@@ -10,6 +10,7 @@ export const FullLogo = ({ location }: LogoProps) => {
         x="0px"
         y="0px"
         viewBox="0 0 1614.5 548.6"
+        xmlns="http://www.w3.org/2000/svg"
         enableBackground="new 0 0 1614.5 548.6"
       >
         <g id="Layer_1"></g>
