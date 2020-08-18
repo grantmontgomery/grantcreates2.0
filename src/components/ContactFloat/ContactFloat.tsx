@@ -250,6 +250,7 @@ export const ContactFloat: React.FC = () => {
           console.log(data)
         )
       })
+
       .catch(response => (console.log(response), handleSendFail(setState)))
   }
 
