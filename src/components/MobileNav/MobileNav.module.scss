@@ -21,12 +21,12 @@
   z-index: 5;
   &.normal {
     & .path1 {
-      stroke-dasharray: 200px;
-      stroke-dashoffset: -193px;
+      stroke-dasharray: 193px;
+      stroke-dashoffset: 193px;
       transition: 250ms ease-out;
     }
     & .path2 {
-      stroke-dashoffset: -195px;
+      stroke-dashoffset: 195px;
       stroke-dasharray: 195px;
       transition: 250ms ease-out;
     }
@@ -34,13 +34,13 @@
 
   &.switched {
     & .path1 {
-      stroke-dasharray: 171px;
-      stroke-dashoffset: 15;
+      stroke-dasharray: 174px;
+      stroke-dashoffset: 369px;
       transition: 250ms ease-out;
     }
     & .path2 {
-      stroke-dasharray: 154px;
-      stroke-dashoffset: -2;
+      stroke-dasharray: 156px;
+      stroke-dashoffset: 314;
       transition: 250ms ease-out;
     }
   }
