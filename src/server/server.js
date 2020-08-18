@@ -58,13 +58,37 @@ exports.handler = async (event, context) => {
       .then(info => {
         console.log("sending response")
         console.log(info)
-        return { statusCode: 200, body: info }
+        return {
+          statusCode: 200,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+          },
+          body: info,
+        }
       })
       .catch(error => {
         console.log("sending response")
-        return { statusCode: 200, body: error }
+        return {
+          statusCode: 200,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+          },
+          body: error,
+        }
       })
   } catch {
-    return { statusCode: 500, body: "server failed" }
+    return {
+      statusCode: 500,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+      },
+      body: "server failed",
+    }
   }
 }
