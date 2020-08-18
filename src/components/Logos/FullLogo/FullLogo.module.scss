@@ -16,6 +16,7 @@
     width: auto;
     outline: none;
     user-select: none;
+    display: block;
     pointer-events: none;
     &::selection {
       background: none;
