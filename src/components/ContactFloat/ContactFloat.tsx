@@ -238,11 +238,18 @@ export const ContactFloat: React.FC = () => {
     setFields: any
   ) {
     return postmail(name, phone, company, email, subject, message)
-      .then(response => response.json())
-      .then(data =>
-        handleSendSuccess(data.accepted.length, setState, handleExit, setFields)
-      )
-
+      .then(response => (response.json(), console.log(response)))
+      .then(data => {
+        return (
+          handleSendSuccess(
+            data.accepted.length,
+            setState,
+            handleExit,
+            setFields
+          ),
+          console.log(data)
+        )
+      })
       .catch(response => (console.log(response), handleSendFail(setState)))
   }
 
