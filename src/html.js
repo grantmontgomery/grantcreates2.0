@@ -8,6 +8,7 @@ import { useLayoutEffect } from "react"
 export default function HTML(props) {
   useLayoutEffect(() => {
     smoothscroll.polyfill()
+    console.log(smoothscroll)
   })
   return (
     <html {...props.htmlAttributes}>

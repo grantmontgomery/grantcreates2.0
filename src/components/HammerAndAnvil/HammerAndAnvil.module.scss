@@ -26,6 +26,8 @@
     height: 100%;
     position: relative;
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
     cursor: grab;
     outline: none;
     &:active {
