@@ -14,7 +14,6 @@ const HammerAndAnvil = () => {
 
   const camera = new THREE.PerspectiveCamera(75, 0.45, 1, 1000)
 
-  // camera.position.z = 5
   camera.position.z = 4.5
 
   camera.position.y = 4
@@ -23,8 +22,6 @@ const HammerAndAnvil = () => {
   ///Renderer
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-
-  // renderer.setSize()
 
   function resizeCanvasToDisplaySize() {
     const canvas = renderer.domElement
@@ -86,7 +83,6 @@ const HammerAndAnvil = () => {
   lightHolder.add(directionalLight)
   scene.add(lightHolder)
 
-  // scene.add(directionalLight)
   scene.add(ambient)
 
   const loader = new GLTFLoader()
@@ -121,7 +117,6 @@ const HammerAndAnvil = () => {
       gltf.scene.position.x += gltf.scene.position.x - center.x
       gltf.scene.position.y += gltf.scene.position.y - center.y
       gltf.scene.position.z += gltf.scene.position.z - center.z
-      // gltf.scene.children[0].children[1].visible = false
     },
 
     function (loading) {
@@ -131,29 +126,6 @@ const HammerAndAnvil = () => {
       console.error(error)
     }
   )
-
-  // const geometry = new THREE.PlaneGeometry(5, 20, 32)
-  // const material = new THREE.MeshBasicMaterial({
-  //   color: 0xfffff,
-  //   side: THREE.DoubleSide,
-  // })
-  // const plane = new THREE.Mesh(geometry, material)
-  // scene.add(plane)
-
-  const rectLight = new THREE.RectAreaLight(0x61dbfb, 2, 2, 2)
-  // rectLight.position.set(
-  //   0.014805922368961166,
-  //   5.2348530855468685,
-  //   58.49785808001576
-  // )
-
-  rectLight.position.set(0, 5, 0)
-
-  rectLight.lookAt(0, 0, 0)
-  // scene.add(rectLight)
-
-  const helper = new RectAreaLightHelper(rectLight)
-  // scene.add(helper)
 
   const animate = function () {
     resizeCanvasToDisplaySize()
