@@ -1,9 +1,14 @@
 import React from "react"
 import { LoadingAssets } from "./components/LoadingAssets"
+import smoothscroll from "smoothscroll-polyfill"
 import { Chain, LoadingAnvil } from "./components/LoadingAssets"
 import PropTypes from "prop-types"
+import { useLayoutEffect } from "react"
 
 export default function HTML(props) {
+  useLayoutEffect(() => {
+    smoothscroll.polyfill()
+  })
   return (
     <html {...props.htmlAttributes}>
       <head>
