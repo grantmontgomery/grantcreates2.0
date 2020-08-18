@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer")
 const { call } = require("file-loader")
 require(`dotenv`).config()
 
-exports.handler = async event => {
+exports.handler = async (event, context) => {
   try {
     const promise = new Promise((resolve, reject) => {
       const newJSON = JSON.parse(event.body)
@@ -46,25 +46,25 @@ exports.handler = async event => {
       transporter.sendMail(mailoptions, function (error, info) {
         console.log("TRANSPORTER TRIGGERED")
         if (error) {
-          reject(error)
+          reject(JSON.stringify(error))
           console.log(error)
         } else {
           console.log(`Message sent`, info.messageId)
-          resolve(info)
+          resolve(JSON.stringify(info))
         }
       })
     })
     return promise
       .then(info => {
+        console.log("sending response")
+        console.log(info)
         return { statusCode: 200, body: info }
       })
       .catch(error => {
+        console.log("sending response")
         return { statusCode: 200, body: error }
       })
   } catch {
-    return {
-      statusCode: 500,
-      body: "Server failed",
-    }
+    return { statusCode: 500, body: "server failed" }
   }
 }
