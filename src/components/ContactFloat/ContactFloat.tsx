@@ -189,14 +189,14 @@ export const ContactFloat: React.FC = () => {
 
   const handleSendFail = (setState: any) => {
     setTimeout(() => {
-      return setState({ ...state, mailStatus: "failed" })
+      return setState(state => ({ ...state, mailStatus: "failed" }))
     }, 2000)
     setTimeout(() => {
-      return setState({
+      return setState(state => ({
         ...state,
         formSide: "email",
         mailStatus: "not sent",
-      })
+      }))
     }, 4000)
   }
 
@@ -209,7 +209,7 @@ export const ContactFloat: React.FC = () => {
     if (accepted > 0) {
       setTimeout(() => {
         console.log("sucessStarted")
-        return setState({ ...state, mailStatus: "delivered" })
+        return setState(state => ({ ...state, mailStatus: "delivered" }))
       }, 2000)
       setTimeout(() => {
         console.log("success ended")
