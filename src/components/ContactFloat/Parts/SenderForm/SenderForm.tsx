@@ -2,7 +2,6 @@ import * as React from "react"
 import { FormFields } from "../../types"
 import { formatNumber, correctEmailFormat, correctPhoneFormat } from "./Logic"
 import css from "./SenderForm.module.css"
-import { stateContext } from "react-three-fiber"
 
 type SenderProps = {
   setFields: any

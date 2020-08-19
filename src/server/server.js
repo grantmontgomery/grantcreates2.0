@@ -33,6 +33,7 @@ exports.handler = async (event, context) => {
         host: `smtp.gmail.com`,
         sendMail: true,
         port: 587,
+        requireTLS: true,
         secure: false, // true for 465, false for other ports
         auth: {
           user: `${process.env.GATSBY_EMAIL_SENDER}`, // generated ethereal user
