@@ -10,6 +10,11 @@ import { useModalDispatch, useModalState } from "../../state/ModalGlobal"
 import { modalActions } from "../../state/actions"
 
 import css from "./ContactFloat.module.css"
+import { string } from "prop-types"
+
+// function SetState(state:FormState):FormState{
+//   return {...state}
+// }
 
 export const ContactFloat: React.FC = () => {
   const [fields, setFields] = React.useState<FormFields>({
@@ -41,7 +46,7 @@ export const ContactFloat: React.FC = () => {
   } = useModalState()
 
   const checkFields = () => {
-    const { name, phone, email, subject, message } = fields
+    const { name, phone, email, subject, message }: FormFields = fields
     if (
       name !== "" &&
       phone !== "" &&
@@ -73,10 +78,10 @@ export const ContactFloat: React.FC = () => {
         }
       }
     } else {
-      const fieldKeys = Object.keys(fields)
-      const errorKeys = Object.keys(errors)
+      const fieldKeys: string[] = Object.keys(fields)
+      const errorKeys: string[] = Object.keys(errors)
 
-      return fieldKeys.forEach(field => {
+      return fieldKeys.forEach((field: string) => {
         if (fields[field] === "") {
           errorKeys.forEach(error => {
             if (error.includes(field)) {
@@ -184,14 +189,14 @@ export const ContactFloat: React.FC = () => {
 
   const handleSendFail = (setState: any) => {
     setTimeout(() => {
-      return setState(state => ({ ...state, mailStatus: "failed" }))
+      return setState({ ...state, mailStatus: "failed" })
     }, 2000)
     setTimeout(() => {
-      return setState(state => ({
+      return setState({
         ...state,
         formSide: "email",
         mailStatus: "not sent",
-      }))
+      })
     }, 4000)
   }
 
@@ -204,7 +209,7 @@ export const ContactFloat: React.FC = () => {
     if (accepted > 0) {
       setTimeout(() => {
         console.log("sucessStarted")
-        return setState(state => ({ ...state, mailStatus: "delivered" }))
+        return setState({ ...state, mailStatus: "delivered" })
       }, 2000)
       setTimeout(() => {
         console.log("success ended")
