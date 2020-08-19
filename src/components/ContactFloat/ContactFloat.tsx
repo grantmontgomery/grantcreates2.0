@@ -245,6 +245,7 @@ export const ContactFloat: React.FC = () => {
     return postmail(name, phone, company, email, subject, message)
       .then(response =>
         response.json().then(data => {
+          console.log(data)
           return handleSendSuccess(
             data.accepted.length,
             setState,
