@@ -54,7 +54,8 @@
     "tslint": "^6.1.2",
     "typescript": "^3.9.7",
     "typescript-plugin-css-modules": "^2.4.0",
-    "typings-for-css-modules-loader": "^1.7.0"
+    "typings-for-css-modules-loader": "^1.7.0",
+    "xoauth2": "^1.2.0"
   },
   "devDependencies": {
     "file-loader": "^6.0.0",
