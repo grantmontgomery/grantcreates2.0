@@ -1,13 +1,13 @@
-// require("dotenv").config({
-//   path: `.env.${process.env.NODE_ENV}`,
-// })
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
     title: "Grant Creates | React Developer | For Hire",
     description:
       "A React Developer based out of Los Angeles seeking a Front-End Developer position.",
-     
+
     author: "Grant Montgomery",
   },
   plugins: [

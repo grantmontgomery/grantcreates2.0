@@ -1,5 +1,4 @@
 const nodemailer = require("nodemailer")
-const { call } = require("file-loader")
 require(`dotenv`).config()
 
 exports.handler = async (event, context) => {
