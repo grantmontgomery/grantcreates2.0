@@ -165,7 +165,7 @@ export const ContactFloat: React.FC = () => {
     subject: string,
     message: string
   ) {
-    return fetch("/.netlify/functions/server", {
+    return fetch("http://localhost:9000/.netlify/functions/server", {
       headers: {
         Accept: "application/json",
         "Content-Type": "text/plain",
@@ -238,19 +238,16 @@ export const ContactFloat: React.FC = () => {
     setFields: any
   ) {
     return postmail(name, phone, company, email, subject, message)
-      .then(response => (response.json(), console.log(response)))
-      .then(data => {
-        return (
-          handleSendSuccess(
+      .then(response =>
+        response.json().then(data => {
+          return handleSendSuccess(
             data.accepted.length,
             setState,
             handleExit,
             setFields
-          ),
-          console.log(data)
-        )
-      })
-
+          )
+        })
+      )
       .catch(response => (console.log(response), handleSendFail(setState)))
   }
 

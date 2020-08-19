@@ -25,7 +25,7 @@
 }
 
 .mobileNav.switched .path1 {
-  stroke-dasharray: 174px;
+  stroke-dasharray: 175px;
   stroke-dashoffset: 369px;
   -webkit-transition: 250ms ease-out;
   transition: 250ms ease-out;
@@ -46,7 +46,7 @@
 
 @media (max-width: 749px) {
   .mobileNav path {
-    stroke-width: 1vh;
+    stroke-width: 0.75vh;
   }
 }
 
