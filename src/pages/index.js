@@ -11,10 +11,14 @@ import {
   Headline,
   Layout,
 } from "../components"
+import smoothscroll from "smoothscroll-polyfill"
 import "./index.css"
 import { ContactPage } from "../components/PageIndices"
 
 const IndexPage = () => {
+  useEffect(() => {
+    smoothscroll.polyfill()
+  }, [])
   return (
     <Layout>
       <HomePage></HomePage>

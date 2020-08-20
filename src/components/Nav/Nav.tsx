@@ -9,13 +9,8 @@ import { modalActions } from "../../state/actions"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 import css from "./Nav.module.css"
 
-type State = {
-  boxShadow: string
-}
-
 export const Nav: React.FC = () => {
   const navRef = React.useRef<HTMLElement | null>(null)
-  // const [state, setState] = React.useState<State>({ boxShadow: "none" })
   const {
     windows: { navLinks },
   } = useModalState()
