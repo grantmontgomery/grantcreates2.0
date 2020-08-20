@@ -1,6 +1,15 @@
 require(`dotenv`).config()
 
 const nodemailer = require("nodemailer")
+const { google } = require(`googleapis`)
+const { OAuth2 } = google.auth
+const OAUTH_PLAYGROUND = "https://developers.google.com/oauthplayground"
+
+const oauth2Client = new OAuth2(
+  process.env.GATSBY_CLIENT_ID,
+  process.env.GATSBY_CLIENT_SECRET,
+  OAUTH_PLAYGROUND
+)
 
 exports.handler = async (event, context) => {
   try {
@@ -21,25 +30,29 @@ exports.handler = async (event, context) => {
     `
 
       const mailoptions = {
-        from: `"Portfolio Visitor"<nodetest94@aol.com>`,
+        from: `"Portfolio Visitor"`,
         to: `grant@grantcreates.com`,
         subject: `Visitor Contact Request`,
         text: `Hello World?`,
         html: output,
       }
 
+      oauth2Client.setCredentials({
+        refresh_token: process.env.GATSBY_EMAIL_REFRESH_TOKEN,
+      })
+
+      const accessToken = oauth2Client.getAccessToken()
+
       let transporter = nodemailer.createTransport({
         service: `gmail`,
-        host: `smtp.gmail.com`,
         sendMail: true,
-        port: 25,
-        secure: false,
         auth: {
-          user: `${process.env.GATSBY_EMAIL_SENDER}`,
-          pass: `${process.env.GATSBY_EMAIL_SENDER_PASSWORD}`,
-        },
-        tls: {
-          rejectUnauthorized: false,
+          type: "OAuth2",
+          user: process.env.GATSBY_EMAIL_SENDER,
+          clientId: process.env.GATSBY_CLIENT_ID,
+          clientSecret: process.env.GATSBY_CLIENT_SECRET,
+          refreshToken: process.env.GATSBY_EMAIL_REFRESH_TOKEN,
+          accessToken,
         },
       })
 
