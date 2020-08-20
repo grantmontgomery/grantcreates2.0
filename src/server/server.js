@@ -31,11 +31,9 @@ exports.handler = async (event, context) => {
 
       let transporter = nodemailer.createTransport({
         service: `gmail`,
-        host: `smtp.gmail.com`,
         sendMail: true,
-        port: 587,
-        requireTLS: true,
-        secure: false, // true for 465, false for other ports
+        port: 25,
+        secure: false,
         auth: {
           user: `${process.env.GATSBY_EMAIL_SENDER}`,
           pass: `${process.env.GATSBY_EMAIL_SENDER_PASSWORD}`,
