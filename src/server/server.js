@@ -35,8 +35,14 @@ exports.handler = async (event, context) => {
         port: 25,
         secure: false,
         auth: {
-          user: `${process.env.GATSBY_EMAIL_SENDER}`,
-          pass: `${process.env.GATSBY_EMAIL_SENDER_PASSWORD}`,
+          xoauth2: xoauth2.createXOAuth2Generator({
+            user: `${process.env.GATSBY_EMAIL_SENDER}`,
+            clientId: `458994737075-7v5lp3pnh5u8hns4tti142bbfe4qc9j8.apps.googleusercontent.com`,
+            clientSecret: ``,
+            refreshToken: ``,
+          }),
+          // user: `${process.env.GATSBY_EMAIL_SENDER}`,
+          // pass: `${process.env.GATSBY_EMAIL_SENDER_PASSWORD}`,
         },
         tls: {
           rejectUnauthorized: false,
