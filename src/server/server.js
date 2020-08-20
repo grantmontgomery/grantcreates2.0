@@ -30,15 +30,15 @@ exports.handler = async (event, context) => {
       }
 
       let transporter = nodemailer.createTransport({
-        service: `AOL`,
-        host: `smtp.aol.com`,
+        service: `gmail`,
+        host: `smtp.gmail.com`,
         sendMail: true,
         port: 587,
         requireTLS: true,
         secure: false, // true for 465, false for other ports
         auth: {
           user: `${process.env.GATSBY_EMAIL_SENDER}`,
-          pass: `${process.env.GATSBY_EMAIL_PASSWORD}`,
+          pass: `${process.env.GATSBY_EMAIL_SENDER_PASSWORD}`,
         },
         tls: {
           rejectUnauthorized: false,
