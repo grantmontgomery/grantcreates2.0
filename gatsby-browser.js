@@ -8,11 +8,9 @@ exports.wrapRootElement = ({ element }) => {
 exports.onInitialClientRender = () => {
   setTimeout(() => {
     document.getElementById("___loader").style.opacity = "0"
-    console.log("loader changed.")
   }, 1000)
   setTimeout(() => {
     document.getElementById("___loader").remove()
-    console.log("loader removed")
   }, 1500)
   setTimeout(() => {
     document.getElementById("___gatsby").style.display = "block"

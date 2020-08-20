@@ -119,9 +119,7 @@ const HammerAndAnvil = () => {
       gltf.scene.position.z += gltf.scene.position.z - center.z
     },
 
-    function (loading) {
-      console.log(loading)
-    },
+    function (loading) {},
     function (error) {
       console.error(error)
     }

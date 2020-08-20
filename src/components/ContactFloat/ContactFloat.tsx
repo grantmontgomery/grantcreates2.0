@@ -208,11 +208,9 @@ export const ContactFloat: React.FC = () => {
   ) => {
     if (accepted > 0) {
       setTimeout(() => {
-        console.log("sucessStarted")
         return setState(state => ({ ...state, mailStatus: "delivered" }))
       }, 2000)
       setTimeout(() => {
-        console.log("success ended")
         return (
           setState({
             tapped: false,
@@ -245,7 +243,6 @@ export const ContactFloat: React.FC = () => {
     return postmail(name, phone, company, email, subject, message)
       .then(response =>
         response.json().then(data => {
-          console.log(data)
           return handleSendSuccess(
             data.accepted.length,
             setState,

@@ -130,9 +130,7 @@ const Hammer: () => void = () => {
       // gltf.scene.children[0].children[1].visible = false
     },
 
-    function (loading) {
-      console.log(loading)
-    },
+    function (loading) {},
     function (error) {
       console.error(error)
     }
@@ -158,7 +156,6 @@ const Hammer: () => void = () => {
   rectLight.lookAt(0, 0, 0)
   // scene.add(rectLight)
 
-  const helper = new RectAreaLightHelper(rectLight)
   // scene.add(helper)
 
   const animate = function () {
