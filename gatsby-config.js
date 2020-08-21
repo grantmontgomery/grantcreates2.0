@@ -7,7 +7,7 @@ module.exports = {
     title: "Grant Creates | React Developer | For Hire",
     description:
       "A React Developer based out of Los Angeles seeking a Front-End Developer position.",
-
+    url: "https://www.grantcreates.com",
     author: "Grant Montgomery",
   },
   plugins: [
@@ -31,13 +31,7 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
-    // `gatsby-plugin-express`,
-    // {
-    //   resolve: `gatsby-plugin-express`,
-    //   options: {
-    //     output: `config/gatsby-express.json`,
-    //   },
-    // },
+
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -50,13 +44,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        theme_color_in_head: false,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
