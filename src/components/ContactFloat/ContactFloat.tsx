@@ -1,6 +1,5 @@
 import * as React from "react"
 import { EmailForm, SenderForm, SendStatus, Pointer, MailIcon } from "./Parts"
-// import { sendMail } from "./Logic"
 import {
   correctPhoneFormat,
   correctEmailFormat,
