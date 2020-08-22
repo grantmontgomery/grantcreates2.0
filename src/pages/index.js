@@ -10,6 +10,7 @@ import {
   Scene,
   Headline,
   Layout,
+  SEO,
 } from "../components"
 import smoothscroll from "smoothscroll-polyfill"
 import "./index.css"
@@ -21,6 +22,8 @@ const IndexPage = () => {
   }, [])
   return (
     <Layout>
+      {" "}
+      <SEO></SEO>
       <HomePage></HomePage>
       <CreationsPage></CreationsPage>
       <AboutPage></AboutPage>

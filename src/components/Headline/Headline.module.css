@@ -36,7 +36,7 @@
 
 .headlineWrapper .firstHeadline {
   color: #3e768e;
-  font-size: 3.5vw;
+  font-size: 3.75vw;
 }
 
 .headlineWrapper .secondHeadline {
@@ -63,7 +63,7 @@
 
 .headlineWrapper .thirdHeadline {
   color: #3e768e;
-  font-size: 3.5vw;
+  font-size: 3.75vw;
 }
 
 @media (orientation: landscape) {

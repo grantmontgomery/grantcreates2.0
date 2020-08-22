@@ -9,6 +9,7 @@ module.exports = {
       "A React Developer based out of Los Angeles seeking a Front-End Developer position.",
     url: "https://www.grantcreates.com",
     author: "Grant Montgomery",
+    lang: "en",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
