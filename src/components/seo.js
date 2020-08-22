@@ -20,6 +20,27 @@ export const SEO = () => {
     `
   )
 
+  const SEOImage = useStaticQuery(
+    graphql`
+      query ImageQuery {
+        file(relativePath: { eq: "GrantCreatesAnvilSEO.png" }) {
+          childImageSharp {
+            fixed {
+              src
+              srcSet
+            }
+            fluid {
+              src
+              srcSet
+            }
+          }
+        }
+      }
+    `
+  )
+
+  console.log(SEOImage)
+
   const {
     siteMetadata: { title, description, url, lang, author },
   } = site
@@ -30,6 +51,7 @@ export const SEO = () => {
       <meta name="lang" content={lang} />
       <meta name="author" content={author} />
       <meta name="url" content={url} />
+      <meta property="og:image" content="" />
     </Helmet>
   )
 }
