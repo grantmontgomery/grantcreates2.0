@@ -13,6 +13,7 @@ export const SEO = () => {
             description
             title
             url
+            image
             lang
           }
         }
@@ -20,29 +21,8 @@ export const SEO = () => {
     `
   )
 
-  const SEOImage = useStaticQuery(
-    graphql`
-      query ImageQuery {
-        file(relativePath: { eq: "GrantCreatesAnvilSEO.png" }) {
-          childImageSharp {
-            fixed {
-              src
-              srcSet
-            }
-            fluid {
-              src
-              srcSet
-            }
-          }
-        }
-      }
-    `
-  )
-
-  console.log(SEOImage)
-
   const {
-    siteMetadata: { title, description, url, lang, author },
+    siteMetadata: { title, description, url, lang, author, image },
   } = site
   return (
     <Helmet>
@@ -51,7 +31,13 @@ export const SEO = () => {
       <meta name="lang" content={lang} />
       <meta name="author" content={author} />
       <meta name="url" content={url} />
-      <meta property="og:image" content="" />
+      <meta property="og:image" content={image} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content={title} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
     </Helmet>
   )
 }
