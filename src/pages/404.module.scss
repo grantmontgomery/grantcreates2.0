@@ -1,0 +1,62 @@
+.pageNotFound {
+  height: 100%;
+  width: 100vw;
+  & .messageWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    height: fit-content;
+    width: fit-content;
+    margin-right: auto;
+    position: relative;
+    margin-left: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    & span {
+      margin-left: 5vw;
+      font-size: 20vw;
+      display: block;
+      height: fit-content;
+      width: fit-content;
+      position: relative;
+      padding: 0;
+      color: white;
+      font-family: Objektiv Mk2 Bold;
+    }
+  }
+}
+
+@media (min-width: 1025px) and (orientation: landscape) {
+  .pageNotFound {
+    height: 89vh;
+    & .messageWrapper {
+      & span {
+        margin-left: 2.5vh;
+        font-size: 15;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .pageNotFound {
+    height: 84vh;
+    & .messageWrapper {
+      & span {
+        margin-left: 2.5vh;
+        font-size: 15vh;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .pageNotFound {
+    height: 89vh;
+    & .messageWrapper {
+      & span {
+        margin-left: 5vw;
+        font-size: 20vw;
+      }
+    }
+  }
+}

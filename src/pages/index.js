@@ -13,6 +13,7 @@ import {
   SEO,
 } from "../components"
 import smoothscroll from "smoothscroll-polyfill"
+import { PageNotFound } from "./404"
 import "./index.css"
 import { ContactPage } from "../components/PageIndices"
 
@@ -22,7 +23,7 @@ const IndexPage = () => {
   }, [])
   return (
     <Layout>
-      {" "}
+      <PageNotFound></PageNotFound>
       <SEO></SEO>
       <HomePage></HomePage>
       <CreationsPage></CreationsPage>
