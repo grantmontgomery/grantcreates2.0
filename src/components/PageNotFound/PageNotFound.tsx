@@ -1,8 +1,8 @@
-import React from "react"
-import { Anvil } from "../components"
-import css from "./404.module.css"
+import * as React from "react"
+import { Anvil } from "../Logos"
+import css from "./PageNotFound.module.css"
 
-export const PageNotFound = () => {
+export const PageNotFound: React.FC = () => {
   return (
     <section id="404" className={css.pageNotFound}>
       <div className={css.messageWrapper}>
