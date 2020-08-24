@@ -5,9 +5,8 @@
   height: 20vh;
   background: #2c5363;
   width: 20vh;
-  -webkit-transition: height width 250ms ease-out;
-  transition: height width 250ms ease-out;
-  will-change: height width;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
   left: 50%;
   cursor: pointer;
 }
@@ -21,9 +20,8 @@
   height: 105vw;
   z-index: 5;
   width: 90vw;
-  -webkit-transition: height width 250ms ease-out;
-  transition: height width 250ms ease-out;
-  will-change: height width;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
   border-radius: 5vh;
 }
 

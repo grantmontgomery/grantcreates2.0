@@ -24,19 +24,12 @@
     & .path1 {
       stroke-dasharray: 193px;
       stroke-dashoffset: 193px;
-      transition: stroke-dasharray 250ms ease-out;
-      transition: stroke-dashoffset 250ms ease-out;
-      will-change: stroke-dashoffset;
-      will-change: stroke-dasharray;
+      transition: 250ms ease-out;
     }
     & .path2 {
       stroke-dashoffset: 195px;
       stroke-dasharray: 195px;
       transition: 250ms ease-out;
-      transition: stroke-dasharray 250ms ease-out;
-      transition: stroke-dashoffset 250ms ease-out;
-      will-change: stroke-dashoffset;
-      will-change: stroke-dasharray;
     }
   }
 
@@ -45,15 +38,11 @@
       stroke-dasharray: 175px;
       stroke-dashoffset: 369px;
       transition: 250ms ease-out;
-      transition: stroke-dasharray stroke-dashoffset 250ms ease-out;
-      will-change: stroke-dashoffset stroke-dasharray;
     }
     & .path2 {
       stroke-dasharray: 156px;
       stroke-dashoffset: 314;
       transition: 250ms ease-out;
-      transition: stroke-dasharray stroke-dashoffset 250ms ease-out;
-      will-change: stroke-dashoffset stroke-dasharray;
     }
   }
 }

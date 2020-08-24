@@ -4,8 +4,7 @@
   height: 20vh;
   background: #2c5363;
   width: 20vh;
-  transition: height width 250ms ease-out;
-  will-change: height width;
+  transition: 250ms ease-out;
   left: 50%;
   cursor: pointer;
   &.tapped {
@@ -17,8 +16,7 @@
     height: 105vw;
     z-index: 5;
     width: 90vw;
-    transition: height width 250ms ease-out;
-    will-change: height width;
+    transition: 250ms ease-out;
     border-radius: 5vh;
   }
 }

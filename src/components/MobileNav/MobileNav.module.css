@@ -14,12 +14,8 @@
 .mobileNav.normal .path1 {
   stroke-dasharray: 193px;
   stroke-dashoffset: 193px;
-  -webkit-transition: stroke-dasharray 250ms ease-out;
-  transition: stroke-dasharray 250ms ease-out;
-  -webkit-transition: stroke-dashoffset 250ms ease-out;
-  transition: stroke-dashoffset 250ms ease-out;
-  will-change: stroke-dashoffset;
-  will-change: stroke-dasharray;
+  -webkit-transition: 250ms ease-out;
+  transition: 250ms ease-out;
 }
 
 .mobileNav.normal .path2 {
@@ -27,12 +23,6 @@
   stroke-dasharray: 195px;
   -webkit-transition: 250ms ease-out;
   transition: 250ms ease-out;
-  -webkit-transition: stroke-dasharray 250ms ease-out;
-  transition: stroke-dasharray 250ms ease-out;
-  -webkit-transition: stroke-dashoffset 250ms ease-out;
-  transition: stroke-dashoffset 250ms ease-out;
-  will-change: stroke-dashoffset;
-  will-change: stroke-dasharray;
 }
 
 .mobileNav.switched .path1 {
@@ -40,9 +30,6 @@
   stroke-dashoffset: 369px;
   -webkit-transition: 250ms ease-out;
   transition: 250ms ease-out;
-  -webkit-transition: stroke-dasharray stroke-dashoffset 250ms ease-out;
-  transition: stroke-dasharray stroke-dashoffset 250ms ease-out;
-  will-change: stroke-dashoffset stroke-dasharray;
 }
 
 .mobileNav.switched .path2 {
@@ -50,9 +37,6 @@
   stroke-dashoffset: 314;
   -webkit-transition: 250ms ease-out;
   transition: 250ms ease-out;
-  -webkit-transition: stroke-dasharray stroke-dashoffset 250ms ease-out;
-  transition: stroke-dasharray stroke-dashoffset 250ms ease-out;
-  will-change: stroke-dashoffset stroke-dasharray;
 }
 
 @media (min-width: 750px) and (max-width: 1024px) {
