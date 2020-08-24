@@ -3,6 +3,7 @@
   width: 100%;
   height: 80%;
   display: -webkit-flex;
+  -webkit-flex-flow: column wrap;
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
