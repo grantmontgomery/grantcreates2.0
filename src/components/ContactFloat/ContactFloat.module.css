@@ -27,7 +27,7 @@
   float: none;
   right: 0;
   cursor: default;
-  z-index: 3;
+  z-index: 4;
   -webkit-transform: translate(50%);
           transform: translate(50%);
   right: 50%;
