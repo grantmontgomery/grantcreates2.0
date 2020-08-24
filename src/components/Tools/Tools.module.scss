@@ -4,15 +4,21 @@
   height: 80%;
   // display: flex;
   display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
   flex-flow: column wrap;
   justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
 }
 
 @media (orientation: landscape) {
   .toolsWrapper {
-    overflow: none;
+    overflow: visible;
     height: 80%;
     width: auto;
     margin-left: 10%;

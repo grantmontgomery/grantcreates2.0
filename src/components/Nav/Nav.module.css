@@ -30,6 +30,10 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: block;
   outline: none;
 }
