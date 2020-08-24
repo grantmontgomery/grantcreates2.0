@@ -15,7 +15,7 @@ export const CreationType: React.FC<Props> = ({ type }) => {
 
   return (
     <div className={css.typeWrapper}>
-      <div className={css.innerTypes} style={{ zIndex: creation ? 3 : 1 }}>
+      <div className={css.innerTypes} style={{ zIndex: creation ? 4 : 1 }}>
         {displayCreations(type)}
       </div>
     </div>

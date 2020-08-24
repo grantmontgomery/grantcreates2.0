@@ -18,6 +18,7 @@ export const ModalDark: React.FC<Props> = ({ inMobileNav }) => {
     return inMobileNav && modal ? (
       <div
         className={css.modalWrapper}
+        style={{ zIndex: 3 }}
         onClick={() => modalDispatch(modalActions("CLOSE"))}
       ></div>
     ) : null
@@ -26,6 +27,7 @@ export const ModalDark: React.FC<Props> = ({ inMobileNav }) => {
       <div
         className={css.modalWrapper}
         onClick={() => modalDispatch(modalActions("CLOSE"))}
+        style={{ zIndex: 4 }}
       ></div>
     ) : null
   }
