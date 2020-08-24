@@ -5,7 +5,7 @@ import css from "./ToolsPage.module.css"
 
 export const ToolsPage: React.FC = () => {
   return (
-    <section className={css.toolsPage} id="toolsPage">
+    <section id="toolsPage" className={css.toolsPage}>
       <div className={css.toolsHeader}>Tools</div>
       <div className={css.hammer}></div>
       <Scene></Scene>
