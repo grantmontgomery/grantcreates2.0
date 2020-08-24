@@ -24,7 +24,12 @@ export const AboutPage: React.FC = () => {
   const aboutRef = React.useRef<HTMLElement | null>(null)
 
   return (
-    <section id="aboutPage" ref={aboutRef} className={css.about}>
+    <section
+      id="aboutPage"
+      data-name="aboutPage"
+      ref={aboutRef}
+      className={css.about}
+    >
       <div className={css.header}>About</div>
       <div className={css.imageWrapper}></div>
       <div className={css.descriptionWrapper}>

@@ -1,0 +1,26 @@
+.toolsWrapper {
+  grid-area: tools;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-flow: column wrap;
+  overflow: hidden;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: center;
+}
+
+@media (orientation: landscape) {
+  .toolsWrapper {
+    overflow: visible;
+    height: 80%;
+    width: auto;
+    margin-left: 10%;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+}

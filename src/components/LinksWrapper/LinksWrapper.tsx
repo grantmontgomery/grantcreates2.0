@@ -36,21 +36,21 @@ export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
             <div className={css.text}>Creations</div>
           </Link>
         </div>
-        <div className={css.link}>
-          <a href="#aboutPage" onClick={handleTap}>
+        <div className={css.link} onClick={handleTap}>
+          <Link to="#aboutPage">
             <div className={css.text}>About</div>
-          </a>
+          </Link>
         </div>
         <div className={css.link}>
-          <a href="#toolsPage" onClick={handleTap}>
+          <Link to="#toolsPage" onClick={handleTap}>
             <div className={css.text}>Tools</div>
-          </a>
+          </Link>
         </div>
 
         <div className={css.link}>
-          <a href="#contactPage" onClick={handleTap}>
+          <Link to="#contactPage" onClick={handleTap}>
             <div className={css.text}>Contact</div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

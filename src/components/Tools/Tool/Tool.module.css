@@ -8,7 +8,6 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  width: 25vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -16,6 +15,9 @@
       -ms-flex-pack: left;
           justify-content: left;
   overflow: hidden;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   text-overflow: ellipsis;
   margin-top: 5%;
 }
@@ -25,7 +27,6 @@
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  width: 10vw;
   height: auto;
   display: block;
   fill: #e2eef3;
@@ -54,28 +55,6 @@
 }
 
 @media (min-width: 450px), (max-width: 1024px) and (orientation: portrait) {
-  .toolWrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    margin-left: 5%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
   .toolWrapper svg {
     position: relative;
     top: 50%;
@@ -83,7 +62,6 @@
             transform: translate(0, -50%);
     width: 5vw;
     height: auto;
-    display: block;
   }
   .toolWrapper p {
     height: -webkit-fit-content;
@@ -108,27 +86,6 @@
 }
 
 @media (max-width: 449px) and (orientation: portrait) {
-  .toolWrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
   .toolWrapper svg {
     position: relative;
     top: 50%;
@@ -170,12 +127,6 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
