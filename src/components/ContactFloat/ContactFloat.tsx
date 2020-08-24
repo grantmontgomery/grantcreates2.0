@@ -260,7 +260,7 @@ export const ContactFloat: React.FC = () => {
       {contactFloat ? (
         <React.Fragment>
           <div className={css.headerWrapper}>
-            <div className={css.titleWrapper}>Hire Me</div>
+            <div className={css.titleWrapper}>Reach Out</div>
             <Pointer
               mailStatus={state.mailStatus}
               formSide={state.formSide}

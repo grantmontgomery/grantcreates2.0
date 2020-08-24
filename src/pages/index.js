@@ -23,7 +23,6 @@ const IndexPage = () => {
   }, [])
   return (
     <Layout>
-      <PageNotFound></PageNotFound>
       <SEO></SEO>
       <HomePage></HomePage>
       <CreationsPage></CreationsPage>

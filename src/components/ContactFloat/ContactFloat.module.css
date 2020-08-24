@@ -192,8 +192,8 @@
   }
   .contactWrapper.extended {
     width: 90vw;
+    bottom: 15vh;
     height: 70vh;
-    bottom: 20vh;
     border-radius: 5vh;
         grid-template-areas: "header" "form";
   }
