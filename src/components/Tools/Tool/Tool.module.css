@@ -61,7 +61,7 @@
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     width: 5vw;
-    height: auto;
+    height: intrinsic;
   }
   .toolWrapper p {
     height: -webkit-fit-content;
