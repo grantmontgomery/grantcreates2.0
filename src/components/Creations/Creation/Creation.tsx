@@ -34,7 +34,6 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
         const body: HTMLBodyElement | null = document.querySelector("body")
         if (body) {
           body.style.overflowY = "scroll"
-          body.style.webkitTransform = "none"
         }
         setState({ top: "0%" })
       }
@@ -74,6 +73,7 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
       const body: HTMLBodyElement | null = document.querySelector("body")
       if (body) {
         body.style.overflowY = "scroll"
+        body.style.webkitTransform = "none"
       }
       return setState({ top: "0%" }), modalDispatch(modalActions("CLOSE"))
     }
