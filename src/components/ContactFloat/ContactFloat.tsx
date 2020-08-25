@@ -99,7 +99,7 @@ export const ContactFloat: React.FC = () => {
                     ...errors,
                     [error]: {
                       error: true,
-                      message: `${errorStart} a phone number.`,
+                      message: `${errorStart} a number.`,
                     },
                   }))
                 case "email":

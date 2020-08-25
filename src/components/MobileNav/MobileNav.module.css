@@ -47,7 +47,7 @@
 
 @media (max-width: 749px) {
   .mobileNav path {
-    stroke-width: 0.75vh;
+    stroke-width: 0.5vh;
   }
 }
 

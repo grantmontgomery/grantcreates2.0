@@ -50,7 +50,6 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
       if (creationRef.current && windowElement) {
         const boundingObject = creationRef.current.getBoundingClientRect()
         const elemTopPosition = boundingObject.top
-
         const creationElement = creationRef.current
         const elementWidth = creationElement.offsetWidth
         const windowTopCenter = windowElement.innerHeight / 2

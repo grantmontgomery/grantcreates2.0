@@ -93,7 +93,7 @@
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   float: right;
-  right: 5%;
+  right: 10%;
   position: absolute;
   cursor: pointer;
   background: #2c5363;
