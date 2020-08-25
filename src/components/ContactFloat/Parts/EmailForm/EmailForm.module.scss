@@ -176,9 +176,9 @@
     position: relative;
     top: 0;
     grid-area: back;
-    height: 9vh;
-    width: 9vh;
-    border-radius: 9vh;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 15vw;
     margin-left: 20%;
     margin-right: auto;
     background: #2c5363;
@@ -192,7 +192,7 @@
       }
     }
     & svg {
-      height: 5vh;
+      height: 8vw;
       width: auto;
       position: relative;
       display: block;

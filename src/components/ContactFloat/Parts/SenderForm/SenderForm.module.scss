@@ -166,7 +166,7 @@
           border-radius: 3vh;
 
           & div {
-            font-size: 1.75vh;
+            font-size: 2.5vw;
           }
         }
         & input {
@@ -175,7 +175,7 @@
           border-radius: 4vh;
           font-size: 2vh;
 
-          width: 97%;
+          width: 90%;
           border: solid 0.25vh white;
           &.error {
             border: solid 0.25vh #ed4548;
@@ -193,12 +193,12 @@
       }
     }
     & .nextButton {
-      height: 9vh;
-      border-radius: 9vh;
-      width: 9vh;
+      height: 15vw;
+      border-radius: 15vw;
+      width: 15vw;
 
       & svg {
-        height: 5vh;
+        height: 8vw;
       }
     }
   }
