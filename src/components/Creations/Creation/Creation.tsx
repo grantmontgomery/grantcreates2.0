@@ -46,7 +46,6 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
       const body: HTMLBodyElement | null = document.querySelector("body")
       if (body) {
         body.style.overflowY = "hidden"
-        body.style.webkitTransform = "translateZ(0)"
       }
       if (creationRef.current && windowElement) {
         const boundingObject = creationRef.current.getBoundingClientRect()
@@ -73,7 +72,6 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
       const body: HTMLBodyElement | null = document.querySelector("body")
       if (body) {
         body.style.overflowY = "scroll"
-        body.style.webkitTransform = "none"
       }
       return setState({ top: "0%" }), modalDispatch(modalActions("CLOSE"))
     }
