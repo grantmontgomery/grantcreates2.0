@@ -15,7 +15,7 @@
       "name": "Grant Creates",
       "subTitle": "Gatsby Portfolio Website",
       "detailsName": "Grant Creates",
-      "details": "My portfolio site",
+      "details": "Welcome to my digital forge! This is my portfolio site displaying different creations I've made. To achieve high performance and less bugs at runtime I decided to code this site in the Gatsby framework with TypeScript.",
       "technologies": "Typescript Gatsby Express Sass",
       "githublink": "https://github.com/grantmontgomery/grantcreates2.0",
       "link": ""

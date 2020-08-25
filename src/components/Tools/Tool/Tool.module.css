@@ -139,7 +139,7 @@
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     width: 3vw;
-    height: intrinsic;
+    height: 4.5vw;
     display: block;
   }
   .toolWrapper p {
