@@ -345,4 +345,287 @@
 .blue5 {
   fill: url(#planeBlue_4_);
 }
+
+@media (orientation: landscape) {
+  .emailWrapper {
+    height: 100%;
+    width: 50%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 25% 25% 25%;
+        grid-template-columns: 25% 25% 25% 25%;
+    -ms-grid-rows: 13vh 32vh 15vh;
+        grid-template-rows: 13vh 32vh 15vh;
+        grid-template-areas: "subject subject subject subject" "message message message message" "back . send send";
+  }
+  .emailWrapper .sectionWrapper .errorWrapper {
+    height: 4vh;
+    margin-left: 5%;
+    position: relative;
+  }
+  .emailWrapper .sectionWrapper .errorWrapper .error {
+    font-family: Objektiv Mk2 Bold;
+    position: relative;
+    font-size: 2vh;
+    color: #ed4548;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: relative;
+  }
+  .emailWrapper .sectionWrapper .labelWrapper {
+    margin-left: 5%;
+    height: 4vh;
+  }
+  .emailWrapper .sectionWrapper .labelWrapper label {
+    display: block;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    position: relative;
+    font-size: 2vh;
+    color: #60a2be;
+  }
+  .emailWrapper .sectionWrapper:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: subject;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .emailWrapper .sectionWrapper:nth-child(1) .inputWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    height: 5vh;
+    width: 90%;
+  }
+  .emailWrapper .sectionWrapper:nth-child(1) .inputWrapper input {
+    width: 97%;
+    text-indent: 2%;
+    font-family: Objektiv Mk2;
+    color: white;
+    border-radius: 4vh;
+    outline: none;
+    height: 4vh;
+    font-size: 2vh;
+    background: transparent;
+    border: solid 0.25vh white;
+  }
+  .emailWrapper .sectionWrapper:nth-child(1) .inputWrapper input.error {
+    border: solid 0.25vh #ed4548;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+  }
+  .emailWrapper .sectionWrapper:nth-child(1) .inputWrapper input:focus {
+    border: solid 0.25vh #61dbfb;
+    color: #61dbfb;
+  }
+  .emailWrapper .sectionWrapper:nth-child(1) .inputWrapper textarea {
+    background: transparent;
+    border: solid 0.25vh white;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: message;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 22vh;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    border-radius: 2vh;
+    padding: 2%;
+    height: 85%;
+    width: 95%;
+    outline: none;
+    color: white;
+    font-family: Objektiv Mk2;
+    border: solid 0.25vh white;
+    font-size: 2vh;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea::-webkit-input-placeholder {
+    color: lightgrey;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea:-ms-input-placeholder {
+    color: lightgrey;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea::-ms-input-placeholder {
+    color: lightgrey;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea::placeholder {
+    color: lightgrey;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea.error {
+    border: solid 0.25vh #ed4548;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea:focus {
+    border: solid 0.25vh #61dbfb;
+    color: #61dbfb;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea:focus::-webkit-input-placeholder {
+    color: #61dbfb;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea:focus:-ms-input-placeholder {
+    color: #61dbfb;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea:focus::-ms-input-placeholder {
+    color: #61dbfb;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .inputWrapper textarea:focus::placeholder {
+    color: #61dbfb;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .errorWrapper {
+    height: 4vh;
+  }
+  .emailWrapper .sectionWrapper:nth-child(2) .errorWrapper .error {
+    font-size: 2vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .emailWrapper .sendWrapper {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: send;
+    height: 9vh;
+    width: 80%;
+    border-radius: 4.5vh;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+  }
+  .emailWrapper .sendWrapper.bluePlane {
+    background: #0f2027;
+  }
+  .emailWrapper .sendWrapper.whitePlane {
+    background: #2c5363;
+  }
+  .emailWrapper .sendWrapper .send {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 2.5vh;
+    color: #60a2be;
+    font-style: italic;
+  }
+  .emailWrapper .sendWrapper .planeWrapper {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: block;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+  }
+  .emailWrapper .sendWrapper .planeWrapper svg {
+    display: block;
+    height: 5vh;
+    width: auto;
+  }
+  .emailWrapper .backWrapper {
+    position: relative;
+    top: 0;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: back;
+    height: 9vh;
+    width: 9vh;
+    border-radius: 9vh;
+    margin-left: 20%;
+    margin-right: auto;
+    background: #2c5363;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+    cursor: pointer;
+  }
+  .emailWrapper .backWrapper.senderErrors {
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+    background: #ed4548;
+  }
+  .emailWrapper .backWrapper.senderErrors svg {
+    fill: white;
+  }
+  .emailWrapper .backWrapper svg {
+    height: 5vh;
+    width: auto;
+    position: relative;
+    display: block;
+    top: 50%;
+    -webkit-transform: rotate(180deg) translate(0, 50%);
+            transform: rotate(180deg) translate(0, 50%);
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+  }
+}
 /*# sourceMappingURL=EmailForm.module.css.map */

@@ -233,3 +233,212 @@
 .blue5 {
   fill: url(#planeBlue_4_);
 }
+
+@media (orientation: landscape) {
+  .emailWrapper {
+    height: 100%;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 13vh 32vh 15vh;
+    grid-template-areas: "subject subject subject subject" "message message message message" "back . send send";
+    & .sectionWrapper {
+      & .errorWrapper {
+        height: 4vh;
+        margin-left: 5%;
+        position: relative;
+        & .error {
+          font-family: Objektiv Mk2 Bold;
+          position: relative;
+          font-size: 2vh;
+          color: #ed4548;
+          height: fit-content;
+          position: relative;
+        }
+      }
+      & .labelWrapper {
+        margin-left: 5%;
+        height: 4vh;
+        & label {
+          display: block;
+          height: fit-content;
+          top: 50%;
+          transform: translate(0, -50%);
+          position: relative;
+          font-size: 2vh;
+          color: #60a2be;
+        }
+      }
+      &:nth-child(1) {
+        grid-area: subject;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+
+        & .inputWrapper {
+          margin-left: auto;
+          margin-right: auto;
+          height: 5vh;
+          width: 90%;
+          & input {
+            width: 97%;
+            text-indent: 2%;
+            font-family: Objektiv Mk2;
+            color: white;
+            border-radius: 4vh;
+            outline: none;
+            height: 4vh;
+            font-size: 2vh;
+            background: transparent;
+            border: solid 0.25vh white;
+            &.error {
+              border: solid 0.25vh #ed4548;
+              transition: 250ms ease-out;
+            }
+            &:focus {
+              border: solid 0.25vh #61dbfb;
+              color: #61dbfb;
+            }
+          }
+          & textarea {
+            background: transparent;
+            border: solid 0.25vh white;
+          }
+        }
+      }
+      &:nth-child(2) {
+        grid-area: message;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        & .inputWrapper {
+          margin-left: auto;
+          margin-right: auto;
+          width: 90%;
+          height: 22vh;
+          & textarea {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            background: transparent;
+            top: 50%;
+            transform: translate(0, -50%);
+            border-radius: 2vh;
+            padding: 2%;
+            height: 85%;
+            width: 95%;
+            outline: none;
+            color: white;
+            font-family: Objektiv Mk2;
+            border: solid 0.25vh white;
+            font-size: 2vh;
+            &::placeholder {
+              color: lightgrey;
+            }
+            &.error {
+              border: solid 0.25vh #ed4548;
+            }
+            &:focus {
+              border: solid 0.25vh #61dbfb;
+              color: #61dbfb;
+              &::placeholder {
+                color: #61dbfb;
+              }
+            }
+          }
+        }
+        & .errorWrapper {
+          height: 4vh;
+          & .error {
+            font-size: 2vh;
+            height: fit-content;
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+          }
+        }
+      }
+    }
+    & .sendWrapper {
+      grid-area: send;
+      height: 9vh;
+      width: 80%;
+      border-radius: 4.5vh;
+      cursor: pointer;
+      margin-left: auto;
+      margin-right: 10%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      transition: 250ms ease-out;
+
+      &.bluePlane {
+        background: #0f2027;
+      }
+      &.whitePlane {
+        background: #2c5363;
+      }
+
+      & .send {
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        height: fit-content;
+        width: fit-content;
+        font-size: 2.5vh;
+        color: #60a2be;
+        font-style: italic;
+      }
+      & .planeWrapper {
+        height: fit-content;
+        width: fit-content;
+        display: block;
+        top: 50%;
+        transform: translate(0, -50%);
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        transition: 250ms ease-out;
+        & svg {
+          display: block;
+          height: 5vh;
+          width: auto;
+        }
+      }
+    }
+    & .backWrapper {
+      position: relative;
+      top: 0;
+      grid-area: back;
+      height: 9vh;
+      width: 9vh;
+      border-radius: 9vh;
+      margin-left: 20%;
+      margin-right: auto;
+      background: #2c5363;
+      transition: 250ms ease-out;
+      cursor: pointer;
+      &.senderErrors {
+        transition: 250ms ease-out;
+        background: #ed4548;
+        & svg {
+          fill: white;
+        }
+      }
+      & svg {
+        height: 5vh;
+        width: auto;
+        position: relative;
+        display: block;
+        top: 50%;
+        transform: rotate(180deg) translate(0, 50%);
+        margin-left: auto;
+        margin-right: auto;
+        transition: 250ms ease-out;
+      }
+    }
+  }
+}

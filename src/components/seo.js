@@ -36,6 +36,7 @@ export const SEO = () => {
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta name="twitter:title" content={title} />
+      <meta name="twitter:card" content={image} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
     </Helmet>
