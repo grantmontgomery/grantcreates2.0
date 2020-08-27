@@ -61,8 +61,8 @@
         display: flex;
         z-index: 2;
         flex-flow: row nowrap;
-        padding-left: 2vw;
-        padding-right: 2vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
         & div {
           font-family: Objektiv Mk2;
           position: relative;
@@ -145,7 +145,7 @@
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 450px) and (orientation: portrait) {
   .senderWrapper {
     grid-template-columns: 75% 25%;
     grid-template-rows: calc(5% / 3 * 13) calc(5% / 3 * 13) calc(5% / 3 * 13) 30%;
@@ -199,6 +199,65 @@
 
       & svg {
         height: 8vw;
+      }
+    }
+  }
+}
+
+@media (min-width: 451px) and (orientation: portrait) {
+  .senderWrapper {
+    grid-template-columns: 75% 25%;
+    grid-template-rows: calc(5% / 3 * 13) calc(5% / 3 * 13) calc(5% / 3 * 13) 30%;
+    & .sectionWrapper {
+      & .labelWrapper {
+        margin-left: 5%;
+        height: calc(100% / 13 * 4);
+        & label {
+          font-size: 2vh;
+        }
+      }
+
+      & .inputWrapper {
+        height: 5vh;
+        & .phoneFormat {
+          height: 3vh;
+          width: 7vh;
+          border-radius: 3vh;
+
+          & div {
+            font-size: 2.5vw;
+          }
+        }
+        & input {
+          height: 4vh;
+
+          border-radius: 4vh;
+          font-size: 2vh;
+
+          width: 90%;
+          border: solid 0.25vh white;
+          &.error {
+            border: solid 0.25vh #ed4548;
+          }
+          &:focus {
+            border: solid 0.25vh #61dbfb;
+          }
+        }
+      }
+      & .errorWrapper {
+        height: 4vh;
+        & .error {
+          font-size: 2vh;
+        }
+      }
+    }
+    & .nextButton {
+      height: 10vw;
+      border-radius: 10vw;
+      width: 10vw;
+
+      & svg {
+        height: 5vw;
       }
     }
   }

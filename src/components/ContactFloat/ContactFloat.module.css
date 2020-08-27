@@ -205,11 +205,11 @@
   }
   .contactWrapper.extended .headerWrapper .x {
     font-size: 3vw;
-    border-radius: 7vw;
+    border-radius: 5vh;
     text-align: center;
-    height: 7vw;
+    height: 5vh;
     cursor: pointer;
-    width: 7vw;
+    width: 5vh;
     border: 1px solid white;
   }
 }

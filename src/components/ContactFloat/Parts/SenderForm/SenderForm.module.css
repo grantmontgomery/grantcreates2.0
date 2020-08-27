@@ -108,8 +108,8 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 .senderWrapper .sectionWrapper .inputWrapper .phoneFormat div {
@@ -240,7 +240,7 @@
   margin-right: auto;
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 450px) and (orientation: portrait) {
   .senderWrapper {
     -ms-grid-columns: 75% 25%;
         grid-template-columns: 75% 25%;
@@ -291,6 +291,60 @@
   }
   .senderWrapper .nextButton svg {
     height: 8vw;
+  }
+}
+
+@media (min-width: 451px) and (orientation: portrait) {
+  .senderWrapper {
+    -ms-grid-columns: 75% 25%;
+        grid-template-columns: 75% 25%;
+    -ms-grid-rows: calc(5% / 3 * 13) calc(5% / 3 * 13) calc(5% / 3 * 13) 30%;
+        grid-template-rows: calc(5% / 3 * 13) calc(5% / 3 * 13) calc(5% / 3 * 13) 30%;
+  }
+  .senderWrapper .sectionWrapper .labelWrapper {
+    margin-left: 5%;
+    height: calc(100% / 13 * 4);
+  }
+  .senderWrapper .sectionWrapper .labelWrapper label {
+    font-size: 2vh;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper {
+    height: 5vh;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper .phoneFormat {
+    height: 3vh;
+    width: 7vh;
+    border-radius: 3vh;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper .phoneFormat div {
+    font-size: 2.5vw;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper input {
+    height: 4vh;
+    border-radius: 4vh;
+    font-size: 2vh;
+    width: 90%;
+    border: solid 0.25vh white;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper input.error {
+    border: solid 0.25vh #ed4548;
+  }
+  .senderWrapper .sectionWrapper .inputWrapper input:focus {
+    border: solid 0.25vh #61dbfb;
+  }
+  .senderWrapper .sectionWrapper .errorWrapper {
+    height: 4vh;
+  }
+  .senderWrapper .sectionWrapper .errorWrapper .error {
+    font-size: 2vh;
+  }
+  .senderWrapper .nextButton {
+    height: 10vw;
+    border-radius: 10vw;
+    width: 10vw;
+  }
+  .senderWrapper .nextButton svg {
+    height: 5vw;
   }
 }
 

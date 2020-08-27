@@ -180,7 +180,6 @@
 
 @media (orientation: landscape) {
   .detailsWrapper .descriptionWrapper .description {
-    text-indent: 5vh;
     font-size: 2vh;
   }
   .detailsWrapper .technologiesWrapper .technologies {
@@ -210,7 +209,6 @@
     display: grid;
   }
   .detailsWrapper .descriptionWrapper .description {
-    text-indent: 5vh;
     font-size: 1.75vh;
   }
   .detailsWrapper .technologiesWrapper .technologies {
