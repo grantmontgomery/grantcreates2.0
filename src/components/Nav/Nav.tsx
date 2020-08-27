@@ -1,8 +1,8 @@
 import * as React from "react"
 import { FullLogo } from "../Logos"
-
 import { LinksWrapper } from "../LinksWrapper"
 import { MobileNav } from "../MobileNav"
+import scrollTo from "gatsby-plugin-smoothscroll"
 import { Link } from "gatsby"
 import { ModalDark } from "../ModalDark"
 import { useModalDispatch, useModalState } from "../../state/ModalGlobal"
@@ -75,9 +75,11 @@ export const Nav: React.FC = () => {
     }
   }
 
+  console.log(document.querySelector("body"))
+
   return (
     <nav className={css.navWrapper} id="navBar" ref={navRef}>
-      <Link to="/" className={css.logoLink}>
+      <Link to="/" className={css.logoLink} onClick={() => scrollTo("body")}>
         <FullLogo location="navBar"></FullLogo>
       </Link>
       <MobileNav navLinks={navLinks} handleTap={handleTap}></MobileNav>

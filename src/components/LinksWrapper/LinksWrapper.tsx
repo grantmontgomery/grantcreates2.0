@@ -41,7 +41,16 @@ export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
     <div className={`${css.linksWrapper} ${css[`${location}`]}`}>
       <div className={css.innerLinks}>
         <div className={css.link}>
-          <Link to={`/${link}`} onClick={() => handleLink(link)}>
+          <Link
+            to={`/${link}`}
+            onClick={() => {
+              if (handleTap) {
+                return handleTap(), scrollTo("body")
+              } else {
+                return scrollTo("body")
+              }
+            }}
+          >
             <div className={css.text}>Creations</div>
           </Link>
         </div>
