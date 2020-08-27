@@ -38,6 +38,7 @@
 
 .linksWrapper.navBar .innerLinks .link a {
   text-decoration: none;
+  display: block;
 }
 
 .linksWrapper.navBar .innerLinks .link a .text {

@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import scrollTo from "gatsby-plugin-smoothscroll"
 import css from "./LinksWrapper.module.css"
 
 interface Props {
@@ -19,8 +20,8 @@ export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
   const determineLink: () => void = () => {
     if (windowElement)
       return windowElement.innerWidth < windowElement.innerHeight
-        ? setLink("/")
-        : setLink("/#creations")
+        ? setLink("")
+        : setLink("#creations")
     else return
   }
 
@@ -28,27 +29,35 @@ export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
     determineLink()
   }, [windowElement])
 
+  const handleLink: (element: string) => void = element => {
+    if (handleTap) {
+      return handleTap(), scrollTo(element)
+    } else {
+      return scrollTo(element)
+    }
+  }
+
   return (
     <div className={`${css.linksWrapper} ${css[`${location}`]}`}>
       <div className={css.innerLinks}>
         <div className={css.link}>
-          <Link to={link} onClick={handleTap}>
+          <Link to={`/${link}`} onClick={() => handleLink(link)}>
             <div className={css.text}>Creations</div>
           </Link>
         </div>
-        <div className={css.link} onClick={handleTap}>
-          <Link to="#aboutPage">
+        <div className={css.link}>
+          <Link to="#aboutPage" onClick={() => handleLink("#aboutPage")}>
             <div className={css.text}>About</div>
           </Link>
         </div>
         <div className={css.link}>
-          <Link to="#toolsPage" onClick={handleTap}>
+          <Link to="#toolsPage" onClick={() => handleLink("#toolsPage")}>
             <div className={css.text}>Tools</div>
           </Link>
         </div>
 
         <div className={css.link}>
-          <Link to="#contactPage" onClick={handleTap}>
+          <Link to="#contactPage" onClick={() => handleLink("#contactPage")}>
             <div className={css.text}>Contact</div>
           </Link>
         </div>
