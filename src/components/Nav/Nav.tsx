@@ -75,8 +75,6 @@ export const Nav: React.FC = () => {
     }
   }
 
-  console.log(document.querySelector("body"))
-
   return (
     <nav className={css.navWrapper} id="navBar" ref={navRef}>
       <Link to="/" className={css.logoLink} onClick={() => scrollTo("body")}>
