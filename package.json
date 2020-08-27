@@ -22,6 +22,7 @@
     "gatsby-plugin-react-redux": "^1.1.0-0",
     "gatsby-plugin-sass": "^2.3.3",
     "gatsby-plugin-sharp": "^2.6.9",
+    "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-ts": "^2.7.1",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.3.23",

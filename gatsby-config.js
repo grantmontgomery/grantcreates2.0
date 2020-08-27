@@ -26,6 +26,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-web-font-loader`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
