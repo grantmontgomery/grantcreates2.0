@@ -227,5 +227,11 @@
   .detailsWrapper .linksWrapper a .link {
     height: 4.5vh;
   }
+  .detailsWrapper .exit {
+    border-radius: 5vh;
+    height: 5vh;
+    width: 5vh;
+    font-size: 3vw;
+  }
 }
 /*# sourceMappingURL=CreationDetails.module.css.map */

@@ -40,6 +40,8 @@ export const AboutPage: React.FC = () => {
       <Img
         fluid={fluid}
         placeholderStyle={{ display: "none" }}
+        fadeIn={true}
+        loading="eager"
         imgStyle={{
           position: "relative",
           height: "100%",
