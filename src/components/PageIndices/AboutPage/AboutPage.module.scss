@@ -23,17 +23,28 @@
     white-space: none;
     color: #e2eef3;
   }
+  & .borderFrame {
+    display: block;
+    height: 27vh;
+    grid-area: picture;
+    width: 27vh;
+    position: relative;
+    z-index: 1;
+    left: 50%;
+    top: 1.5vh;
+    transform: translate(calc(-50% + 1.5vh));
+    border: solid 0.5vh #61dbfb90;
+  }
 
   & .imageWrapper {
     grid-area: picture;
     height: 90%;
     position: relative;
     padding: 0;
-    top: 50%;
-    transform: translate(0, -50%);
     margin-right: auto;
     margin-left: auto;
     width: auto;
+    z-index: 0;
     & div {
       display: none;
     }
@@ -143,6 +154,18 @@
       height: fit-content;
       width: fit-content;
       white-space: none;
+    }
+    & .borderFrame {
+      display: block;
+      height: 64.8vh;
+      grid-area: picture;
+      width: 64.8vh;
+      position: relative;
+      z-index: 1;
+      left: 50%;
+      top: 3vh;
+      transform: translate(calc(-50% + 3vh));
+      border: solid 0.5vh #61dbfb;
     }
 
     & .imageWrapper {

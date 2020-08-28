@@ -36,6 +36,7 @@ export const AboutPage: React.FC = () => {
       className={css.about}
     >
       <div className={css.header}>About</div>
+      <div className={css.borderFrame}></div>
       <Img
         fluid={fluid}
         placeholderStyle={{ display: "none" }}
