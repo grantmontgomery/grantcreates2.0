@@ -38,6 +38,19 @@
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: picture;
+  height: 90%;
+  position: relative;
+  padding: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin-right: auto;
+  margin-left: auto;
+  width: auto;
+}
+
+.about .imageWrapper div {
+  display: none;
 }
 
 .about .descriptionWrapper {
@@ -106,6 +119,15 @@
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: picture;
+    height: 90%;
+    position: relative;
+    padding: 0;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
   }
   .about .descriptionWrapper {
     -ms-grid-row: 4;

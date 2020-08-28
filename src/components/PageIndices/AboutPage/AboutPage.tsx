@@ -1,28 +1,33 @@
 import * as React from "react"
-import { Tools } from "../../Tools"
-import { Scene } from "../../Hammer"
+import Img from "gatsby-image"
+import { graphql, useStaticQuery } from "gatsby"
 import css from "./AboutPage.module.css"
 
 export const AboutPage: React.FC = () => {
-  //For When I need to drop in a picture of myself.
-  // const { file } = useStaticQuery(graphql`
-  //   query NewQuery {
-  //     file(relativePath: { eq: "MailIconCompressed.png" }) {
-  //       childImageSharp {
-  //         fluid {
-  //           aspectRatio
-  //           base64
-  //           sizes
-  //           src
-  //           srcSet
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   const aboutRef = React.useRef<HTMLElement | null>(null)
+  const {
+    file: { childImageSharp },
+  } = useStaticQuery(
+    graphql`
+      query PicQuery {
+        file(relativePath: { eq: "GrantCreatesCompressed.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+            fixed {
+              src
+              srcSet
+            }
+          }
+        }
+      }
+    `
+  )
 
+  const { fluid, fixed } = childImageSharp
+
+  // console.log(fluid, fixed)
   return (
     <section
       id="aboutPage"
@@ -31,7 +36,16 @@ export const AboutPage: React.FC = () => {
       className={css.about}
     >
       <div className={css.header}>About</div>
-      <div className={css.imageWrapper}></div>
+      <Img
+        fluid={fluid}
+        placeholderStyle={{ display: "none" }}
+        imgStyle={{
+          position: "relative",
+          height: "100%",
+          width: "auto",
+        }}
+        className={css.imageWrapper}
+      ></Img>
       <div className={css.descriptionWrapper}>
         <p>
           Hi, I'm Grant! I'm a web developer based in Los Angeles who enjoys

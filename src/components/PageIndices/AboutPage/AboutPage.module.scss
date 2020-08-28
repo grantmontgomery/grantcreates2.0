@@ -26,6 +26,17 @@
 
   & .imageWrapper {
     grid-area: picture;
+    height: 90%;
+    position: relative;
+    padding: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+    & div {
+      display: none;
+    }
   }
   & .descriptionWrapper {
     grid-area: about;
@@ -77,6 +88,14 @@
 
     & .imageWrapper {
       grid-area: picture;
+      height: 90%;
+      position: relative;
+      padding: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin-right: auto;
+      margin-left: auto;
+      width: auto;
     }
     & .descriptionWrapper {
       grid-area: about;
