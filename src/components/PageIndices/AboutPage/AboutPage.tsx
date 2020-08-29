@@ -27,7 +27,6 @@ export const AboutPage: React.FC = () => {
 
   const { fluid, fixed } = childImageSharp
 
-  // console.log(fluid, fixed)
   return (
     <section
       id="aboutPage"

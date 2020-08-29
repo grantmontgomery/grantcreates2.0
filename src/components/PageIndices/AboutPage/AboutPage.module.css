@@ -45,8 +45,8 @@
   z-index: 1;
   left: 50%;
   top: 1.5vh;
-  -webkit-transform: translate(calc(-50% + 1.5vh));
-          transform: translate(calc(-50% + 1.5vh));
+  -webkit-transform: translate(calc(-50% + 2vh));
+          transform: translate(calc(-50% + 2vh));
   border: solid 0.5vh #61dbfb;
 }
 
@@ -211,7 +211,7 @@
     position: relative;
     z-index: 1;
     left: 50%;
-    top: 3vh;
+    top: 2.5vh;
     -webkit-transform: translate(calc(-50% + 3vh));
             transform: translate(calc(-50% + 3vh));
     border: solid 0.5vh #61dbfb;
