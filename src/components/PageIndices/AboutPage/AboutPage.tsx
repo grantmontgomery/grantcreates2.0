@@ -41,6 +41,8 @@ export const AboutPage: React.FC = () => {
         placeholderStyle={{ display: "none" }}
         fadeIn={true}
         loading="eager"
+        title="Grant Montgomery"
+        alt="Grant on a rooftop in Los Angeles"
         imgStyle={{
           position: "relative",
           height: "100%",
