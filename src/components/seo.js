@@ -39,7 +39,7 @@ export const SEO = () => {
         href={Objektiv}
         type="font/woff"
         crossOrigin="anonymous"
-      /> */}
+      />  */}
       <meta name="description" content={description} />
       <meta name="lang" content={lang} />
       <meta name="author" content={author} />
