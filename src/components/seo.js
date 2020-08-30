@@ -1,5 +1,6 @@
 import React from "react"
-import PropTypes from "prop-types"
+// import ObjektivBold from "../fonts/ObjektivMk2Bold.woff"
+// import Objektiv from "../fonts/ObjektivMk2.woff"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -27,6 +28,18 @@ export const SEO = () => {
   return (
     <Helmet>
       <title>{title}</title>
+      {/* <link
+        rel="preload"
+        href={ObjektivBold}
+        type="font/woff"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preload"
+        href={Objektiv}
+        type="font/woff"
+        crossOrigin="anonymous"
+      /> */}
       <meta name="description" content={description} />
       <meta name="lang" content={lang} />
       <meta name="author" content={author} />

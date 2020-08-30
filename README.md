@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://grantcreates.com">
-    <img alt="Grant Creates" src="src/images/GrantCreatesAnvilSEO.png" width="480" />
+    <img alt="Grant Creates" src="src/images/GrantCreatesLogoBanner.png" width="480" />
   </a>
 </p>
 <h1 align="center">
@@ -13,6 +13,4 @@ Welcome to my digital forge! This is my portfolio site displaying different crea
 
 ##
 
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+##
