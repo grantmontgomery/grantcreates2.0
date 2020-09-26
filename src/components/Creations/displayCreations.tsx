@@ -2,7 +2,9 @@ import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Creation } from "./Creation"
 
-export const displayCreations = (type: string) => {
+export const displayCreations: (type: string) => JSX.Element[] | null = (
+  type: string
+) => {
   const {
     allCreationsJson: { nodes },
   } = useStaticQuery(
@@ -34,7 +36,13 @@ export const displayCreations = (type: string) => {
     `
   )
 
-  const { apps, websites } = nodes[0]
+  const {
+    apps,
+    websites,
+  }: {
+    apps: { [key: string]: string }[]
+    websites: { [key: string]: string }[]
+  } = nodes[0]
 
   switch (type) {
     case "apps":
@@ -57,5 +65,7 @@ export const displayCreations = (type: string) => {
           ></Creation>
         )
       })
+    default:
+      return null
   }
 }
