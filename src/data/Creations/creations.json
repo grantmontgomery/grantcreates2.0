@@ -1,19 +1,19 @@
 {
-  "apps": [
+  "creations": [
     {
       "name": "Seknd",
       "subTitle": "React Web Application",
+      "category": "app",
       "detailsName": "Seknd (Second)",
       "details": "You've got the match, but how do you find and plan the best date? This web application solves that question. Start a search utilizing the Ticketmaster and Yelp API and plan the day or night out with the drag n' drop scheduler.",
       "technologies": "JavaScript React Redux Express Sass",
       "githublink": "https://github.com/grantmontgomery/seknd",
       "link": "sekndapp.com"
-    }
-  ],
-  "websites": [
+    },
     {
       "name": "Grant Creates",
       "subTitle": "Gatsby Portfolio Website",
+      "category": "website",
       "detailsName": "Grant Creates",
       "details": "Welcome to my digital forge! This is my portfolio site displaying different creations I've made. To achieve high performance and less bugs at runtime I decided to code this site in the Gatsby framework with TypeScript.",
       "technologies": "Typescript Gatsby Express Sass",

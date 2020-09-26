@@ -6,29 +6,23 @@ export const displayCreations: (type: string) => JSX.Element[] | null = (
   type: string
 ) => {
   const {
-    allCreationsJson: { nodes },
+    allCreationsJson: { edges },
   } = useStaticQuery(
     graphql`
       query MyQuery {
         allCreationsJson {
-          nodes {
-            websites {
-              details
-              detailsName
-              githublink
-              link
-              name
-              subTitle
-              technologies
-            }
-            apps {
-              details
-              detailsName
-              githublink
-              link
-              name
-              subTitle
-              technologies
+          edges {
+            node {
+              creations {
+                name
+                subTitle
+                detailsName
+                details
+                technologies
+                githublink
+                link
+                category
+              }
             }
           }
         }
@@ -36,27 +30,35 @@ export const displayCreations: (type: string) => JSX.Element[] | null = (
     `
   )
 
-  const {
-    apps,
-    websites,
-  }: {
-    apps: { [key: string]: string }[]
-    websites: { [key: string]: string }[]
-  } = nodes[0]
+  const creations: { [key: string]: string }[] = edges[0].node.creations
 
   switch (type) {
     case "apps":
-      return apps.map(creation => {
-        return (
-          <Creation
-            key={`${creation.name}${creation.technologies}`}
-            type="apps"
-            data={creation}
-          ></Creation>
-        )
-      })
+      return creations
+        .filter(creation => creation.category === "app")
+        .map(creation => {
+          return (
+            <Creation
+              key={`${creation.name}${creation.technologies}`}
+              type="apps"
+              data={creation}
+            ></Creation>
+          )
+        })
     case "websites":
-      return websites.map(creation => {
+      return creations
+        .filter(creation => creation.category === "website")
+        .map(creation => {
+          return (
+            <Creation
+              key={`${creation.name}${creation.technologies}`}
+              type="websites"
+              data={creation}
+            ></Creation>
+          )
+        })
+    default:
+      return creations.map(creation => {
         return (
           <Creation
             key={`${creation.name}${creation.technologies}`}
@@ -65,7 +67,5 @@ export const displayCreations: (type: string) => JSX.Element[] | null = (
           ></Creation>
         )
       })
-    default:
-      return null
   }
 }
