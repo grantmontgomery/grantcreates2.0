@@ -8,7 +8,7 @@
       "details": "You've got the match, but how do you find and plan the best date? This web application solves that question. Start a search utilizing the Ticketmaster and Yelp API and plan the day or night out with the drag n' drop scheduler.",
       "technologies": "JavaScript React Redux Express Sass",
       "githublink": "https://github.com/grantmontgomery/seknd",
-      "link": "sekndapp.com"
+      "link": "https://sekndapp.com"
     },
     {
       "name": "Grant Creates",
