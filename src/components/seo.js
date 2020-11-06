@@ -44,14 +44,14 @@ export const SEO = () => {
       <meta name="lang" content={lang} />
       <meta name="author" content={author} />
       <meta name="url" content={url} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" title="main logo" content={image} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:card" content={image} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" title="main logo" content={image} />
     </Helmet>
   )
 }
