@@ -44,11 +44,16 @@ export const SEO = () => {
       <meta name="lang" content={lang} />
       <meta name="author" content={author} />
       <meta name="url" content={url} />
+      <meta
+        name="keywords"
+        content="Grant Montgomery, React Developer, Web Developer, Software Engineer"
+      />
       <meta property="og:image" title="main logo" content={image} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta name="twitter:title" content={title} />
+      <meta name="twitter:creator" content="@grantcreates" />
       <meta name="twitter:card" content={image} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" title="main logo" content={image} />
