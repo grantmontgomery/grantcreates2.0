@@ -46,7 +46,11 @@ export const SEO = () => {
       <meta name="url" content={url} />
       <meta
         name="keywords"
+<<<<<<< HEAD
         content="Grant Montgomery, React Developer, Web Developer, Software Engineer"
+=======
+        content="Grant Montgomery, Grant Creates, React Developer, Web Developer, Software Engineer"
+>>>>>>> develop
       />
       <meta property="og:image" title="main logo" content={image} />
       <meta property="og:description" content={description} />
