@@ -139,7 +139,7 @@
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     width: 3vw;
-    height: 4.5vw;
+    height: 4vw;
     display: block;
   }
   .toolWrapper p {
@@ -150,7 +150,7 @@
     margin-top: 0;
     margin-bottom: 0;
     text-overflow: ellipsis;
-    margin-left: 2vw;
+    margin-left: 1vw;
     font-family: Objektiv Mk2;
     width: -webkit-fit-content;
     width: -moz-fit-content;

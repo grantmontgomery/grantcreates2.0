@@ -16,7 +16,7 @@ export const Tools: React.FC = () => {
     }
   `)
 
-  const { tools } = nodes[0]
+  const { tools }: { tools: string[] } = nodes[0]
 
   return (
     <div className={css.toolsWrapper}>
