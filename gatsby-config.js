@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: "Grant Montgomery | React Developer | For Hire",
     description:
-      "A React Developer based out of Los Angeles seeking a Front-End Developer position.",
+      "Full Stack Developer specialized in bringing designs to life with React.",
     url: "https://www.grantcreates.com",
     author: "Grant Montgomery",
     image: "/GrantCreatesAnvilSeo.png",

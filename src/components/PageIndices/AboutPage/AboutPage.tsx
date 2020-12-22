@@ -52,13 +52,15 @@ export const AboutPage: React.FC = () => {
       ></Img>
       <div className={css.descriptionWrapper}>
         <p>
-          Hi, I'm Grant! I'm a web developer based in Los Angeles who enjoys
-          creating slick digital experiences and efficient solutions. I'm
-          seeking a Full-Stack or Front-End Engineering position domestically or
-          internationally. Although I know how to implement a fair amount of
-          technologies, my greatest trait is my ability to adapt and learn
-          quickly whether that be in life or tech. When I'm not coding you can
-          catch me at the beach or on a trail.
+          Hi, I'm Grant! I'm a full stack web developer who enjoys creating
+          immersive experiences and applications with the power of React. I'm
+          seeking a Full-Stack or Front-End Engineering position where I can
+          utilize my skills and experience to bring your ideas to life. My
+          previous experience in sales has given me the ability to understand
+          the needs of end-users and to build out tools which solve them.
+          Besides my technical skill and customer-facing experience, my greatest
+          trait is my ability to learn quickly and adapt to any environment or
+          tech stack.
         </p>
       </div>
     </section>
