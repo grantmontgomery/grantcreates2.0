@@ -4,11 +4,10 @@ import { homePageContext } from "../PagesLogic/Context"
 import { useModalState } from "../../../state/ModalGlobal"
 import css from "./CreationsPage.module.css"
 
-interface State {
-  type: string
-}
 export const CreationsPage: React.FC = () => {
-  const [state, setState] = React.useState<State>({ type: "apps" })
+  const [creationsType, changeCreationType] = React.useState<
+    "apps" | "websites"
+  >("apps")
   const { creationsRef } = React.useContext(homePageContext)
 
   const {
@@ -26,21 +25,23 @@ export const CreationsPage: React.FC = () => {
       </div>
       <div className={`${css.creationTypes}`}>
         <button
-          className={`${css.type} ${state.type === "apps" ? css.active : null}`}
-          onClick={() => setState({ type: "apps" })}
+          className={`${css.type} ${
+            creationsType === "apps" ? css.active : null
+          }`}
+          onClick={() => changeCreationType("apps")}
         >
           Apps
         </button>
         <button
           className={`${css.type} ${
-            state.type === "websites" ? css.active : null
+            creationsType === "websites" ? css.active : null
           }`}
-          onClick={() => setState({ type: "websites" })}
+          onClick={() => changeCreationType("websites")}
         >
           Websites
         </button>
       </div>
-      <CreationType type={state.type}></CreationType>
+      <CreationType type={creationsType}></CreationType>
     </section>
   )
 }
