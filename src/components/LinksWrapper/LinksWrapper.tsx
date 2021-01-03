@@ -17,23 +17,20 @@ export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
     windowElement = window
   })
 
-  const determineLink: () => void = () => {
-    if (windowElement)
-      return windowElement.innerWidth < windowElement.innerHeight
+  React.useEffect(() => {
+    if (windowElement) {
+      windowElement.innerWidth < windowElement.innerHeight
         ? setLink("")
         : setLink("#creations")
-    else return
-  }
-
-  React.useEffect(() => {
-    determineLink()
+    }
   }, [windowElement])
 
   const handleLink: (element: string) => void = element => {
     if (handleTap) {
-      return handleTap(), scrollTo(element)
+      handleTap()
+      scrollTo(element)
     } else {
-      return scrollTo(element)
+      scrollTo(element)
     }
   }
 

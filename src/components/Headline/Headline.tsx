@@ -8,7 +8,7 @@ export const Headline: React.FC = () => {
 
   React.useEffect(() => {
     const interval = setInterval(() => {
-      return setCreation(creation => {
+      setCreation(creation => {
         return creation < creations.length - 1 ? (creation += 1) : 0
       })
     }, 2000)
