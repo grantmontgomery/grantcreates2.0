@@ -3,8 +3,9 @@ import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import css from "./AboutPage.module.css"
 
-export const AboutPage: React.FC = () => {
-  const aboutRef = React.useRef<HTMLElement | null>(null)
+export const AboutPage: React.FC<{
+  aboutRef: React.MutableRefObject<HTMLElement | null>
+}> = ({ aboutRef }) => {
   const {
     file: { childImageSharp },
   } = useStaticQuery(

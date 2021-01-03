@@ -16,7 +16,7 @@ export const ContactPage: React.FC<Props> = ({ contactRef }) => {
     if (body) {
       body.style.overflowY = "hidden"
     }
-    return modalDispatch(modalActions("CONTACT_FLOAT"))
+    modalDispatch(modalActions("CONTACT_FLOAT"))
   }
 
   return (

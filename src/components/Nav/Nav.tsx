@@ -17,19 +17,24 @@ export const Nav: React.FC = () => {
   } = useModalState()
   const modalDispatch = useModalDispatch()
   const applyLinksTransitions = () => {
-    return navLinks ? (
-      <CSSTransition
-        timeout={250}
-        classNames={{
-          enter: css["linksEnter"],
-          enterActive: css["linksEnterActive"],
-          exit: css["linksExit"],
-          exitActive: css["linksExitActive"],
-        }}
-      >
-        <LinksWrapper handleTap={handleTap} location="mobileNav"></LinksWrapper>
-      </CSSTransition>
-    ) : null
+    return (
+      navLinks && (
+        <CSSTransition
+          timeout={250}
+          classNames={{
+            enter: css["linksEnter"],
+            enterActive: css["linksEnterActive"],
+            exit: css["linksExit"],
+            exitActive: css["linksExitActive"],
+          }}
+        >
+          <LinksWrapper
+            handleTap={handleTap}
+            location="mobileNav"
+          ></LinksWrapper>
+        </CSSTransition>
+      )
+    )
   }
 
   let windowElement: Window | null = null
