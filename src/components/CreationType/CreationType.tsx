@@ -4,11 +4,7 @@ import { useModalState } from "../../state/ModalGlobal"
 import { ModalDark } from "../ModalDark"
 import css from "./CreationType.module.css"
 
-interface Props {
-  type: string
-}
-
-export const CreationType: React.FC<Props> = ({ type }) => {
+export const CreationType: React.FC<{ type: string }> = ({ type }) => {
   const {
     windows: { creation },
   } = useModalState()

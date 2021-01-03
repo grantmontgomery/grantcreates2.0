@@ -11,10 +11,6 @@ import { modalActions } from "../../state/actions"
 import css from "./ContactFloat.module.css"
 import { string } from "prop-types"
 
-// function SetState(state:FormState):FormState{
-//   return {...state}
-// }
-
 export const ContactFloat: React.FC = () => {
   const [fields, setFields] = React.useState<FormFields>({
     name: "",
@@ -45,7 +41,7 @@ export const ContactFloat: React.FC = () => {
   } = useModalState()
 
   const checkFields = () => {
-    const { name, phone, email, subject, message }: FormFields = fields
+    const { name, phone, email, subject, message } = fields
     if (
       name !== "" &&
       phone !== "" &&
@@ -62,15 +58,15 @@ export const ContactFloat: React.FC = () => {
           mailStatus: "sent",
           formSide: "status",
         }))
-        return sendMail(fields, handleExit, setState, setFields)
+        sendMail(fields, handleExit, setState, setFields)
       } else {
         if (!correctPhoneFormat(phone, state.phoneFormat)) {
-          return setErrors(errors => ({
+          setErrors(errors => ({
             ...errors,
             phoneError: { error: true, message: "Check phone formatting." },
           }))
         } else if (!correctEmailFormat(email)) {
-          return setErrors(errors => ({
+          setErrors(errors => ({
             ...errors,
             emailError: { error: true, message: "Check email formatting." },
           }))
