@@ -5,6 +5,7 @@
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
   background: #0b171d;
+  height: 44.5vh;
   -ms-grid-rows: 10% 12.5% auto;
       grid-template-rows: 10% 12.5% auto;
       grid-template-areas: "header" "types" "creationtype";
@@ -110,12 +111,6 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-}
-
-@media (orientation: portrait) {
-  .creations {
-    height: 44.5vh;
-  }
 }
 
 @media (orientation: landscape) {

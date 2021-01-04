@@ -20,9 +20,13 @@ export const ContactPage: React.FC<Props> = ({ contactRef }) => {
   }
 
   return (
-    <section id="contactPage" ref={contactRef} className={css.contact}>
+    <section
+      id="contactPage"
+      ref={contactRef}
+      className={css.contactPageWrapper}
+    >
       <span className={css.header}>Contact</span>
-      <span className={css.contact}>grant@grantcreates.com</span>
+      <span className={css.email}>grant@grantcreates.com</span>
       <button className={css.hireMe} onClick={handleTap}>
         Hire Me
       </button>
