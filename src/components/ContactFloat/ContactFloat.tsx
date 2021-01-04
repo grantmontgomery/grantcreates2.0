@@ -146,7 +146,7 @@ export const ContactFloat: React.FC = () => {
     if (body) {
       body.style.overflowY = "scroll"
     }
-    return modalDispatch(modalActions("CLOSE"))
+    modalDispatch(modalActions("CLOSE"))
   }
 
   const handleTap: () => void = () => {
@@ -154,7 +154,7 @@ export const ContactFloat: React.FC = () => {
     if (body) {
       body.style.overflowY = "hidden"
     }
-    return modalDispatch(modalActions("CONTACT_FLOAT"))
+    modalDispatch(modalActions("CONTACT_FLOAT"))
   }
 
   async function postmail(
@@ -165,7 +165,7 @@ export const ContactFloat: React.FC = () => {
     subject: string,
     message: string
   ) {
-    return fetch("/.netlify/functions/server", {
+    return fetch(`/.netlify/functions/server`, {
       headers: {
         Accept: "application/json",
         "Content-Type": "text/plain",
@@ -182,12 +182,12 @@ export const ContactFloat: React.FC = () => {
     })
   }
 
-  const handleSendFail = (setState: any) => {
+  const handleSendFail = () => {
     setTimeout(() => {
-      return setState(state => ({ ...state, mailStatus: "failed" }))
+      setState(state => ({ ...state, mailStatus: "failed" }))
     }, 2000)
     setTimeout(() => {
-      return setState(state => ({
+      setState(state => ({
         ...state,
         formSide: "email",
         mailStatus: "not sent",
@@ -197,18 +197,16 @@ export const ContactFloat: React.FC = () => {
 
   const handleSendSuccess = (
     accepted: number,
-    setState: any,
-    handleExit: () => void,
-    setFields: any
+
+    handleExit: () => void
   ) => {
     if (accepted > 0) {
       setTimeout(() => {
-        return setState(state => ({ ...state, mailStatus: "delivered" }))
+        setState(state => ({ ...state, mailStatus: "delivered" }))
       }, 2000)
       setTimeout(() => {
         return (
           setState({
-            tapped: false,
             formSide: "sender",
             phoneFormat: "us",
             mailStatus: "not sent",
@@ -225,7 +223,7 @@ export const ContactFloat: React.FC = () => {
         )
       }, 4000)
     } else {
-      return handleSendFail(setState)
+      handleSendFail()
     }
   }
 
@@ -235,18 +233,13 @@ export const ContactFloat: React.FC = () => {
     setState: any,
     setFields: any
   ) {
-    return postmail(name, phone, company, email, subject, message)
+    postmail(name, phone, company, email, subject, message)
       .then(response =>
         response.json().then(data => {
-          return handleSendSuccess(
-            data.accepted.length,
-            setState,
-            handleExit,
-            setFields
-          )
+          handleSendSuccess(data.accepted.length, handleExit)
         })
       )
-      .catch(response => (console.log(response), handleSendFail(setState)))
+      .catch(response => (console.log(response), handleSendFail()))
   }
 
   return (

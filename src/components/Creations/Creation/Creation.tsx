@@ -23,10 +23,12 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
       windows: { creation },
     } = useModalState()
 
-    let windowElement: Window | null = null
+    const windowRefObject: React.MutableRefObject<
+      Window | undefined
+    > = React.useRef()
 
     React.useLayoutEffect(() => {
-      windowElement = window
+      windowRefObject.current = window
     })
 
     React.useEffect(() => {
@@ -47,14 +49,15 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
       if (body) {
         body.style.overflowY = "hidden"
       }
-      if (creationRef.current && windowElement) {
+      if (creationRef.current && windowRefObject.current) {
         const boundingObject = creationRef.current.getBoundingClientRect()
         const elemTopPosition = boundingObject.top
         const creationElement = creationRef.current
         const elementWidth = creationElement.offsetWidth
-        const windowTopCenter = windowElement.innerHeight / 2
+        const windowTopCenter = windowRefObject.current.innerHeight / 2
 
-        return windowElement.innerHeight >= windowElement.innerWidth
+        windowRefObject.current.innerHeight >=
+        windowRefObject.current.innerWidth
           ? (setState({
               top: `${
                 windowTopCenter - elemTopPosition - elementWidth * 1.75
@@ -73,7 +76,7 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
       if (body) {
         body.style.overflowY = "scroll"
       }
-      return setState({ top: "0%" }), modalDispatch(modalActions("CLOSE"))
+      setState({ top: "0%" }), modalDispatch(modalActions("CLOSE"))
     }
 
     const changeDisplay = () => {

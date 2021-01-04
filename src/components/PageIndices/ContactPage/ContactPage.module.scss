@@ -111,7 +111,7 @@
     }
 
     & .hireMe {
-      height: 10vw;
+      height: 100px;
       top: 50%;
       transform: translate(0, -50%);
       font-family: Objektiv Mk2 Bold;
@@ -124,7 +124,7 @@
       border-style: none;
       border-radius: 5vw;
       font-size: 2vw;
-      width: 50%;
+      width: 40%;
       transition: 100ms ease-out;
       user-select: none;
       &:active {

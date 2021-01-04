@@ -3,6 +3,8 @@
   display: grid;
   grid-template-columns: 100%;
   background: #0b171d;
+  height: 44.5vh;
+
   grid-template-rows: 10% 12.5% auto;
   grid-template-areas: "header" "types" "creationtype";
   & .headerWrapper {
@@ -75,12 +77,6 @@
     color: white;
     width: 100%;
     height: fit-content;
-  }
-}
-
-@media (orientation: portrait) {
-  .creations {
-    height: 44.5vh;
   }
 }
 
