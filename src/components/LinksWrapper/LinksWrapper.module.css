@@ -69,6 +69,7 @@
   height: 100vh;
   background: #203a43;
   z-index: 4;
+  width: 75vw;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -85,6 +86,7 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  margin-top: 50%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -118,6 +120,10 @@
   font-size: 3vh;
 }
 
+.linksWrapper.navBar {
+  display: none;
+}
+
 @media (orientation: landscape) {
   .linksWrapper.mobileNav {
     display: none;
@@ -125,35 +131,11 @@
   .linksWrapper.navBar {
     display: block;
   }
-}
-
-@media (orientation: portrait) {
-  .linksWrapper.mobileNav {
-    width: 75vw;
-  }
-  .linksWrapper.mobileNav .innerLinks {
-    margin-top: 50%;
-  }
-  .linksWrapper.navBar {
-    display: none;
-  }
-}
-
-@media (min-width: 1025px) and (orientation: landscape) {
   .linksWrapper.navBar .innerLinks .link a {
     text-decoration: none;
   }
   .linksWrapper.navBar .innerLinks .link a .text {
-    font-size: 1.5vw;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  .linksWrapper.navBar .innerLinks .link a {
-    text-decoration: none;
-  }
-  .linksWrapper.navBar .innerLinks .link a .text {
-    font-size: 2vw;
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=LinksWrapper.module.css.map */

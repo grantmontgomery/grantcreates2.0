@@ -136,21 +136,14 @@
           transform: translate(100%, 0);
 }
 
-@media (min-width: 1025px) and (orientation: landscape) {
+@media (orientation: landscape) {
   .navWrapper {
-    height: 11vh;
+    width: 100vw;
+    height: 75px;
   }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  .navWrapper {
-    height: 16vh;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: portrait) {
-  .navWrapper {
-    height: 11vh;
+  .navWrapper .logoLink {
+    margin-left: 5%;
+    height: 100%;
   }
 }
 /*# sourceMappingURL=Nav.module.css.map */
