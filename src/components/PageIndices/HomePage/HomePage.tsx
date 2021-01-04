@@ -7,11 +7,13 @@ import { CreationsPage } from "../CreationsPage"
 export const HomePage: React.FC = () => {
   const hammerAnvilRef = React.useRef<HTMLDivElement | null>(null)
 
-  let observer: IntersectionObserver | null = null
+  const observer: React.MutableRefObject<
+    IntersectionObserver | undefined
+  > = React.useRef()
 
   React.useLayoutEffect(() => {
     hammerAnvilRef.current?.focus()
-    observer = new IntersectionObserver(
+    observer.current = new IntersectionObserver(
       entries => {
         const opacityBar1: HTMLElement | null = document.getElementById(
           "opacityBar1"
@@ -37,7 +39,7 @@ export const HomePage: React.FC = () => {
 
   React.useEffect(() => {
     if (hammerAnvilRef.current) {
-      observer?.observe(hammerAnvilRef.current)
+      observer.current?.observe(hammerAnvilRef.current)
     }
   })
   return (

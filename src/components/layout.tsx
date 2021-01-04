@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import "./layout.css"
 import { ContactFloat } from "./ContactFloat"
@@ -13,7 +6,7 @@ import { Nav } from "./Nav"
 import { ModalDark } from "./ModalDark"
 import { useEffect } from "react"
 
-export const Layout = ({ children }) => {
+export const Layout: React.FC = ({ children }) => {
   useEffect(() => {
     window.scroll({
       behavior: "smooth",

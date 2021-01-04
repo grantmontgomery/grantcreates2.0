@@ -1,10 +1,8 @@
 import React from "react"
-// import ObjektivBold from "../fonts/ObjektivMk2Bold.woff"
-// import Objektiv from "../fonts/ObjektivMk2.woff"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-export const SEO = () => {
+export const SEO: React.FC = () => {
   const { site } = useStaticQuery(
     graphql`
       query SEOQuery {

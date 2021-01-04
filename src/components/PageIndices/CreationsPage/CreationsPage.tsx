@@ -20,10 +20,10 @@ export const CreationsPage: React.FC = () => {
       className={css.creations}
       // style={{ zIndex: creation ? 4 : 2 }}
     >
-      <div className={`${css.headerWrapper}`}>
+      <div className={css.headerWrapper}>
         <span>Creations</span>
       </div>
-      <div className={`${css.creationTypes}`}>
+      <div className={css.creationTypes}>
         <button
           className={`${css.type} ${
             creationsType === "apps" ? css.active : null
