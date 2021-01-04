@@ -42,23 +42,22 @@
 .headlineWrapper .secondHeadline {
   margin-top: 2vw;
   margin-bottom: 2vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-}
-
-.headlineWrapper .secondHeadline span {
+  display: inline-block;
+  font-family: Objektiv Mk2 Bold;
   font-size: 4vw;
+  position: relative;
+  white-space: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #e2eef3;
+  width: fit-content;
 }
 
-.headlineWrapper .secondHeadline span:last-child {
-  margin-left: 1vw;
+.headlineWrapper .secondHeadline .dynamicText {
   color: #61dbfb;
+  display: inline-block;
+  margin-left: 1vw;
 }
 
 .headlineWrapper .thirdHeadline {
@@ -77,7 +76,7 @@
   .headlineWrapper .firstHeadline {
     font-size: clamp(25px, 2.5vw, 45px);
   }
-  .headlineWrapper .secondHeadline span {
+  .headlineWrapper .secondHeadline {
     font-size: clamp(30px, 2.75vw, 50px);
   }
   .headlineWrapper .secondHeadline span:last-child {

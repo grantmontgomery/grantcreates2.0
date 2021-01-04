@@ -24,16 +24,18 @@
   & .secondHeadline {
     margin-top: 2vw;
     margin-bottom: 2vw;
-    display: flex;
-    flex-flow: row nowrap;
-    // display: block;
-    & span {
-      font-size: 4vw;
-      color: #e2eef3;
-    }
-    & span:last-child {
-      margin-left: 1vw;
+    display: inline-block;
+    font-family: Objektiv Mk2 Bold;
+    font-size: 4vw;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+    color: #e2eef3;
+    width: fit-content;
+    & .dynamicText {
       color: #61dbfb;
+      display: inline-block;
+      margin-left: 1vw;
     }
   }
   & .thirdHeadline {
@@ -52,9 +54,8 @@
       font-size: clamp(25px, 2.5vw, 45px);
     }
     & .secondHeadline {
-      & span {
-        font-size: clamp(30px, 2.75vw, 50px);
-      }
+      font-size: clamp(30px, 2.75vw, 50px);
+
       & span:last-child {
         margin-left: 15px;
       }
