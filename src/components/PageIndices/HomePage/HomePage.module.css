@@ -9,9 +9,11 @@
       grid-template-rows: 40% 60%;
 }
 
-@media (min-width: 1025px) and (orientation: landscape) {
+@media (orientation: landscape) {
   .homePage {
-    height: 89vh;
+    height: calc(100vh - 75px);
+    padding-left: 5%;
+    padding-right: 5%;
     display: -ms-grid;
     display: grid;
         grid-template-areas: "headline anvil";
@@ -19,33 +21,6 @@
         grid-template-columns: 40% 60%;
     -ms-grid-rows: 100%;
         grid-template-rows: 100%;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  .homePage {
-    height: 84vh;
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: "headline anvil";
-    -ms-grid-columns: 40% 60%;
-        grid-template-columns: 40% 60%;
-    -ms-grid-rows: 100%;
-        grid-template-rows: 100%;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: portrait) {
-  .homePage {
-    height: 44.5vh;
-    height: 44.5vh;
-    display: -ms-grid;
-    display: grid;
-        grid-template-areas: "headline headline headline" "anvil anvil anvil";
-    -ms-grid-columns: 20% 60% 20%;
-        grid-template-columns: 20% 60% 20%;
-    -ms-grid-rows: 40% 60%;
-        grid-template-rows: 40% 60%;
   }
 }
 /*# sourceMappingURL=HomePage.module.css.map */

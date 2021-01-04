@@ -45,23 +45,22 @@
 @media (orientation: landscape) {
   .headlineWrapper {
     grid-area: headline;
-    margin-left: 7vw;
-
     transform: translate(0, -85%);
-
+    margin-left: 0;
+    margin-right: 0;
     & .firstHeadline {
-      font-size: 2.5vw;
+      font-size: clamp(25px, 2.5vw, 45px);
     }
     & .secondHeadline {
       & span {
-        font-size: 2.5vw;
+        font-size: clamp(30px, 2.75vw, 50px);
       }
       & span:last-child {
-        margin-left: 1vw;
+        margin-left: 15px;
       }
     }
     & .thirdHeadline {
-      font-size: 2.5vw;
+      font-size: clamp(25px, 2.5vw, 45px);
     }
   }
 }
