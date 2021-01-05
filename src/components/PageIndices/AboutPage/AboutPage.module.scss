@@ -31,12 +31,13 @@
     position: relative;
     z-index: 1;
     left: 50%;
-    top: 1.5vh;
-    transform: translate(calc(-50% + 2vh));
+    top: 1vh;
+    transform: translate(calc(-50% + 1.5vh));
     border: solid 0.5vh #61dbfb;
   }
 
   & .imageWrapper {
+    top: 0;
     grid-area: picture;
     height: 90%;
     position: relative;
@@ -55,77 +56,21 @@
     width: 100%;
     overflow: hidden;
     & p {
+      text-indent: 4vh;
+
       position: relative;
       margin-left: auto;
       margin-right: auto;
-      padding-left: 10%;
-      padding-right: 10%;
+      padding: 0;
       margin-top: 0;
       margin-bottom: auto;
       height: fit-content;
-      width: fit-content;
+      width: 80%;
       text-indent: 4vh;
       font-family: Objektiv Mk2;
       color: #e2eef3;
       text-align: left;
       font-size: 2vh;
-    }
-  }
-}
-
-@media (orientation: portait) {
-  .about {
-    width: 100vw;
-    display: grid;
-    background: #0b171d;
-    height: 100vh;
-    grid-template-areas: "." "header" "picture" "about";
-    grid-template-columns: 100%;
-
-    & .header {
-      margin-right: auto;
-      grid-area: header;
-      margin-left: 5%;
-      display: block;
-      position: relative;
-      font-size: 2.5vh;
-      top: 50%;
-      transform: translate(0, -50%);
-      font-family: Objektiv Mk2 Bold;
-      height: fit-content;
-      width: fit-content;
-      white-space: none;
-    }
-
-    & .imageWrapper {
-      grid-area: picture;
-      height: 90%;
-      position: relative;
-      padding: 0;
-      top: 50%;
-      transform: translate(0, -50%);
-      margin-right: auto;
-      margin-left: auto;
-      width: auto;
-    }
-    & .descriptionWrapper {
-      grid-area: about;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      & p {
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0;
-        margin-top: 0;
-        margin-bottom: auto;
-        width: 80%;
-        text-indent: 4vh;
-        font-family: Objektiv Mk2;
-        text-align: left;
-        font-size: 2vh;
-      }
     }
   }
 }
@@ -136,7 +81,6 @@
     display: grid;
     background: #0b171d;
     height: 100vh;
-
     grid-template-areas: ". ." "header header" "picture about";
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 8% auto;
@@ -147,7 +91,7 @@
       margin-left: 5%;
       display: block;
       position: relative;
-      font-size: 2.5vw;
+      font-size: 30px;
       top: 50%;
       transform: translate(0, -50%);
       font-family: Objektiv Mk2 Bold;

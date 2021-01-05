@@ -44,13 +44,14 @@
   position: relative;
   z-index: 1;
   left: 50%;
-  top: 1.5vh;
-  -webkit-transform: translate(calc(-50% + 2vh));
-          transform: translate(calc(-50% + 2vh));
+  top: 1vh;
+  -webkit-transform: translate(calc(-50% + 1.5vh));
+          transform: translate(calc(-50% + 1.5vh));
   border: solid 0.5vh #61dbfb;
 }
 
 .about .imageWrapper {
+  top: 0;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: picture;
@@ -77,93 +78,22 @@
 }
 
 .about .descriptionWrapper p {
+  text-indent: 4vh;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding: 0;
   margin-top: 0;
   margin-bottom: auto;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 80%;
   text-indent: 4vh;
   font-family: Objektiv Mk2;
   color: #e2eef3;
   text-align: left;
   font-size: 2vh;
-}
-
-@media (orientation: portait) {
-  .about {
-    width: 100vw;
-    display: -ms-grid;
-    display: grid;
-    background: #0b171d;
-    height: 100vh;
-        grid-template-areas: "." "header" "picture" "about";
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-  }
-  .about .header {
-    margin-right: auto;
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: header;
-    margin-left: 5%;
-    display: block;
-    position: relative;
-    font-size: 2.5vh;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    font-family: Objektiv Mk2 Bold;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    white-space: none;
-  }
-  .about .imageWrapper {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: picture;
-    height: 90%;
-    position: relative;
-    padding: 0;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    margin-right: auto;
-    margin-left: auto;
-    width: auto;
-  }
-  .about .descriptionWrapper {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    grid-area: about;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-  }
-  .about .descriptionWrapper p {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: auto;
-    width: 80%;
-    text-indent: 4vh;
-    font-family: Objektiv Mk2;
-    text-align: left;
-    font-size: 2vh;
-  }
 }
 
 @media (orientation: landscape) {
@@ -188,7 +118,7 @@
     margin-left: 5%;
     display: block;
     position: relative;
-    font-size: 2.5vw;
+    font-size: 30px;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);

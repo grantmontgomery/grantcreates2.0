@@ -81,7 +81,7 @@
 
 @media (orientation: landscape) {
   .creations {
-    height: calc(100vh - 75px);
+    height: 100vh;
     grid-template-rows: 20% 10% 12.5% auto;
     grid-template-areas: "." "header" "types" "creationtype";
     & .headerWrapper {
@@ -96,7 +96,7 @@
         cursor: pointer;
         height: 50px;
         width: fit-content;
-        border-radius: 5vw;
+        border-radius: 50px;
         font-size: 15px;
       }
     }

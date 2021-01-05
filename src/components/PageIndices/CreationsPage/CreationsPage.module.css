@@ -115,7 +115,7 @@
 
 @media (orientation: landscape) {
   .creations {
-    height: calc(100vh - 75px);
+    height: 100vh;
     -ms-grid-rows: 20% 10% 12.5% auto;
         grid-template-rows: 20% 10% 12.5% auto;
         grid-template-areas: "." "header" "types" "creationtype";
@@ -133,7 +133,7 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    border-radius: 5vw;
+    border-radius: 50px;
     font-size: 15px;
   }
 }

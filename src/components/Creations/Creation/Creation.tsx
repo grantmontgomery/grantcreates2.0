@@ -107,7 +107,7 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
         >
           {changeDisplay()}
         </div>
-        {creation ? null : (
+        {!creation && (
           <div className={css.selectorTitleWrapper}>
             <div className={css.selctorTitle}>{data.name}</div>
             <div className={css.subTitle}>{data.subTitle}</div>
