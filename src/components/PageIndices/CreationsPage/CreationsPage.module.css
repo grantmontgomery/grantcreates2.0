@@ -115,41 +115,26 @@
 
 @media (orientation: landscape) {
   .creations {
-    height: 100vh;
+    height: calc(100vh - 75px);
     -ms-grid-rows: 20% 10% 12.5% auto;
         grid-template-rows: 20% 10% 12.5% auto;
         grid-template-areas: "." "header" "types" "creationtype";
   }
   .creations .headerWrapper span {
-    font-size: 2.5vw;
+    font-size: 30px;
   }
   .creations .creationTypes {
     width: auto;
-    margin-left: 5vw;
+    margin-left: 25px;
   }
   .creations .creationTypes .type {
     cursor: pointer;
-    height: 5vw;
+    height: 50px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     border-radius: 5vw;
-    font-size: 2vw;
-  }
-}
-
-@media (min-width: 1025px) and (orientation: landscape) {
-  .creations .headerWrapper span {
-    font-size: 2.5vw;
-  }
-  .creations .creationTypes .type {
-    cursor: pointer;
-    height: 4vw;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    border-radius: 5vw;
-    font-size: 1vw;
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=CreationsPage.module.css.map */

@@ -55,13 +55,15 @@
     }
     & .secondHeadline {
       font-size: clamp(30px, 2.75vw, 50px);
-
-      & span:last-child {
+      display: block;
+      width: 60vw;
+      white-space: pre-wrap;
+      & .dynamicText {
         margin-left: 15px;
       }
     }
     & .thirdHeadline {
-      font-size: clamp(25px, 2.5vw, 45px);
+      font-size: clamp(20px, 2.5vw, 45px);
     }
   }
 }

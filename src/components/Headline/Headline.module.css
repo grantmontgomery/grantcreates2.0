@@ -78,12 +78,15 @@
   }
   .headlineWrapper .secondHeadline {
     font-size: clamp(30px, 2.75vw, 50px);
+    display: block;
+    width: 60vw;
+    white-space: pre-wrap;
   }
-  .headlineWrapper .secondHeadline span:last-child {
+  .headlineWrapper .secondHeadline .dynamicText {
     margin-left: 15px;
   }
   .headlineWrapper .thirdHeadline {
-    font-size: clamp(25px, 2.5vw, 45px);
+    font-size: clamp(20px, 2.5vw, 45px);
   }
 }
 /*# sourceMappingURL=Headline.module.css.map */

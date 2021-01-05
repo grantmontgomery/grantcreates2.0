@@ -38,9 +38,8 @@
 
 @media (orientation: landscape) {
   .hammerAnvil {
-    height: 75%;
+    height: clamp(350px, 35vw, 750px);
     width: 100%;
-
     top: 50%;
     transform: translate(0, -50%);
     & .dragBar {
