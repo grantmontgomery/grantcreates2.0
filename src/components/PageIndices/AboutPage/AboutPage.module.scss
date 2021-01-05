@@ -113,6 +113,8 @@
     }
 
     & .imageWrapper {
+      height: auto;
+
       grid-area: picture;
     }
     & .descriptionWrapper {
