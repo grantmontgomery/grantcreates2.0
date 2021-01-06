@@ -3,6 +3,8 @@
   grid-template-rows: 20vh 8vh 20vh 40vh;
   grid-template-areas: "." "header" "hammer" "tools";
   grid-template-columns: 100%;
+  height: 88vh;
+
   background: #0b171d;
   & .toolsHeader {
     grid-area: header;
@@ -19,13 +21,6 @@
   }
 }
 
-@media (orientation: portrait) {
-  .toolsPage {
-    height: 88vh;
-    grid-template-rows: 20vh 8vh 20vh 40vh;
-  }
-}
-
 @media (orientation: landscape) {
   .toolsPage {
     height: 100vh;
@@ -35,7 +30,7 @@
     background: #0b171d;
     & .toolsHeader {
       grid-area: header;
-      font-size: 2.5vw;
+      font-size: 30px;
       display: block;
       position: relative;
       height: fit-content;
