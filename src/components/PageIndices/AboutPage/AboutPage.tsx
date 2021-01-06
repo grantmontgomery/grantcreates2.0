@@ -40,22 +40,12 @@ export const AboutPage: React.FC<{
 
   const [portrait, setPortraitMode] = React.useState<boolean>(false)
 
-  // const windowRefObject: React.MutableRefObject<
-  //   Window | undefined
-  // > = React.useRef()
-
   React.useEffect(() => {
     window.innerWidth < window.innerHeight && setPortraitMode(true)
   }, [])
 
   const { fluid, fixed } = childImageSharp
 
-  // React.useEffect(() => {
-  //   if (windowRefObject.current) {
-  //     console.log(windowRefObject.current.innerWidth)
-  //     console.log(windowRefObject.current.innerHeight)
-  //   }
-  // }, [windowRefObject.current?.innerWidth])
   return (
     <section
       id="aboutPage"
