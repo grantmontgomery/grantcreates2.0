@@ -133,11 +133,11 @@
   }
   .about .borderFrame {
     display: block;
-    height: 64.8vh;
+    height: clamp(300px, 30vw, 800px);
+    width: clamp(300px, 30vw, 800px);
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: picture;
-    width: 64.8vh;
     position: relative;
     z-index: 1;
     left: 50%;
@@ -148,6 +148,7 @@
   }
   .about .imageWrapper {
     height: auto;
+    width: clamp(300px, 30vw, 800px);
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: picture;
@@ -170,7 +171,7 @@
     text-indent: 4vh;
     font-family: Objektiv Mk2;
     text-align: left;
-    font-size: 1.5vw;
+    font-size: clamp(13px, 1.5vw, 27px);
   }
 }
 /*# sourceMappingURL=AboutPage.module.css.map */
