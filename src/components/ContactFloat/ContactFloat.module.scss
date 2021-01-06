@@ -69,12 +69,10 @@
         text-align: center;
         height: 5vh;
         width: 5vh;
-
         top: 50%;
         display: block;
         text-align: center;
         transform: translate(0, -50%);
-        width: fit-content;
         position: relative;
         border: 1px solid white;
         text-align: center;
@@ -129,14 +127,14 @@
       grid-template-areas: "header" "form";
       & .headerWrapper {
         & .titleWrapper {
-          font-size: 2vw;
+          font-size: 3vh;
         }
 
         & .x {
-          border-radius: 4vw;
-          height: 4vw;
-          width: 4vw;
-          font-size: 2vw;
+          border-radius: 5vh;
+          height: 5vh;
+          width: 5vh;
+          font-size: 2vh;
         }
       }
     }

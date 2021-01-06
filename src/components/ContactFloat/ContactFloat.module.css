@@ -98,9 +98,6 @@
   text-align: center;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   position: relative;
   border: 1px solid white;
   text-align: center;
@@ -166,13 +163,13 @@
         grid-template-areas: "header" "form";
   }
   .contactWrapper.extended .headerWrapper .titleWrapper {
-    font-size: 2vw;
+    font-size: 3vh;
   }
   .contactWrapper.extended .headerWrapper .x {
-    border-radius: 4vw;
-    height: 4vw;
-    width: 4vw;
-    font-size: 2vw;
+    border-radius: 5vh;
+    height: 5vh;
+    width: 5vh;
+    font-size: 2vh;
   }
 }
 /*# sourceMappingURL=ContactFloat.module.css.map */
