@@ -3,10 +3,14 @@
   position: fixed;
   z-index: 2;
   float: right;
-  right: 3vh;
   -webkit-transition: 250ms ease-out;
   transition: 250ms ease-out;
   font-family: Objektiv Mk2 Bold;
+  height: 15vw;
+  width: 15vw;
+  border-radius: 15vw;
+  right: 4vh;
+  bottom: 4vh;
   cursor: pointer;
 }
 
@@ -39,6 +43,10 @@
   -ms-grid-rows: calc(100% / 7) calc(100% / 7 * 6);
       grid-template-rows: calc(100% / 7) calc(100% / 7 * 6);
       grid-template-areas: "header" "form";
+  width: 90vw;
+  bottom: 15vh;
+  height: 70vh;
+  border-radius: 5vh;
 }
 
 .contactWrapper.extended .headerWrapper {
@@ -73,12 +81,18 @@
   width: fit-content;
   color: white;
   margin-left: 5%;
+  font-size: 4vw;
   top: 50%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }
 
 .contactWrapper.extended .headerWrapper .x {
+  font-size: 3vw;
+  border-radius: 5vh;
+  text-align: center;
+  height: 5vh;
+  width: 5vh;
   top: 50%;
   display: block;
   text-align: center;
@@ -134,6 +148,13 @@
 }
 
 @media (orientation: landscape) {
+  .contactWrapper {
+    height: 11vh;
+    width: 11vh;
+    border-radius: 11vh;
+    right: 5vw;
+    bottom: 5vh;
+  }
   .contactWrapper.extended {
     width: 60vh;
     height: 80vh;
@@ -152,65 +173,6 @@
     height: 4vw;
     width: 4vw;
     font-size: 2vw;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  .contactWrapper {
-    height: 10vw;
-    width: 10vw;
-    border-radius: 10vw;
-    right: 3vw;
-    bottom: 3vw;
-  }
-}
-
-@media (min-width: 1025px) and (orientation: landscape) {
-  .contactWrapper {
-    height: 11vh;
-    width: 11vh;
-    border-radius: 11vh;
-    right: 5vw;
-    bottom: 5vh;
-  }
-  .contactWrapper.extended .headerWrapper .titleWrapper {
-    font-size: 1.5vw;
-  }
-  .contactWrapper.extended .headerWrapper .x {
-    border-radius: 2.5vw;
-    height: 2.5vw;
-    width: 2.5vw;
-    font-size: 1vw;
-    text-align: center;
-  }
-}
-
-@media (orientation: portrait) {
-  .contactWrapper {
-    height: 15vw;
-    width: 15vw;
-    border-radius: 15vw;
-    right: 4vh;
-    bottom: 4vh;
-  }
-  .contactWrapper.extended {
-    width: 90vw;
-    bottom: 15vh;
-    height: 70vh;
-    border-radius: 5vh;
-        grid-template-areas: "header" "form";
-  }
-  .contactWrapper.extended .headerWrapper .titleWrapper {
-    font-size: 4vw;
-  }
-  .contactWrapper.extended .headerWrapper .x {
-    font-size: 3vw;
-    border-radius: 5vh;
-    text-align: center;
-    height: 5vh;
-    cursor: pointer;
-    width: 5vh;
-    border: 1px solid white;
   }
 }
 /*# sourceMappingURL=ContactFloat.module.css.map */
