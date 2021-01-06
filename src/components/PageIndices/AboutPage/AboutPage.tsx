@@ -65,19 +65,16 @@ export const AboutPage: React.FC<{
         imgStyle={portrait ? portraitDimensions : landscapeDimensions}
         className={css.imageWrapper}
       ></Img>
-      <div className={css.descriptionWrapper}>
-        <p>
-          Hi, I'm Grant! I'm a full stack web developer who enjoys creating
-          immersive experiences and applications with the power of React. I'm
-          seeking a Full-Stack or Front-End Engineering position where I can
-          utilize my skills and experience to bring your ideas to life. My
-          previous experience in sales has given me the ability to understand
-          the needs of end-users and to build out tools which solve them.
-          Besides my technical skill and customer-facing experience, my greatest
-          trait is my ability to learn quickly and adapt to any environment or
-          tech stack.
-        </p>
-      </div>
+      <p className={css.description}>
+        Hi, I'm Grant! I'm a full stack web developer who enjoys creating
+        immersive experiences and applications with the power of React. I'm
+        seeking a Full-Stack or Front-End Engineering position where I can
+        utilize my skills and experience to bring your ideas to life. My
+        previous experience in sales has given me the ability to understand the
+        needs of end-users and to build out tools which solve them. Besides my
+        technical skill and customer-facing experience, my greatest trait is my
+        ability to learn quickly and adapt to any environment or tech stack.
+      </p>
     </section>
   )
 }

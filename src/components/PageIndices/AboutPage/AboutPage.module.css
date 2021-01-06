@@ -68,27 +68,22 @@
   display: none;
 }
 
-.about .descriptionWrapper {
+.about .description {
+  text-indent: 4vh;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: about;
   height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.about .descriptionWrapper p {
-  text-indent: 4vh;
+  width: 80%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
   margin-top: 0;
-  margin-bottom: auto;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 80%;
+  display: block;
   text-indent: 4vh;
   font-family: Objektiv Mk2;
   color: #e2eef3;
@@ -153,20 +148,16 @@
     -ms-grid-column: 1;
     grid-area: picture;
   }
-  .about .descriptionWrapper {
+  .about .description {
     -ms-grid-row: 3;
     -ms-grid-column: 2;
     grid-area: about;
     height: 100%;
     width: 100%;
-    overflow: hidden;
-  }
-  .about .descriptionWrapper p {
     position: relative;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10%;
-    margin-bottom: auto;
     width: 75%;
     text-indent: 4vh;
     font-family: Objektiv Mk2;

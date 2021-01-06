@@ -50,28 +50,23 @@
       display: none;
     }
   }
-  & .descriptionWrapper {
+  & .description {
+    text-indent: 4vh;
     grid-area: about;
     height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    & p {
-      text-indent: 4vh;
-
-      position: relative;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0;
-      margin-top: 0;
-      margin-bottom: auto;
-      height: fit-content;
-      width: 80%;
-      text-indent: 4vh;
-      font-family: Objektiv Mk2;
-      color: #e2eef3;
-      text-align: left;
-      font-size: 2vh;
-    }
+    width: 80%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    margin-top: 0;
+    height: fit-content;
+    display: block;
+    text-indent: 4vh;
+    font-family: Objektiv Mk2;
+    color: #e2eef3;
+    text-align: left;
+    font-size: 2vh;
   }
 }
 
@@ -117,23 +112,20 @@
       width: clamp(300px, 30vw, 800px);
       grid-area: picture;
     }
-    & .descriptionWrapper {
+    & .description {
       grid-area: about;
       height: 100%;
       width: 100%;
-      overflow: hidden;
-      & p {
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10%;
-        margin-bottom: auto;
-        width: 75%;
-        text-indent: 4vh;
-        font-family: Objektiv Mk2;
-        text-align: left;
-        font-size: clamp(13px, 1.5vw, 27px);
-      }
+
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
+      width: 75%;
+      text-indent: 4vh;
+      font-family: Objektiv Mk2;
+      text-align: left;
+      font-size: clamp(13px, 1.5vw, 27px);
     }
   }
 }
