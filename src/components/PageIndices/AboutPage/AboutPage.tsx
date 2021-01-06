@@ -38,16 +38,24 @@ export const AboutPage: React.FC<{
     `
   )
 
-  const windowRefObject: React.MutableRefObject<
-    Window | undefined
-  > = React.useRef()
+  const [portrait, setPortraitMode] = React.useState<boolean>(false)
 
-  React.useLayoutEffect(() => {
-    windowRefObject.current = window
+  // const windowRefObject: React.MutableRefObject<
+  //   Window | undefined
+  // > = React.useRef()
+
+  React.useEffect(() => {
+    window.innerWidth < window.innerHeight && setPortraitMode(true)
   }, [])
 
   const { fluid, fixed } = childImageSharp
 
+  // React.useEffect(() => {
+  //   if (windowRefObject.current) {
+  //     console.log(windowRefObject.current.innerWidth)
+  //     console.log(windowRefObject.current.innerHeight)
+  //   }
+  // }, [windowRefObject.current?.innerWidth])
   return (
     <section
       id="aboutPage"
@@ -64,13 +72,7 @@ export const AboutPage: React.FC<{
         loading="eager"
         title="Grant Montgomery"
         alt="Grant on a rooftop in Los Angeles"
-        imgStyle={
-          windowRefObject.current &&
-          windowRefObject.current.innerHeight >
-            windowRefObject.current.innerWidth
-            ? portraitDimensions
-            : landscapeDimensions
-        }
+        imgStyle={portrait ? portraitDimensions : landscapeDimensions}
         className={css.imageWrapper}
       ></Img>
       <div className={css.descriptionWrapper}>
