@@ -45,6 +45,7 @@
     height: 100vh;
     background: #203a43;
     z-index: 4;
+    width: 75vw;
     justify-content: space-between;
     overflow: hidden;
     & .innerLinks {
@@ -52,6 +53,8 @@
       height: 30%;
       display: flex;
       flex-flow: column nowrap;
+      margin-top: 50%;
+
       justify-content: flex-start;
       & .link {
         height: fit-content;
@@ -73,7 +76,11 @@
       }
     }
   }
+  &.navBar {
+    display: none;
+  }
 }
+
 @media (orientation: landscape) {
   .linksWrapper {
     &.mobileNav {
@@ -81,51 +88,12 @@
     }
     &.navBar {
       display: block;
-    }
-  }
-}
-
-@media (orientation: portrait) {
-  .linksWrapper {
-    &.mobileNav {
-      width: 75vw;
-      & .innerLinks {
-        margin-top: 50%;
-      }
-    }
-    &.navBar {
-      display: none;
-    }
-  }
-}
-
-@media (min-width: 1025px) and (orientation: landscape) {
-  .linksWrapper {
-    &.navBar {
       & .innerLinks {
         & .link {
           & a {
             text-decoration: none;
             & .text {
-              font-size: 1.5vw;
-              // font-size: 3vh;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  .linksWrapper {
-    &.navBar {
-      & .innerLinks {
-        & .link {
-          & a {
-            text-decoration: none;
-            & .text {
-              font-size: 2vw;
+              font-size: 20px;
             }
           }
         }

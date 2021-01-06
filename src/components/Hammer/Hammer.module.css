@@ -13,6 +13,7 @@
   width: 20vw;
   background: none;
   top: 0;
+  display: block;
   z-index: 1;
 }
 
@@ -40,48 +41,18 @@
   cursor: grabbing;
 }
 
-@media (orientation: portrait) {
+@media (orientation: landscape) {
   .hammer {
-    grid-area: hammer;
+    overflow: hidden;
+  }
+  .hammer .dragBar {
+    display: none;
+  }
+  .hammer canvas {
+    height: clamp(285px, 40vw, 500px);
     width: 100%;
-    position: relative;
-    height: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .hammer .dragBar {
-    display: block;
-  }
-  .hammer canvas {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    outline: none;
-  }
-}
-
-@media (max-width: 599px) and (orientation: landscape) {
-  .hammer .dragBar {
-    display: none;
-  }
-  .hammer canvas {
-    height: 60%;
-    width: 100%;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    position: relative;
-    outline: none;
-  }
-}
-
-@media (min-width: 600px) and (orientation: landscape) {
-  .hammer .dragBar {
-    display: none;
-  }
-  .hammer canvas {
-    height: 60%;
-    width: 100%;
     position: relative;
     outline: none;
   }

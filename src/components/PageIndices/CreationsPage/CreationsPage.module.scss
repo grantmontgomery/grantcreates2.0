@@ -4,7 +4,6 @@
   grid-template-columns: 100%;
   background: #0b171d;
   height: 44.5vh;
-
   grid-template-rows: 10% 12.5% auto;
   grid-template-areas: "header" "types" "creationtype";
   & .headerWrapper {
@@ -87,37 +86,18 @@
     grid-template-areas: "." "header" "types" "creationtype";
     & .headerWrapper {
       & span {
-        font-size: 2.5vw;
+        font-size: 30px;
       }
     }
     & .creationTypes {
       width: auto;
-      margin-left: 5vw;
+      margin-left: 25px;
       & .type {
         cursor: pointer;
-        height: 5vw;
+        height: 50px;
         width: fit-content;
-        border-radius: 5vw;
-        font-size: 2vw;
-      }
-    }
-  }
-}
-
-@media (min-width: 1025px) and (orientation: landscape) {
-  .creations {
-    & .headerWrapper {
-      & span {
-        font-size: 2.5vw;
-      }
-    }
-    & .creationTypes {
-      & .type {
-        cursor: pointer;
-        height: 4vw;
-        width: fit-content;
-        border-radius: 5vw;
-        font-size: 1vw;
+        border-radius: 50px;
+        font-size: 15px;
       }
     }
   }

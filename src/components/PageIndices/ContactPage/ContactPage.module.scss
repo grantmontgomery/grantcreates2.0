@@ -98,16 +98,15 @@
     grid-template-columns: 50% 50%;
 
     & .header {
-      font-size: 2.5vw;
+      font-size: 30px;
     }
 
     & .email {
       top: 0;
       transform: translate(0, 0);
-      margin-top: 15vh;
+      margin-top: 20vh;
       margin-bottom: auto;
-
-      font-size: 2.5vw;
+      font-size: clamp(20px, 2vw, 35px);
     }
 
     & .hireMe {
@@ -122,9 +121,9 @@
       border: solid 0.5vh #2c5363;
       outline: none;
       border-style: none;
-      border-radius: 5vw;
-      font-size: 2vw;
-      width: 40%;
+      border-radius: 100px;
+      font-size: 25px;
+      width: 250px;
       transition: 100ms ease-out;
       user-select: none;
       &:active {
@@ -140,7 +139,7 @@
       grid-area: email;
       top: 0;
       transform: translate(0, 0);
-      margin-bottom: 10vh;
+      margin-bottom: 15vh;
       margin-top: auto;
       width: fit-content;
       & a {
@@ -150,7 +149,7 @@
           display: block;
           user-select: none;
           outline: none;
-          height: 5vw;
+          height: 7vh;
           width: auto;
           fill: #e3eef2;
           &:first-child {

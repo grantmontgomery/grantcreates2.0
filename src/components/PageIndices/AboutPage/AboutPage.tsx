@@ -3,6 +3,18 @@ import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import css from "./AboutPage.module.css"
 
+const portraitDimensions = {
+  position: "relative",
+  height: "100%",
+  width: "auto",
+}
+
+const landscapeDimensions = {
+  position: "relative",
+  height: "auto",
+  width: "100%",
+}
+
 export const AboutPage: React.FC<{
   aboutRef: React.MutableRefObject<HTMLElement | null>
 }> = ({ aboutRef }) => {
@@ -26,6 +38,12 @@ export const AboutPage: React.FC<{
     `
   )
 
+  const [portrait, setPortraitMode] = React.useState<boolean>(false)
+
+  React.useEffect(() => {
+    window.innerWidth < window.innerHeight && setPortraitMode(true)
+  }, [])
+
   const { fluid, fixed } = childImageSharp
 
   return (
@@ -44,11 +62,7 @@ export const AboutPage: React.FC<{
         loading="eager"
         title="Grant Montgomery"
         alt="Grant on a rooftop in Los Angeles"
-        imgStyle={{
-          position: "relative",
-          height: "100%",
-          width: "auto",
-        }}
+        imgStyle={portrait ? portraitDimensions : landscapeDimensions}
         className={css.imageWrapper}
       ></Img>
       <div className={css.descriptionWrapper}>

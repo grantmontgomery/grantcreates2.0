@@ -9,7 +9,6 @@ import { useModalDispatch, useModalState } from "../../state/ModalGlobal"
 import { modalActions } from "../../state/actions"
 
 import css from "./ContactFloat.module.css"
-import { string } from "prop-types"
 
 export const ContactFloat: React.FC = () => {
   const [fields, setFields] = React.useState<FormFields>({

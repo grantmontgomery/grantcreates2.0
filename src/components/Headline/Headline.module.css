@@ -42,23 +42,22 @@
 .headlineWrapper .secondHeadline {
   margin-top: 2vw;
   margin-bottom: 2vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-}
-
-.headlineWrapper .secondHeadline span {
+  display: inline-block;
+  font-family: Objektiv Mk2 Bold;
   font-size: 4vw;
+  position: relative;
+  white-space: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #e2eef3;
+  width: fit-content;
 }
 
-.headlineWrapper .secondHeadline span:last-child {
-  margin-left: 1vw;
+.headlineWrapper .secondHeadline .dynamicText {
   color: #61dbfb;
+  display: inline-block;
+  margin-left: 1vw;
 }
 
 .headlineWrapper .thirdHeadline {
@@ -69,21 +68,25 @@
 @media (orientation: landscape) {
   .headlineWrapper {
     grid-area: headline;
-    margin-left: 7vw;
     -webkit-transform: translate(0, -85%);
             transform: translate(0, -85%);
+    margin-left: 0;
+    margin-right: 0;
   }
   .headlineWrapper .firstHeadline {
-    font-size: 2.5vw;
+    font-size: clamp(25px, 2.5vw, 45px);
   }
-  .headlineWrapper .secondHeadline span {
-    font-size: 2.5vw;
+  .headlineWrapper .secondHeadline {
+    font-size: clamp(30px, 2.75vw, 50px);
+    display: block;
+    width: 60vw;
+    white-space: pre-wrap;
   }
-  .headlineWrapper .secondHeadline span:last-child {
-    margin-left: 1vw;
+  .headlineWrapper .secondHeadline .dynamicText {
+    margin-left: 15px;
   }
   .headlineWrapper .thirdHeadline {
-    font-size: 2.5vw;
+    font-size: clamp(20px, 2.5vw, 45px);
   }
 }
 /*# sourceMappingURL=Headline.module.css.map */

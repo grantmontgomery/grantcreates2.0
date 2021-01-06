@@ -6,16 +6,22 @@
   width: 20vh;
   transition: 250ms ease-out;
   left: 50%;
+  border-radius: 4vh;
+
+  display: block;
   cursor: pointer;
   &.tapped {
+    margin-top: 0%;
+    position: fixed;
+    height: 60vh;
+    z-index: 4;
+    width: 90vw;
+    left: 50%;
+    transform: translate(-50%, 0%);
     overflow: hidden;
     margin-left: auto;
     cursor: default;
     margin-right: auto;
-    position: fixed;
-    height: 105vw;
-    z-index: 5;
-    width: 90vw;
     transition: 250ms ease-out;
     border-radius: 5vh;
   }
@@ -29,6 +35,8 @@
   left: 50%;
   transform: translate(-50%, 0);
   transition: 250ms ease-out;
+  bottom: 2.5%;
+
   flex-flow: column nowrap;
   z-index: -1;
   & .selctorTitle {
@@ -53,9 +61,9 @@
 
 @media (orientation: landscape) {
   .creationWrapper {
-    height: 17.5vw;
-    border-radius: 3vw;
-    width: 17.5vw;
+    height: 35vh;
+    border-radius: 5vh;
+    width: 35vh;
     transform: translate(-50%, 0);
     left: 50%;
     &.tapped {
@@ -75,39 +83,13 @@
   }
   .selectorTitleWrapper {
     position: relative;
-    margin-top: 1%;
+    margin-top: 3vh;
     z-index: 1;
     & .selctorTitle {
-      font-size: 1.25vw;
+      font-size: 2.5vh;
     }
     & .subTitle {
-      font-size: 1vw;
-    }
-  }
-}
-
-@media (orientation: portrait) {
-  .creationWrapper {
-    border-radius: 4vh;
-    display: block;
-    &.tapped {
-      margin-top: 0%;
-      position: fixed;
-      height: 60vh;
-      z-index: 4;
-      width: 90vw;
-      left: 50%;
-      transform: translate(-50%, 0%);
-    }
-  }
-  .selectorTitleWrapper {
-    bottom: 2.5%;
-
-    & .selctorTitle {
       font-size: 2vh;
-    }
-    & .subTitle {
-      font-size: 1.8vh;
     }
   }
 }
