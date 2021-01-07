@@ -2,7 +2,7 @@
     <img alt="Grant Creates" src="src/images/GrantCreatesLogoBanner.png" width="100%" />
  </a>
 
-#<h1 align="center">
+<h1 align="center">
 grantcreates.com version 2.0
 </h1>
 
