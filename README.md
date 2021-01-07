@@ -10,15 +10,15 @@ Hi I'm Grant and I like to create rad things! This is my portfolio where I displ
 
 ## Contents
 * [Motivation](#Motivation)
-* [Design Principles](#DesignPrinciples)
+* [Design](#Design)
 * [Features](#Features)
 * [Technologies](#Technologies)
+* [Colors](#Colors)
 * [License](#License)
 
 ## Motivation
 
-
-## Design Principles
+## Design
 
 ## Features
 
