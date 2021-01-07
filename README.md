@@ -57,8 +57,8 @@ Here's a list of some of the major Technologies used to create this experience.
 
 Color | Hex
 ------------ | -------------
-Rich Black FOGRA 29  | ![#0b171d](https://via.placeholder.com/10/0b171d?text=)`#0b171d`
-Charleston Green | #0f2027
+Rich Black FOGRA 29  | ![#0b171d](https://via.placeholder.com/10/0b171d?text=+)`#0b171d`
+Charleston Green | ![#0f2027](https://via.placeholder.com/10/0f2027?text=+)`#0f2027`
 Gunmetal | #203a43
 Teal Blue | #3e768e
 
