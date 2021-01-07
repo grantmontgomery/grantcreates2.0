@@ -31,16 +31,22 @@ Here's a list of some of the major Technologies used to create this experience.
   * HTML
 * **Styling**
   * [Sass](https://github.com/sass/sass)
+  * [CSS Modules](https://github.com/css-modules/css-modules)
   * CSS
 * **Libraries**
   * [React.js](https://github.com/facebook/react)
   * [Three.js](https://github.com/mrdoob/three.js)
 * **Frameworks**
   * [Gatsby.js](https://github.com/gatsbyjs/gatsby)
-* **Cloud Services**
-  * [Netlify](https://github.com/netlify)
+* **Micro Services
+  * [Netlify Lambda](https://github.com/netlify/netlify-lambda)
 * **SMTP Services**
   * [Nodemailer](https://github.com/nodemailer/nodemailer)
+* **APIs**
+  * [Google APIs](https://github.com/googleapis/googleapis)
+* **Cloud Services**
+  * [Netlify](https://github.com/netlify)
+
 
  
 
