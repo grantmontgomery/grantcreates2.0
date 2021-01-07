@@ -6,7 +6,7 @@
 grantcreates.com version 2.0
 </h1>
 
-Hi I'm Grant and I like to create rad things! This is my portfolio where I display different creations that I've created or am currently creating.
+Hi I'm Grant and I like to create rad things! This is my portfolio displaying my digital creations, some created and some being created.
 
 ## Contents
 * [Motivation](#Motivation)
