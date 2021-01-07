@@ -25,8 +25,8 @@ Hi I'm Grant and I like to create rad things! This is my portfolio where I displ
 ## Technologies
 Here's a list of some of the major Technologies used to create this experience.
  * Languages
- ** TypeScript
- ** JavaScript
+  * TypeScript
+  * JavaScript
  
 
 ## Colors
