@@ -27,6 +27,7 @@ Here's a list of some of the major Technologies used to create this experience.
 * **Languages**
   * [TypeScript](https://github.com/microsoft/TypeScript)
   * JavaScript
+  * [GraphQL](https://graphql.org/)
 * **Markdown**
   * HTML
 * **Styling**
