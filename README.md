@@ -3,7 +3,7 @@
     <img alt="Grant Creates" src="src/images/GrantCreatesLogoBanner.png" width="100%" />
   </a>
 </p>
-<h1 align="center">
+##<h1 align="center">
 grantcreates.com version 2.0
 </h1>
 
@@ -12,6 +12,4 @@ grantcreates.com version 2.0
 ##<h1>Contents</h1>
 
 
-##
 
-##
