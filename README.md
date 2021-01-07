@@ -54,9 +54,9 @@ Here's a list of some of the major Technologies used to create this experience.
 ## Colors
 
 
-First Header | Second Header
+Color | Hex
 ------------ | -------------
-Content from cell 1 | Content from cell 2
+Content from cell  | Content from cell 2
 Content in the first column | Content in the second column
 
 
