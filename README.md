@@ -27,11 +27,20 @@ Here's a list of some of the major Technologies used to create this experience.
 * Languages
   * [TypeScript](https://github.com/microsoft/TypeScript)
   * JavaScript
+* Markdown
+  * HTML
+* Styling
+  * [Sass](https://github.com/sass/sass)
+  * CSS
 * Libraries
   * [React.js](https://github.com/facebook/react)
   * [Three.js](https://github.com/mrdoob/three.js)
 * Frameworks
   * [Gatsby.js](https://github.com/gatsbyjs/gatsby)
+* Cloud Services
+  * [Netlify](https://github.com/netlify)
+* SMTP Services
+  * [Nodemailer](https://github.com/nodemailer/nodemailer)
 
  
 
