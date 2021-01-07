@@ -56,8 +56,11 @@ Here's a list of some of the major Technologies used to create this experience.
 
 Color | Hex
 ------------ | -------------
-Content from cell  | Content from cell 2
-Content in the first column | Content in the second column
+Rich Black FOGRA 29  | #0b171d
+Charleston Green | #0f2027
+Gunmetal | #203a43
+Teal Blue | #3e768e
+
 
 
 ## License
