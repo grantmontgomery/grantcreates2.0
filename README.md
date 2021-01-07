@@ -53,6 +53,12 @@ Here's a list of some of the major Technologies used to create this experience.
 
 ## Colors
 
+Color | Hex
+- | -
+Blue | bruh
+
+
+
 ## License
 
 
