@@ -6,9 +6,19 @@
 grantcreates.com version 2.0
 </h1>
 
-<p>Hi I'm Grant and I like to create rad things! This is my portfolio and digital forge where I display different creations that I've created or am currently creating.</p> 
+Hi I'm Grant and I like to create rad things! This is my portfolio where I display different creations that I've created or am currently creating.
 
-##<h1>Contents</h1>
+## Contents
+1. [Motivation]
+2. [Design Principles]
+3. [Features]
+4. [Technologies]
+5. [License]
+
+
+
+
+
 
 
 
