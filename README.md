@@ -38,7 +38,7 @@ Here's a list of some of the major Technologies used to create this experience.
   * [Three.js](https://github.com/mrdoob/three.js)
 * **Frameworks**
   * [Gatsby.js](https://github.com/gatsbyjs/gatsby)
-* **Micro Services
+* **Micro Services**
   * [Netlify Lambda](https://github.com/netlify/netlify-lambda)
 * **SMTP Services**
   * [Nodemailer](https://github.com/nodemailer/nodemailer)
