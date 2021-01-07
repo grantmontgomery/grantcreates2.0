@@ -48,8 +48,6 @@ Here's a list of some of the major Technologies used to create this experience.
   * [Google APIs](https://github.com/googleapis/googleapis)
 * **Cloud Services**
   * [Netlify](https://github.com/netlify)
-
-
  
 
 ## Colors
@@ -69,15 +67,15 @@ Red Salsa | ![#ed4548](https://via.placeholder.com/10/ed4548?text=+)`#ed4548`
 
 
 ## Inspirations
-These are some notable people who's work or advice were inspirations for this portfolio. Go check out their work!
+These are some notable people who's work or advice were huge inspirations for this portfolio. Go check out their work!
 * [Brittany Chiang](https://github.com/bchiang7)
-* []
-
-
-
+* [Artem Gavrysh](https://github.com/temrysh)
+* [Pablo Lorenzo](https://github.com/mr-wellick)
 
 
 ## License
+
+* [MIT License](https://github.com/grantmontgomery/grantcreates2.0/blob/master/LICENSE)
 
 
 
