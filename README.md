@@ -53,10 +53,11 @@ Here's a list of some of the major Technologies used to create this experience.
 
 ## Colors
 
-Color | Hex
-    - | -
- Blue | bruh
 
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
 
 
 ## License
