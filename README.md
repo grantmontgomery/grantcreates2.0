@@ -6,11 +6,11 @@
 <h1 align="center">
 grantcreates.com version 2.0
 </h1>
-##
+
 <p>Hi I'm Grant and I like to create rad things! This is my portfolio and digital forge where I display different creations that I've created or am currently creating.</p> 
 
-<h1>Contents</h1>
-##
+##<h1>Contents</h1>
+
 
 ##
 
