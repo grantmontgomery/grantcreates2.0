@@ -25,8 +25,14 @@ Hi I'm Grant and I like to create rad things! This is my portfolio where I displ
 ## Technologies
 Here's a list of some of the major Technologies used to create this experience.
 * Languages
-  * TypeScript
+  * [TypeScript](https://github.com/microsoft/TypeScript)
   * JavaScript
+* Libraries
+  * [Gatsby.js](https://github.com/gatsbyjs/gatsby)
+  * React.js
+  * Three.js
+* Frameworks
+  * 
  
 
 ## Colors
