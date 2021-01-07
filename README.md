@@ -6,9 +6,8 @@
 <h1 align="center">
 grantcreates.com version 2.0
 </h1>
-
-Welcome to my digital forge! This is my portfolio site displaying different creations that I've made or are in the works. 
-
+##
+<p>Hi I'm Grant and I like to create rad things! This is my portfolio and digital forge where I display different creations that I've created or am currently creating.</p> 
 
 <h1>Contents</h1>
 ##
