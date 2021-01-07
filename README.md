@@ -24,6 +24,8 @@ Hi I'm Grant and I like to create rad things! This is my portfolio where I displ
 
 ## Technologies
 
+## Colors
+
 ## License
 
 
