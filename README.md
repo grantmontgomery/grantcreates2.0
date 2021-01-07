@@ -64,6 +64,8 @@ Blue Sapphire | ![#2c5363](https://via.placeholder.com/10/2c5363?text=+)`#2c5363
 Teal Blue | ![#3e768e](https://via.placeholder.com/10/3e768e?text=+)`#3e768e`
 Sky Blue Crayola (React Color) | ![#61dbfb](https://via.placeholder.com/10/61dbfb?text=+)`#61dbfb`
 Alice Blue | ![#e2eef3](https://via.placeholder.com/10/e2eef3?text=+)`#e2eef3`
+Emerald | ![#57c769](https://via.placeholder.com/10/57c769?text=+)`#57c769`
+Red Salsa | ![#ed4548](https://via.placeholder.com/10/ed4548?text=+)`#ed4548`
 
 
 ## Inspirations
