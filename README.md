@@ -14,6 +14,7 @@ Hi I'm Grant and I like to create rad things! This is my portfolio where I displ
 * [Features](#Features)
 * [Technologies](#Technologies)
 * [Colors](#Colors)
+* [Inspirations](#Inspirations)
 * [License](#License)
 
 ## Motivation
@@ -56,10 +57,17 @@ Here's a list of some of the major Technologies used to create this experience.
 
 Color | Hex
 ------------ | -------------
-Rich Black FOGRA 29  | #0b171d
+Rich Black FOGRA 29  | ![#0b171d](https://via.placeholder.com/10/0b171d?text=)`#0b171d`
 Charleston Green | #0f2027
 Gunmetal | #203a43
 Teal Blue | #3e768e
+
+
+
+
+## Inspirations
+
+
 
 
 
