@@ -60,12 +60,14 @@ Color | Hex
 Rich Black FOGRA 29  | ![#0b171d](https://via.placeholder.com/10/0b171d?text=+)`#0b171d`
 Charleston Green | ![#0f2027](https://via.placeholder.com/10/0f2027?text=+)`#0f2027`
 Gunmetal | ![#203a43](https://via.placeholder.com/10/203a43?text=+)`#203a43`
+Blue Sapphire | ![#2c5363](https://via.placeholder.com/10/2c5363?text=+)`#2c5363`
 Teal Blue | ![#3e768e](https://via.placeholder.com/10/3e768e?text=+)`#3e768e`
-
-
+Sky Blue Crayola (React Color) | ![#61dbfb](https://via.placeholder.com/10/61dbfb?text=+)`#61dbfb`
 
 
 ## Inspirations
+These are some notable people who's work or advice were inspirations for this portfolio. 
+[Brittany Chiang](https://github.com/bchiang7)
 
 
 
