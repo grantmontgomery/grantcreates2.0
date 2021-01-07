@@ -63,11 +63,13 @@ Gunmetal | ![#203a43](https://via.placeholder.com/10/203a43?text=+)`#203a43`
 Blue Sapphire | ![#2c5363](https://via.placeholder.com/10/2c5363?text=+)`#2c5363`
 Teal Blue | ![#3e768e](https://via.placeholder.com/10/3e768e?text=+)`#3e768e`
 Sky Blue Crayola (React Color) | ![#61dbfb](https://via.placeholder.com/10/61dbfb?text=+)`#61dbfb`
+Alice Blue | ![#e2eef3](https://via.placeholder.com/10/e2eef3?text=+)`#e2eef3`
 
 
 ## Inspirations
-These are some notable people who's work or advice were inspirations for this portfolio. 
-[Brittany Chiang](https://github.com/bchiang7)
+These are some notable people who's work or advice were inspirations for this portfolio. Go check out their work!
+* [Brittany Chiang](https://github.com/bchiang7)
+* []
 
 
 
