@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://grantcreates.com">
-    <img alt="Grant Creates" src="src/images/GrantCreatesLogoBanner.png" width="480" />
+    <img alt="Grant Creates" src="src/images/GrantCreatesLogoBanner.png" width="100%" />
   </a>
 </p>
 <h1 align="center">
