@@ -4,11 +4,13 @@
   </a>
 </p>
 <h1 align="center">
-Grant Creates
+grantcreates.com version 2.0
 </h1>
 
-Welcome to my digital forge! This is my portfolio site displaying different creations I've made. To achieve high performance and less bugs at runtime I decided to code this site in the Gatsby framework with TypeScript.
+Welcome to my digital forge! This is my portfolio site displaying different creations that I've made or are in the works. 
 
+
+<h1>Contents</h1>
 ##
 
 ##
