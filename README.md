@@ -28,11 +28,11 @@ Here's a list of some of the major Technologies used to create this experience.
   * [TypeScript](https://github.com/microsoft/TypeScript)
   * JavaScript
 * Libraries
-  * [Gatsby.js](https://github.com/gatsbyjs/gatsby)
-  * React.js
-  * Three.js
+  * [React.js](https://github.com/facebook/react)
+  * [Three.js](https://github.com/mrdoob/three.js)
 * Frameworks
-  * 
+  * [Gatsby.js](https://github.com/gatsbyjs/gatsby)
+
  
 
 ## Colors
