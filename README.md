@@ -8,9 +8,6 @@ grantcreates.com version 2.0
 
 Hi I'm Grant and I like to create rad things! This is my portfolio displaying my digital creations, some created and some being created.
 
-*Updated 1/7/21*
-
-
 ## Contents
 
 - [Deployment](#Deployment)
@@ -33,22 +30,22 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 5. Delete grantcreates2.0 folder.
 6. Install the Gatsby CLI
 
-- `npm install -g gatsby-cli`
+`npm install -g gatsby-cli`
 
 7. Install dependencies
 
-- `npm install`
+`npm install`
 
 8. Run the development server
 
-- `npm start`
+`npm start`
 
-9. When the build is done in the terminal a window should open up at ***http://localhost:8000*** in one of your browsers, but if it doesn't visit this address in the browser of your choice (except for Internet Explorer...).
+9. When the build is done in the terminal a window should open up at **_http://localhost:8000_** in one of your browsers, but if it doesn't visit this address in the browser of your choice (except for Internet Explorer...).
 
 - Run production build.
-  - `npm run build`
+  `npm run build`
 - Preview production build.
-  - `npm run server`
+  `npm run server`
 
 ## Motivation
 
@@ -65,11 +62,9 @@ While looking around for other examples and inspiration for my portfolio I notic
 
 As a developer specializing in React, it made the most sense to me to create the site using it. React by itself is fast, but after researching the power of static site generation and server side rendering I saw that I could make it faster using a framework like [Gatsby](https://www.gatsbyjs.com/) or [Next.js](https://nextjs.org). Both of these tools specialize in static site generation for React applications however Next.js offers a lot more features for Full Stack Applications which I didn't need for this site. For that reason I chose to build it using Gatsby and it allowed me to meet the first two principles of my design.
 
-In order to meet the third and fourth principles I decided to make the site a single page site. I built out the mobile layout of the site first which allowed me to  With the only complex animations/interactivity being the 3D models.
+In order to meet the third and fourth principles I decided to make the site a single page site. I built out the mobile layout of the site first which allowed me to With the only complex animations/interactivity being the 3D models.
 
 ## Features
-
-
 
 ## Technologies
 
