@@ -9,6 +9,7 @@ grantcreates.com version 2.0
 Hi I'm Grant and I like to create rad things! This is my portfolio displaying my digital creations, some created and some being created.
 
 ## Contents
+* [Deployment](#Deployment)
 * [Motivation](#Motivation)
 * [Design](#Design)
 * [Features](#Features)
@@ -16,6 +17,8 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 * [Colors](#Colors)
 * [Inspirations](#Inspirations)
 * [License](#License)
+
+## Deployment
 
 ## Motivation
 
