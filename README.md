@@ -69,6 +69,7 @@ In order to meet the third and fourth principles I decided to make the site a si
 Creations
 3D Objects
 Contact Form
+Another test
 
 ## Technologies
 
@@ -123,5 +124,6 @@ These are some notable people who's work or advice were huge inspirations for th
 ## License
 
 - [MIT License](https://github.com/grantmontgomery/grantcreates2.0/blob/master/LICENSE)
-Fri, Jan  8, 2021 11:39:39 AM
-Fri, Jan  8, 2021 11:40:22 AM
+  Fri, Jan 8, 2021 11:39:39 AM
+  Fri, Jan 8, 2021 11:40:22 AM
+Fri, Jan  8, 2021 11:42:08 AM
