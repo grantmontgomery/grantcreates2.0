@@ -8,16 +8,24 @@ grantcreates.com version 2.0
 
 Hi I'm Grant and I like to create rad things! This is my portfolio displaying my digital creations, some created and some being created.
 
+<p align="center"> 
+<span>
+
+</span>
+<span>
+</span>
+</p>
+
 ## Contents
 
-- [Deployment](#Deployment)
-- [Motivation](#Motivation)
-- [Design](#Design)
-- [Features](#Features)
-- [Technologies](#Technologies)
-- [Colors](#Colors)
-- [Inspirations](#Inspirations)
-- [License](#License)
+1. [Deployment](#Deployment)
+2. [Motivation](#Motivation)
+3. [Design](#Design)
+4. [Features](#Features)
+5. [Technologies](#Technologies)
+6. [Colors](#Colors)
+7. [Inspirations](#Inspirations)
+8. [License](#License)
 
 ## Deployment
 
@@ -126,5 +134,5 @@ These are some notable people who's work or advice were huge inspirations for th
 - [MIT License](https://github.com/grantmontgomery/grantcreates2.0/blob/master/LICENSE)
   Fri, Jan 8, 2021 11:39:39 AM
   Fri, Jan 8, 2021 11:40:22 AM
-Fri, Jan  8, 2021 11:42:08 AM
-Fri, Jan  8, 2021 11:43:20 AM
+  Fri, Jan 8, 2021 11:42:08 AM
+  Fri, Jan 8, 2021 11:43:20 AM
