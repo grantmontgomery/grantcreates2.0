@@ -10,9 +10,12 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 <p align="center"> 
 <span>
-
+<img src="static/DesktopScreenshot.png" height="100px">
+</img>
 </span>
 <span>
+<img src="static/MobileScreenshot.png" height="100px">
+</img>
 </span>
 </p>
 
@@ -77,7 +80,6 @@ In order to meet the third and fourth principles I decided to make the site a si
 Creations
 3D Objects
 Contact Form
-Another test
 
 ## Technologies
 
