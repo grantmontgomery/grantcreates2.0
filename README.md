@@ -21,12 +21,12 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 ## Deployment
 
-`Type text in these blocks in your terminal and hit enter.`
+`Type text in these blocks in your IDE's or code editor's terminal and hit enter.`
 
-1. Open up a new folder.
+1. Open up a new folder in the IDE or code editor of your choice (Visual Studio Code highly suggested).
 2. `git init`
 3. `git clone https://github.com/grantmontgomery/grantcreates2.0.git`
-4. Move all files and folders outside of grantcreates2.0 folder in to new folder.
+4. Move all files and folders outside of grantcreates2.0 folder in to the new folder.
 5. Delete grantcreates2.0 folder.
 6. Install the Gatsby CLI
 
@@ -42,9 +42,9 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 9. When the build is done in the terminal a window should open up at _http://localhost:8000_ in one of your browsers, but if it doesn't visit this address in the browser of your choice (except for Internet Explorer...).
 
-- Run production build
+- Run production build.
   - `npm run build`
-- Preview production build
+- Preview production build.
   - `npm run server`
 
 ## Motivation
