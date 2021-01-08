@@ -20,6 +20,8 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 ## Deployment
 
+`npm start`
+
 ## Motivation
 
 ## Design
