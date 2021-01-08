@@ -8,6 +8,9 @@ grantcreates.com version 2.0
 
 Hi I'm Grant and I like to create rad things! This is my portfolio displaying my digital creations, some created and some being created.
 
+*Updated 1/7/21*
+
+
 ## Contents
 
 - [Deployment](#Deployment)
@@ -40,7 +43,7 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 - `npm start`
 
-9. When the build is done in the terminal a window should open up at _http://localhost:8000_ in one of your browsers, but if it doesn't visit this address in the browser of your choice (except for Internet Explorer...).
+9. When the build is done in the terminal a window should open up at ***http://localhost:8000*** in one of your browsers, but if it doesn't visit this address in the browser of your choice (except for Internet Explorer...).
 
 - Run production build.
   - `npm run build`
@@ -49,9 +52,24 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 ## Motivation
 
+With so many other talented developers out there in the community it makes it tough to stand out from the crowd. I realized that for the second iteration of my site I had to create a place that wasn't just a showcase of my skills and projects, but was also an **experience**. I wanted to immerse my visitors and I believed one of the best ways to do that was with clean visual design and a touch of 3D to make the experience more interactive. My work started with the logo you see above and then the 3D models I created using [Vectary](https://www.vectary.com/). UI and visual design were important steps to the equation, but I also needed the site to be fast and that's where my design principle came in.
+
 ## Design
 
+While looking around for other examples and inspiration for my portfolio I noticed many portfolios were bogged down by large libraries, assets that were too big, and were built with very complex designs or animations. I created these three principles to avoid these issues during the development of this site.
+
+1. **Load times needed to be fast.**
+2. **Bundle size needed to be as light as possible.**
+3. **The site needed to be simple in it's layout and UI design.**
+4. **Design with a mobile first approach**
+
+As a developer specializing in React, it made the most sense to me to create the site using it. React by itself is fast, but after researching the power of static site generation and server side rendering I saw that I could make it faster using a framework like [Gatsby](https://www.gatsbyjs.com/) or [Next.js](https://nextjs.org). Both of these tools specialize in static site generation for React applications however Next.js offers a lot more features for Full Stack Applications which I didn't need for this site. For that reason I chose to build it using Gatsby and it allowed me to meet the first two principles of my design.
+
+In order to meet the third and fourth principles I decided to make the site a single page site. I built out the mobile layout of the site first which allowed me to  With the only complex animations/interactivity being the 3D models.
+
 ## Features
+
+
 
 ## Technologies
 
