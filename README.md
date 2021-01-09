@@ -104,7 +104,6 @@ These are some of the unique features of my site.
 
   - Relevant Components
     - [Contact Float](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/ContactFloat)
-  
   - Backend
     - [Lambda Service](https://github.com/grantmontgomery/grantcreates2.0/blob/master/src/server/server.js)
 
