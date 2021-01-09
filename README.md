@@ -41,7 +41,8 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 6. **Install the Gatsby CLI** 
    `npm install -g gatsby-cli`
 
-7. **Install dependencies** 
+7. **Install dependencies** <br/>
+
    `npm install`
 
 8. **Run the development server** 
