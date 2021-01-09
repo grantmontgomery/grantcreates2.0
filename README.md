@@ -74,21 +74,21 @@ In order to meet the third and fourth principles I decided to make the site a si
 
 These are some of the unique features of my site.
 
-1. **Creations**
+1. **Creations**<br/>
    These are the projects I've created or am currently working on.
 
 - Relevant Components
   - [Creations](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Creations)
   - [Creation](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Creations/Creation)
 
-2. **3D Objects**
+2. **3D Objects**<br/>
    Interactable 3D objects created with Vectary and rendered using Three.js.
 
   - Relevant Components
     - [Hammer And Anvil](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/HammerAndAnvil)
     - [Hammer](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Hammer)
 
-3. Contact Form
+3. **Contact Form**<br/>
    Send a message directly to my inbox.
 
   - Relevant Components
