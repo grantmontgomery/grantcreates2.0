@@ -8,6 +8,8 @@ grantcreates.com version 2.0
 
 Hi I'm Grant and I like to create rad things! This is my portfolio displaying my digital creations, some created and some being created.
 
+_Last updated on_
+
 <p align="center"> 
 <span>
 <img src="static/DesktopScreenshot.png" width="74.385%">
