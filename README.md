@@ -10,7 +10,7 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 <!-- DO NOT CHANGE -->
 
-_Last updated on Sat, Jan  9, 2021  1:51:26 PM_
+_Last updated on Sat, Jan  9, 2021  2:00:12 PM_
 
 <!-- DO NOT CHANGE -->
 
@@ -20,7 +20,8 @@ _Last updated on Sat, Jan  9, 2021  1:51:26 PM_
 </img>
 </span>
 <span>
-<img src="static/MobileScreenshot.png" width="20.615%"></img>
+<img src="static/MobileScreenshot.png" width="20.615%">
+</img>
 </span>
 </p>
 
@@ -39,19 +40,17 @@ _Last updated on Sat, Jan  9, 2021  1:51:26 PM_
 
 `Type text in these blocks in your IDE's or code editor's terminal and hit enter.`
 
-test
-
 1. **Open up a new folder in the IDE or code editor of your choice (Visual Studio Code highly suggested).**
 2. `git init`
 3. `git clone https://github.com/grantmontgomery/grantcreates2.0.git`
 4. **Move all files and folders outside of grantcreates2.0 folder in to the new folder.**
 5. **Delete grantcreates2.0 folder.**
 6. **Install the Gatsby CLI** <br/>
-   
+
    `npm install -g gatsby-cli`
-   
+
 7. **Install dependencies** <br/>
-   
+
    `npm install`
 
 8. **Run the development server** <br/>
@@ -63,11 +62,10 @@ test
 - Run production build. <br/>
 
   `npm run build`<br/>
-  
+
 - Preview production build. <br/>
 
   `npm run server`
-  
 
 ## Motivation
 
@@ -90,30 +88,27 @@ In order to meet the third and fourth principles I decided to make the site a si
 
 These are some of the unique features of my site.
 
-1. **Creations**<br/>
-
+1. **Creations**
    These are the projects I've created or am currently working on.
 
 - Relevant Components
   - [Creations](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Creations)
   - [Creation](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Creations/Creation)
 
-2. **3D Objects**<br/>
-
+2. **3D Objects**
    Interactable 3D objects created with Vectary and rendered using Three.js.
 
-  - Relevant Components
-    - [Hammer And Anvil](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/HammerAndAnvil)
-    - [Hammer](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Hammer)
+- Relevant Components
+  - [Hammer And Anvil](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/HammerAndAnvil)
+  - [Hammer](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Hammer)
 
-3. **Contact Form**<br/>
-
+3. Contact Form
    Send a message directly to my inbox.
 
-  - Relevant Components
-    - [Contact Float](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/ContactFloat)
-  - Backend
-    - [Lambda Service](https://github.com/grantmontgomery/grantcreates2.0/blob/master/src/server/server.js)
+- Relevant Components
+  - [Contact Float](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/ContactFloat)
+- Backend
+  - [Lambda Service](https://github.com/grantmontgomery/grantcreates2.0/blob/master/src/server/server.js)
 
 ## Technologies
 
@@ -123,31 +118,23 @@ Here's a list of some of the major Technologies used to create this experience.
   - [TypeScript](https://github.com/microsoft/TypeScript)
   - JavaScript
   - [GraphQL](https://graphql.org/)
-  
 - **Markdown**
   - HTML
-  
 - **Styling**
   - [Sass](https://github.com/sass/sass)
   - [CSS Modules](https://github.com/css-modules/css-modules)
   - CSS
-  
 - **Libraries**
   - [React.js](https://github.com/facebook/react)
   - [Three.js](https://github.com/mrdoob/three.js)
-  
 - **Frameworks**
   - [Gatsby.js](https://github.com/gatsbyjs/gatsby)
-  
 - **Micro Services**
   - [Netlify Lambda](https://github.com/netlify/netlify-lambda)
-  
 - **SMTP Services**
   - [Nodemailer](https://github.com/nodemailer/nodemailer)
-  
 - **APIs**
   - [Google APIs](https://github.com/googleapis/googleapis)
-  
 - **Cloud Services**
   - [Netlify](https://github.com/netlify)
 
