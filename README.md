@@ -10,11 +10,11 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 <p align="center"> 
 <span>
-<img src="static/DesktopScreenshot.png" width="78.3%">
+<img src="static/DesktopScreenshot.png" width="73.3%">
 </img>
 </span>
 <span>
-<img src="static/MobileScreenshot.png" width="21.7%">
+<img src="static/MobileScreenshot.png" width="16.7%">
 </img>
 </span>
 </p>
