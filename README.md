@@ -10,7 +10,7 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 <!-- DO NOT CHANGE -->
 
-_Last updated on Sat, Jan  9, 2021  2:32:04 PM_
+_Last updated on Sat, Jan  9, 2021  3:35:38 PM_
 
 <!-- DO NOT CHANGE -->
 
@@ -89,9 +89,9 @@ In order to meet the third and fourth principles I decided to make the site a si
 These are some of the unique features of my site.
 
 1. **Creations**<br>
-   These are the projects I've created or am currently working on.
-   <br>
-   **_This section and these projects might still be works in progress_**
+   These are the projects I've created or am currently working on.<br>
+
+**_This section and these projects might still be works in progress_**
 
 <img src="https://media.giphy.com/media/0DDvHcUFWTAPKWUzQj/giphy.gif" width="100%"></img>
 
@@ -103,6 +103,10 @@ These are some of the unique features of my site.
 
 2. **3D Objects**<br>
    Interactable 3D objects created with Vectary and rendered using Three.js.
+
+<img src="https://media.giphy.com/media/bfLT0Ok3nZ52S9K59U/giphy.gif" width="100%"></img>
+
+<img src="https://media.giphy.com/media/n7RkDPKOfQdOeIXqkm/giphy.gif" width="100%"></img>
 
 - Relevant Components
   - [Hammer And Anvil](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/HammerAndAnvil)
