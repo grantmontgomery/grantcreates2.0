@@ -44,12 +44,13 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
    `npm install`
 
 8. **Run the development server** <br/>
-   `npm start`
+<br/>
+   `npm start`<br/>
 
 9. **When the build is done in the terminal a window should open up at \***http://localhost:8000**\* in one of your browsers, but if it doesn't visit this address in the browser of your choice.**
 
 - Run production build. <br/>
-  `npm run build`
+  `npm run build`<br/>
 - Preview production build. <br/>
   `npm run server`
 
