@@ -39,20 +39,27 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 4. **Move all files and folders outside of grantcreates2.0 folder in to the new folder.**
 5. **Delete grantcreates2.0 folder.**
 6. **Install the Gatsby CLI** <br/>
+   
    `npm install -g gatsby-cli`
+   
 7. **Install dependencies** <br/>
+   
    `npm install`
 
 8. **Run the development server** <br/>
-<br/>
+
    `npm start`<br/>
 
 9. **When the build is done in the terminal a window should open up at \***http://localhost:8000**\* in one of your browsers, but if it doesn't visit this address in the browser of your choice.**
 
 - Run production build. <br/>
+
   `npm run build`<br/>
+  
 - Preview production build. <br/>
+
   `npm run server`
+  
 
 ## Motivation
 
