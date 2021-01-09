@@ -8,9 +8,9 @@ grantcreates.com version 2.0
 
 Hi I'm Grant and I like to create rad things! This is my portfolio displaying my digital creations, some created and some being created.
 
-<!-- The phrase _Last updated on is used to track where to input the date on README.md changes. -->
+<!-- DO NOT CHANGE -->
 
-_Last updated on Sat, Jan 9, 2021 1:46:42 PM_
+_Last updated on Sat, Jan 9, 2021 1:49:19 PM_
 
 <!-- DO NOT CHANGE -->
 
