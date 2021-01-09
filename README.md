@@ -38,21 +38,19 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 3. `git clone https://github.com/grantmontgomery/grantcreates2.0.git`
 4. **Move all files and folders outside of grantcreates2.0 folder in to the new folder.**
 5. **Delete grantcreates2.0 folder.**
-6. **Install the Gatsby CLI** 
+6. **Install the Gatsby CLI** <br/>
    `npm install -g gatsby-cli`
-
 7. **Install dependencies** <br/>
-
    `npm install`
 
-8. **Run the development server** 
+8. **Run the development server** <br/>
    `npm start`
 
 9. **When the build is done in the terminal a window should open up at \***http://localhost:8000**\* in one of your browsers, but if it doesn't visit this address in the browser of your choice.**
 
-- Run production build. 
+- Run production build. <br/>
   `npm run build`
-- Preview production build. 
+- Preview production build. <br/>
   `npm run server`
 
 ## Motivation
@@ -86,17 +84,17 @@ These are some of the unique features of my site.
 2. **3D Objects**
    Interactable 3D objects created with Vectary and rendered using Three.js.
 
-- Relevant Components
-  - [Hammer And Anvil](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/HammerAndAnvil)
-  - [Hammer](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Hammer)
+  - Relevant Components
+    - [Hammer And Anvil](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/HammerAndAnvil)
+    - [Hammer](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Hammer)
 
 3. Contact Form
    Send a message directly to my inbox.
 
-- Relevant Components
-  - [Contact Float](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/ContactFloat)
-- Backend
-  - [Lambda Service](https://github.com/grantmontgomery/grantcreates2.0/blob/master/src/server/server.js)
+  - Relevant Components
+    - [Contact Float](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/ContactFloat)
+  - Backend
+    - [Lambda Service](https://github.com/grantmontgomery/grantcreates2.0/blob/master/src/server/server.js)
 
 ## Technologies
 
