@@ -34,6 +34,8 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 `Type text in these blocks in your IDE's or code editor's terminal and hit enter.`
 
+test
+
 1. **Open up a new folder in the IDE or code editor of your choice (Visual Studio Code highly suggested).**
 2. `git init`
 3. `git clone https://github.com/grantmontgomery/grantcreates2.0.git`
