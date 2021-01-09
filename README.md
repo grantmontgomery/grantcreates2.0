@@ -82,7 +82,7 @@ In order to meet the third and fourth principles I decided to make the site a si
 
 These are some of the unique features of my site.
 
-1. **Creations**<br/>
+### **Creations**<br/>
 
    These are the projects I've created or am currently working on.
 
