@@ -16,6 +16,8 @@ const HammerAndAnvil = () => {
 
   camera.position.z = 4.5
 
+  console.log("test")
+
   camera.position.y = 4
   camera.position.x = 0
 
