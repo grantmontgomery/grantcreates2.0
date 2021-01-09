@@ -90,7 +90,7 @@ These are some of the unique features of my site.
   - [Creations](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Creations)
   - [Creation](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Creations/Creation)
 
-2. **3D Objects**<br/>
+### **3D Objects**<br/>
 
    Interactable 3D objects created with Vectary and rendered using Three.js.
 
@@ -98,7 +98,7 @@ These are some of the unique features of my site.
     - [Hammer And Anvil](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/HammerAndAnvil)
     - [Hammer](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Hammer)
 
-3. **Contact Form**<br/>
+### **Contact Form**<br/>
 
    Send a message directly to my inbox.
 
