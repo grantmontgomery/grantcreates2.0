@@ -8,6 +8,12 @@ grantcreates.com version 2.0
 
 Hi I'm Grant and I like to create rad things! This is my portfolio displaying my digital creations, some created and some being created.
 
+<!-- DO NOT CHANGE -->
+
+_Last updated on Sat, Jan  9, 2021  1:51:26 PM_
+
+<!-- DO NOT CHANGE -->
+
 <p align="center"> 
 <span>
 <<<<<<< HEAD
@@ -41,6 +47,8 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 ## Deployment
 
 `Type text in these blocks in your IDE's or code editor's terminal and hit enter.`
+
+test
 
 1. **Open up a new folder in the IDE or code editor of your choice (Visual Studio Code highly suggested).**
 2. `git init`
