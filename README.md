@@ -10,7 +10,7 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 <!-- DO NOT CHANGE -->
 
-_Last updated on Sat, Jan  9, 2021  3:35:38 PM_
+_Last updated on Sat, Jan  9, 2021  4:00:25 PM_
 
 <!-- DO NOT CHANGE -->
 
@@ -89,35 +89,40 @@ In order to meet the third and fourth principles I decided to make the site a si
 These are some of the unique features of my site.
 
 1. **Creations**<br>
+
    These are the projects I've created or am currently working on.<br>
 
-**_This section and these projects might still be works in progress_**
+**_This section and these projects are constantly changing_**
 
 <img src="https://media.giphy.com/media/0DDvHcUFWTAPKWUzQj/giphy.gif" width="100%"></img>
 
 <br>
 
-- Relevant Components
+- **Relevant Components**
   - [Creations](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Creations)
   - [Creation](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Creations/Creation)
 
 2. **3D Objects**<br>
-   Interactable 3D objects created with Vectary and rendered using Three.js.
+
+   Interactable 3D objects created with Vectary and rendered using Three.js. Click and drag to move them around.
 
 <img src="https://media.giphy.com/media/bfLT0Ok3nZ52S9K59U/giphy.gif" width="100%"></img>
 
 <img src="https://media.giphy.com/media/n7RkDPKOfQdOeIXqkm/giphy.gif" width="100%"></img>
 
-- Relevant Components
+- **Relevant Components**
   - [Hammer And Anvil](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/HammerAndAnvil)
   - [Hammer](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/Hammer)
 
-3. Contact Form<br>
-   Send a message directly to my inbox.
+3. **Contact Form**<br>
 
-- Relevant Components
+   Send a message directly to my inbox.<br>
+
+<img src="https://media.giphy.com/media/4AJiMQ2jpeYNcgNE7m/giphy.gif" width="100%"></img>
+
+- **Relevant Components**
   - [Contact Float](https://github.com/grantmontgomery/grantcreates2.0/tree/master/src/components/ContactFloat)
-- Backend
+- **Backend**
   - [Lambda Service](https://github.com/grantmontgomery/grantcreates2.0/blob/master/src/server/server.js)
 
 ## Technologies
