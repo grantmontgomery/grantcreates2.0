@@ -10,7 +10,7 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 <!-- DO NOT CHANGE -->
 
-_Last updated on Sat, Jan  9, 2021  4:00:25 PM_
+_Last updated on Sat, Jan  9, 2021  4:29:05 PM_
 
 <!-- DO NOT CHANGE -->
 
@@ -92,7 +92,7 @@ These are some of the unique features of my site.
 
    These are the projects I've created or am currently working on.<br>
 
-**_This section and these projects are constantly changing_**
+   **_This section and these projects are constantly changing_**
 
 <img src="https://media.giphy.com/media/0DDvHcUFWTAPKWUzQj/giphy.gif" width="100%"></img>
 
