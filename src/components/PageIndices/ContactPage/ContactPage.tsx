@@ -28,7 +28,7 @@ export const ContactPage: React.FC<Props> = ({ contactRef }) => {
       <span className={css.header}>Contact</span>
       <span className={css.email}>grant@grantcreates.com</span>
       <button className={css.hireMe} onClick={handleTap}>
-        Hire Me
+        Reach Out
       </button>
       <div className={css.socialLinks}>
         <OutboundLink

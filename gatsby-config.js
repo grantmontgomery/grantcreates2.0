@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Grant Montgomery | React Developer | For Hire",
+    title: "Grant Montgomery | Full Stack Creator | React Developer",
     description:
       "Full Stack Developer specialized in bringing designs to life with React.",
     url: "https://www.grantcreates.com",

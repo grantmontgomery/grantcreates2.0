@@ -61,7 +61,7 @@ export const AboutPage: React.FC<{
         fadeIn={true}
         loading="eager"
         title="Grant Montgomery"
-        alt="Grant on a rooftop in Los Angeles"
+        alt="Grant Montgomery"
         imgStyle={portrait ? portraitDimensions : landscapeDimensions}
         className={css.imageWrapper}
       ></Img>

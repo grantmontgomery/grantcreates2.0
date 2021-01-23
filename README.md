@@ -10,7 +10,7 @@ Hi I'm Grant and I like to create rad things! This is my portfolio displaying my
 
 <!-- DO NOT CHANGE -->
 
-_Last updated on Wed, Jan 13, 2021 12:03:55 PM_
+_Last updated on Sat, Jan 23, 2021  3:33:08 PM_
 
 <!-- DO NOT CHANGE -->
 
@@ -62,10 +62,6 @@ _Last updated on Wed, Jan 13, 2021 12:03:55 PM_
 - Run production build. <br>
 
   `npm run build`<br>
-
-- Preview production build. <br>
-
-  `npm run server`
 
 ## Motivation
 
