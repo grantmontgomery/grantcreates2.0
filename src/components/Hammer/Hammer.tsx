@@ -90,7 +90,7 @@ const Hammer: () => void = () => {
   const loader = new GLTFLoader()
 
   loader.load(
-    "/OnlyHammer.glb",
+    "/GrantCreatesHammer.glb",
     function (gltf) {
       scene.add(gltf.scene)
 
