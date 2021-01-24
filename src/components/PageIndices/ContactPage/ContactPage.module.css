@@ -141,10 +141,11 @@
 @media (orientation: landscape) {
   .contactPageWrapper {
         grid-template-areas: ". ." "header header" "hireMe email" ". .";
-    -ms-grid-rows: 20vh 8vh 52vh 20vh;
-        grid-template-rows: 20vh 8vh 52vh 20vh;
+    -ms-grid-rows: 20% 8% 52% 20%;
+        grid-template-rows: 20% 8% 52% 20%;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
+    min-height: 754px;
   }
   .contactPageWrapper .header {
     font-size: 30px;
@@ -153,7 +154,7 @@
     top: 0;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    margin-top: 20vh;
+    margin-top: clamp(135px, 20vh, 250px);
     margin-bottom: auto;
     font-size: clamp(20px, 2vw, 35px);
   }
@@ -198,7 +199,7 @@
     top: 0;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    margin-bottom: 15vh;
+    margin-bottom: clamp(100px, 15vh, 200px);
     margin-top: auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -219,6 +220,7 @@
             user-select: none;
     outline: none;
     height: 7vh;
+    min-height: 52px;
     width: auto;
     fill: #e3eef2;
   }
