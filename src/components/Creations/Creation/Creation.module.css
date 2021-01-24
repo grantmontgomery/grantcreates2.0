@@ -118,10 +118,10 @@
     z-index: 1;
   }
   .selectorTitleWrapper .selctorTitle {
-    font-size: 2.5vh;
+    font-size: clamp(15px, 2.5vh, 20px);
   }
   .selectorTitleWrapper .subTitle {
-    font-size: 2vh;
+    font-size: clamp(12px, 2vh, 16px);
   }
 }
 /*# sourceMappingURL=Creation.module.css.map */

@@ -90,10 +90,10 @@
     margin-top: 3vh;
     z-index: 1;
     & .selctorTitle {
-      font-size: 2.5vh;
+      font-size: clamp(15px, 2.5vh, 20px);
     }
     & .subTitle {
-      font-size: 2vh;
+      font-size: clamp(12px, 2vh, 16px);
     }
   }
 }

@@ -130,35 +130,37 @@
   .detailsWrapper {
     & .descriptionWrapper {
       & .description {
-        font-size: 2vh;
+        font-size: clamp(12px, 2vh, 16px);
       }
     }
 
     & .technologiesWrapper {
       & .technologies {
         font-weight: 200;
-        font-size: 2vh;
+        font-size: clamp(12px, 2vh, 16px);
       }
     }
 
     & .headerWrapper {
-      font-size: 3vh;
+      font-size: clamp(18px, 3vh, 24px);
     }
     & .linksWrapper {
       & a {
         margin-left: 2vh;
         & .link {
           height: 5vh;
+          min-height: 37px;
         }
       }
     }
     & .exit {
       border-radius: 6vh;
-
       height: 6vh;
       width: 6vh;
 
-      font-size: 2vh;
+      min-width: 37px;
+      min-height: 37px;
+      font-size: clamp(12px, 2vh, 16px);
     }
   }
 }

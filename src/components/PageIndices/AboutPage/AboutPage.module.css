@@ -94,6 +94,7 @@
 @media (orientation: landscape) {
   .about {
     width: 100vw;
+    min-height: 754px;
     display: -ms-grid;
     display: grid;
     background: #0b171d;
@@ -136,10 +137,10 @@
     position: relative;
     z-index: 1;
     left: 50%;
-    top: 2.5vh;
+    top: clamp(15px, 2.5vh, 20px);
     -webkit-transform: translate(calc(-50% + 3vh));
             transform: translate(calc(-50% + 3vh));
-    border: solid 0.5vh #61dbfb;
+    border: solid 5px #61dbfb;
   }
   .about .imageWrapper {
     height: auto;
@@ -159,7 +160,7 @@
     margin-right: auto;
     margin-top: 10%;
     width: 75%;
-    text-indent: 4vh;
+    text-indent: clamp(10px, 4vh, 20px);
     font-family: Objektiv Mk2;
     text-align: left;
     font-size: clamp(13px, 1.5vw, 27px);

@@ -34,12 +34,13 @@
 @media (orientation: landscape) {
   .toolsPage {
     height: 100vh;
-    -ms-grid-rows: 20vh 8vh 72vh;
-        grid-template-rows: 20vh 8vh 72vh;
+    -ms-grid-rows: 20% 8% 72%;
+        grid-template-rows: 20% 8% 72%;
         grid-template-areas: ". ." "header header" "tools hammer";
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
     background: #0b171d;
+    min-height: 754px;
   }
   .toolsPage .toolsHeader {
     -ms-grid-row: 2;
