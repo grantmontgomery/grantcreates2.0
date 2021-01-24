@@ -91,6 +91,12 @@
   font-size: 2vh;
 }
 
+.about .description .link {
+  color: #61dbfb;
+  outline: none;
+  text-decoration: none;
+}
+
 @media (orientation: landscape) {
   .about {
     width: 100vw;

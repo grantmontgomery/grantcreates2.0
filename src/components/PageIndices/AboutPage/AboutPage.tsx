@@ -66,14 +66,26 @@ export const AboutPage: React.FC<{
         className={css.imageWrapper}
       ></Img>
       <p className={css.description}>
-        Hi, I'm Grant! I'm a full stack web developer who enjoys creating
-        immersive experiences and applications with the power of React. I'm
-        seeking a Full-Stack or Front-End Engineering position where I can
-        utilize my skills and experience to bring your ideas to life. My
-        previous experience in sales has given me the ability to understand the
-        needs of end-users and to build out tools which solve them. Besides my
-        technical skill and customer-facing experience, my greatest trait is my
-        ability to learn quickly and adapt to any environment or tech stack.
+        Hi, I'm Grant! I'm a full stack developer who enjoys creating immersive
+        experiences and applications with the power of React. I'm currently
+        working at{" "}
+        <a
+          className={css.link}
+          target="_blank"
+          href="https://www.intellipse.com/"
+        >
+          Intellipse
+        </a>{" "}
+        as a Customer Solutions Engineer using React, GraphQL, PostGreSQL, and
+        TypeScript to support the sales and development teams. If you would like
+        to reach out about advice, projects, or consultations you can click on
+        the mail icon on the bottom right and fill out the form. I also love
+        connecting with other developers or people in the industry as well so
+        feel free to follow me on Twitter at{" "}
+        <a className={css.link} href="https://twitter.com/grantcreates">
+          @grantcreates
+        </a>
+        .
       </p>
     </section>
   )

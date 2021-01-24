@@ -67,6 +67,11 @@
     color: #e2eef3;
     text-align: left;
     font-size: 2vh;
+    & .link {
+      color: #61dbfb;
+      outline: none;
+      text-decoration: none;
+    }
   }
 }
 
