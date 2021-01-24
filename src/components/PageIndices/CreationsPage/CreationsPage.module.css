@@ -116,6 +116,7 @@
 @media (orientation: landscape) {
   .creations {
     height: 100vh;
+    min-height: 754px;
     -ms-grid-rows: 20% 10% 12.5% auto;
         grid-template-rows: 20% 10% 12.5% auto;
         grid-template-areas: "." "header" "types" "creationtype";

@@ -63,6 +63,8 @@
   .creationWrapper {
     height: 35vh;
     border-radius: 5vh;
+    min-height: 264px;
+    min-width: 264px;
     width: 35vh;
     transform: translate(-50%, 0);
     left: 50%;
@@ -75,6 +77,8 @@
       border-radius: 0;
       height: 80vh;
       z-index: 4;
+      min-height: 603px;
+      min-width: 603px;
       width: 80vh;
       transition: 250ms ease-out;
       transform: translate(-50%, -50%);

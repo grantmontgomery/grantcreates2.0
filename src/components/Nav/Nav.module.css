@@ -139,7 +139,8 @@
 @media (orientation: landscape) {
   .navWrapper {
     width: 100vw;
-    height: 75px;
+    height: 10vh;
+    min-height: 75px;
   }
   .navWrapper .logoLink {
     margin-left: 5%;

@@ -148,9 +148,11 @@
   .contactWrapper {
     height: 11vh;
     width: 11vh;
+    min-height: 82px;
+    min-width: 82px;
     border-radius: 11vh;
     right: 5vw;
-    bottom: 5vh;
+    bottom: clamp(40px, 5vh, 70px);
   }
   .contactWrapper.extended {
     width: 60vh;
