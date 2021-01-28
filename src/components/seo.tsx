@@ -55,7 +55,7 @@ export const SEO: React.FC = () => {
       <meta name="twitter:card" content={image} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" title="main logo" content={image} />
-      <script> window.Intellipse=window.Intellipse||function(){(Intellipse.q=Intellipse.q||[]).push(arguments)};Intellipse.l=+new Date; </script> <script async src='https://bootstrap.development.intellipse.com/bootstrap.js'></script>
+      <script async src='https://bootstrap.development.intellipse.com/bootstrap.js'></script>
     </Helmet>
   )
 }
