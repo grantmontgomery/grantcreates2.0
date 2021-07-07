@@ -7,8 +7,8 @@
 .navWrapper {
   top: 0;
   width: 100vw;
-  height: 11vh;
-  transition: 250ms ease-out;
+  height: 60px;
+  transition: top 250ms ease-out;
   display: flex;
   flex-flow: row;
   background: transparent;
@@ -73,26 +73,26 @@
 //slightly more black #0B171D
 
 .navExit {
-  transition: 250ms ease-out;
+  transition: top 250ms ease-out;
   &.navExitActive {
-    transition: 250ms ease-out;
+    transition: transform 250ms ease-out;
   }
 }
 
 .linksEnter {
-  transition: all 250ms ease-out;
+  transition: transform 250ms ease-out;
   transform: translate(100%, 0);
   &.linksEnterActive {
     transform: translate(0, 0);
-    transition: all 250ms ease-out;
+    transition: transform 250ms ease-out;
   }
 }
 
 .linksExit {
   transform: translate(0, 0);
-  transition: all 250ms ease-out;
+  transition: transform 250ms ease-out;
   &.linksExitActive {
-    transition: all 250ms ease-out;
+    transition: transform 250ms ease-out;
     transform: translate(100%, 0);
   }
 }
@@ -105,11 +105,16 @@
 //   @include mobileLandscape();
 // }
 
+@media (orientation: portrait) and (min-width: 700px) {
+  .navWrapper {
+    height: 100px;
+  }
+}
+
 @media (orientation: landscape) {
   .navWrapper {
     width: 100vw;
-    height: 10vh;
-    min-height: 75px;
+    height: 75px;
 
     & .logoLink {
       margin-left: 5%;

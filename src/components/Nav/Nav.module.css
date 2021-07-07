@@ -1,9 +1,9 @@
 .navWrapper {
   top: 0;
   width: 100vw;
-  height: 11vh;
-  -webkit-transition: 250ms ease-out;
-  transition: 250ms ease-out;
+  height: 60px;
+  -webkit-transition: top 250ms ease-out;
+  transition: top 250ms ease-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,18 +99,22 @@
 }
 
 .navExit {
-  -webkit-transition: 250ms ease-out;
-  transition: 250ms ease-out;
+  -webkit-transition: top 250ms ease-out;
+  transition: top 250ms ease-out;
 }
 
 .navExit.navExitActive {
-  -webkit-transition: 250ms ease-out;
-  transition: 250ms ease-out;
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+  transition: transform 250ms ease-out, -webkit-transform 250ms ease-out;
 }
 
 .linksEnter {
-  -webkit-transition: all 250ms ease-out;
-  transition: all 250ms ease-out;
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+  transition: transform 250ms ease-out, -webkit-transform 250ms ease-out;
   -webkit-transform: translate(100%, 0);
           transform: translate(100%, 0);
 }
@@ -118,29 +122,40 @@
 .linksEnter.linksEnterActive {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-  -webkit-transition: all 250ms ease-out;
-  transition: all 250ms ease-out;
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+  transition: transform 250ms ease-out, -webkit-transform 250ms ease-out;
 }
 
 .linksExit {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-  -webkit-transition: all 250ms ease-out;
-  transition: all 250ms ease-out;
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+  transition: transform 250ms ease-out, -webkit-transform 250ms ease-out;
 }
 
 .linksExit.linksExitActive {
-  -webkit-transition: all 250ms ease-out;
-  transition: all 250ms ease-out;
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+  transition: transform 250ms ease-out, -webkit-transform 250ms ease-out;
   -webkit-transform: translate(100%, 0);
           transform: translate(100%, 0);
+}
+
+@media (orientation: portrait) and (min-width: 700px) {
+  .navWrapper {
+    height: 100px;
+  }
 }
 
 @media (orientation: landscape) {
   .navWrapper {
     width: 100vw;
-    height: 10vh;
-    min-height: 75px;
+    height: 75px;
   }
   .navWrapper .logoLink {
     margin-left: 5%;
