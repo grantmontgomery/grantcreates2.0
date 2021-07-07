@@ -123,7 +123,7 @@ export const SendStatus: React.FC<Props> = ({ mailStatus }) => {
             y="0px"
             viewBox="0 0 125.03 110"
             enableBackground="new 0 0 125.03 110"
-            className={`${css.greenCheck}`}
+            className={css.greenCheck}
           >
             <polygon points="54.51,81.07 23.98,50.54 31.05,43.46 54.51,66.93 114.98,6.46 122.05,13.54 	" />
             <path

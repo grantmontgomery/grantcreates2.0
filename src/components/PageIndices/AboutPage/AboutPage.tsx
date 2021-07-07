@@ -67,21 +67,18 @@ export const AboutPage: React.FC<{
       ></Img>
       <p className={css.description}>
         Hi, I'm Grant! I'm a full stack developer who enjoys creating immersive
-        experiences and applications with the power of React. I'm currently
-        working at{" "}
-        <a
-          className={css.link}
-          target="_blank"
-          href="https://www.intellipse.com/"
-        >
-          Intellipse
+        experiences and applications using web technologies such as React. I
+        have previous experience as a Customer Solutions Engineer where I was
+        tasked with developing full stack tools and features using React, Apollo
+        GraphQL, PostGreSQL, and Node.js. I'm currently seeking a role where I
+        can continue applying my skills and experience in order to contribute
+        towards building amazing products. If you would like to get in contact
+        with me about opportunities or assistance in solving your development
+        needs you can contact me{" "}
+        <a className={css.link} href="/#contactPage">
+          here
         </a>{" "}
-        as a Customer Solutions Engineer using React, GraphQL, PostGreSQL, and
-        TypeScript to support the sales and development teams. If you would like
-        to reach out about advice, projects, or consultations you can click on
-        the mail icon on the bottom right and fill out the form. I also love
-        connecting with other developers or people in the industry as well so
-        feel free to follow me on Twitter at{" "}
+        or follow me on Twitter at{" "}
         <a className={css.link} href="https://twitter.com/grantcreates">
           @grantcreates
         </a>

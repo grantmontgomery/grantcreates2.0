@@ -164,12 +164,12 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 5%;
     width: 75%;
     text-indent: clamp(10px, 4vh, 20px);
     font-family: Objektiv Mk2;
     text-align: left;
-    font-size: clamp(13px, 1.5vw, 27px);
+    font-size: clamp(13px, 1.45vw, 27px);
   }
 }
 /*# sourceMappingURL=AboutPage.module.css.map */
