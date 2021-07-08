@@ -3,22 +3,19 @@
     position: relative;
     margin-left: auto;
     margin-right: 5%;
-    top: 50%;
     justify-content: right;
-    width: 45vw;
+    width: 50%;
     height: 50%;
-    transform: translate(0, -50%);
     & .innerLinks {
       display: flex;
       height: 100%;
+      align-items: center;
       width: 100%;
       flex-flow: row nowrap;
       & .link {
         height: fit-content;
         position: relative;
         margin-left: auto;
-        top: 50%;
-        transform: translate(0, -50%);
         position: relative;
         & a {
           text-decoration: none;
@@ -83,10 +80,14 @@
 
 @media (orientation: landscape) {
   .linksWrapper {
+    width: 50%;
+    max-width: 800px;
     &.mobileNav {
       display: none;
     }
     &.navBar {
+      margin-right: 0;
+      margin-left: 0;
       display: block;
       & .innerLinks {
         & .link {

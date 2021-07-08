@@ -24,4 +24,12 @@
         grid-template-rows: 100%;
   }
 }
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .homePage {
+    min-height: 679px;
+    padding-left: 500px;
+    padding-right: 500px;
+  }
+}
 /*# sourceMappingURL=HomePage.module.css.map */

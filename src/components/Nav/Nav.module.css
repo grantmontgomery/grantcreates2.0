@@ -156,10 +156,25 @@
   .navWrapper {
     width: 100vw;
     height: 75px;
+    padding-left: 5%;
+    padding-right: 5%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .navWrapper .logoLink {
-    margin-left: 5%;
     height: 100%;
+    margin-left: 0;
+  }
+  .navWrapper #mobileLinkTransitions {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .navWrapper {
+    padding-left: 500px;
+    padding-right: 500px;
   }
 }
 /*# sourceMappingURL=Nav.module.css.map */

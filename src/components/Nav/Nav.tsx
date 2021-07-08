@@ -77,7 +77,9 @@ export const Nav: React.FC = () => {
       <MobileNav navLinks={navLinks} handleTap={handleTap}></MobileNav>
       <LinksWrapper location="navBar"></LinksWrapper>
       <ModalDark inMobileNav={true}></ModalDark>
-      <TransitionGroup>{applyLinksTransitions()}</TransitionGroup>
+      <TransitionGroup id="mobileLinkTransitions">
+        {applyLinksTransitions()}
+      </TransitionGroup>
     </nav>
   )
 }
