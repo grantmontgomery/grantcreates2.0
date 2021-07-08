@@ -122,17 +122,19 @@
 }
 
 @media (orientation: landscape) {
-  .linksWrapper {
-    width: 50%;
-    max-width: 800px;
-  }
   .linksWrapper.mobileNav {
     display: none;
   }
   .linksWrapper.navBar {
     margin-right: 0;
     margin-left: 0;
+    width: 50%;
     display: block;
+  }
+  .linksWrapper.navBar .innerLinks {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .linksWrapper.navBar .innerLinks .link a {
     text-decoration: none;

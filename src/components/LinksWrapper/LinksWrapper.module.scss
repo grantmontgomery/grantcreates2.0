@@ -80,16 +80,16 @@
 
 @media (orientation: landscape) {
   .linksWrapper {
-    width: 50%;
-    max-width: 800px;
     &.mobileNav {
       display: none;
     }
     &.navBar {
       margin-right: 0;
       margin-left: 0;
+      width: 50%;
       display: block;
       & .innerLinks {
+        width: fit-content;
         & .link {
           & a {
             text-decoration: none;
