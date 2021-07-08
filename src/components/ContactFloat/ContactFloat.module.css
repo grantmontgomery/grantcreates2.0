@@ -146,13 +146,11 @@
 
 @media (orientation: landscape) {
   .contactWrapper {
-    height: 11vh;
-    width: 11vh;
-    min-height: 82px;
-    min-width: 82px;
-    border-radius: 11vh;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
     right: 5vw;
-    bottom: clamp(40px, 5vh, 70px);
+    bottom: 50px;
   }
   .contactWrapper.extended {
     width: 60vh;

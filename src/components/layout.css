@@ -14,7 +14,7 @@ body {
   background: #0f2027;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #___gatsby {
@@ -29,11 +29,12 @@ body {
 }
 
 #___loader {
-  -webkit-transition: 250ms ease-out;
-  transition: 250ms ease-out;
+  -webkit-transition: opacity 250ms ease-out;
+  transition: opacity 250ms ease-out;
   opacity: 1;
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
+  position: relative;
   -webkit-animation-duration: 500ms;
           animation-duration: 500ms;
 }
