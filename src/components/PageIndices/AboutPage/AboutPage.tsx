@@ -76,7 +76,7 @@ export const AboutPage: React.FC<{
         >
           Intellipse
         </a>{" "}
-        as a Customer Solutions Engineer using React, GraphQL, PostGreSQL, and
+        as a Jr. Software Engineer using React, GraphQL, PostGreSQL, and
         TypeScript to support the sales and development teams. If you would like
         to reach out about advice, projects, or consultations you can click on
         the mail icon on the bottom right and fill out the form. I also love
