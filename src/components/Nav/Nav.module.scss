@@ -120,6 +120,8 @@
     align-items: center;
     & .logoLink {
       height: 100%;
+      width: fit-content;
+      margin-right: 0;
       margin-left: 0;
     }
     & #mobileLinkTransitions {

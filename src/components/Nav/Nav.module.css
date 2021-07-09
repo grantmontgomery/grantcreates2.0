@@ -164,6 +164,10 @@
   }
   .navWrapper .logoLink {
     height: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: 0;
     margin-left: 0;
   }
   .navWrapper #mobileLinkTransitions {
