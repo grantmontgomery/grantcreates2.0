@@ -86,11 +86,12 @@
     &.navBar {
       margin-right: 0;
       margin-left: 0;
-      width: 50%;
+      width: fit-content;
       display: block;
       & .innerLinks {
         width: fit-content;
         & .link {
+          margin-left: 3vw;
           & a {
             text-decoration: none;
             & .text {

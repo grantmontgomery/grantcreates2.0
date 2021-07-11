@@ -39,6 +39,17 @@ body {
   }
 }
 
+@media (orientation: portrait) {
+  #mobileLinkTransitions {
+    display: block;
+  }
+}
+
+@media (orientation: landscape) {
+  #mobileLinkTransitions {
+    display: none;
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
