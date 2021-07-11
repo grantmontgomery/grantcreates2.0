@@ -1,6 +1,6 @@
 .navWrapper {
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 60px;
   -webkit-transition: top 250ms ease-out;
   transition: top 250ms ease-out;
@@ -12,6 +12,8 @@
       -ms-flex-flow: row;
           flex-flow: row;
   background: transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   z-index: 3;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -154,7 +156,6 @@
 
 @media (orientation: landscape) {
   .navWrapper {
-    width: 100vw;
     height: 75px;
     padding-left: 5%;
     padding-right: 5%;
@@ -172,13 +173,6 @@
   }
   .navWrapper #mobileLinkTransitions {
     display: none;
-  }
-}
-
-@media (orientation: landscape) and (min-width: 2000px) {
-  .navWrapper {
-    padding-left: 500px;
-    padding-right: 500px;
   }
 }
 /*# sourceMappingURL=Nav.module.css.map */
