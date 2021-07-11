@@ -1,8 +1,9 @@
 .creations {
-  width: 100vw;
+  width: 100%;
   display: grid;
   grid-template-columns: 100%;
   background: #0b171d;
+  box-sizing: border-box;
   height: 44.5vh;
   grid-template-rows: 10% 12.5% auto;
   grid-template-areas: "header" "types" "creationtype";
@@ -79,9 +80,16 @@
   }
 }
 
+@media (orientation: landscape) and (min-width: 2000px) {
+  .creations {
+    padding-left: 500px;
+    padding-right: 500px;
+  }
+}
 @media (orientation: landscape) {
   .creations {
     height: 100vh;
+
     min-height: 754px;
     grid-template-rows: 20% 10% 12.5% auto;
     grid-template-areas: "." "header" "types" "creationtype";

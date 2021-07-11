@@ -56,8 +56,8 @@
     & .secondHeadline {
       font-size: clamp(30px, 1.5vw, 50px);
       display: block;
-      width: 60vw;
-      white-space: pre-wrap;
+      width: fit-content;
+      white-space: no-wrap;
       & .dynamicText {
         margin-left: 15px;
       }

@@ -11,7 +11,7 @@
 
 @media (orientation: landscape) {
   .homePage {
-    height: calc(90vh + 75px);
+    height: calc(90vh + 60px);
     min-height: 679px;
     padding-left: 5%;
     padding-right: 5%;

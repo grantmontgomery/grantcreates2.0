@@ -79,8 +79,10 @@
   .headlineWrapper .secondHeadline {
     font-size: clamp(30px, 1.5vw, 50px);
     display: block;
-    width: 60vw;
-    white-space: pre-wrap;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    white-space: no-wrap;
   }
   .headlineWrapper .secondHeadline .dynamicText {
     margin-left: 15px;
