@@ -156,7 +156,7 @@
 
 @media (orientation: landscape) {
   .navWrapper {
-    height: 75px;
+    height: 60px;
     padding-left: 5%;
     padding-right: 5%;
     -webkit-box-align: center;
