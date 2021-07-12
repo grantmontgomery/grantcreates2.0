@@ -208,21 +208,24 @@ export const ContactFloat: React.FC = () => {
     message: string
   ) {
     try {
-      const response = await fetch(`/.netlify/functions/server`, {
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "text/plain",
-        },
-        method: "POST",
-        body: JSON.stringify({
-          name,
-          company,
-          phone,
-          email,
-          subject,
-          message,
-        }),
-      })
+      const response = await fetch(
+        `http://localhost:9000/.netlify/functions/server`,
+        {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "text/plain",
+          },
+          method: "POST",
+          body: JSON.stringify({
+            name,
+            company,
+            phone,
+            email,
+            subject,
+            message,
+          }),
+        }
+      )
 
       const data = await response.json()
 
