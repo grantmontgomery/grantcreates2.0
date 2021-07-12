@@ -85,11 +85,9 @@
 
 @media (orientation: landscape) {
   .creationWrapper {
-    height: 35vh;
-    border-radius: 5vh;
-    min-height: 264px;
-    min-width: 264px;
-    width: 35vh;
+    height: 250px;
+    border-radius: 50px;
+    width: 250px;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     left: 50%;
@@ -122,6 +120,14 @@
   }
   .selectorTitleWrapper .subTitle {
     font-size: clamp(12px, 2vh, 16px);
+  }
+}
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .creationWrapper {
+    height: 350px;
+    width: 350px;
+    border-radius: 50px;
   }
 }
 /*# sourceMappingURL=Creation.module.css.map */
