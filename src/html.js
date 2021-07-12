@@ -4,7 +4,6 @@ import { Chain, LoadingAnvil } from "./components/LoadingAssets"
 import PropTypes from "prop-types"
 
 export default function HTML(props) {
-  console.log(props.htmlAttributes)
   return (
     <html {...props.htmlAttributes}>
       <head>
@@ -23,8 +22,8 @@ export default function HTML(props) {
           key={`loader`}
           style={{
             background: "#0b171d",
-            height: "100vh",
-            width: "100vw",
+            height: "100%",
+            width: "100%",
             margin: "0",
             padding: "0",
           }}

@@ -157,10 +157,12 @@
       border-radius: 6vh;
       height: 6vh;
       width: 6vh;
+      max-height: 20px;
+      max-width: 20px;
 
       min-width: 37px;
       min-height: 37px;
-      font-size: clamp(12px, 2vh, 16px);
+      font-size: clamp(12px, 2vh, 13px);
     }
   }
 }

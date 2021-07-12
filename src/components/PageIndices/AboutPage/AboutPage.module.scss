@@ -142,6 +142,8 @@
 
     & .borderFrame {
       width: 500px;
+      top: 20px;
+      transform: translate(calc(-50% + 25px));
       height: 500px;
     }
     & .imageWrapper {

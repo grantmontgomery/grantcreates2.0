@@ -181,6 +181,9 @@
   }
   .about .borderFrame {
     width: 500px;
+    top: 20px;
+    -webkit-transform: translate(calc(-50% + 25px));
+            transform: translate(calc(-50% + 25px));
     height: 500px;
   }
   .about .imageWrapper {
