@@ -1,9 +1,11 @@
 .about {
-  width: 100vw;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   background: #0b171d;
   height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
       grid-template-areas: "." "header" "picture" "about";
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
@@ -99,7 +101,6 @@
 
 @media (orientation: landscape) {
   .about {
-    width: 100vw;
     min-height: 754px;
     display: -ms-grid;
     display: grid;
@@ -170,6 +171,23 @@
     font-family: Objektiv Mk2;
     text-align: left;
     font-size: clamp(13px, 1.45vw, 27px);
+  }
+}
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .about {
+    padding-left: 500px;
+    padding-right: 500px;
+  }
+  .about .borderFrame {
+    width: 500px;
+    height: 500px;
+  }
+  .about .imageWrapper {
+    width: 500px;
+  }
+  .about .description {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=AboutPage.module.css.map */
