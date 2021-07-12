@@ -99,15 +99,17 @@ const HammerAndAnvil = () => {
       gltf.scene.children[0].traverse(child => {
         switch (child.type) {
           case "Object3D":
-            return (child.castShadow = true), (child.receiveShadow = true)
+            child.castShadow = true
+            child.receiveShadow = true
           case "Mesh":
-            return (
+            const isCircleOrPath =
               child.name.includes("Circle_-_baked") ||
               child.name.includes("Path_-_baked")
-                ? null
-                : (child.castShadow = true),
-              (child.receiveShadow = true)
-            )
+
+            if (!isCircleOrPath) {
+              child.castShadow = true
+              child.receiveShadow
+            }
         }
       })
 
