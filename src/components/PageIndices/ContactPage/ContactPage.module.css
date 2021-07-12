@@ -1,5 +1,5 @@
 .contactPageWrapper {
-  width: 100vw;
+  width: 100%;
       grid-template-areas: "." "header" "hireMe" "email" "links" ".";
   -ms-grid-rows: 20vh 8vh 20vh 12vh 20vh 20vh;
       grid-template-rows: 20vh 8vh 20vh 12vh 20vh 20vh;
@@ -9,6 +9,8 @@
   display: -ms-grid;
   display: grid;
   background-color: #0b171d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .contactPageWrapper .header {
@@ -229,6 +231,13 @@
   }
   .contactPageWrapper .socialLinks a svg:last-child {
     margin-left: 2vw;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .contactPageWrapper {
+    padding-right: 500px;
+    padding-left: 500px;
   }
 }
 /*# sourceMappingURL=ContactPage.module.css.map */

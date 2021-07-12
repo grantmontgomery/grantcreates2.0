@@ -7,6 +7,9 @@
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
   height: 88vh;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: #0b171d;
 }
 
@@ -62,6 +65,13 @@
     margin-left: 5%;
     font-family: Objektiv Mk2 Bold;
     color: #e2eef3;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .toolsPage {
+    padding-left: 500px;
+    padding-right: 500px;
   }
 }
 /*# sourceMappingURL=ToolsPage.module.css.map */
