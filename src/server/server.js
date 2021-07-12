@@ -2,7 +2,7 @@ import { GoogleApis } from "googleapis"
 import { google } from "googleapis"
 import { HttpMethod } from "googleapis-common"
 import nodemailer from "nodemailer"
-require("dotenv").configure()
+require("dotenv").config()
 
 const { OAuth2 } = google.auth
 const OAUTH_PLAYGROUND = "https://developers.google.com/oauthplayground"
@@ -68,6 +68,7 @@ exports.handler = async (event, context) => {
         "Access-Control-Allow-Headers": "Content-Type",
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
       },
+      body: JSON.stringify(sendMailResponse),
     }
   } catch (error) {
     return {
