@@ -156,31 +156,6 @@ export const ContactFloat: React.FC = () => {
     modalDispatch(modalActions("CONTACT_FLOAT"))
   }
 
-  async function postmail(
-    name: string,
-    phone: string,
-    company: string,
-    email: string,
-    subject: string,
-    message: string
-  ) {
-    return fetch(`/.netlify/functions/server`, {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "text/plain",
-      },
-      method: "POST",
-      body: JSON.stringify({
-        name,
-        company,
-        phone,
-        email,
-        subject,
-        message,
-      }),
-    })
-  }
-
   const handleSendFail = () => {
     setTimeout(() => {
       setState(state => ({ ...state, mailStatus: "failed" }))
@@ -204,12 +179,11 @@ export const ContactFloat: React.FC = () => {
         setState(state => ({ ...state, mailStatus: "delivered" }))
       }, 2000)
       setTimeout(() => {
-        return (
-          setState({
-            formSide: "sender",
-            phoneFormat: "us",
-            mailStatus: "not sent",
-          }),
+        setState({
+          formSide: "sender",
+          phoneFormat: "us",
+          mailStatus: "not sent",
+        }),
           handleExit(),
           setFields({
             name: "",
@@ -219,26 +193,54 @@ export const ContactFloat: React.FC = () => {
             company: "",
             message: "",
           })
-        )
       }, 4000)
     } else {
       handleSendFail()
     }
   }
 
-  function sendMail(
-    { name, phone, company, email, subject, message }: FormFields,
-    handleExit: () => void,
-    setState: any,
-    setFields: any
+  async function postmail(
+    name: string,
+    phone: string,
+    company: string,
+    email: string,
+    subject: string,
+    message: string
   ) {
+    try {
+      const response = await fetch(`/.netlify/functions/server`, {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "text/plain",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          name,
+          company,
+          phone,
+          email,
+          subject,
+          message,
+        }),
+      })
+
+      const data = await response.json()
+
+      handleSendSuccess(data.accepted.length, handleExit)
+    } catch {
+      handleSendFail()
+    }
+  }
+
+  function sendMail({
+    name,
+    phone,
+    company,
+    email,
+    subject,
+    message,
+  }: FormFields) {
     postmail(name, phone, company, email, subject, message)
-      .then(response =>
-        response.json().then(data => {
-          handleSendSuccess(data.accepted.length, handleExit)
-        })
-      )
-      .catch(response => (console.log(response), handleSendFail()))
   }
 
   return (
