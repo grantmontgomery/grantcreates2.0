@@ -34,9 +34,7 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
     React.useEffect(() => {
       if (!modal) {
         const body: HTMLBodyElement | null = document.querySelector("body")
-        if (body) {
-          body.style.overflowY = "scroll"
-        }
+        if (body) body.style.overflowY = "scroll"
         setState({ top: "0%" })
       }
     }, [modal])
@@ -56,18 +54,16 @@ export const Creation: React.FunctionComponent<Props> = React.memo(
         const elementWidth = creationElement.offsetWidth
         const windowTopCenter = windowRefObject.current.innerHeight / 2
 
-        windowRefObject.current.innerHeight >=
-        windowRefObject.current.innerWidth
-          ? (setState({
-              top: `${
-                windowTopCenter - elemTopPosition - elementWidth * 1.75
-              }px`,
-            }),
-            modalDispatch(modalActions("CREATION")))
-          : (setState({
-              top: `50%`,
-            }),
-            modalDispatch(modalActions("CREATION")))
+        const isPortraitMode =
+          windowRefObject.current.innerHeight >=
+          windowRefObject.current.innerWidth
+
+        setState({
+          top: isPortraitMode
+            ? `${windowTopCenter - elemTopPosition - elementWidth * 1.75}px`
+            : "50%",
+        }),
+          modalDispatch(modalActions("CREATION"))
       }
     }
 

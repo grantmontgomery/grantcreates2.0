@@ -13,7 +13,7 @@ const oauth2Client = new OAuth2(
 
 exports.handler = async (event, context) => {
   try {
-    const promise = new Promise((resolve, reject) => {
+    const sendEmailPromise = new Promise((resolve, reject) => {
       const newJSON = JSON.parse(event.body)
 
       const output = `
@@ -67,7 +67,7 @@ exports.handler = async (event, context) => {
         }
       })
     })
-    return promise
+    return sendEmailPromise
       .then(info => {
         console.log("sending response")
         console.log(info)

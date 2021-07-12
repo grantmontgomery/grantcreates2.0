@@ -2,6 +2,9 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
 }
 body {
   margin: 0;
@@ -12,7 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #0f2027;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #___gatsby {
@@ -26,9 +29,12 @@ body {
 }
 
 #___loader {
-  transition: 250ms ease-out;
+  transition: opacity 250ms ease-out;
   opacity: 1;
+  height: 100%;
+  width: 100%;
   animation-name: fadeIn;
+  position: absolute;
   animation-duration: 500ms;
 }
 
@@ -38,6 +44,17 @@ body {
   }
 }
 
+@media (orientation: portrait) {
+  #mobileLinkTransitions {
+    display: block;
+  }
+}
+
+@media (orientation: landscape) {
+  #mobileLinkTransitions {
+    display: none;
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;

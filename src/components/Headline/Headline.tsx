@@ -20,7 +20,7 @@ export const Headline: React.FC = () => {
       <span className={css.firstHeadline}>Hi, I'm Grant</span>
       <p className={css.secondHeadline}>
         I CREATE THINGS THAT LOOK
-        <span className={css.dynamicText}>{`${creations[creation]}`}</span>
+        <span className={css.dynamicText}>{creations[creation]}</span>
       </p>
       <span className={css.thirdHeadline}>
         Full Stack Creator and React Developer

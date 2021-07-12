@@ -18,4 +18,5 @@ exports.onInitialClientRender = () => {
   setTimeout(() => {
     document.getElementById("___gatsby").style.opacity = 1
   }, 2000)
+  clearTimeout()
 }

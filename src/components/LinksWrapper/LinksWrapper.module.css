@@ -2,14 +2,11 @@
   position: relative;
   margin-left: auto;
   margin-right: 5%;
-  top: 50%;
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  width: 45vw;
+  width: 50%;
   height: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
 }
 
 .linksWrapper.navBar .innerLinks {
@@ -17,6 +14,9 @@
   display: -ms-flexbox;
   display: flex;
   height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -30,9 +30,6 @@
   height: fit-content;
   position: relative;
   margin-left: auto;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
   position: relative;
 }
 
@@ -129,13 +126,26 @@
     display: none;
   }
   .linksWrapper.navBar {
+    margin-right: 0;
+    margin-left: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     display: block;
+  }
+  .linksWrapper.navBar .innerLinks {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .linksWrapper.navBar .innerLinks .link {
+    margin-left: 3vw;
   }
   .linksWrapper.navBar .innerLinks .link a {
     text-decoration: none;
   }
   .linksWrapper.navBar .innerLinks .link a .text {
-    font-size: 20px;
+    font-size: 17.5px;
   }
 }
 /*# sourceMappingURL=LinksWrapper.module.css.map */

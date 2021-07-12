@@ -1,10 +1,12 @@
 .creations {
-  width: 100vw;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
   background: #0b171d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 44.5vh;
   -ms-grid-rows: 10% 12.5% auto;
       grid-template-rows: 10% 12.5% auto;
@@ -84,8 +86,8 @@
   padding-right: 3.5%;
   font-family: Objektiv Mk2 Bold;
   font-size: 3vw;
-  -webkit-transition: 250ms ease-out;
-  transition: 250ms ease-out;
+  -webkit-transition: background 250ms ease-out, color 250ms ease-out;
+  transition: background 250ms ease-out, color 250ms ease-out;
 }
 
 .creations .creationTypes .type.type:nth-child(1) {
@@ -113,6 +115,13 @@
   height: fit-content;
 }
 
+@media (orientation: landscape) and (min-width: 2000px) {
+  .creations {
+    padding-left: 500px;
+    padding-right: 500px;
+  }
+}
+
 @media (orientation: landscape) {
   .creations {
     height: 100vh;
@@ -130,10 +139,20 @@
   }
   .creations .creationTypes .type {
     cursor: pointer;
-    height: 50px;
+    height: 40px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 50px;
     font-size: 15px;
   }

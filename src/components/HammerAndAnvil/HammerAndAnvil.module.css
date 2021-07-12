@@ -60,6 +60,13 @@
   }
 }
 
+@media (orientation: landscape) and (min-width: 2000px) {
+  .hammerAnvil {
+    height: 700px;
+    width: 125%;
+  }
+}
+
 @media (width: 1024px) and (height: 768px) {
   .hammerAnvil {
     height: 80%;

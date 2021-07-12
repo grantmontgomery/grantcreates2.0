@@ -4,7 +4,7 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 import css from "./LinksWrapper.module.css"
 
 interface Props {
-  handleTap?: () => void
+  handleTap?(): void
   location: string
 }
 
@@ -19,19 +19,15 @@ export const LinksWrapper: React.FC<Props> = ({ location, handleTap }) => {
 
   React.useEffect(() => {
     if (windowElement) {
-      windowElement.innerWidth < windowElement.innerHeight
-        ? setLink("")
-        : setLink("#creations")
+      const isPortraitMode =
+        windowElement.innerWidth < windowElement.innerHeight
+      setLink(isPortraitMode ? "" : "#creations")
     }
   }, [windowElement])
 
   const handleLink: (element: string) => void = element => {
-    if (handleTap) {
-      handleTap()
-      scrollTo(element)
-    } else {
-      scrollTo(element)
-    }
+    handleTap && handleTap()
+    scrollTo(element)
   }
 
   return (

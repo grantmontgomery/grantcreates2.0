@@ -8,7 +8,7 @@
 
 @media (orientation: landscape) {
   .homePage {
-    height: 90vh;
+    height: calc(90vh + 60px);
     min-height: 679px;
     padding-left: 5%;
     padding-right: 5%;
@@ -16,5 +16,13 @@
     grid-template-areas: "headline anvil";
     grid-template-columns: 40% 60%;
     grid-template-rows: 100%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 2000px) {
+  .homePage {
+    min-height: 679px;
+    padding-left: 500px;
+    padding-right: 500px;
   }
 }

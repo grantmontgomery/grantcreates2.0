@@ -3,8 +3,8 @@
   width: 100vw;
   z-index: 1;
   top: 0;
-  -webkit-transition: 500ms;
-  transition: 500ms;
+  -webkit-transition: height 500ms;
+  transition: height 500ms;
   background: -webkit-gradient(linear, left top, left bottom, from(#0b171d), to(#0b171d00));
   background: linear-gradient(#0b171d, #0b171d00);
   pointer-events: none;
@@ -16,8 +16,8 @@
   position: fixed;
   width: 100vw;
   z-index: 1;
-  -webkit-transition: 500ms;
-  transition: 500ms;
+  -webkit-transition: height 500ms;
+  transition: height 500ms;
   background: -webkit-gradient(linear, left top, left bottom, from(#0b171d00), to(#0b171d));
   background: linear-gradient(#0b171d00, #0b171d);
 }

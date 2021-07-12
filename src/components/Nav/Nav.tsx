@@ -37,11 +37,7 @@ export const Nav: React.FC = () => {
     )
   }
 
-  let windowElement: Window | null = null
-
   React.useLayoutEffect(() => {
-    windowElement = window
-
     navRef.current?.focus()
   })
 
@@ -53,11 +49,12 @@ export const Nav: React.FC = () => {
         if (navRef.current) {
           const navHeight = navRef.current.offsetHeight
           navRef.current.style.opacity = "1"
-          if (prevScrollpos > currentScrollPos) {
-            navRef.current.style.top = "0"
-          } else {
-            navRef.current.style.top = `-${navHeight * 1.5}px`
-          }
+          const currentScrollIsSmaller = prevScrollpos > currentScrollPos
+          const navRetractPosition = currentScrollIsSmaller
+            ? "0"
+            : `-${navHeight * 1.5}px`
+          navRef.current.style.top = navRetractPosition
+
           prevScrollpos = currentScrollPos
         }
       }
@@ -65,19 +62,11 @@ export const Nav: React.FC = () => {
   }, [])
 
   const handleTap = () => {
-    if (!navLinks) {
-      const body: HTMLBodyElement | null = document.querySelector("body")
-      if (body) {
-        body.style.overflowY = "hidden"
-      }
-      return modalDispatch(modalActions("NAV_LINKS"))
-    } else {
-      const body: HTMLBodyElement | null = document.querySelector("body")
-      if (body) {
-        body.style.overflowY = "scroll"
-      }
-      return modalDispatch(modalActions("CLOSE"))
+    const body: HTMLBodyElement | null = document.querySelector("body")
+    if (body) {
+      body.style.overflowY = navLinks ? "scroll" : "hidden"
     }
+    modalDispatch(modalActions(navLinks ? "CLOSE" : "NAV_LINKS"))
   }
 
   return (
@@ -88,7 +77,9 @@ export const Nav: React.FC = () => {
       <MobileNav navLinks={navLinks} handleTap={handleTap}></MobileNav>
       <LinksWrapper location="navBar"></LinksWrapper>
       <ModalDark inMobileNav={true}></ModalDark>
-      <TransitionGroup>{applyLinksTransitions()}</TransitionGroup>
+      <TransitionGroup id="mobileLinkTransitions">
+        {applyLinksTransitions()}
+      </TransitionGroup>
     </nav>
   )
 }

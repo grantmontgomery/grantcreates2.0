@@ -6,12 +6,13 @@
 
 .navWrapper {
   top: 0;
-  width: 100vw;
-  height: 11vh;
-  transition: 250ms ease-out;
+  width: 100%;
+  height: 60px;
+  transition: top 250ms ease-out;
   display: flex;
   flex-flow: row;
   background: transparent;
+  box-sizing: border-box;
   z-index: 3;
   justify-content: space-between;
   position: sticky;
@@ -73,26 +74,26 @@
 //slightly more black #0B171D
 
 .navExit {
-  transition: 250ms ease-out;
+  transition: top 250ms ease-out;
   &.navExitActive {
-    transition: 250ms ease-out;
+    transition: transform 250ms ease-out;
   }
 }
 
 .linksEnter {
-  transition: all 250ms ease-out;
+  transition: transform 250ms ease-out;
   transform: translate(100%, 0);
   &.linksEnterActive {
     transform: translate(0, 0);
-    transition: all 250ms ease-out;
+    transition: transform 250ms ease-out;
   }
 }
 
 .linksExit {
   transform: translate(0, 0);
-  transition: all 250ms ease-out;
+  transition: transform 250ms ease-out;
   &.linksExitActive {
-    transition: all 250ms ease-out;
+    transition: transform 250ms ease-out;
     transform: translate(100%, 0);
   }
 }
@@ -105,15 +106,23 @@
 //   @include mobileLandscape();
 // }
 
+@media (orientation: portrait) and (min-width: 700px) {
+  .navWrapper {
+    height: 100px;
+  }
+}
+
 @media (orientation: landscape) {
   .navWrapper {
-    width: 100vw;
-    height: 10vh;
-    min-height: 75px;
-
+    height: 60px;
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: center;
     & .logoLink {
-      margin-left: 5%;
       height: 100%;
+      width: fit-content;
+      margin-right: 0;
+      margin-left: 0;
     }
   }
 }
