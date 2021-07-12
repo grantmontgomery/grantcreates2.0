@@ -68,19 +68,15 @@ export const AboutPage: React.FC<{
       <p className={css.description}>
         Hi, I'm Grant! I'm a full stack developer who enjoys creating immersive
         experiences and applications using web technologies such as React. I
-        have previous experience as a Customer Solutions Engineer where I was
-        tasked with developing full stack tools and features using React, Apollo
-        GraphQL, PostGreSQL, and Node.js. I'm currently seeking a role where I
-        can continue applying my skills and experience in order to contribute
-        towards building amazing products. If you would like to get in contact
-        with me about opportunities or assistance in solving your development
-        needs you can contact me{" "}
+        have previous experience and success as a Customer Solutions Engineer
+        where I was tasked with developing full stack tools and features using
+        React, Apollo GraphQL, PostGreSQL, and Node.js. I'm currently seeking a
+        role where I can continue applying my skills and experience in order to
+        contribute towards building amazing products. If you would like to get
+        in contact with me about opportunities or assistance in solving your
+        development needs you can contact me{" "}
         <a className={css.link} href="/#contactPage">
           here
-        </a>{" "}
-        or follow me on Twitter at{" "}
-        <a className={css.link} href="https://twitter.com/grantcreates">
-          @grantcreates
         </a>
         .
       </p>
