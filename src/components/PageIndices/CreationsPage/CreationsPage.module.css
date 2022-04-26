@@ -134,8 +134,8 @@
     font-size: 30px;
   }
   .creations .creationTypes {
-    width: auto;
-    margin-left: 25px;
+    width: 100%;
+    padding-left: 5%;
   }
   .creations .creationTypes .type {
     cursor: pointer;

@@ -7,7 +7,7 @@ import css from "./CreationsPage.module.css"
 export const CreationsPage: React.FC = () => {
   const [creationsType, changeCreationType] = React.useState<
     "apps" | "websites"
-  >("apps")
+  >("websites")
   const { creationsRef } = React.useContext(homePageContext)
 
   const {
@@ -24,14 +24,6 @@ export const CreationsPage: React.FC = () => {
         <span>Creations</span>
       </div>
       <div className={css.creationTypes}>
-        <button
-          className={`${css.type} ${
-            creationsType === "apps" ? css.active : null
-          }`}
-          onClick={() => changeCreationType("apps")}
-        >
-          Apps
-        </button>
         <button
           className={`${css.type} ${
             creationsType === "websites" ? css.active : null
