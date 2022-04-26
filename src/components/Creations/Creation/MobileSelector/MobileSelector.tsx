@@ -1,5 +1,4 @@
 import * as React from "react"
-import { SekndIcon } from "../../CreationIcons"
 import { Anvil } from "../../../Logos"
 import css from "./MobileSelector.module.css"
 
@@ -14,17 +13,14 @@ export const MobileSelector: React.FunctionComponent<Props> = ({
   handleTap,
   type,
 }) => {
-  const appCreations = (name: string) => {
-    switch (name) {
-      case "Seknd":
-        return <SekndIcon location="creation"></SekndIcon>
-    }
-  }
+  const appCreations = (name: string) => {}
 
   const websiteCreations = (name: string) => {
     switch (name) {
       case "Grant Creates":
         return <Anvil location="creation"></Anvil>
+      default:
+        return <></>
     }
   }
 

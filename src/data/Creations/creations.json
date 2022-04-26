@@ -1,16 +1,6 @@
 {
   "creations": [
     {
-      "name": "Seknd",
-      "subTitle": "React Web Application",
-      "category": "app",
-      "detailsName": "Seknd (Second)",
-      "details": "You've got the match, but how do you find and plan the best date? This web application solves that question. Start a search utilizing the Ticketmaster and Yelp API and plan the day or night out with the drag n' drop scheduler.",
-      "technologies": "TypeScript Next React Sass Serverless",
-      "githublink": "https://github.com/grantmontgomery/sekndproduction",
-      "link": "https://sekndapp.com"
-    },
-    {
       "name": "Grant Creates",
       "subTitle": "Gatsby Portfolio Website",
       "category": "website",
